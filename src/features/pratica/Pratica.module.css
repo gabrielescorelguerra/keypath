@@ -44,10 +44,8 @@
   display: inline-flex;
   align-items: center;
   gap: var(--space-2);
-  font-family: var(--font-mono);
-  font-size: 0.6875rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
+  font-size: var(--text-sm);
+  font-weight: 500;
   color: var(--console-text-2);
 }
 
@@ -579,4 +577,12 @@
   .songTable td:nth-child(3) {
     display: none;
   }
+}
+
+.weekNumber {
+  font-family: var(--font-display);
+  font-size: 3rem;
+  font-weight: 300;
+  line-height: 0.95;
+  letter-spacing: -0.02em;
 }

@@ -47,7 +47,7 @@ export function DiagnosisPage() {
                   return (
                     <fieldset key={level} className={styles.level}>
                       <legend className={styles.legend}>
-                        <span className="mono">N{level}</span> {levelName(level)}
+                        <span className="num">Nível {level}</span> · {levelName(level)}
                       </legend>
                       <div className={styles.items}>
                         {atLevel.map((competency) => {

@@ -39,7 +39,7 @@ export function TrackPage() {
           <div className={styles.levelBox}>
             <span className="eyebrow">Seu nível</span>
             <span className={styles.levelValue}>
-              <span className={`mono ${styles.levelNumber}`}>{level}</span>
+              <span className={styles.levelNumber}>{level}</span>
               <span className={styles.levelOf}>/ 5</span>
             </span>
             <span className={styles.levelName}>{level === 0 ? 'Sem nível' : levelName(level)}</span>
@@ -51,7 +51,7 @@ export function TrackPage() {
             {next && next.total > 0 && (
               <span className="muted small">
                 Rumo ao nível {next.level} · {levelName(next.level)}:{' '}
-                <strong className="mono">
+                <strong className="num">
                   {next.satisfied} de {next.total}
                 </strong>{' '}
                 competências essenciais
@@ -81,12 +81,10 @@ export function TrackPage() {
                   className={styles.levelLabel}
                   aria-label={`Nível ${lvl} · ${levelName(lvl)}`}
                 >
-                  <span className={`mono ${styles.levelIndex}`}>
-                    {String(lvl).padStart(2, '0')}
-                  </span>
+                  <span className={styles.levelIndex}>{lvl}</span>
                   <span className={styles.levelTitle}>{levelName(lvl)}</span>
                 </h2>
-                <span className="mono xsmall faint">
+                <span className="xsmall faint num">
                   {satisfied}/{atLevel.length} {reached && '· alcançado'}
                 </span>
               </div>
@@ -154,8 +152,8 @@ export function TrackPage() {
                           {lesson.estimatedMinutes && ` · ~${lesson.estimatedMinutes} min`}
                         </span>
                       </td>
-                      <td className="mono">N{lesson.level}</td>
-                      <td className="mono">
+                      <td className="num">{lesson.level}</td>
+                      <td className="num">
                         {ls?.completedCheckpoints.length ?? 0}/
                         {ls?.totalCheckpoints ?? lesson.checkpoints.length}
                       </td>

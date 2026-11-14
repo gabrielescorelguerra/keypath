@@ -1,9 +1,7 @@
 .panel {
   padding-bottom: var(--space-4);
-  background: var(--color-surface);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-md);
-  overflow: hidden;
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
 }
 
 .stats {
@@ -14,40 +12,38 @@
 }
 
 .stats > div {
-  padding: var(--space-4) var(--space-5);
+  padding: var(--space-4) var(--space-5) var(--space-4) 0;
 }
 
 .stats > div + div {
+  padding-left: var(--space-5);
   border-left: 1px solid var(--color-border);
 }
 
 .stats dt {
-  font-family: var(--font-mono);
-  font-size: 0.6875rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+  font-size: var(--text-sm);
   color: var(--color-text-3);
 }
 
 .stats dd {
   margin: var(--space-1) 0 0;
-  font-family: var(--font-mono);
-  font-size: var(--text-lg);
-  font-weight: 500;
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  font-weight: 400;
 }
 
 .actions {
   display: flex;
   flex-wrap: wrap;
   gap: var(--space-2);
-  padding: var(--space-4) var(--space-5) 0;
+  padding: var(--space-4) 0 0;
 }
 
 .reminder,
 .ok,
 .error,
 .note {
-  margin: var(--space-3) var(--space-5) 0;
+  margin: var(--space-3) 0 0;
   font-size: var(--text-md);
 }
 

@@ -1,9 +1,6 @@
 .block {
-  margin: var(--space-5) 0;
-  padding: var(--space-4);
-  background: var(--color-surface);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-md);
+  margin: var(--space-6) 0;
+  padding: 0;
   font-size: var(--text-base);
   line-height: 1.5;
 }
@@ -24,11 +21,10 @@
 }
 
 .degree {
-  font-family: var(--font-mono);
-  font-size: var(--text-sm);
-  font-weight: 500;
-  padding: 0.125rem 0.45rem;
-  border-radius: var(--radius-sm);
+  font-size: var(--text-md);
+  font-weight: 600;
+  padding: 0.05rem 0.45rem;
+  border-radius: var(--radius-xs);
   color: var(--color-accent-text);
   background: var(--color-accent-soft);
 }
@@ -127,22 +123,21 @@
 }
 
 .chipMain {
-  font-family: var(--font-mono);
-  font-weight: 500;
+  font-weight: 600;
   font-size: var(--text-md);
 }
 
 .chipSub {
-  font-family: var(--font-mono);
-  font-size: 0.6875rem;
+  font-size: var(--text-xs);
   color: var(--color-text-3);
 }
 
 /* Teclado em moldura rebaixada */
+/* Teclado com feltro vermelho no topo, como num piano. */
 .keys {
-  padding: var(--space-3) var(--space-3) var(--space-2);
-  background: var(--color-sunken);
-  border-radius: var(--radius-sm);
+  padding: 0 0 var(--space-2);
+  border-top: 3px solid var(--key-felt);
+  border-radius: 2px;
 }
 
 .keyboard {
@@ -196,7 +191,6 @@
 
 .notes {
   margin: var(--space-3) 0 0;
-  font-family: var(--font-mono);
   font-size: var(--text-sm);
   color: var(--color-text-2);
 }

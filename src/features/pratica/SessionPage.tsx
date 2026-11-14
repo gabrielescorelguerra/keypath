@@ -68,7 +68,7 @@ function Summary({ session }: { readonly session: PracticeSession }) {
                       <Link to={paths.exercise(attempt.exerciseId)} className="plain">
                         {exercise?.title ?? attempt.exerciseId}
                       </Link>
-                      <span className="mono xsmall faint">{summary}</span>
+                      <span className="xsmall faint num">{summary}</span>
                     </li>
                   )
                 })}
@@ -89,7 +89,7 @@ function Summary({ session }: { readonly session: PracticeSession }) {
                     <Link to={practicePaths.song(entry.songId)} className="plain">
                       {songById.get(entry.songId)?.title ?? 'Música removida'}
                     </Link>
-                    <span className="mono xsmall faint">
+                    <span className="xsmall faint num">
                       {entry.minutes} min{entry.note ? ` · ${entry.note}` : ''}
                     </span>
                   </li>

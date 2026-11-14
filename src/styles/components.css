@@ -495,9 +495,7 @@ input[type='radio'] {
 
 /* Nota de margem: aviso sem caixa. */
 .banner {
-  display: flex;
-  align-items: baseline;
-  gap: var(--space-2);
+  display: block;
   margin: 0;
   padding: 0;
   font-size: var(--text-md);
@@ -508,12 +506,13 @@ input[type='radio'] {
 
 .banner::before {
   content: '';
-  flex-shrink: 0;
+  display: inline-block;
   width: 6px;
   height: 6px;
+  margin-right: var(--space-2);
   border-radius: 50%;
+  vertical-align: 0.15em;
   background: var(--color-warning);
-  transform: translateY(-2px);
 }
 
 .banner.info::before {

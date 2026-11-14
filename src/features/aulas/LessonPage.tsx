@@ -4,10 +4,11 @@ import { useProgress } from '@/app/progress'
 import { catalog } from '@/content'
 import { setCheckpointCompleted, visitLesson } from '@/data'
 import type { Lesson } from '@/domain/catalog'
-import { Badge, ProgressBar, StatusBadge } from '@/ui/Badges'
+import { StatusBadge } from '@/ui/Badges'
 import { Icon } from '@/ui/Icon'
 import { LESSON_STATUS, levelName, METHOD_LABEL } from '@/ui/labels'
 import { Markdown, type EmbedRenderers } from '@/ui/markdown/Markdown'
+import { Measures } from '@/ui/Notation'
 import { Loading, PageHeader } from '@/ui/Page'
 import { paths } from '@/ui/paths'
 import { ExerciseRunner } from '../exercicios/ExerciseRunner.tsx'
@@ -87,27 +88,37 @@ export function LessonPage() {
         ]}
         subtitle={lesson.summary}
         meta={
-          <>
-            <Badge tone={isCompleted ? 'success' : done.size > 0 ? 'accent' : 'neutral'}>
+          <p className={styles.metaLine}>
+            <span className={styles.metaStatus} data-state={state?.status ?? 'not-started'}>
               {LESSON_STATUS[state?.status ?? 'not-started']} · {done.size}/{total}
-            </Badge>
-            <Badge>
-              N{lesson.level} · {levelName(lesson.level)}
-            </Badge>
-            {lesson.estimatedMinutes && <Badge>~{lesson.estimatedMinutes} min</Badge>}
+            </span>
+            <span>
+              Nível {lesson.level} · {levelName(lesson.level)}
+            </span>
+            {lesson.estimatedMinutes && <span>cerca de {lesson.estimatedMinutes} min</span>}
             {lesson.styles.map((id) => (
-              <Badge key={id} tone="accent">
+              <span key={id} className={styles.metaStyle}>
                 {catalog.styleById.get(id)?.name ?? id}
-              </Badge>
+              </span>
             ))}
-          </>
+          </p>
         }
       />
 
       <div className={styles.layout}>
         <nav className={styles.parts} aria-label="Partes da aula">
-          <span className="eyebrow">Partes</span>
-          <ProgressBar value={done.size / Math.max(1, total)} label="Progresso na aula" />
+          <span className={styles.partsHead}>
+            <span>Partes</span>
+            <span className="num faint">
+              {done.size} de {total}
+            </span>
+          </span>
+          <Measures
+            done={lesson.checkpoints.map((c) => done.has(c.id))}
+            total={total}
+            current={currentIndex}
+            label="Progresso na aula"
+          />
           <ol>
             {lesson.checkpoints.map((checkpoint, index) => (
               <li key={checkpoint.id}>

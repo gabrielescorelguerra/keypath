@@ -206,3 +206,26 @@ Rótulos em mono maiúsculo deixam de existir. A hierarquia vem de tamanho, peso
 
 - **Início:** o próximo passo vira a manchete da página (título-herói com compassos e tecla-botão). Abaixo da régua de teclado, três colunas abertas de larguras diferentes: "A seguir" (lista numerada em serifa), "Trilhas" (medidores de oitava) e "Semana" (frase com números em destaque e o lembrete de backup como nota de margem).
 - **Competência:** cabeçalho em duas partes (título e descrição | situação e ação, separados por um fio vertical). O corpo tem duas colunas: "Para dominar" (critérios numerados na margem, sem caixas) e "Caminho" (diagrama vertical: pré-requisitos → esta competência → o que libera), seguido de "Onde estudar".
+
+## 8. Resultado da v2
+
+**Comparação lado a lado.** Antes e depois de Início, Intervalos, Trilha, Aula e Prática, no tema escuro:
+
+- **Cartões:** de cerca de 4 a 6 recipientes por página para **zero ou um**. Superfície só onde há controle: transporte da sessão, campos e opções do quiz.
+- **Mono e caixa alta:** a caixa alta foi eliminada. O mono ficou restrito ao cronômetro, ao bpm e ao campo de andamento do metrônomo.
+- **Composição:** cada página-chave tem uma estrutura própria:
+  - Início: manchete com três colunas de pesos 5/4/3.
+  - Competência: cabeçalho em duas partes e o diagrama "caminho".
+  - Trilha: escada de níveis.
+  - Aula: compassos e leitura.
+- **Identidade musical:** medidor de oitava (barra lateral, Início, Trilha, Competência), compassos (Início, Aula), régua de teclado (todos os cabeçalhos) e feltro sobre os teclados dos exemplos.
+
+**Teste do critério de sucesso**, sem o logotipo e o nome:
+
+- O medidor de oitava, os compassos, a régua de teclado e a tecla laranja tornam o produto reconhecível como uma ferramenta de música.
+- A manchete serifada sobre fundo contínuo afasta a leitura de "dashboard SaaS".
+
+**Limites que permanecem:**
+
+- Páginas de formulário (Configurações, Repertório) continuam mais convencionais por natureza.
+- O tema claro foi verificado, mas a direção de arte foi desenhada primeiro para o escuro.

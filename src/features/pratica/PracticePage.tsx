@@ -349,7 +349,7 @@ export function PracticePage() {
                       <strong>{formatDateTime(session.startedAt)}</strong>
                       {session.focus && <span className="muted"> · {session.focus}</span>}
                     </Link>
-                    <span className="mono xsmall faint">
+                    <span className="xsmall faint num">
                       {formatDuration(
                         Date.parse(session.endedAt ?? session.startedAt) -
                           Date.parse(session.startedAt),
@@ -366,17 +366,17 @@ export function PracticePage() {
         </section>
 
         <aside className="aside">
-          <section className="panel sunken" aria-labelledby="semana">
-            <h2 id="semana" className="eyebrow" style={{ margin: '0 0 var(--space-3)' }}>
+          <section aria-labelledby="semana">
+            <h2 id="semana" className="section-title">
               Últimos 7 dias
             </h2>
             <div className={styles.weekStats}>
               <div>
-                <span className="mono">{week.minutes}</span>
+                <span className={styles.weekNumber}>{week.minutes}</span>
                 <span>min</span>
               </div>
               <div>
-                <span className="mono">{week.days}</span>
+                <span className={styles.weekNumber}>{week.days}</span>
                 <span>{week.days === 1 ? 'dia' : 'dias'}</span>
               </div>
             </div>

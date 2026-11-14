@@ -85,7 +85,7 @@ export function SettingsPage() {
                 disabled={!settings.soundEnabled}
                 onChange={(event) => void updateSettings({ volume: Number(event.target.value) })}
               />
-              <span className="mono small">{Math.round(settings.volume * 100)}%</span>
+              <span className="small num">{Math.round(settings.volume * 100)}%</span>
             </label>
           </div>
         </section>

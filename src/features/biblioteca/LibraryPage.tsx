@@ -50,7 +50,7 @@ export function LibraryPage() {
         eyebrow="Consulta livre"
         title="Biblioteca"
         subtitle="Acordes, escalas, harmonia e teoria — a mesma fonte usada nas aulas."
-        aside={<span className="mono xsmall faint">{catalog.concepts.length} verbetes</span>}
+        aside={<span className="xsmall faint num">{catalog.concepts.length} verbetes</span>}
       />
 
       <search className={styles.search}>
@@ -94,7 +94,7 @@ export function LibraryPage() {
             <section key={track.id} className={styles.group} aria-labelledby={`bib-${track.id}`}>
               <h2 id={`bib-${track.id}`} className={styles.groupTitle}>
                 {track.name}
-                <span className="mono xsmall faint" aria-hidden="true">
+                <span className="xsmall faint num" aria-hidden="true">
                   {concepts.length}
                 </span>
               </h2>

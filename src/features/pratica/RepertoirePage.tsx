@@ -37,7 +37,7 @@ export function RepertoirePage() {
         crumbs={[{ label: 'Prática', to: practicePaths.home }]}
         subtitle="Suas músicas, com cifras, partituras, arquivos MIDI e vídeos. Tudo fica só neste dispositivo e entra no backup."
         aside={
-          <span className="mono xsmall faint">{plural(songs.length, 'música', 'músicas')}</span>
+          <span className="xsmall faint num">{plural(songs.length, 'música', 'músicas')}</span>
         }
       />
 
@@ -111,7 +111,7 @@ export function RepertoirePage() {
                   aria-pressed={status === null}
                   onClick={() => setStatus(null)}
                 >
-                  Todas <span className="mono">({songs.length})</span>
+                  Todas <span className="num faint">({songs.length})</span>
                 </button>
                 {SONG_STATUSES.map((s) => (
                   <button
@@ -152,7 +152,7 @@ export function RepertoirePage() {
                         </Link>
                         {song.artist && <span className={styles.artist}>{song.artist}</span>}
                       </td>
-                      <td className="mono">
+                      <td className="num">
                         {song.key ? (
                           <>
                             <span className="visually-hidden">Tom </span>
@@ -162,7 +162,7 @@ export function RepertoirePage() {
                           <span className="faint">—</span>
                         )}
                       </td>
-                      <td className="mono">
+                      <td className="num">
                         {attachments > 0 ? (
                           <>
                             {attachments}
