@@ -1,0 +1,35 @@
+id: harmonia.alterados.upper-structures
+title: As cinco upper structures sobre o dominante
+type: performance
+stage: execution
+competencies: [harmonia.dominantes-alterados]
+prompt: |
+  Mão esquerda: o trítono do dominante (3ª embaixo, 7ª em cima). Em C7: **Mi e Si♭**.
+  Mão direita: cada uma das tríades maiores abaixo, em posição fundamental e depois invertida:
+
+  | Tríade sobre C7 | Notas | Tensões | Cifra |
+  | --- | --- | --- | --- |
+  | Ré | Ré Fá♯ Lá | 9 · ♯11 · 13 | C7(9)(♯11)(13) |
+  | Lá | Lá Dó♯ Mi | 13 · ♭9 · 3 | C7(♭9)(13) |
+  | Lá♭ | Lá♭ Dó Mi♭ | ♭13 · 1 · ♯9 | C7(♯9)(♭13) |
+  | Sol♭ | Sol♭ Si♭ Ré♭ | ♯11 · 7 · ♭9 | C7(♭9)(♯11) |
+  | Mi♭ | Mi♭ Sol Si♭ | ♯9 · 5 · 7 | C7(♯9) |
+
+  ::chords{symbols="C7 D/C A/C Ab/C Gb/C Eb/C"}
+
+  Depois, resolva cada uma em F7M (ou Fm7) e ouça qual pede mais a resolução.
+parameters:
+  keys: [C, G, F, Bb]
+  startBpm: 60
+  targetBpm: 80
+  bpmStep: 5
+  hands: both
+checklist:
+  - id: cinco
+    text: Toquei as cinco upper structures nos quatro dominantes.
+  - id: resolucao
+    text: Resolvi cada uma no I, conduzindo as vozes da direita por grau conjunto.
+  - id: escuta
+    text: Consigo dizer quais soam "claras" (Ré, Lá) e quais soam "escuras" (Lá♭, Sol♭, Mi♭).
+challenges:
+  - Use só as upper structures de Lá♭ e Sol♭ num II–V–I menor.

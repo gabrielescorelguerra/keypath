@@ -1,0 +1,16 @@
+id: harmonia.progressoes.compor
+title: Uma progressão sua a partir das comuns
+type: performance
+stage: creativity
+competencies: [harmonia.progressoes-comuns]
+prompt: |
+  Parta de uma das progressões da aula e crie uma versão sua de 8 compassos combinando pelo menos
+  três recursos: rotação (começar em outro grau), inversões no baixo, substituição por acorde de
+  mesma função, cores (sus, add9, 7M) e um dominante secundário. Escreva em graus e toque em dois tons.
+parameters:
+  keys: []
+checklist:
+  - id: tres-recursos
+    text: A progressão usa pelo menos três recursos da aula.
+  - id: dois-tons
+    text: Toquei em dois tons, pensando em graus.

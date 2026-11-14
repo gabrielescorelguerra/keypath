@@ -1,0 +1,34 @@
+id: tecnica.arpejos.inversoes
+title: Arpejos a partir das inversões
+type: performance
+stage: execution
+competencies: [tecnica.arpejos-triades]
+prompt: |
+  Toque o arpejo de cada tríade começando da **fundamental**, da **terça** (1ª inversão) e da
+  **quinta** (2ª inversão), duas oitavas, subindo e descendo:
+
+  ::arpeggio{symbol="C" octaves="2"}
+
+  ::arpeggio{symbol="C" octaves="2" inversion="1"}
+
+  ::arpeggio{symbol="C" octaves="2" inversion="2"}
+
+  Nas inversões, o intervalo de **quarta** aparece dentro da oitava (Sol–Dó em Mi-Sol-Dó). Na mão
+  direita, a 1ª e a 2ª inversão costumam usar **1 2 4** no lugar de 1 2 3, para o 4º dedo alcançar
+  a quarta; confirme o dedilhado de cada tom na tabela do Aprofundamento.
+parameters:
+  keys: [C, G, F, D]
+  startBpm: 60
+  targetBpm: 92
+  bpmStep: 4
+  hands: right
+checklist:
+  - id: tres-posicoes
+    text: Toquei as três posições nos quatro tons, subindo e descendo.
+  - id: dedilhado
+    text: Usei o mesmo dedilhado toda vez, sem improvisar dedos.
+  - id: igualdade
+    text: As notas ficaram igualmente espaçadas, inclusive na passagem do polegar.
+challenges:
+  - Faça as três posições com a mão esquerda.
+  - Faça as tétrades (C7M) a partir das quatro posições.

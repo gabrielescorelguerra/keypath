@@ -205,3 +205,36 @@
     - id: melodia
       method: self-assessment
       exercise: harmonia.rearmonizacao.melodia
+
+- id: harmonia.progressoes-comuns
+  track: harmonia
+  level: 2
+  title: Progressões comuns e variações
+  description: Reconhece de ouvido e toca em vários tons as progressões mais usadas (I–V–VIm–IV e rotações, II–V–I, I–VIm–IIm–V, ciclo de quintas, progressão do Cânone) e cria variações com inversões, substituições e cores.
+  core: false
+  prerequisites: [harmonia.funcoes-harmonicas]
+  mastery:
+    - id: ouvido
+      method: quiz
+      exercise: harmonia.progressoes.reconhecer
+    - id: teclado
+      method: self-assessment
+      exercise: harmonia.progressoes.em-tons
+      distinctDays: 2
+
+- id: harmonia.dominantes-alterados
+  track: harmonia
+  level: 4
+  title: Dominantes alterados e upper structures
+  description: Usa as tensões alteradas do dominante (♭9, ♯9, ♯11, ♭13) e as tríades de estrutura superior sobre o trítono para colorir e resolver dominantes.
+  core: false
+  prerequisites: [harmonia.extensoes]
+  styles: [jazz, gospel, neo-soul]
+  mastery:
+    - id: ouvido
+      method: quiz
+      exercise: harmonia.alterados.reconhecer
+    - id: teclado
+      method: self-assessment
+      exercise: harmonia.alterados.upper-structures
+      distinctDays: 2

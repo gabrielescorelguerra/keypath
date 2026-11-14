@@ -1,0 +1,28 @@
+id: harmonia.progressoes.variacoes
+title: Variar uma progressão de quatro acordes
+type: performance
+stage: application
+competencies: [harmonia.progressoes-comuns]
+prompt: |
+  Sobre o playback de **I – V – VIm – IV** em Sol, toque quatro variações, duas voltas cada:
+
+  1. **Inversões no baixo:** G – D/F♯ – Em – C (baixo descendo).
+  2. **Substituição:** troque o IV pelo IIm7 (Am7) na segunda volta.
+  3. **Cores:** Gadd9 – Dsus4 – Em7 – C7M.
+  4. **Dominante secundário:** troque o último tempo do C por um D7 (V7 que volta ao I).
+
+  ::chords{symbols="G D/F# Em C" key="G"}
+parameters:
+  keys: [G]
+  startBpm: 72
+  targetBpm: 90
+  bpmStep: 6
+  hands: both
+  backing: { key: G, degrees: I V VIm IV, beatsPerChord: 4 }
+checklist:
+  - id: quatro
+    text: Toquei as quatro variações sem parar o playback.
+  - id: escuta
+    text: Consigo dizer o que cada variação muda no som.
+challenges:
+  - Combine duas variações na mesma volta.

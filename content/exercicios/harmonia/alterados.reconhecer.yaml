@@ -1,0 +1,41 @@
+id: harmonia.alterados.reconhecer
+title: Dominantes alterados — reconhecer
+type: quiz
+stage: recognition
+competencies: [harmonia.dominantes-alterados]
+questions:
+  - id: b9
+    kind: single-choice
+    prompt: Que dominante é este?
+    audio: { chord: G7b9, play: arpeggio }
+    options: [G7(♭9), G7(9), G7(13)]
+    correct: [0]
+    explanation: A nona menor (Lá♭) cria a tensão mais "dramática" — muito usada antes de acordes menores.
+  - id: sharp9
+    kind: single-choice
+    prompt: E este, com uma nota que parece a terça menor?
+    audio: { chord: G7#9, play: together }
+    options: [G7(♯9), Gm7, G7(♭9)]
+    correct: [0]
+  - id: tritono
+    kind: single-choice
+    prompt: Numa upper structure, o que a mão esquerda toca?
+    options: [O trítono do dominante (3ª e 7ª), Só a fundamental, A tríade alterada]
+    correct: [0]
+  - id: ust-eb
+    kind: single-choice
+    prompt: Sobre o C7 (Mi e Si♭ na esquerda), a tríade de Mi♭ maior na direita resulta em…
+    options: [C7(♯9), C7(13), C7(♭9)]
+    correct: [0]
+    explanation: 'Mi♭, Sol e Si♭: ♯9, 5ª e 7ª.'
+  - id: ust-d
+    kind: single-choice
+    prompt: E a tríade de Ré maior sobre o C7?
+    options: [C7(9)(♯11)(13), C7(♭9), C7(♯5)]
+    correct: [0]
+    explanation: 'Ré, Fá♯ e Lá: 9ª, ♯11 e 13ª — o som do lídio dominante.'
+  - id: onde
+    kind: single-choice
+    prompt: Em que situação as tensões ♭9 e ♭13 soam mais naturais?
+    options: [No V7 que resolve num acorde menor, No I7M, No IIm7]
+    correct: [0]

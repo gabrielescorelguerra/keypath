@@ -1,0 +1,28 @@
+id: harmonia.alterados.dois-cinco-um
+title: II–V–I com dominante alterado sobre o playback
+type: performance
+stage: application
+competencies: [harmonia.dominantes-alterados]
+prompt: |
+  O playback toca **Dm7 – G7 – C7M – C7M**. A cada volta, troque o colorido do G7:
+
+  1. G7(13) — sem alteração.
+  2. G7(♭9) — Lá♭ no topo.
+  3. Upper structure de **Mi♭** sobre o trítono Si–Fá: G7(♯9)(♭13) (Mi♭ = ♭13, Sol = fundamental, Si♭ = ♯9).
+  4. Upper structure de **Mi** sobre o trítono: G7(13)(♭9).
+
+  Em todas, a nota de cima do G7 resolve por grau conjunto numa nota do C7M.
+parameters:
+  keys: [C, F]
+  startBpm: 66
+  targetBpm: 96
+  bpmStep: 6
+  hands: both
+  backing: { key: C, degrees: IIm7 V7 I7M I7M, beatsPerChord: 4 }
+checklist:
+  - id: quatro
+    text: Toquei as quatro versões do G7 sem parar o playback.
+  - id: resolucao
+    text: A nota de cima de cada versão resolveu por grau conjunto no C7M.
+challenges:
+  - Use a escala alterada (Lá♭ menor melódica) na direita sobre o G7 e resolva na terça do C7M.

@@ -1,0 +1,24 @@
+id: tecnica.arpejos.padrao-classico
+title: Acordes quebrados no estilo do Prelúdio em Dó de Bach
+type: performance
+stage: application
+competencies: [tecnica.arpejos-triades]
+prompt: |
+  Sobre **C – Dm/C – G7/B – C**, toque cada compasso como acorde quebrado: duas notas graves na
+  esquerda e três agudas na direita, subindo — a figura do Prelúdio em Dó maior do Cravo Bem
+  Temperado (domínio público). Escolha voicings que mudem pouco de um compasso para o outro.
+
+  ::chords{symbols="C Dm/C G7/B C"}
+parameters:
+  keys: [C, G]
+  startBpm: 60
+  targetBpm: 80
+  bpmStep: 5
+  hands: both
+checklist:
+  - id: figura
+    text: Mantive a mesma figura em todos os compassos.
+  - id: conducao
+    text: Os voicings mudaram pouco de um acorde para o outro.
+challenges:
+  - Aplique a mesma figura à progressão de uma música do seu repertório.

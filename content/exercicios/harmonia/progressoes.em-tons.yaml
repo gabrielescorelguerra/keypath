@@ -1,0 +1,32 @@
+id: harmonia.progressoes.em-tons
+title: Cinco progressões em cinco tons
+type: performance
+stage: execution
+competencies: [harmonia.progressoes-comuns]
+prompt: |
+  Toque cada progressão em cada tom, com condução de vozes na direita e fundamental na esquerda:
+
+  ::progression{key="C" degrees="I V VIm IV"}
+
+  ::progression{key="C" degrees="I VIm IV V"}
+
+  ::progression{key="C" degrees="IIm7 V7 I7M"}
+
+  ::progression{key="C" degrees="I7M IV7M VIIm7(b5) IIIm7 VIm7 IIm7 V7 I7M"}
+
+  ::progression{key="D" degrees="I V VIm IIIm IV I IV V"}
+parameters:
+  keys: [C, G, D, F, Bb]
+  startBpm: 60
+  targetBpm: 90
+  bpmStep: 5
+  hands: both
+checklist:
+  - id: cinco
+    text: Toquei as cinco progressões nos cinco tons.
+  - id: memoria
+    text: A partir do terceiro tom, toquei sem olhar a tela, pensando em graus.
+  - id: conducao
+    text: A mão direita andou pouco entre os acordes.
+challenges:
+  - Toque o ciclo de quintas em Mi♭ e Lá♭.

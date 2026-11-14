@@ -1,0 +1,37 @@
+id: harmonia.progressoes.reconhecer
+title: Progressões comuns — reconhecer
+type: quiz
+stage: recognition
+competencies: [harmonia.progressoes-comuns]
+questions:
+  - id: pop
+    kind: single-choice
+    prompt: C – G – Am – F é qual progressão?
+    options: [I – V – VIm – IV, I – IV – V – I, IIm – V – I]
+    correct: [0]
+  - id: rotacao
+    kind: single-choice
+    prompt: Am – F – C – G tem os mesmos acordes de C – G – Am – F. Qual é a diferença?
+    options: [Começa no VIm, então soa mais introspectiva, Nenhuma, É outra tonalidade]
+    correct: [0]
+  - id: doo-wop
+    kind: single-choice
+    prompt: I – VIm – IV – V (C – Am – F – G) ficou famosa nos anos 50 com qual nome?
+    options: [Progressão "doo-wop", Blues de 12 compassos, Ciclo de quintas]
+    correct: [0]
+  - id: ciclo
+    kind: single-choice
+    prompt: Na progressão pelo ciclo de quintas, as fundamentais se movem…
+    options: [Por quintas descendentes (quartas ascendentes), Por semitons, Por terças]
+    correct: [0]
+    explanation: "Em Dó: Fá → Si → Mi → Lá → Ré → Sol → Dó — cada acorde é a 'dominante' do seguinte dentro do tom."
+  - id: canone
+    kind: single-choice
+    prompt: I – V – VIm – IIIm – IV – I – IV – V é a progressão de qual obra de domínio público, usada em centenas de canções?
+    options: [Cânone em Ré, de Pachelbel, Für Elise, Ode à Alegria]
+    correct: [0]
+  - id: ouvido-v
+    kind: single-choice
+    prompt: Num I – ? – I, qual acorde cria mais tensão antes da volta?
+    options: [V7, IV, VIm]
+    correct: [0]

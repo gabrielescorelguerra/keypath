@@ -1,0 +1,30 @@
+id: tecnica.arpejos.movimento-contrario
+title: Arpejos em movimento contrário
+type: performance
+stage: execution
+competencies: [tecnica.arpejos-triades]
+prompt: |
+  As duas mãos começam no **mesmo Dó central** e se afastam — a direita sobe, a esquerda desce —
+  e depois voltam ao centro.
+
+  - Dó maior, primeira oitava: mão direita **1 2 3 · 5** (Dó Mi Sol Dó); mão esquerda
+    **1 2 4 · 5** (Dó Sol Mi Dó). Para duas oitavas, o polegar de cada mão passa por baixo no Dó.
+  - Como as mãos são espelhadas, os dedos ficam quase iguais nas duas — é o jeito mais fácil de
+    tocar arpejos com as duas mãos juntas.
+
+  ::arpeggio{symbol="C" octaves="2"}
+parameters:
+  keys: [C, G, F, Am]
+  startBpm: 56
+  targetBpm: 84
+  bpmStep: 4
+  hands: both
+checklist:
+  - id: tons
+    text: Toquei em movimento contrário nos quatro tons, duas oitavas.
+  - id: sincronia
+    text: As duas mãos tocaram exatamente juntas (sem "flam").
+  - id: volta
+    text: Voltei ao centro sem parar.
+challenges:
+  - Toque em movimento paralelo (as duas mãos subindo, a uma oitava de distância) e compare a dificuldade.
