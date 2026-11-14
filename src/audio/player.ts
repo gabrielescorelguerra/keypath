@@ -1,4 +1,5 @@
 import type { SplendidGrandPiano } from 'smplr'
+import { getAudio } from './context.ts'
 
 /**
  * Reprodução de notas (D: interface AudioPlayer). Usa amostras de piano (smplr),
@@ -25,15 +26,15 @@ class WebAudioPlayer implements AudioPlayer {
   private synthVoices = new Set<OscillatorNode>()
 
   private ensureContext(): AudioContext | null {
-    if (typeof AudioContext === 'undefined') return null
+    const audio = getAudio()
+    if (!audio) return null
     if (!this.context) {
-      this.context = new AudioContext()
-      this.master = this.context.createGain()
+      this.context = audio.context
+      this.master = audio.context.createGain()
       this.master.gain.value = this.volume
-      this.master.connect(this.context.destination)
+      this.master.connect(audio.master)
       this.loadPiano(this.context, this.master)
     }
-    if (this.context.state === 'suspended') void this.context.resume()
     return this.context
   }
 

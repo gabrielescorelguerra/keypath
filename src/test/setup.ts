@@ -6,3 +6,6 @@ import { afterEach } from 'vitest'
 afterEach(() => {
   cleanup()
 })
+
+// O navegador simulado (jsdom) não implementa rolagem.
+window.scrollTo = () => {}

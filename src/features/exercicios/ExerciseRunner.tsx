@@ -2,12 +2,13 @@ import { useState } from 'react'
 import { Link } from 'react-router'
 import { useProgress } from '@/app/progress'
 import { catalog } from '@/content'
-import { DEFAULT_SETTINGS, recordAttempt, useSettings } from '@/data'
+import { DEFAULT_SETTINGS, recordAttempt, useActiveSession, useSettings } from '@/data'
 import type { Exercise, PerformanceExercise, QuizExercise } from '@/domain/catalog'
 import { formatPitchClass, parseKey } from '@/domain/music'
 import { gradeQuiz, type AttemptContext, type QuizGrade } from '@/domain/progress'
 import { Badge } from '@/ui/Badges'
 import { Markdown } from '@/ui/markdown/Markdown'
+import { MetronomeControl } from '@/ui/music/MetronomeControl'
 import { paths } from '@/ui/paths'
 import styles from './Exercise.module.css'
 
@@ -244,6 +245,13 @@ function PerformanceRunner({
         </dl>
       )}
 
+      {parameters.targetBpm && (
+        <details className={styles.metronome}>
+          <summary>Metrônomo ({parameters.targetBpm} bpm)</summary>
+          <MetronomeControl initialBpm={parameters.targetBpm} />
+        </details>
+      )}
+
       <fieldset className={styles.question}>
         <legend className={styles.prompt}>Depois de tocar, marque o que você conseguiu:</legend>
         {exercise.checklist.map((item) => (
@@ -315,6 +323,8 @@ export function ExerciseRunner({
   readonly context?: AttemptContext
   readonly embedded?: boolean
 }) {
+  const active = useActiveSession()
+  const fullContext: AttemptContext = active ? { ...context, sessionId: active.id } : context
   return (
     <div className={embedded ? `card ${styles.embedded}` : styles.page}>
       {embedded && (
@@ -329,9 +339,9 @@ export function ExerciseRunner({
       )}
       {exercise.prompt && <Markdown root={exercise.prompt} />}
       {exercise.type === 'quiz' ? (
-        <QuizRunner key={exercise.id} exercise={exercise} context={context} />
+        <QuizRunner key={exercise.id} exercise={exercise} context={fullContext} />
       ) : (
-        <PerformanceRunner key={exercise.id} exercise={exercise} context={context} />
+        <PerformanceRunner key={exercise.id} exercise={exercise} context={fullContext} />
       )}
       <CountsFor exercise={exercise} />
     </div>

@@ -70,6 +70,8 @@
 @media (max-width: 48rem) {
   .shell {
     grid-template-columns: minmax(0, 1fr);
+    /* Barra só com a altura do conteúdo; o restante fica para a página. */
+    grid-template-rows: auto 1fr;
   }
 
   .sidebar {

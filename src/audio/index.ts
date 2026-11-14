@@ -1,2 +1,5 @@
 export { audioPlayer, type AudioPlayer } from './player.ts'
 export { useAudio } from './useAudio.ts'
+export { Metronome } from './metronome.ts'
+export { clampBpm, MAX_BPM, MIN_BPM } from './metronomeSchedule.ts'
+export { useMetronome } from './useMetronome.ts'

@@ -26,6 +26,8 @@ export type AttemptResult = QuizResult | SelfAssessmentResult
 export interface AttemptContext {
   readonly lessonId?: string
   readonly checkpointId?: string
+  /** Sessão de prática em andamento quando a tentativa foi feita. */
+  readonly sessionId?: string
 }
 
 /** Uma tentativa de exercício. */

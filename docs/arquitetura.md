@@ -112,7 +112,7 @@ O código de `domain/` e `scripts/` usa extensão `.ts` explícita nos imports r
 - **Sem espera e sem internet:** enquanto as amostras carregam, ou se o download falhar, o player toca com um sintetizador simples de Web Audio (seno e triângulo com decaimento). O som sempre responde. Para uso offline de verdade (PWA), as amostras precisarão ser hospedadas no próprio app.
 - `useAudio()` aplica as Configurações: com o som desligado, os botões de tocar nem aparecem; o volume vem do controle.
 - **Condução de vozes:** sequências de acordes usam `voiceLead` (`domain/music`), que escolhe a inversão mais próxima do acorde anterior.
-- O metrônomo (v0.2) vai usar o mesmo relógio do Web Audio.
+- **Metrônomo** (`src/audio/metronome.ts`): agenda cada clique com antecedência no relógio do Web Audio (olha 120 ms à frente a cada 25 ms), o que mantém o tempo preciso mesmo com a aba ocupada. A agenda é uma função pura com testes (`metronomeSchedule.ts`), e o indicador visual acompanha cada batida. Piano e metrônomo compartilham um único `AudioContext` (`src/audio/context.ts`).
 - Quando o MIDI chegar, haverá a opção "não tocar som quando o teclado estiver conectado".
 
 ## 7.1 Markdown e blocos musicais

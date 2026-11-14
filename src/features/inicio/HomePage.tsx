@@ -1,7 +1,7 @@
 import { Link } from 'react-router'
 import { useProgress } from '@/app/progress'
 import { catalog } from '@/content'
-import { backupReminder, lastActivity, useLastBackupAt } from '@/data'
+import { backupReminder, lastActivity, useActiveSession, useLastBackupAt } from '@/data'
 import { recommend, type ProgressSnapshot, type Recommendation } from '@/domain/progress'
 import { ProgressBar } from '@/ui/Badges'
 import { trackLevelLabel } from '@/ui/labels'
@@ -52,6 +52,7 @@ function describe(step: Recommendation, snapshot: ProgressSnapshot) {
 export function HomePage() {
   const progress = useProgress()
   const lastBackupAt = useLastBackupAt()
+  const activeSession = useActiveSession()
   if (!progress) return <Loading />
 
   const { facts, snapshot } = progress
@@ -67,6 +68,13 @@ export function HomePage() {
   return (
     <>
       <PageHeader title="Início" subtitle="O que estudar agora e como você está em cada trilha." />
+
+      {activeSession && (
+        <p className="banner" role="status" style={{ borderColor: 'var(--color-accent)' }}>
+          Você tem uma sessão de prática em andamento.{' '}
+          <Link to="/pratica">Voltar para a sessão</Link>
+        </p>
+      )}
 
       {reminder !== 'none' && (
         <p className="banner" role="status">

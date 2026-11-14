@@ -6,6 +6,7 @@ import { addLinkAttachment, deleteSong, updateSong, useAttachments, useSong } fr
 import { MAJOR_KEYS, MINOR_KEYS } from '@/domain/music'
 import { parseYouTube, SONG_STATUS_LABEL, SONG_STATUSES, type Song } from '@/domain/practice'
 import { StatusBadge } from '@/ui/Badges'
+import { MetronomeControl } from '@/ui/music/MetronomeControl'
 import { Loading, PageHeader } from '@/ui/Page'
 import { paths } from '@/ui/paths'
 import { NotFoundPage } from '../NotFoundPage.tsx'
@@ -154,6 +155,10 @@ function SongDetails({ song }: { readonly song: Song }) {
             onBlur={() => notes !== song.notes && save({ notes })}
           />
         </label>
+      </section>
+
+      <section className="section" aria-label="Metrônomo da música">
+        <MetronomeControl key={song.bpm ?? 'sem-bpm'} initialBpm={song.bpm ?? 80} />
       </section>
 
       <section className="section" aria-labelledby="anexos">

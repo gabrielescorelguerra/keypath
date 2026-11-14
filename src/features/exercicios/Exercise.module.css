@@ -137,3 +137,14 @@
   font-size: var(--text-sm);
   color: var(--color-text-muted);
 }
+
+.metronome {
+  width: 100%;
+}
+
+.metronome summary {
+  cursor: pointer;
+  font-size: var(--text-sm);
+  color: var(--color-accent);
+  margin-bottom: var(--space-2);
+}

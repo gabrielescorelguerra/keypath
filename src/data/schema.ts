@@ -27,7 +27,9 @@ export const attemptSchema = z.object({
   exerciseId: id,
   startedAt: isoDate,
   finishedAt: isoDate,
-  context: z.object({ lessonId: id.optional(), checkpointId: id.optional() }).default({}),
+  context: z
+    .object({ lessonId: id.optional(), checkpointId: id.optional(), sessionId: id.optional() })
+    .default({}),
   result: z.discriminatedUnion('type', [quizResultSchema, selfAssessmentResultSchema]),
 })
 

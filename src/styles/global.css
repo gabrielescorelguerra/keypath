@@ -35,6 +35,11 @@ a {
   cursor: pointer;
 }
 
+a.button {
+  display: inline-block;
+  text-decoration: none;
+}
+
 .button:hover {
   border-color: var(--color-accent);
 }

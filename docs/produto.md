@@ -174,11 +174,14 @@ A ordem de prioridade é:
 - Nomes de notas configuráveis (Dó, C ou "Dó (C)"). O padrão é **ambos**.
 - Exportação e importação de backup (JSON).
 
-### Próxima etapa (v0.2)
+### v0.2: entregue (área de Prática)
 
-- Área de Prática: sessões de estudo e repertório (músicas e anexos), com backup que inclui os arquivos.
+- ✅ Área de Prática:
+  - **Repertório:** músicas com anexos (PDF, imagem, MIDI, YouTube), importação em lote e competências exigidas.
+  - **Sessões:** cronômetro, sugestões do que treinar, músicas praticadas, anotações e histórico.
+  - **Backup:** passa a ser um ZIP com os arquivos.
 - Cursos e módulos.
-- Metrônomo.
+- ✅ Metrônomo, na sessão, nos exercícios no teclado e na página de cada música.
 
 ### Futuro
 
