@@ -5,9 +5,11 @@ import remarkParse from 'remark-parse'
 import { unified } from 'unified'
 import { SKIP, visit } from 'unist-util-visit'
 import type { CheckpointInput, LessonStage, MarkdownRef } from '../../src/domain/catalog/index.ts'
+import { isPresetId, PRESETS } from '../../src/audio/patch.ts'
 import { LESSON_STAGES, SLUG_RE } from '../../src/domain/catalog/index.ts'
 import {
   isScaleType,
+  noteToMidi,
   parseChord,
   parseKey,
   parsePitchClass,
@@ -65,6 +67,8 @@ const intInRange = (name: string, value: string | undefined, min: number, max: n
  *   ::chord{symbol="Cm7" inversion="1" key="G" octave="4"}
  *   ::chords{symbols="G G7 C Cm G" key="G"}
  *   ::arpeggio{symbol="Cmaj7" octaves="2" inversion="0"}
+ *   ::interval{from="C4" to="E4"}                    (duas notas e o nome do intervalo)
+ *   ::synth{preset="pad"}                             (laboratório de síntese)
  *   ::progression{key="G" degrees="I I7 IV iv I"}
  *   ::scale{root="D" type="harmonic-minor" octaves="2"}
  */
@@ -101,6 +105,32 @@ const DIRECTIVES: Readonly<Record<string, DirectiveSpec>> = {
       ...intInRange('inversion', a.inversion, 0, 6),
       ...intInRange('octave', a.octave, 1, 7),
     ],
+  },
+  interval: {
+    kind: 'leafDirective',
+    contexts: ALL,
+    required: ['from', 'to'],
+    optional: [],
+    check: (a) => {
+      const problems = [
+        ...attempt(() => noteToMidi(a.from ?? '')),
+        ...attempt(() => noteToMidi(a.to ?? '')),
+      ]
+      if (problems.length === 0 && noteToMidi(a.to ?? '') < noteToMidi(a.from ?? '')) {
+        problems.push('"to" deve ser mais aguda que "from"')
+      }
+      return problems
+    },
+  },
+  synth: {
+    kind: 'leafDirective',
+    contexts: ALL,
+    required: [],
+    optional: ['preset'],
+    check: (a) =>
+      a.preset === undefined || isPresetId(a.preset)
+        ? []
+        : [`preset desconhecido: "${a.preset}" (use ${Object.keys(PRESETS).join(', ')})`],
   },
   arpeggio: {
     kind: 'leafDirective',

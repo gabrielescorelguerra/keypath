@@ -5,6 +5,7 @@ import {
   chordQualityName,
   chordToDegree,
   chordToneLabels,
+  INTERVAL_NAMES,
   intervalLabel,
   labelNotes,
   pitchClassOf,
@@ -394,6 +395,60 @@ export function ArpeggioBlock({
         />
       </div>
       <p className={styles.notes}>{noteList(base, naming)}</p>
+    </figure>
+  )
+}
+
+/** ::interval — duas notas, com o nome do intervalo, tocadas separadas e juntas. */
+export function IntervalBlock({ from, to }: { readonly from: NoteName; readonly to: NoteName }) {
+  const naming = useNaming()
+  const playback = usePlayback()
+  const slow = useSlowMotion()
+  const showIntervals = useShowIntervals()
+  const [low, high] = notesToMidi([from, to])
+  const semitones = Math.abs((high ?? 0) - (low ?? 0))
+  const raw = semitones <= 12 ? (INTERVAL_NAMES[semitones] ?? '') : `${semitones} semitons`
+  const name = raw.charAt(0).toUpperCase() + raw.slice(1)
+  const label = intervalLabel(pitchClassOf(from), pitchClassOf(to))
+  const labels = showIntervals
+    ? new Map<NoteName, string>([
+        [from, '1'],
+        [to, label],
+      ])
+    : undefined
+  const step = slow ? 1.2 : 0.6
+
+  return (
+    <figure className={styles.block}>
+      <figcaption className={styles.header}>
+        <span className={styles.chordName}>{name}</span>
+        <span className={styles.degree}>{label}</span>
+        <span className={styles.caption}>
+          {semitones} {semitones === 1 ? 'semitom' : 'semitons'}
+        </span>
+        <Controls
+          onPlay={() =>
+            playback.play([
+              { midis: [low ?? 60], at: 0, seconds: step * 0.95 },
+              { midis: [high ?? 60], at: step, seconds: step * 0.95 },
+              { midis: [low ?? 60, high ?? 60], at: step * 2 + 0.1, seconds: 1.6 },
+            ])
+          }
+          label="Tocar"
+        />
+      </figcaption>
+      <div className={styles.keys}>
+        <Keyboard
+          notes={[from, to]}
+          naming={naming}
+          minOctaves={2}
+          pressed={playback.pressed}
+          onPress={playback.press}
+          onRelease={playback.release}
+          labels={labels}
+        />
+      </div>
+      <p className={styles.notes}>{noteList([from, to], naming)}</p>
     </figure>
   )
 }

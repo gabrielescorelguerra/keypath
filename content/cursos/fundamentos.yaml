@@ -8,8 +8,7 @@ modules:
     title: Intervalos
     summary: Medir a distância entre duas notas, no teclado e de ouvido. É a régua de toda a harmonia.
     level: 1
-    upcoming:
-      - Intervalos no teclado e de ouvido
+    lessons: [teoria.intervalos-no-teclado-e-de-ouvido]
 
   - id: escalas-maior-e-menor
     title: Escala maior e escalas menores

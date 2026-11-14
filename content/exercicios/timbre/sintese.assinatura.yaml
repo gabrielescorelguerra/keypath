@@ -1,0 +1,21 @@
+id: timbre.sintese.assinatura
+title: Um timbre assinatura para uma música
+type: performance
+stage: creativity
+competencies: [timbre.sintese-basica]
+prompt: |
+  Escolha uma música do repertório e crie **um timbre que seja a cara dela** — um pad para a
+  introdução, um pluck para um riff ou um lead para uma frase. Descreva em três linhas:
+
+  - qual sensação você queria (ex.: "amanhecer", "tensão", "espaço");
+  - quais parâmetros mais contribuíram para isso;
+  - o que você mudaria ao vivo (o corte do filtro durante a música?).
+parameters:
+  keys: []
+checklist:
+  - id: timbre
+    text: Criei o timbre e toquei com ele um trecho da música.
+  - id: descricao
+    text: Escrevi a descrição de sensação, parâmetros e uso ao vivo.
+challenges:
+  - Abra o filtro aos poucos ao longo de oito compassos, como um crescendo, enquanto toca.

@@ -11,7 +11,7 @@ describe('conteúdo real (content/)', () => {
   it('compila sem erros', async () => {
     const { catalog, issues } = await buildCatalog(CONTENT_DIR)
     expect(issues.filter((i) => i.severity === 'error')).toEqual([])
-    expect(catalog?.tracks).toHaveLength(6)
+    expect(catalog?.tracks).toHaveLength(7)
     expect(catalog?.levels).toHaveLength(5)
   })
 
@@ -23,7 +23,8 @@ describe('conteúdo real (content/)', () => {
     expect(snapshot.competencies.size).toBe(catalog.competencies.length)
     expect([...snapshot.tracks.values()].every((t) => t.level === 0)).toBe(true)
     expect(recommend(index, snapshot)[0]).toEqual({
-      kind: 'demonstrate',
+      kind: 'start-lesson',
+      lessonId: 'teoria.intervalos-no-teclado-e-de-ouvido',
       competencyId: 'teoria.intervalos',
     })
   })

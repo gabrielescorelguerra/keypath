@@ -1,0 +1,29 @@
+id: timbre.sintese.no-seu-teclado
+title: Os mesmos controles no seu teclado
+type: performance
+stage: application
+competencies: [timbre.sintese-basica]
+prompt: |
+  Abra o manual do seu teclado, sintetizador ou instrumento virtual e localize os quatro blocos
+  da aula — às vezes com outros nomes:
+
+  | Na aula | Nomes comuns |
+  | --- | --- |
+  | Oscilador | OSC, Wave, Waveform, Tone |
+  | Filtro (corte, ressonância) | Filter, Cutoff, Brightness, Resonance, Q |
+  | Envelope de amplitude | Amp EG, Envelope, ADSR, Attack/Release |
+  | LFO | LFO, Modulation, Vibrato, Wah |
+
+  Depois, a partir de um timbre de **pad** do próprio teclado, crie uma versão sua para o momento
+  de oração: mais escura (corte mais baixo) e com release mais longo. Salve como timbre do usuário.
+parameters:
+  keys: []
+checklist:
+  - id: localizar
+    text: Encontrei no meu instrumento os controles de filtro e de envelope.
+  - id: pad
+    text: Criei e salvei uma versão própria de um pad.
+  - id: tocar
+    text: Toquei uma progressão de quatro acordes com o pad e soltei as teclas sem cortar o som.
+challenges:
+  - Faça uma segunda versão "mais clara" do mesmo pad para o refrão e alterne entre as duas.

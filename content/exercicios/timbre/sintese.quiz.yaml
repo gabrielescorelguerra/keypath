@@ -1,0 +1,68 @@
+id: timbre.sintese.quiz
+title: Síntese — oscilador, filtro, envelope e LFO
+type: quiz
+stage: recognition
+competencies: [timbre.sintese-basica]
+questions:
+  - id: cadeia
+    kind: single-choice
+    prompt: Na síntese subtrativa, qual é a ordem do sinal?
+    options:
+      - Oscilador → filtro → amplificador (com envelope)
+      - Filtro → oscilador → amplificador
+      - Amplificador → oscilador → filtro
+    correct: [0]
+    explanation: O oscilador gera um som rico em harmônicos; o filtro "subtrai" parte deles; o envelope molda o volume no tempo.
+  - id: onda-brilhante
+    kind: single-choice
+    prompt: Qual forma de onda tem mais harmônicos (soa mais brilhante e "cheia")?
+    options: [Senoide, Triangular, Dente de serra]
+    correct: [2]
+    explanation: A dente de serra tem todos os harmônicos; a senoide, nenhum. A quadrada fica no meio, só com os ímpares — por isso soa "oca".
+  - id: corte
+    kind: single-choice
+    prompt: Num filtro passa-baixa, o que acontece ao baixar o corte (cutoff)?
+    options:
+      - O som fica mais escuro e abafado
+      - O som fica mais agudo
+      - O som fica mais alto
+    correct: [0]
+  - id: ressonancia
+    kind: single-choice
+    prompt: E a ressonância (Q)?
+    options:
+      - Reforça as frequências perto do corte, dando um "pico" característico
+      - Aumenta o tempo de ataque
+      - Desafina o oscilador
+    correct: [0]
+  - id: sustain
+    kind: single-choice
+    prompt: No ADSR, qual parâmetro é um **nível** e não um tempo?
+    options: [Attack, Decay, Sustain, Release]
+    correct: [2]
+    explanation: Ataque, queda e release são durações. A sustentação é o volume mantido enquanto a tecla está pressionada.
+  - id: pad
+    kind: single-choice
+    prompt: Qual envelope combina com um pad de fundo para louvor?
+    options:
+      - Ataque lento, sustentação alta e release longo
+      - Ataque instantâneo, sustentação zero e release curto
+      - Ataque instantâneo, sustentação alta e release instantâneo
+    correct: [0]
+    explanation: O pad entra devagar, se mantém e some aos poucos depois que você solta — sem "ataque" perceptível. A segunda opção é um pluck; a terceira, um órgão.
+  - id: lfo
+    kind: single-choice
+    prompt: O que é um LFO?
+    options:
+      - Um oscilador lento que modula outro parâmetro (filtro, volume, afinação) de forma cíclica
+      - Um filtro passa-baixa de alta frequência
+      - O efeito de reverb do sintetizador
+    correct: [0]
+  - id: detune
+    kind: single-choice
+    prompt: Por que desafinar levemente um segundo oscilador?
+    options:
+      - Para engrossar o som (efeito de "coro"), como em pads e strings
+      - Para deixar o som mais agudo
+      - Para encurtar o release
+    correct: [0]

@@ -1,0 +1,28 @@
+id: timbre.sintese.recriar
+title: Do zero a três timbres no laboratório
+type: performance
+stage: execution
+competencies: [timbre.sintese-basica]
+prompt: |
+  No laboratório da aula, comece do timbre **Órgão** e chegue a três sons diferentes mexendo
+  em **um bloco por vez**. Anote os valores que você usou.
+
+  1. **Pad:** dente de serra, desafinação ~12 cents, corte por volta de 1 500 Hz, ataque perto de
+     1 s, sustentação alta, release de 1,5 s ou mais, LFO lento (0,2–0,5 Hz) mexendo no filtro.
+  2. **Pluck:** ataque mínimo, sustentação **zero**, queda de 0,2–0,3 s, ressonância média.
+  3. **Lead:** onda quadrada ou dente de serra, ataque curto, sustentação alta, corte alto e um LFO
+     rápido e sutil.
+
+  Compare com os timbres prontos do laboratório: chegou perto?
+parameters:
+  keys: []
+checklist:
+  - id: tres
+    text: Montei pad, pluck e lead começando do mesmo ponto.
+  - id: um-de-cada
+    text: Mudei um bloco por vez e consigo dizer o que cada mudança fez com o som.
+  - id: anotacao
+    text: Anotei os valores dos três timbres.
+challenges:
+  - Monte um baixo de synth (corte baixo, ressonância alta, queda curta) e toque uma linha de baixo de quatro notas.
+  - Faça um pad que "respira" — o LFO abrindo e fechando o filtro uma vez a cada dois tempos a 70 bpm (cerca de 0,6 Hz).

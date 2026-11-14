@@ -8,15 +8,15 @@ beforeEach(resetDatabase)
 describe('Aprender', () => {
   it('mostra onde estou, a próxima aula e o mapa de um curso por vez', async () => {
     const { user } = renderRoute('/aprender')
-    const where = await screen.findByRole('region', { name: /Tríades e campo harmônico maior/ })
+    const where = await screen.findByRole('region', { name: 'Intervalos' })
     expect(within(where).getByText('Próxima aula')).toBeInTheDocument()
     expect(within(where).getByRole('link', { name: /Começar/ })).toHaveAttribute(
       'href',
-      '/aulas/harmonia.revisao-campo-harmonico-maior',
+      '/aulas/teoria.intervalos-no-teclado-e-de-ouvido',
     )
 
     const tabs = screen.getByRole('tablist', { name: 'Cursos' })
-    expect(within(tabs).getByRole('tab', { name: 'Harmonia e técnica' })).toHaveAttribute(
+    expect(within(tabs).getByRole('tab', { name: 'Fundamentos' })).toHaveAttribute(
       'aria-selected',
       'true',
     )

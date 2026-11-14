@@ -1,0 +1,13 @@
+- id: timbre.sintese-basica
+  track: timbre
+  level: 1
+  title: Fundamentos de síntese
+  description: Explica o papel do oscilador, do filtro, do envelope ADSR e do LFO, e os ajusta para obter um pad, um pluck e um lead.
+  concepts: []
+  mastery:
+    - id: teoria
+      method: quiz
+      exercise: timbre.sintese.quiz
+    - id: laboratorio
+      method: self-assessment
+      exercise: timbre.sintese.recriar

@@ -7,9 +7,12 @@ import {
   ArpeggioBlock,
   ChordBlock,
   ChordsBlock,
+  IntervalBlock,
   ProgressionBlock,
   ScaleBlock,
 } from '../music/MusicBlocks.tsx'
+import { SynthLab } from '../music/SynthLab.tsx'
+import { isPresetId } from '@/audio'
 import styles from './Markdown.module.css'
 
 /** Como mostrar os blocos que incorporam outras entidades (::concept, ::exercise). */
@@ -183,6 +186,17 @@ function MusicOrEmbed({
         <ChordsBlock
           symbols={attr(attributes, 'symbols') ?? ''}
           {...(keyName ? { keyName } : {})}
+        />
+      )
+    case 'synth': {
+      const preset = attr(attributes, 'preset') ?? 'pad'
+      return <SynthLab preset={isPresetId(preset) ? preset : 'pad'} />
+    }
+    case 'interval':
+      return (
+        <IntervalBlock
+          from={attr(attributes, 'from') ?? 'C4'}
+          to={attr(attributes, 'to') ?? 'E4'}
         />
       )
     case 'arpeggio':

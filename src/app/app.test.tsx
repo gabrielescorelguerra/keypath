@@ -9,10 +9,9 @@ describe('Início', () => {
   it('recomenda o primeiro passo, mostra as trilhas e convida ao diagnóstico', async () => {
     renderRoute('/')
     const steps = await screen.findByRole('region', { name: 'Próximos passos' })
-    expect(within(steps).getByRole('link', { name: 'Intervalos' })).toHaveAttribute(
-      'href',
-      '/competencias/teoria.intervalos',
-    )
+    expect(
+      within(steps).getByRole('link', { name: 'Intervalos no teclado e de ouvido' }),
+    ).toHaveAttribute('href', '/aulas/teoria.intervalos-no-teclado-e-de-ouvido')
     const tracks = screen.getByRole('region', { name: 'Suas trilhas' })
     expect(within(tracks).getByText('Harmonia')).toBeInTheDocument()
     expect(screen.getByRole('link', { name: 'Fazer o diagnóstico' })).toBeInTheDocument()
@@ -48,7 +47,8 @@ describe('Competência', () => {
     expect(await screen.findByText('Declarada')).toBeInTheDocument()
 
     await user.click(screen.getByRole('button', { name: 'Remover declaração' }))
-    expect(await screen.findByText('Não iniciada')).toBeInTheDocument()
+    const standing = screen.getByRole('region', { name: 'Situação' })
+    expect(await within(standing).findByText('Não iniciada')).toBeInTheDocument()
   })
 
   it('declarar junto com os pré-requisitos libera a próxima', async () => {

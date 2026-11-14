@@ -23,3 +23,7 @@
   name: Improvisação
   description: Criar frases, preencher espaços e solar sobre a harmonia.
   kind: application
+- id: timbre
+  name: Timbres e sound design
+  description: Síntese, famílias de timbres, camadas, divisão do teclado e efeitos — o som, além das notas.
+  kind: discipline

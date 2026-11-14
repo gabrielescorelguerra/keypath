@@ -1,0 +1,26 @@
+id: teoria.intervalos.cantar-e-tocar
+title: Cantar antes de tocar
+type: performance
+stage: application
+competencies: [teoria.intervalos]
+prompt: |
+  O objetivo é ligar ouvido, voz e mão.
+
+  1. Toque uma nota qualquer e **cante** a nota a um intervalo pedido (comece pela quinta justa
+     e pela terça maior).
+  2. Só depois toque a nota que você cantou — acertou?
+  3. Faça para cima e para baixo. Use notas brancas e pretas.
+
+  Ordem sugerida: 5ª justa → 3ª maior → 3ª menor → 4ª justa → 8ª → 2ª maior → 6ª maior → 7ª menor.
+parameters:
+  keys: []
+checklist:
+  - id: cinco
+    text: Acertei cinco intervalos seguidos cantando antes de tocar.
+  - id: descendente
+    text: Fiz também intervalos descendentes (para baixo).
+  - id: referencias
+    text: Anotei uma música de referência para pelo menos quatro intervalos (o começo de uma melodia que eu conheço).
+challenges:
+  - Sobre uma nota fixa no grave (um "drone"), cante a escala maior inteira e diga o intervalo de cada nota.
+  - Identifique os três primeiros intervalos da melodia de uma música que você toca na igreja.

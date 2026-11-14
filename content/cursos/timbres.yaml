@@ -7,9 +7,8 @@ modules:
   - id: sintese
     title: Fundamentos de síntese
     summary: Osciladores, filtros, envelopes (ADSR) e LFOs — os blocos de qualquer sintetizador.
-    level: 2
-    upcoming:
-      - Osciladores, filtro, ADSR e LFO
+    level: 1
+    lessons: [timbre.osciladores-filtro-adsr-e-lfo]
 
   - id: tipos-de-timbre
     title: Pads, leads, plucks, keys, strings e órgãos

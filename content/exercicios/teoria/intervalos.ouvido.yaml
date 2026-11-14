@@ -1,0 +1,61 @@
+id: teoria.intervalos.ouvido
+title: Intervalos de ouvido
+type: quiz
+stage: recognition
+competencies: [teoria.intervalos]
+prompt: |
+  Ouça cada intervalo — primeiro as duas notas separadas, depois juntas. Cante a nota de baixo,
+  depois a de cima, antes de responder. Cantar é o atalho para o ouvido.
+questions:
+  - id: terca-maior-menor
+    kind: single-choice
+    prompt: Terça maior ou menor?
+    audio: { notes: C4 E4, play: arpeggio }
+    options: [Terça maior, Terça menor]
+    correct: [0]
+    explanation: Dó–Mi, quatro semitons. A terça maior soa "alegre"; a menor (três semitons), "triste".
+  - id: terca-menor
+    kind: single-choice
+    prompt: E este?
+    audio: { notes: A3 C4, play: arpeggio }
+    options: [Terça maior, Terça menor]
+    correct: [1]
+  - id: quarta-quinta
+    kind: single-choice
+    prompt: Quarta justa ou quinta justa?
+    audio: { notes: G3 D4, play: arpeggio }
+    options: [Quarta justa, Quinta justa]
+    correct: [1]
+    explanation: Sol–Ré, sete semitons. A quinta soa "oca" e estável — é o power chord do rock.
+  - id: quarta
+    kind: single-choice
+    prompt: E este?
+    audio: { notes: D4 G4, play: arpeggio }
+    options: [Quarta justa, Quinta justa]
+    correct: [0]
+  - id: segunda
+    kind: single-choice
+    prompt: Segunda maior, segunda menor ou terça menor?
+    audio: { notes: E4 F4, play: melody }
+    options: [Segunda menor, Segunda maior, Terça menor]
+    correct: [0]
+    explanation: Mi–Fá, um semitom — o intervalo de maior tensão quando tocado junto.
+  - id: tritono
+    kind: single-choice
+    prompt: Qual destes soa tenso, "instável", e divide a oitava ao meio?
+    audio: { notes: F4 B4, play: arpeggio }
+    options: [Quinta justa, Trítono, Sexta maior]
+    correct: [1]
+    explanation: Fá–Si, seis semitons. O trítono está dentro de todo acorde dominante (o G7 tem Si e Fá).
+  - id: sexta-setima
+    kind: single-choice
+    prompt: Sexta maior ou sétima menor?
+    audio: { notes: C4 Bb4, play: arpeggio }
+    options: [Sexta maior, Sétima menor]
+    correct: [1]
+  - id: oitava
+    kind: single-choice
+    prompt: E este?
+    audio: { notes: G3 G4, play: arpeggio }
+    options: [Sétima maior, Oitava, Nona]
+    correct: [1]
