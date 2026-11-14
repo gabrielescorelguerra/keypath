@@ -1,0 +1,31 @@
+.header {
+  margin-bottom: var(--space-4);
+}
+
+.crumbs {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-1);
+}
+
+.crumbs a {
+  color: inherit;
+}
+
+.titleRow {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+}
+
+.title {
+  margin: 0;
+  font-size: var(--text-2xl);
+  letter-spacing: -0.01em;
+}
+
+.subtitle {
+  margin-top: var(--space-2);
+  color: var(--color-text-muted);
+}

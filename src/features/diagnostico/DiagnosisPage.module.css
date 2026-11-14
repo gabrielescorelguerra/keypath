@@ -1,0 +1,27 @@
+.level {
+  margin: 0;
+  display: grid;
+  gap: var(--space-1);
+}
+
+.legend {
+  padding: 0 var(--space-1);
+  font-weight: 600;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-1) 0;
+  cursor: pointer;
+}
+
+.title {
+  flex: 1;
+}
+
+.all {
+  justify-self: start;
+  margin-top: var(--space-2);
+}
