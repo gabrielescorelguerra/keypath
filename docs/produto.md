@@ -41,16 +41,17 @@ Não há autenticação, múltiplos usuários nem backend.
 
 ### 4.1 Trilhas
 
-São seis trilhas, que funcionam como os eixos de progresso. Repertório deixou de ser trilha e passou para a área de Prática (ver [D12](decisoes.md)).
+São sete trilhas, que funcionam como os eixos de progresso. Repertório deixou de ser trilha e passou para a área de Prática (ver [D12](decisoes.md)).
 
-| Trilha             | Natureza                          |
-| ------------------ | --------------------------------- |
-| Teoria musical     | Disciplina                        |
-| Harmonia           | Disciplina                        |
-| Técnica            | Disciplina                        |
-| Percepção auditiva | Disciplina                        |
-| Acompanhamento     | Aplicação: integra as disciplinas |
-| Improvisação       | Aplicação: integra as disciplinas |
+| Trilha                 | Natureza                          |
+| ---------------------- | --------------------------------- |
+| Teoria musical         | Disciplina                        |
+| Harmonia               | Disciplina                        |
+| Técnica                | Disciplina                        |
+| Percepção auditiva     | Disciplina                        |
+| Acompanhamento         | Aplicação: integra as disciplinas |
+| Improvisação           | Aplicação: integra as disciplinas |
+| Timbres e sound design | Disciplina                        |
 
 ### 4.2 Níveis
 
@@ -136,9 +137,9 @@ Um exercício é uma entidade independente e reutilizável: aparece em aulas, em
 
 Estilos (gospel, MPB, pop, jazz…) são **etiquetas**. Podem ser aplicados a competências, conceitos, aulas, exercícios e músicas, e servem para filtrar e priorizar. Não são trilhas e não têm progresso próprio.
 
-### 4.9 Cursos e módulos _(pós-MVP)_
+### 4.9 Cursos e módulos
 
-Um curso é uma sequência curada de aulas, organizada em módulos, que pode passar por várias trilhas. Exemplo: "Harmonia Gospel". O curso não tem estado próprio: o progresso dele é derivado das aulas e competências que contém. Ficou fora do MVP porque a fatia de Harmonia é organizada naturalmente pelo grafo de competências.
+Um curso é uma área de estudo organizada em módulos, que pode passar por várias trilhas. Há cinco: Fundamentos, Harmonia e técnica, Escalas e modos, Estilos, e Timbres e sound design. Cada módulo tem nível, pré-requisitos (outros módulos), aulas em ordem e tópicos em preparação. O curso não tem estado próprio: a situação de cada módulo é derivada das aulas e competências (novo, em andamento, concluído, revisar, avançado ou em preparação — [D46](decisoes.md)). A página **Aprender** mostra onde o aluno está, a próxima aula, objetivos de estudo (um módulo-alvo e o caminho até ele), aulas para revisar e o mapa de um curso por vez.
 
 ### 4.10 Músicas e repertório _(pós-MVP, área de Prática)_
 
@@ -183,7 +184,7 @@ A ordem de prioridade é:
 - ✅ Metrônomo, na sessão, nos exercícios no teclado e na página de cada música.
 - ✅ Teclado tocável nos exemplos: clicar ou arrastar toca as teclas, e as teclas que estão soando aparecem afundadas.
 - ✅ Câmera lenta nos exemplos: sequências e escalas mais devagar, acordes arpejados nota por nota.
-- ⏳ Cursos e módulos (pendente).
+- ✅ Cursos e módulos, página Aprender, aula em etapas com materiais externos e recursos interativos (graus no teclado, arpejos, intervalos, laboratório de síntese, questões de ouvido, playback).
 
 ### Futuro
 
