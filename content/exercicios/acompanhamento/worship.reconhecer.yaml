@@ -1,0 +1,45 @@
+id: acompanhamento.worship.reconhecer
+title: Worship — progressões, dinâmica e papéis
+type: quiz
+stage: recognition
+competencies: [acompanhamento.worship]
+questions:
+  - id: ordem-1564
+    kind: single-choice
+    prompt: Em Sol maior, G – D – Em – C é qual sequência de graus?
+    options: [I – V – VIm – IV, I – IV – V – VIm, VIm – IV – I – V]
+    correct: [0]
+  - id: ordem-6415
+    kind: single-choice
+    prompt: E Em – C – G – D?
+    options: [VIm – IV – I – V, IIm – V – I – IV, I – V – VIm – IV]
+    correct: [0]
+    explanation: São os mesmos quatro acordes começando em outro ponto — o que muda é o centro emocional (começar no VIm soa mais introspectivo).
+  - id: cor-add9
+    kind: single-choice
+    prompt: Qual destes soa como o I grau "aberto" típico do worship?
+    audio: { chord: Gadd9, play: arpeggio }
+    options: [G, G(9), G7]
+    correct: [1]
+  - id: pad-funcao
+    kind: single-choice
+    prompt: Qual é a função principal do pad numa banda de worship?
+    options:
+      - Uma camada sustentada que preenche o espaço por baixo da banda e liga as músicas
+      - Tocar a melodia da música
+      - Substituir o baixo
+    correct: [0]
+  - id: dinamica
+    kind: single-choice
+    prompt: Numa música com estrofe, refrão e ponte, onde o teclado costuma tocar menos?
+    options: [Primeira estrofe, Último refrão, Clímax da ponte]
+    correct: [0]
+    explanation: A dinâmica cresce em ondas — começa econômica para deixar a voz à frente e cresce até o clímax.
+  - id: registro
+    kind: single-choice
+    prompt: Numa banda com baixo e guitarras, em que região a mão direita do teclado costuma ficar menos embolada?
+    options:
+      - Do Dó central para cima, com voicings abertos
+      - Na região grave, junto com o baixo
+      - Exatamente na região da guitarra base
+    correct: [0]

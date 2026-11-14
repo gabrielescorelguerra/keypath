@@ -1,0 +1,31 @@
+id: acompanhamento.worship.dinamica
+title: Uma música em ondas de dinâmica
+type: performance
+stage: application
+competencies: [acompanhamento.worship]
+prompt: |
+  Use o playback (**I – V – VIm – IV** em Ré) como se fosse uma música inteira, mudando o que
+  você toca em cada parte — conte as voltas:
+
+  | Voltas | Parte | O que tocar |
+  | --- | --- | --- |
+  | 1–2 | Introdução | só a mão direita, notas longas (semibreves), região aguda |
+  | 3–4 | Estrofe | mão esquerda só a fundamental; direita em semínimas |
+  | 5–6 | Refrão | 1·5·8 na esquerda; direita em colcheias com add9 |
+  | 7–8 | Ponte | crescendo: comece em semínimas e termine em colcheias fortes |
+  | 9 | Final | segure o I(9) e deixe soar |
+parameters:
+  keys: [D]
+  startBpm: 72
+  targetBpm: 72
+  hands: both
+  backing: { key: D, degrees: I V VIm IV, beatsPerChord: 4 }
+checklist:
+  - id: partes
+    text: Mudei de textura no começo de cada parte, sem parar.
+  - id: contraste
+    text: Dá para ouvir claramente a diferença de intensidade entre estrofe e refrão.
+  - id: final
+    text: Terminei com o acorde sustentado, sem cortar o som.
+challenges:
+  - 'Grave e escute: a ponte realmente cresceu, ou só ficou mais alta de repente?'

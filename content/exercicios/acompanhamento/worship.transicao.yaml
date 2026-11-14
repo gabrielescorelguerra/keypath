@@ -1,0 +1,24 @@
+id: acompanhamento.worship.transicao
+title: Criar uma transição com pad entre duas músicas
+type: performance
+stage: creativity
+competencies: [acompanhamento.worship]
+prompt: |
+  Escolha duas músicas do repertório em **tons diferentes** (ex.: uma em Sol, outra em Lá) e crie
+  uma transição de 8 a 16 compassos com timbre de pad:
+
+  1. Termine a primeira música no I e segure com o pad.
+  2. Encontre um acorde que ligue os dois tons — o **V do novo tom** em sus4 funciona quase sempre
+     (para ir a Lá: E7(4) → E).
+  3. Entre no novo tom pelo I, ainda só com o pad, até a banda começar.
+parameters:
+  keys: []
+checklist:
+  - id: ligacao
+    text: A transição levou de um tom ao outro sem soar "quebrada".
+  - id: pad
+    text: Usei o pad (ou um timbre sustentado) com release longo, sem cortes.
+  - id: duracao
+    text: A transição tem entre 8 e 16 compassos e cabe num momento de oração ou leitura.
+challenges:
+  - Faça a mesma transição usando um baixo pedal na tônica do novo tom.

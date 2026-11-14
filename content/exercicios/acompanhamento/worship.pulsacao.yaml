@@ -1,0 +1,32 @@
+id: acompanhamento.worship.pulsacao
+title: I–V–VIm–IV com pulsação em colcheias
+type: performance
+stage: execution
+competencies: [acompanhamento.worship]
+prompt: |
+  A base do piano de worship: **mão esquerda aberta** (fundamental, quinta e oitava — 1·5·8) e
+  **mão direita com a tríade invertida**, perto do Dó central, conduzindo as vozes. A direita
+  pulsa em **colcheias** (oito por compasso), com o primeiro tempo um pouco mais forte.
+
+  ::progression{key="G" degrees="I V VIm IV"}
+
+  Mão direita em Sol, conduzindo: G (Sol Si Ré) → D (Lá Ré Fá♯) → Em (Sol Si Mi) → C (Sol Dó Mi).
+  Depois, troque o I por **I(9)** e o IV por **IV(9)**.
+parameters:
+  keys: [G, D, A, E, C]
+  startBpm: 68
+  targetBpm: 80
+  bpmStep: 4
+  hands: both
+checklist:
+  - id: tons
+    text: Toquei a progressão nos cinco tons.
+  - id: pulsacao
+    text: As colcheias ficaram regulares, com o tempo 1 levemente acentuado.
+  - id: conducao
+    text: A mão direita ficou na mesma região, sem saltar entre os acordes.
+  - id: add9
+    text: Toquei também a versão com I(9) e IV(9).
+challenges:
+  - Toque a mesma progressão a 128 bpm, só com semínimas na direita (versão "rápida").
+  - Faça a ordem VIm – IV – I – V nos mesmos tons.

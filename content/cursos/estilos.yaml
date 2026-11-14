@@ -22,14 +22,10 @@ modules:
     level: 2
     style: worship
     prerequisites: [harmonia-e-tecnica.funcoes-e-progressoes]
+    lessons: [acompanhamento.worship-no-teclado]
     upcoming:
-      - Características harmônicas
-      - Progressões características
-      - Vocabulário de acordes
-      - Padrões rítmicos
-      - Técnicas de acompanhamento
-      - Frases, riffs e recursos de improvisação
-      - Repertório e artistas de referência
+      - Levadas em 6/8 e ballads lentas
+      - Repertório comentado
 
   - id: jazz
     title: Jazz

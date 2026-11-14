@@ -50,3 +50,20 @@
       method: self-assessment
       exercise: acompanhamento.gospel.passagens-em-tons
       distinctDays: 2
+
+- id: acompanhamento.worship
+  track: acompanhamento
+  level: 2
+  title: Teclado no worship
+  description: Acompanha músicas de worship com voicings abertos, pulsação em colcheias, dinâmica em ondas, pads e transições entre músicas.
+  core: false
+  prerequisites: [harmonia.campo-harmonico-maior-triades, acompanhamento.inversoes-e-conducao]
+  styles: [worship]
+  mastery:
+    - id: teoria
+      method: quiz
+      exercise: acompanhamento.worship.reconhecer
+    - id: teclado
+      method: self-assessment
+      exercise: acompanhamento.worship.pulsacao
+      distinctDays: 2
