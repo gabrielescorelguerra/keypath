@@ -6,6 +6,7 @@ import { ProgressProvider } from './ProgressProvider.tsx'
 const NAV = [
   { to: '/', label: 'Início', end: true },
   { to: '/biblioteca', label: 'Biblioteca', end: false },
+  { to: '/pratica/repertorio', label: 'Repertório', end: false },
   { to: '/diagnostico', label: 'O que já sei', end: false },
   { to: '/configuracoes', label: 'Configurações', end: false },
 ] as const

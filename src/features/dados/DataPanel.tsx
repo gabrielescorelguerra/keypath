@@ -6,7 +6,8 @@ import {
   getPersistenceStatus,
   importBackup,
   lastActivity,
-  parseBackup,
+  readBackup,
+  summarizeBackup,
   useLastBackupAt,
   type PersistenceStatus,
 } from '@/data'
@@ -55,12 +56,13 @@ export function DataPanel({ facts }: { readonly facts: UserFacts }) {
 
   async function handleImport(file: File) {
     try {
-      const backup = parseBackup(await file.text())
-      const { attempts, declarations, lessonProgress } = backup.data
+      const backup = readBackup(new Uint8Array(await file.arrayBuffer()))
+      const summary = summarizeBackup(backup.file)
       const confirmed = window.confirm(
-        `Substituir TODOS os seus dados pelo backup de ${formatDate(backup.exportedAt)}?\n\n` +
-          `O backup tem ${attempts.length} tentativa(s), ${declarations.length} declaração(ões) ` +
-          `e progresso em ${lessonProgress.length} aula(s).\n\n` +
+        `Substituir TODOS os seus dados pelo backup de ${formatDate(summary.exportedAt)}?\n\n` +
+          `O backup tem ${summary.attempts} tentativa(s), ${summary.declarations} declaração(ões), ` +
+          `progresso em ${summary.lessons} aula(s), ${summary.songs} música(s) com ` +
+          `${summary.attachments} anexo(s) e ${summary.sessions} sessão(ões) de prática.\n\n` +
           'Seus dados atuais serão perdidos. Se quiser guardá-los, exporte um backup antes.',
       )
       if (!confirmed) return
@@ -113,7 +115,7 @@ export function DataPanel({ facts }: { readonly facts: UserFacts }) {
         <input
           ref={fileInput}
           type="file"
-          accept="application/json,.json"
+          accept=".zip,.json,application/zip,application/json"
           hidden
           aria-label="Arquivo de backup"
           onChange={(event) => {

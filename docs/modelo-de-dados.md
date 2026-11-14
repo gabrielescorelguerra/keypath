@@ -217,17 +217,22 @@ São armazenados no IndexedDB. Todo registro tem `id` (UUID) e datas no formato 
 
 `{ noteNaming: 'latin' | 'letters' | 'both', chordSymbols: 'br', soundEnabled, volume }`. É um registro único.
 
-### 5.5 `Song`, `Attachment`, `PracticeSession` _(v0.2)_
+### 5.5 `Song`, `Attachment`, `PracticeSession` (área de Prática)
+
+Implementados no banco versão 2 (`src/domain/practice/types.ts`). Campos ausentes valem `null`.
 
 - `Song`:
-  - `title`, `artist?`, `key?`, `bpm?`;
+  - `id`, `title`, `artist`, `key` (tom canônico: `G`, `Em`), `bpm`;
   - `styles`, `competencies` (as que a música exige);
   - `status`: `wishlist` \| `learning` \| `ready` \| `repertoire`;
-  - `notes` (Markdown).
+  - `notes` (texto), `createdAt`, `updatedAt`.
 - `Attachment`:
-  - `songId`, `kind` (`pdf` \| `image` \| `midi` \| `youtube`), `name`;
-  - `blobId?` (arquivo guardado no IndexedDB) ou `url?` (YouTube, com tempo inicial opcional).
-- `PracticeSession`: `startedAt`, `endedAt`, `focus?`, `songs: { songId, minutes, note? }[]`, `notes`. As tentativas apontam para a sessão por meio de `Attempt.context.sessionId`.
+  - `id`, `songId`, `kind` (`pdf` \| `image` \| `midi` \| `youtube`), `name`;
+  - `blobId`, `mimeType` e `size` para arquivos, ou `url` e `startSeconds` para vídeos.
+- Arquivos (tabela `blobs`): `{ id, data: ArrayBuffer, mimeType }`. São guardados como bytes, o que funciona de forma confiável em qualquer navegador.
+- `PracticeSession`: `id`, `startedAt`, `endedAt` (`null` = em andamento; existe no máximo uma), `focus`, `songs: { songId, minutes, note }[]`, `notes`. As tentativas feitas durante a sessão apontam para ela por meio de `Attempt.context.sessionId`.
+
+**Importação de arquivos.** Arquivos soltos no Repertório viram uma música cada. O título vem do nome do arquivo e o tom também, quando aparece no fim: `Oceanos - D.pdf`, `Oceanos (Em).png`, `Oceanos em Bb.pdf`. Arquivos soltos numa música viram anexos dela. São aceitos PDF, imagem e MIDI, até 50 MB cada. Vídeos do YouTube entram por link, inclusive com o tempo inicial (`?t=90`).
 
 ## 6. Estado derivado (regras de domínio)
 
@@ -373,14 +378,9 @@ Estas situações geram apenas **avisos**: um pré-requisito com nível maior qu
 
 ## 9. Formato do backup
 
-```json
-{
-  "format": "keypath-backup",
-  "schemaVersion": 1,
-  "exportedAt": "2026-11-14T12:00:00Z",
-  "data": { "attempts": [], "declarations": [], "lessonProgress": [], "settings": {} }
-}
-```
-
-- **MVP:** um arquivo `.json` (`keypath-backup-AAAA-MM-DD.json`). Se faltarem as configurações (`settings`), valem as padrão. A data do último backup é do dispositivo e não vai no arquivo. A importação **substitui** todos os dados, depois de uma confirmação, e aplica as migrações a partir de `schemaVersion`.
-- **v0.2:** quando houver anexos, o backup passa a ser um `.zip` com `backup.json` e uma pasta `files/`. O mesmo `schemaVersion` controla a migração.
+- **Formato 2 (atual):** um arquivo `keypath-backup-AAAA-MM-DD.zip` com:
+  - `backup.json`: `{ format: "keypath-backup", schemaVersion: 2, exportedAt, data }`, em que `data` tem `attempts`, `declarations`, `lessonProgress`, `settings`, `songs`, `attachments` e `practiceSessions`;
+  - `files/<blobId>`: o conteúdo de cada anexo.
+- **Formato 1 (antigo):** um `.json` só com o progresso e as configurações. Continua sendo aceito na importação: a migração 1 → 2 acrescenta repertório, anexos e sessões vazios.
+- A importação valida tudo e recusa backups de versão mais nova ou sem o arquivo de algum anexo. Depois de uma confirmação, que mostra o que o backup contém, ela **substitui** todos os dados (D21).
+- A data do último backup é do dispositivo e não vai no arquivo.

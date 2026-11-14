@@ -1,3 +1,4 @@
+import type { Attachment, PracticeSession, Song } from '@/domain/practice'
 import type { Attempt, LessonProgress, UserFacts } from '@/domain/progress'
 import { db } from './db.ts'
 import { DEFAULT_SETTINGS, type Settings } from './settings.ts'
@@ -108,23 +109,34 @@ export async function setLastBackupAt(date: Date = new Date()): Promise<void> {
 
 /** Substitui todos os dados do usuário (importação de backup, D21). */
 export async function replaceAllData(
-  data: UserFacts & { readonly settings: Settings },
+  data: UserFacts & {
+    readonly settings: Settings
+    readonly songs: readonly Song[]
+    readonly attachments: readonly Attachment[]
+    readonly practiceSessions: readonly PracticeSession[]
+  },
+  files: ReadonlyMap<string, { readonly data: ArrayBuffer; readonly mimeType: string }> = new Map(),
 ): Promise<void> {
-  await db.transaction(
-    'rw',
-    [db.attempts, db.declarations, db.lessonProgress, db.settings],
-    async () => {
-      await Promise.all([
-        db.attempts.clear(),
-        db.declarations.clear(),
-        db.lessonProgress.clear(),
-        db.settings.clear(),
-      ])
-      await db.attempts.bulkAdd([...data.attempts])
-      await db.declarations.bulkAdd([...data.declarations])
-      await db.lessonProgress.bulkAdd([...data.lessonProgress])
-      await db.settings.put({ id: 'settings', ...data.settings })
-    },
-  )
+  const tables = [
+    db.attempts,
+    db.declarations,
+    db.lessonProgress,
+    db.settings,
+    db.songs,
+    db.attachments,
+    db.blobs,
+    db.practiceSessions,
+  ]
+  await db.transaction('rw', tables, async () => {
+    await Promise.all(tables.map((table) => table.clear()))
+    await db.attempts.bulkAdd([...data.attempts])
+    await db.declarations.bulkAdd([...data.declarations])
+    await db.lessonProgress.bulkAdd([...data.lessonProgress])
+    await db.settings.put({ id: 'settings', ...data.settings })
+    await db.songs.bulkAdd([...data.songs])
+    await db.attachments.bulkAdd([...data.attachments])
+    await db.practiceSessions.bulkAdd([...data.practiceSessions])
+    await db.blobs.bulkAdd([...files].map(([id, file]) => ({ id, ...file })))
+  })
   afterWrite()
 }

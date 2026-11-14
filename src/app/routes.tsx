@@ -3,6 +3,8 @@ import { ConceptPage } from '@/features/biblioteca/ConceptPage'
 import { LibraryPage } from '@/features/biblioteca/LibraryPage'
 import { LessonPage } from '@/features/aulas/LessonPage'
 import { ExercisePage } from '@/features/exercicios/ExercisePage'
+import { RepertoirePage } from '@/features/pratica/RepertoirePage'
+import { SongPage } from '@/features/pratica/SongPage'
 import { CompetencyPage } from '@/features/competencias/CompetencyPage'
 import { SettingsPage } from '@/features/configuracoes/SettingsPage'
 import { DiagnosisPage } from '@/features/diagnostico/DiagnosisPage'
@@ -23,6 +25,8 @@ export const routes: RouteObject[] = [
       { path: 'exercicios/:exerciseId', element: <ExercisePage /> },
       { path: 'biblioteca', element: <LibraryPage /> },
       { path: 'biblioteca/:conceptId', element: <ConceptPage /> },
+      { path: 'pratica/repertorio', element: <RepertoirePage /> },
+      { path: 'pratica/repertorio/:songId', element: <SongPage /> },
       { path: 'diagnostico', element: <DiagnosisPage /> },
       { path: 'configuracoes', element: <SettingsPage /> },
       { path: '*', element: <NotFoundPage /> },

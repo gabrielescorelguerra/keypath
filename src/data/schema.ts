@@ -50,9 +50,54 @@ export const settingsSchema = z.object({
   volume: z.number().min(0).max(1).default(0.8),
 })
 
+const nullableText = z.string().nullable().default(null)
+
+export const songSchema = z.object({
+  id,
+  title: z.string().min(1),
+  artist: nullableText,
+  key: nullableText,
+  bpm: z.number().positive().nullable().default(null),
+  styles: z.array(z.string()).default([]),
+  competencies: z.array(z.string()).default([]),
+  status: z.enum(['wishlist', 'learning', 'ready', 'repertoire']).default('learning'),
+  notes: z.string().default(''),
+  createdAt: isoDate,
+  updatedAt: isoDate,
+})
+
+export const attachmentSchema = z.object({
+  id,
+  songId: id,
+  kind: z.enum(['pdf', 'image', 'midi', 'youtube']),
+  name: z.string(),
+  blobId: z.string().nullable().default(null),
+  mimeType: nullableText,
+  size: z.number().nonnegative().nullable().default(null),
+  url: nullableText,
+  startSeconds: z.number().nonnegative().nullable().default(null),
+  createdAt: isoDate,
+})
+
+export const practiceSessionSchema = z.object({
+  id,
+  startedAt: isoDate,
+  endedAt: isoDate.nullable().default(null),
+  focus: nullableText,
+  songs: z
+    .array(
+      z.object({ songId: id, minutes: z.number().nonnegative(), note: z.string().default('') }),
+    )
+    .default([]),
+  notes: z.string().default(''),
+})
+
 export const backupDataSchema = z.object({
   attempts: z.array(attemptSchema),
   declarations: z.array(declarationSchema),
   lessonProgress: z.array(lessonProgressSchema),
   settings: settingsSchema.default({ noteNaming: 'both', soundEnabled: true, volume: 0.8 }),
+  songs: z.array(songSchema).default([]),
+  attachments: z.array(attachmentSchema).default([]),
+  practiceSessions: z.array(practiceSessionSchema).default([]),
 })
