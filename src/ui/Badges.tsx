@@ -1,6 +1,7 @@
 import type { ReactNode } from 'react'
 import type { CompetencyStatus } from '@/domain/progress'
 import { COMPETENCY_STATUS } from './labels.ts'
+import { OctaveMeter } from './Notation.tsx'
 
 const STATUS_TONE: Record<CompetencyStatus, string> = {
   mastered: 'success',
@@ -48,10 +49,7 @@ export function ProgressBar({ value, label }: { readonly value: number; readonly
   )
 }
 
-/**
- * Medidor de nível em 5 segmentos. Segmentos até `level` acesos; o seguinte,
- * parcialmente aceso conforme o progresso no próximo nível.
- */
+/** Nível (0–5) desenhado como uma oitava: as 5 teclas pretas são os níveis. */
 export function LevelMeter({
   level,
   next = 0,
@@ -62,21 +60,7 @@ export function LevelMeter({
   /** Progresso (0–1) no próximo nível. */
   readonly next?: number
   readonly label: string
-  readonly size?: 'sm' | 'lg'
+  readonly size?: 'sm' | 'md' | 'lg'
 }) {
-  return (
-    <span
-      className={`meter ${size === 'lg' ? 'lg' : ''}`}
-      role="meter"
-      aria-label={label}
-      aria-valuemin={0}
-      aria-valuemax={5}
-      aria-valuenow={level}
-    >
-      {[1, 2, 3, 4, 5].map((segment) => {
-        const fill = segment <= level ? 1 : segment === level + 1 ? next : 0
-        return <span key={segment} style={{ ['--fill' as string]: `${Math.round(fill * 100)}%` }} />
-      })}
-    </span>
-  )
+  return <OctaveMeter level={level} next={next} label={label} size={size} />
 }

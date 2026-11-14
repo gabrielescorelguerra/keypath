@@ -4,7 +4,7 @@
   grid-template-columns: var(--sidebar-width) minmax(0, 1fr);
 }
 
-/* ---------- Console (barra lateral) ---------- */
+/* ---------- Console ---------- */
 .sidebar {
   position: sticky;
   top: 0;
@@ -12,7 +12,7 @@
   overflow-y: auto;
   display: flex;
   flex-direction: column;
-  padding: var(--space-5) var(--space-3) var(--space-4);
+  padding: var(--space-6) var(--space-4) var(--space-5);
   background: var(--console-bg);
   color: var(--console-text);
   border-right: 1px solid var(--console-line);
@@ -21,8 +21,8 @@
 .brand {
   display: flex;
   align-items: center;
-  gap: var(--space-2);
-  padding: var(--space-1) var(--space-3) var(--space-5);
+  gap: var(--space-3);
+  padding: 0 var(--space-2) var(--space-7);
   color: var(--console-active);
   text-decoration: none;
 }
@@ -33,30 +33,25 @@
 
 .brandName {
   font-family: var(--font-display);
-  font-size: 1.1875rem;
-  font-weight: 600;
-  letter-spacing: -0.01em;
+  font-size: 1.3125rem;
+  font-weight: 500;
+  letter-spacing: -0.015em;
 }
 
 .nav,
 .tracks {
   display: grid;
-  gap: 1px;
+  gap: 2px;
 }
 
 .tracks {
-  margin-top: var(--space-6);
-  padding-top: var(--space-4);
-  border-top: 1px solid var(--console-line);
+  margin-top: var(--space-7);
 }
 
 .navTitle {
-  padding: 0 var(--space-3) var(--space-2);
-  font-family: var(--font-mono);
-  font-size: 0.625rem;
+  padding: 0 var(--space-2) var(--space-2);
+  font-size: var(--text-sm);
   font-weight: 500;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
   color: var(--console-text-3);
 }
 
@@ -66,38 +61,42 @@
   align-items: center;
   gap: var(--space-3);
   min-height: 2.25rem;
-  padding: 0 var(--space-3);
-  border-radius: var(--radius-sm);
+  padding: 0 var(--space-2);
   color: var(--console-text-2);
   text-decoration: none;
   font-size: var(--text-md);
-  transition:
-    color var(--t-fast) var(--ease),
-    background-color var(--t-fast) var(--ease);
+  border-radius: var(--radius-xs);
+  transition: color var(--t-fast) var(--ease);
 }
 
 .link:hover {
   color: var(--console-active);
-  background: var(--console-surface);
 }
 
 .icon {
   flex-shrink: 0;
-  opacity: 0.85;
+  opacity: 0.7;
+  transition: opacity var(--t-fast) var(--ease);
+}
+
+.link:hover .icon {
+  opacity: 1;
 }
 
 .active {
   color: var(--console-active);
-  background: var(--console-surface);
+  font-weight: 500;
 }
 
+/* Tecla laranja indicando o item ativo. */
 .active::before {
   content: '';
   position: absolute;
-  left: calc(-1 * var(--space-3));
-  top: 8px;
-  bottom: 8px;
-  width: 2px;
+  left: calc(-1 * var(--space-4));
+  top: 50%;
+  width: 4px;
+  height: 18px;
+  transform: translateY(-50%);
   border-radius: 0 2px 2px 0;
   background: var(--color-accent);
 }
@@ -129,40 +128,10 @@
   display: inline-flex;
 }
 
-.trackMeter :global(.meter) {
-  width: 2.75rem;
-  gap: 2px;
-}
-
-.trackMeter :global(.meter > span) {
-  height: 5px;
-  background: var(--console-line);
-}
-
-.footer {
-  margin-top: auto;
-  padding: var(--space-4) var(--space-3) 0;
-  display: grid;
-  gap: 2px;
-}
-
-.footerLabel {
-  font-family: var(--font-mono);
-  font-size: 0.625rem;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--console-text-3);
-}
-
-.footerValue {
-  font-size: var(--text-sm);
-  color: var(--console-text-2);
-}
-
 /* ---------- Conteúdo ---------- */
 .main {
   min-width: 0;
-  padding: var(--space-6) clamp(var(--space-5), 4vw, var(--space-8)) var(--space-8);
+  padding: var(--space-7) clamp(var(--space-5), 5vw, var(--space-8)) var(--space-8);
 }
 
 .content {
@@ -170,7 +139,7 @@
   margin: 0 auto;
 }
 
-/* ---------- Celular: console vira barra superior ---------- */
+/* ---------- Celular ---------- */
 @media (max-width: 48rem) {
   .shell {
     grid-template-columns: minmax(0, 1fr);
@@ -195,7 +164,9 @@
     padding: 0 var(--space-2) 0 0;
   }
 
-  .brandName {
+  .brandName,
+  .navTitle,
+  .trackMeter {
     display: none;
   }
 
@@ -203,14 +174,6 @@
   .tracks {
     display: flex;
     margin: 0;
-    padding: 0;
-    border: 0;
-  }
-
-  .navTitle,
-  .trackMeter,
-  .footer {
-    display: none;
   }
 
   .link {
@@ -219,13 +182,14 @@
   }
 
   .active::before {
-    left: 10px;
-    right: 10px;
+    left: var(--space-2);
+    right: var(--space-2);
     top: auto;
-    bottom: 2px;
+    bottom: -2px;
     width: auto;
     height: 2px;
-    border-radius: 2px;
+    transform: none;
+    border-radius: 1px;
   }
 
   .main {

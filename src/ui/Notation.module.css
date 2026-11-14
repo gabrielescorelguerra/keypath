@@ -1,0 +1,108 @@
+/* ---------- Medidor de oitava ---------- */
+.octave {
+  display: block;
+  flex-shrink: 0;
+  height: auto;
+}
+
+.octave[data-size='sm'] {
+  width: 2.625rem;
+}
+
+.octave[data-size='md'] {
+  width: 4rem;
+}
+
+.octave[data-size='lg'] {
+  width: 6.5rem;
+}
+
+.white {
+  fill: var(--oct-white);
+  stroke: var(--oct-white-stroke);
+  stroke-width: 1;
+}
+
+.black {
+  fill: var(--oct-black);
+  stroke: var(--oct-white-stroke);
+  stroke-width: 0.8;
+}
+
+.lit {
+  fill: var(--color-accent);
+  transition:
+    height var(--t-slow) var(--ease),
+    y var(--t-slow) var(--ease);
+}
+
+.lit[data-partial='true'] {
+  fill-opacity: 0.55;
+}
+
+/* ---------- Compassos ---------- */
+.measures {
+  display: flex;
+  align-items: stretch;
+  height: 14px;
+}
+
+.measure {
+  position: relative;
+  flex: 1;
+  border-left: 1px solid var(--color-text-3);
+}
+
+/* Linha de pauta */
+.measure::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  height: 1px;
+  background: var(--color-border-strong);
+}
+
+/* Preenchimento do compasso concluído */
+.measure::after {
+  content: '';
+  position: absolute;
+  left: 3px;
+  right: 3px;
+  top: calc(50% - 2px);
+  height: 4px;
+  border-radius: 1px;
+  background: var(--color-accent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--t-slow) var(--ease);
+}
+
+.measure[data-done='true']::after {
+  transform: scaleX(1);
+}
+
+.measure[data-current='true']::before {
+  background: var(--color-accent);
+  opacity: 0.6;
+}
+
+/* Barra dupla final */
+.final {
+  width: 5px;
+  border-left: 1px solid var(--color-text-3);
+  border-right: 3px solid var(--color-text-3);
+  margin-left: 2px;
+}
+
+/* ---------- Régua de teclado ---------- */
+.rule {
+  display: block;
+  width: 100%;
+}
+
+.ruleLine,
+.ruleBlack {
+  fill: var(--rule-color);
+}

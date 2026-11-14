@@ -10,11 +10,13 @@ import {
 } from '@/data'
 import { weeklyPractice } from '@/domain/practice'
 import { recommend, type ProgressSnapshot, type Recommendation } from '@/domain/progress'
-import { LevelMeter, ProgressBar } from '@/ui/Badges'
+import { LevelMeter } from '@/ui/Badges'
 import { Icon } from '@/ui/Icon'
-import { levelName, plural, trackLevelLabel } from '@/ui/labels'
-import { Loading, PageHeader } from '@/ui/Page'
+import { levelName, trackLevelLabel } from '@/ui/labels'
+import { KeyRule, Measures } from '@/ui/Notation'
+import { Loading } from '@/ui/Page'
 import { paths } from '@/ui/paths'
+import { useDocumentTitle } from '@/ui/useDocumentTitle'
 import styles from './HomePage.module.css'
 
 interface StepInfo {
@@ -23,7 +25,7 @@ interface StepInfo {
   readonly detail: string
   readonly to: string
   readonly action: string
-  readonly progress: number | null
+  readonly parts: { readonly done: readonly boolean[]; readonly current: number } | null
 }
 
 function describe(step: Recommendation, snapshot: ProgressSnapshot): StepInfo {
@@ -31,15 +33,15 @@ function describe(step: Recommendation, snapshot: ProgressSnapshot): StepInfo {
     case 'continue-lesson': {
       const lesson = catalog.lessonById.get(step.lessonId)
       const state = snapshot.lessons.get(step.lessonId)
-      const done = state?.completedCheckpoints.length ?? 0
-      const total = state?.totalCheckpoints ?? 0
+      const doneIds = new Set(state?.completedCheckpoints ?? [])
+      const done = (lesson?.checkpoints ?? []).map((c) => doneIds.has(c.id))
       return {
         kicker: 'Continuar aula',
         title: lesson?.title ?? step.lessonId,
-        detail: `${done} de ${total} partes concluídas`,
+        detail: `${doneIds.size} de ${done.length} partes concluídas`,
         to: paths.lesson(step.lessonId),
         action: 'Continuar',
-        progress: total > 0 ? done / total : null,
+        parts: { done, current: done.indexOf(false) },
       }
     }
     case 'start-lesson': {
@@ -54,7 +56,7 @@ function describe(step: Recommendation, snapshot: ProgressSnapshot): StepInfo {
         detail: `Trabalha: ${worked ?? ''}`,
         to: paths.lesson(step.lessonId),
         action: 'Começar',
-        progress: null,
+        parts: lesson ? { done: lesson.checkpoints.map(() => false), current: 0 } : null,
       }
     }
     case 'demonstrate': {
@@ -65,13 +67,14 @@ function describe(step: Recommendation, snapshot: ProgressSnapshot): StepInfo {
         detail: 'Faça os exercícios para comprovar o domínio — ou declare, se já sabe.',
         to: paths.competency(step.competencyId),
         action: 'Ver competência',
-        progress: null,
+        parts: null,
       }
     }
   }
 }
 
 export function HomePage() {
+  useDocumentTitle('Início')
   const progress = useProgress()
   const lastBackupAt = useLastBackupAt()
   const activeSession = useActiveSession()
@@ -94,157 +97,160 @@ export function HomePage() {
   const week = weeklyPractice(pastSessions ?? [])
 
   return (
-    <>
-      <PageHeader
-        eyebrow="Painel"
-        title="O que estudar agora"
-        subtitle="Seu próximo passo, o nível de cada trilha e a sua semana de prática."
-      />
+    <section aria-labelledby="proximos-passos" className={styles.page}>
+      <h2 id="proximos-passos" className="visually-hidden">
+        Próximos passos
+      </h2>
 
-      <div className="split">
-        <div className={styles.main}>
-          {(activeSession || reminder !== 'none') && (
-            <div className="stack">
-              {activeSession && (
-                <p className="banner info" role="status">
-                  <span className={styles.rec} aria-hidden="true" />
-                  Você tem uma sessão de prática em andamento.{' '}
-                  <Link to="/pratica">Voltar para a sessão</Link>
-                </p>
+      {(activeSession || reminder !== 'none') && (
+        <div className={styles.notes}>
+          {activeSession && (
+            <p className="banner info" role="status">
+              Sessão de prática em andamento. <Link to="/pratica">Voltar para a sessão</Link>
+            </p>
+          )}
+          {reminder !== 'none' && (
+            <p className="banner" role="status">
+              {reminder === 'never'
+                ? 'Você ainda não fez backup dos seus dados.'
+                : 'Seu último backup tem mais de uma semana.'}{' '}
+              <Link to={paths.settings}>Fazer backup agora</Link>
+            </p>
+          )}
+        </div>
+      )}
+
+      {/* Manchete: o próximo passo */}
+      <header className={styles.masthead}>
+        {featured ? (
+          <>
+            <div className={styles.headline}>
+              <span className={styles.kicker}>{featured.info.kicker}</span>
+              <h1 className={styles.heroTitle}>
+                <Link to={featured.info.to} className="plain">
+                  {featured.info.title}
+                </Link>
+              </h1>
+              <p className={styles.lead}>{featured.info.detail}</p>
+            </div>
+            <div className={styles.cue}>
+              {featured.info.parts && (
+                <div className={styles.parts}>
+                  <Measures
+                    done={featured.info.parts.done}
+                    total={featured.info.parts.done.length}
+                    current={featured.info.parts.current}
+                    label="Progresso na aula"
+                  />
+                  <span className={styles.partsLabel}>
+                    {featured.info.parts.done.length} partes
+                  </span>
+                </div>
               )}
-              {reminder !== 'none' && (
-                <p className="banner" role="status">
-                  {reminder === 'never'
-                    ? 'Você ainda não fez backup dos seus dados.'
-                    : 'Seu último backup tem mais de uma semana.'}{' '}
-                  <Link to={paths.settings}>Fazer backup agora</Link>
-                </p>
+              <Link to={featured.info.to} className="button primary lg">
+                {featured.info.action}
+                <Icon name="arrow" size={16} />
+              </Link>
+              {isNew && (
+                <span className={styles.diagnosis}>
+                  Já sabe parte disso? <Link to={paths.diagnosis}>Fazer o diagnóstico</Link>
+                </span>
               )}
             </div>
-          )}
+          </>
+        ) : (
+          <div className={styles.headline}>
+            <span className={styles.kicker}>Tudo em dia</span>
+            <h1 className={styles.heroTitle}>Você satisfez todas as competências disponíveis.</h1>
+          </div>
+        )}
+      </header>
 
-          <section aria-labelledby="proximos-passos">
-            <h2 id="proximos-passos" className="visually-hidden">
-              Próximos passos
-            </h2>
-            {!featured ? (
-              <div className="panel">
-                <span className="eyebrow accent">Tudo em dia</span>
-                <p className={styles.emptyTitle}>
-                  Você satisfez todas as competências disponíveis.
-                </p>
-              </div>
-            ) : (
-              <ol className={styles.steps}>
-                <li className={`panel raised ${styles.featured}`}>
-                  <span className="eyebrow accent">{featured.info.kicker}</span>
-                  <Link to={featured.info.to} className={`plain ${styles.featuredTitle}`}>
-                    {featured.info.title}
-                  </Link>
-                  <span className={styles.detail}>{featured.info.detail}</span>
-                  {featured.info.progress !== null && (
-                    <ProgressBar value={featured.info.progress} label="Progresso na aula" />
-                  )}
-                  <div className={styles.featuredFooter}>
-                    <Link to={featured.info.to} className="button primary lg">
-                      {featured.info.action}
-                      <Icon name="arrow" size={16} />
+      <KeyRule />
+
+      <div className={styles.columns}>
+        <section className={styles.next} aria-labelledby="a-seguir">
+          <h2 id="a-seguir" className={styles.columnTitle}>
+            A seguir
+          </h2>
+          {others.length === 0 ? (
+            <p className="muted small">Nada mais na fila por enquanto.</p>
+          ) : (
+            <ol className={styles.queue}>
+              {others.map(({ step, info }, index) => (
+                <li key={`${step.kind}-${info.to}`} className={styles.queueItem}>
+                  <span className={styles.number} aria-hidden="true">
+                    {index + 2}
+                  </span>
+                  <div className={styles.queueText}>
+                    <span className={styles.queueKicker}>{info.kicker}</span>
+                    <Link to={info.to} className={`plain ${styles.queueTitle}`}>
+                      {info.title}
                     </Link>
-                    {isNew && (
-                      <span className={styles.secondaryLink}>
-                        Já sabe parte disso? <Link to={paths.diagnosis}>Fazer o diagnóstico</Link>
-                      </span>
-                    )}
+                    <span className={styles.queueDetail}>{info.detail}</span>
                   </div>
                 </li>
-                {others.map(({ step, info }) => (
-                  <li key={`${step.kind}-${info.to}`} className={`link-row ${styles.step}`}>
-                    <span className={styles.stepIndex} aria-hidden="true" />
-                    <span className={styles.stepText}>
-                      <span className="eyebrow">{info.kicker}</span>
-                      <Link to={info.to} className={`plain ${styles.stepTitle}`}>
-                        {info.title}
-                      </Link>
-                      <span className={styles.detail}>{info.detail}</span>
+              ))}
+            </ol>
+          )}
+        </section>
+
+        <section className={styles.tracks} aria-labelledby="trilhas">
+          <h2 id="trilhas" className={styles.columnTitle}>
+            Suas trilhas
+          </h2>
+          <ul className={styles.trackList}>
+            {tracks.map((track) => {
+              const state = snapshot.tracks.get(track.id)
+              const next = state?.next
+              const fraction = next && next.total > 0 ? next.satisfied / next.total : 0
+              return (
+                <li key={track.id}>
+                  <Link to={paths.track(track.id)} className={`plain ${styles.track}`}>
+                    <LevelMeter
+                      level={state?.level ?? 0}
+                      next={fraction}
+                      size="md"
+                      label={`Nível ${state?.level ?? 0} de 5 em ${track.name}`}
+                    />
+                    <span className={styles.trackText}>
+                      <strong>{track.name}</strong>
+                      <span>{trackLevelLabel(state?.level ?? 0)}</span>
+                      {next && next.total > 0 && (
+                        <span className={styles.trackNext}>
+                          {next.satisfied} de {next.total} rumo ao{' '}
+                          {levelName(next.level).toLowerCase()}
+                        </span>
+                      )}
                     </span>
-                    <Link to={info.to} className="arrow-link xsmall" aria-label={info.action}>
-                      {info.action}
-                      <Icon name="arrow" size={14} />
-                    </Link>
-                  </li>
-                ))}
-              </ol>
-            )}
-          </section>
-        </div>
+                  </Link>
+                </li>
+              )
+            })}
+          </ul>
+        </section>
 
-        <div className="aside">
-          <section className="panel" aria-labelledby="trilhas">
-            <h2 id="trilhas" className={`eyebrow ${styles.panelTitle}`}>
-              Suas trilhas
-            </h2>
-            <ul className={styles.tracks}>
-              {tracks.map((track) => {
-                const state = snapshot.tracks.get(track.id)
-                const next = state?.next
-                const fraction = next && next.total > 0 ? next.satisfied / next.total : 0
-                return (
-                  <li key={track.id}>
-                    <Link to={paths.track(track.id)} className={`plain ${styles.track}`}>
-                      <span className={styles.trackHead}>
-                        <strong>{track.name}</strong>
-                        <span className={`mono ${styles.levelNumber}`}>N{state?.level ?? 0}</span>
-                      </span>
-                      <LevelMeter
-                        level={state?.level ?? 0}
-                        next={fraction}
-                        size="lg"
-                        label={`Nível ${state?.level ?? 0} de 5 em ${track.name}`}
-                      />
-                      <span className={styles.trackMeta}>
-                        <span>{trackLevelLabel(state?.level ?? 0)}</span>
-                        {next && next.total > 0 && (
-                          <span className="faint">
-                            {' '}
-                            · rumo ao {next.level} ({levelName(next.level).toLowerCase()}):{' '}
-                            {next.satisfied}/{next.total}
-                          </span>
-                        )}
-                      </span>
-                    </Link>
-                  </li>
-                )
-              })}
-            </ul>
-          </section>
-
-          <section className="panel sunken" aria-labelledby="semana">
-            <h2 id="semana" className={`eyebrow ${styles.panelTitle}`}>
-              Últimos 7 dias
-            </h2>
-            <div className={styles.stats}>
-              <div>
-                <span className={`mono ${styles.statValue}`}>{week.minutes}</span>
-                <span className={styles.statLabel}>minutos</span>
-              </div>
-              <div>
-                <span className={`mono ${styles.statValue}`}>{week.days}</span>
-                <span className={styles.statLabel}>{week.days === 1 ? 'dia' : 'dias'}</span>
-              </div>
-              <div>
-                <span className={`mono ${styles.statValue}`}>{week.sessions}</span>
-                <span className={styles.statLabel}>
-                  {plural(week.sessions, 'sessão', 'sessões').replace(/^\d+ /, '')}
-                </span>
-              </div>
-            </div>
-            <Link to="/pratica" className="arrow-link xsmall">
-              Ir para a prática
-              <Icon name="arrow" size={14} />
-            </Link>
-          </section>
-        </div>
+        <section className={styles.week} aria-labelledby="semana">
+          <h2 id="semana" className={styles.columnTitle}>
+            Esta semana
+          </h2>
+          <p className={styles.weekFigure}>
+            <span className={styles.big}>{week.minutes}</span>
+            <span className={styles.unit}>min</span>
+          </p>
+          <p className={styles.weekText}>
+            {week.sessions === 0
+              ? 'Nenhuma sessão de prática nos últimos 7 dias.'
+              : `em ${week.days} ${week.days === 1 ? 'dia' : 'dias'} e ${week.sessions} ${
+                  week.sessions === 1 ? 'sessão' : 'sessões'
+                } nos últimos 7 dias.`}
+          </p>
+          <Link to="/pratica" className="arrow-link small">
+            Ir para a prática
+            <Icon name="arrow" size={14} />
+          </Link>
+        </section>
       </div>
-    </>
+    </section>
   )
 }

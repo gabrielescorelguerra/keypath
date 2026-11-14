@@ -56,18 +56,13 @@ function Sidebar() {
                 <span className={styles.trackName}>{track.name}</span>
                 <span className="visually-hidden">, nível {state?.level ?? 0}</span>
                 <span className={styles.trackMeter} aria-hidden="true">
-                  <LevelMeter level={state?.level ?? 0} next={next} label="" />
+                  <LevelMeter level={state?.level ?? 0} next={next} label="" size="sm" />
                 </span>
               </NavLink>
             )
           })}
         </nav>
       )}
-
-      <div className={styles.footer}>
-        <span className={styles.footerLabel}>Escola de teclado</span>
-        <span className={styles.footerValue}>Harmonia · gospel</span>
-      </div>
     </aside>
   )
 }

@@ -1,6 +1,6 @@
-/* Componentes globais — direção "Estúdio" (docs/design.md §2–3). */
+/* Componentes globais — direção v2 "Partitura noturna" (docs/design.md §7). */
 
-/* ---------- Texto utilitário ---------- */
+/* ---------- Texto ---------- */
 .muted {
   color: var(--color-text-2);
 }
@@ -17,9 +17,14 @@
   font-size: var(--text-sm);
 }
 
+/* Mono só para números (bpm, tempo, graus, contagens). */
 .mono {
   font-family: var(--font-mono);
   font-variant-numeric: tabular-nums;
+}
+
+.num {
+  font-variant-numeric: tabular-nums lining-nums;
 }
 
 .serif {
@@ -27,14 +32,14 @@
   font-optical-sizing: auto;
 }
 
-/* Rótulo de seção (eyebrow): mono, maiúsculas, espaçado. */
+/* Rótulo: sentence case, discreto. Sem caixa alta, sem mono. */
 .eyebrow {
   display: block;
-  font-family: var(--font-mono);
-  font-size: 0.6875rem;
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
   font-weight: 500;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
+  letter-spacing: 0;
+  text-transform: none;
   color: var(--color-text-3);
 }
 
@@ -76,31 +81,25 @@
   margin-top: var(--space-7);
 }
 
+/* Título de seção: serifa, sem linha decorativa. */
 .section > h2,
 .section-title {
   margin: 0 0 var(--space-4);
-  font-size: var(--text-md);
-  font-weight: 600;
-  letter-spacing: 0;
+  font-family: var(--font-display);
+  font-optical-sizing: auto;
+  font-size: 1.375rem;
+  font-weight: 500;
+  letter-spacing: -0.01em;
   display: flex;
   align-items: baseline;
   gap: var(--space-3);
 }
 
-.section > h2::after,
-.section-title::after {
-  content: '';
-  flex: 1;
-  height: 1px;
-  background: var(--color-border);
-  transform: translateY(-0.25em);
-}
-
-/* Principal + painel lateral (2fr / 1fr). */
+/* Principal + coluna de apoio. */
 .split {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 20rem;
-  gap: var(--space-7);
+  grid-template-columns: minmax(0, 1fr) minmax(16rem, 22rem);
+  gap: var(--space-7) var(--space-8);
   align-items: start;
 }
 
@@ -108,21 +107,21 @@
   position: sticky;
   top: var(--space-5);
   display: grid;
-  gap: var(--space-5);
+  gap: var(--space-6);
 }
 
-/* Coluna de rótulos + conteúdo. */
+/* Coluna de anotação (margem) + conteúdo. */
 .ladder {
   display: grid;
-  grid-template-columns: 10rem minmax(0, 1fr);
-  gap: var(--space-5) var(--space-6);
+  grid-template-columns: 11rem minmax(0, 1fr);
+  gap: var(--space-5) var(--space-7);
   align-items: start;
 }
 
 .ladder > .ladder-label {
   position: sticky;
   top: var(--space-5);
-  padding-top: var(--space-3);
+  padding-top: var(--space-1);
 }
 
 @media (max-width: 64rem) {
@@ -135,7 +134,6 @@
     position: static;
   }
 
-  /* Em telas estreitas, o painel vem antes quando contém as ações principais. */
   .split.aside-first > .aside {
     order: -1;
   }
@@ -149,72 +147,60 @@
 
   .ladder > .ladder-label {
     position: static;
-    padding-top: 0;
   }
 }
 
-/* ---------- Superfícies ---------- */
+/* ---------- Superfícies: abertas por padrão ---------- */
 .card,
 .panel {
+  background: transparent;
+  border: 0;
+  padding: 0;
+}
+
+/* Superfície real só onde há algo a manipular. */
+.panel.raised {
   background: var(--color-surface);
-  border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
   padding: var(--space-5);
 }
 
-.panel.raised {
-  box-shadow: var(--shadow-raised);
-  border-color: transparent;
-}
-
 .panel.sunken {
   background: var(--color-sunken);
-  border-color: transparent;
+  border-radius: var(--radius-md);
+  padding: var(--space-5);
 }
 
-.panel-title {
-  margin: 0 0 var(--space-3);
-}
-
-/* Lista com linhas finas e hover. */
+/* Lista pautada: só divisórias finas. */
 .list {
   list-style: none;
   margin: 0;
   padding: 0;
-  background: var(--color-surface);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-md);
-  overflow: hidden;
+  border-top: 1px solid var(--color-border);
 }
 
 .list > li {
-  padding: var(--space-3) var(--space-4);
+  padding: var(--space-3) 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.list > li.link-row {
+  position: relative;
   transition: background-color var(--t-fast) var(--ease);
 }
 
-.list > li + li {
-  border-top: 1px solid var(--color-border);
+.list > li.link-row:hover {
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--color-hover) 8%,
+    var(--color-hover) 92%,
+    transparent
+  );
 }
 
 .list.flush {
-  background: transparent;
-  border: 0;
-  border-top: 1px solid var(--color-border);
-  border-bottom: 1px solid var(--color-border);
-  border-radius: 0;
-}
-
-.list.flush > li {
-  padding-inline: 0;
-}
-
-/* Linha inteira clicável: o link principal recebe a seta. */
-.list > li.link-row:hover {
-  background: var(--color-hover);
-}
-
-.list.flush > li.link-row:hover {
-  background: transparent;
+  border-top: 0;
 }
 
 a.plain {
@@ -235,13 +221,17 @@ a.plain:hover {
   color: var(--color-text);
 }
 
+.arrow-link:hover {
+  color: var(--color-accent-text);
+}
+
 .arrow-link svg {
   transition: transform var(--t-fast) var(--ease);
 }
 
 .arrow-link:hover svg,
 .link-row:hover .arrow-link svg {
-  transform: translateX(2px);
+  transform: translateX(3px);
 }
 
 /* ---------- Botões ---------- */
@@ -258,16 +248,17 @@ a.plain:hover {
   line-height: 1;
   white-space: nowrap;
   color: var(--color-text);
-  background: var(--color-surface);
+  background: transparent;
   border: 1px solid var(--color-border-strong);
-  border-radius: var(--radius-sm);
+  border-radius: var(--radius-xs);
   cursor: pointer;
   text-decoration: none;
   transition:
     background-color var(--t-fast) var(--ease),
     border-color var(--t-fast) var(--ease),
     color var(--t-fast) var(--ease),
-    transform var(--t-fast) var(--ease);
+    transform 60ms var(--ease),
+    box-shadow 60ms var(--ease);
 }
 
 a.button {
@@ -275,35 +266,43 @@ a.button {
 }
 
 .button:hover {
-  background: var(--color-surface-2);
   border-color: var(--color-text-3);
+  background: var(--color-hover);
   color: var(--color-text);
 }
 
 .button:active {
-  transform: scale(0.98);
+  transform: translateY(1px);
 }
 
 .button:disabled {
-  opacity: 0.45;
+  opacity: 0.4;
   cursor: not-allowed;
   transform: none;
 }
 
+/* Tecla: o botão principal afunda como uma tecla. */
 .button.primary {
-  background: var(--color-ink);
-  border-color: var(--color-ink);
-  color: var(--color-on-ink);
+  color: #17140f;
+  background: var(--color-accent);
+  border-color: transparent;
+  font-weight: 600;
+  box-shadow:
+    inset 0 -2px 0 rgb(0 0 0 / 0.22),
+    inset 0 1px 0 rgb(255 255 255 / 0.18);
 }
 
 .button.primary:hover {
-  background: color-mix(in srgb, var(--color-ink) 86%, var(--color-accent));
+  color: #17140f;
+  background: color-mix(in srgb, var(--color-accent) 88%, #fff);
   border-color: transparent;
-  color: var(--color-on-ink);
+}
+
+.button.primary:active {
+  box-shadow: inset 0 1px 2px rgb(0 0 0 / 0.25);
 }
 
 .button.ghost {
-  background: transparent;
   border-color: transparent;
   color: var(--color-text-2);
 }
@@ -320,7 +319,7 @@ a.button {
 }
 
 .button.lg {
-  min-height: 2.75rem;
+  min-height: 2.875rem;
   padding: 0 var(--space-5);
   font-size: var(--text-base);
 }
@@ -344,11 +343,10 @@ a.button {
   padding: var(--space-2) var(--space-3);
   color: var(--color-text);
   background: var(--color-surface);
-  border: 1px solid var(--color-border-strong);
-  border-radius: var(--radius-sm);
-  transition:
-    border-color var(--t-fast) var(--ease),
-    box-shadow var(--t-fast) var(--ease);
+  border: 1px solid transparent;
+  border-radius: var(--radius-xs);
+  box-shadow: inset 0 0 0 1px var(--color-border);
+  transition: box-shadow var(--t-fast) var(--ease);
 }
 
 .input::placeholder,
@@ -359,15 +357,16 @@ a.button {
 .input:hover,
 .select:hover,
 .textarea:hover {
-  border-color: var(--color-text-3);
+  box-shadow: inset 0 0 0 1px var(--color-border-strong);
 }
 
 .input:focus,
 .select:focus,
 .textarea:focus {
   outline: none;
-  border-color: var(--color-accent);
-  box-shadow: 0 0 0 3px var(--color-accent-soft);
+  box-shadow:
+    inset 0 0 0 1px var(--color-accent),
+    0 0 0 3px var(--color-accent-soft);
 }
 
 .textarea {
@@ -379,7 +378,7 @@ a.button {
 
 input[type='checkbox'],
 input[type='radio'] {
-  accent-color: var(--color-ink);
+  accent-color: var(--color-accent);
   width: 1rem;
   height: 1rem;
   margin: 0;
@@ -390,33 +389,35 @@ input[type='radio'] {
   display: inline-flex;
   align-items: center;
   gap: 0.35em;
-  padding: 0.125rem 0.5rem;
-  border-radius: var(--radius-sm);
-  font-family: var(--font-mono);
-  font-size: 0.6875rem;
+  padding: 0.125rem 0.45rem;
+  border-radius: var(--radius-xs);
+  font-size: var(--text-sm);
   font-weight: 500;
-  letter-spacing: 0.04em;
   white-space: nowrap;
   color: var(--color-text-2);
-  background: var(--color-sunken);
+  background: var(--color-hover);
+  box-shadow: inset 0 0 0 1px var(--color-border);
 }
 
 .badge[data-tone='success'] {
   color: var(--color-success);
   background: var(--color-success-soft);
+  box-shadow: none;
 }
 
 .badge[data-tone='accent'] {
   color: var(--color-accent-text);
   background: var(--color-accent-soft);
+  box-shadow: none;
 }
 
 .badge[data-tone='warning'] {
   color: var(--color-warning);
   background: var(--color-warning-soft);
+  box-shadow: none;
 }
 
-/* Ponto de estado + rótulo. */
+/* Estado: glifo + texto. */
 .status {
   display: inline-flex;
   align-items: center;
@@ -441,8 +442,8 @@ input[type='radio'] {
 }
 
 .status[data-tone='declared']::before {
-  border-color: var(--color-success);
-  background: linear-gradient(90deg, var(--color-success) 50%, transparent 50%);
+  border-color: var(--color-declared);
+  background: linear-gradient(90deg, var(--color-declared) 50%, transparent 50%);
 }
 
 .status[data-tone='accent']::before {
@@ -451,21 +452,19 @@ input[type='radio'] {
 }
 
 .progress {
-  height: 4px;
-  border-radius: 2px;
-  background: var(--color-sunken);
+  height: 3px;
+  background: var(--color-border);
   overflow: hidden;
 }
 
 .progress > span {
   display: block;
   height: 100%;
-  border-radius: inherit;
   background: var(--color-accent);
   transition: width var(--t-slow) var(--ease);
 }
 
-/* Medidor de nível em 5 segmentos (VU-meter). */
+/* Medidor antigo em segmentos (mantido para compatibilidade). */
 .meter {
   display: inline-grid;
   grid-template-columns: repeat(5, 1fr);
@@ -476,8 +475,8 @@ input[type='radio'] {
 .meter > span {
   position: relative;
   height: 6px;
-  border-radius: 1.5px;
-  background: var(--color-sunken);
+  border-radius: 1px;
+  background: var(--color-border);
   overflow: hidden;
 }
 
@@ -487,38 +486,43 @@ input[type='radio'] {
   inset: 0;
   width: var(--fill, 0%);
   background: var(--color-accent);
-  transition: width var(--t-slow) var(--ease);
 }
 
 .meter.lg {
   width: 100%;
   max-width: 22rem;
-  gap: 4px;
 }
 
-.meter.lg > span {
-  height: 10px;
-  border-radius: 2px;
-}
-
+/* Nota de margem: aviso sem caixa. */
 .banner {
   display: flex;
-  align-items: center;
-  gap: var(--space-3);
-  padding: var(--space-3) var(--space-4);
-  border-radius: var(--radius-sm);
+  align-items: baseline;
+  gap: var(--space-2);
+  margin: 0;
+  padding: 0;
   font-size: var(--text-md);
-  color: var(--color-text);
-  background: var(--color-warning-soft);
-  border: 1px solid color-mix(in srgb, var(--color-warning) 30%, transparent);
+  color: var(--color-text-2);
+  background: none;
+  border: 0;
 }
 
-.banner.info {
-  background: var(--color-accent-soft);
-  border-color: color-mix(in srgb, var(--color-accent) 35%, transparent);
+.banner::before {
+  content: '';
+  flex-shrink: 0;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--color-warning);
+  transform: translateY(-2px);
+}
+
+.banner.info::before {
+  background: #e5484d;
+  animation: pulse 1.6s var(--ease) infinite;
 }
 
 .banner a {
+  color: var(--color-text);
   font-weight: 500;
 }
 
@@ -531,18 +535,15 @@ input[type='radio'] {
 
 .table th {
   text-align: left;
-  font-family: var(--font-mono);
-  font-size: 0.6875rem;
+  font-size: var(--text-sm);
   font-weight: 500;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
   color: var(--color-text-3);
-  padding: var(--space-2) var(--space-3);
+  padding: var(--space-2) var(--space-3) var(--space-2) 0;
   border-bottom: 1px solid var(--color-border-strong);
 }
 
 .table td {
-  padding: var(--space-3);
+  padding: var(--space-3) var(--space-3) var(--space-3) 0;
   border-bottom: 1px solid var(--color-border);
   vertical-align: middle;
 }

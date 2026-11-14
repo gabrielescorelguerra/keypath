@@ -3,11 +3,13 @@ import { useProgress } from '@/app/progress'
 import { catalog } from '@/content'
 import { declareCompetencies, undeclareCompetencies } from '@/data'
 import { unsatisfiedPrerequisites, type CriterionState } from '@/domain/progress'
-import { Badge, StatusBadge } from '@/ui/Badges'
+import { Badge, LevelMeter, StatusBadge } from '@/ui/Badges'
 import { Icon } from '@/ui/Icon'
 import { formatDate, LESSON_STATUS, levelName, METHOD_LABEL } from '@/ui/labels'
-import { Loading, PageHeader } from '@/ui/Page'
+import { KeyRule } from '@/ui/Notation'
+import { Loading } from '@/ui/Page'
 import { paths } from '@/ui/paths'
+import { useDocumentTitle } from '@/ui/useDocumentTitle'
 import { NotFoundPage } from '../NotFoundPage.tsx'
 import styles from './CompetencyPage.module.css'
 
@@ -27,8 +29,9 @@ function criterionDetail(state: CriterionState, minScore: number): string {
 
 export function CompetencyPage() {
   const { competencyId = '' } = useParams()
-  const progress = useProgress()
   const competency = catalog.competencyById.get(competencyId)
+  useDocumentTitle(competency?.title ?? 'Competência')
+  const progress = useProgress()
   if (!competency) return <NotFoundPage />
   if (!progress) return <Loading />
 
@@ -42,220 +45,233 @@ export function CompetencyPage() {
   const metCount = state?.criteria.filter((c) => c.met).length ?? 0
 
   return (
-    <>
-      <PageHeader
-        title={competency.title}
-        crumbs={[
-          { label: 'Início', to: paths.home },
-          { label: track?.name ?? competency.track, to: paths.track(competency.track) },
-        ]}
-        subtitle={competency.description}
-        meta={
-          <>
-            <Badge>
-              N{competency.level} · {levelName(competency.level)}
-            </Badge>
+    <article className={styles.page}>
+      <header className={styles.masthead}>
+        <div className={styles.identity}>
+          <nav aria-label="Você está em" className={styles.crumbs}>
+            <Link to={paths.home}>Início</Link>
+            <span aria-hidden="true">/</span>
+            <Link to={paths.track(competency.track)}>{track?.name ?? competency.track}</Link>
+          </nav>
+          <h1 className={styles.title}>{competency.title}</h1>
+          <p className={styles.lead}>{competency.description}</p>
+          <div className={styles.meta}>
+            <span className={styles.level}>
+              <LevelMeter level={competency.level} label="" size="sm" />
+              Nível {competency.level} · {levelName(competency.level)}
+            </span>
             {!competency.core && <Badge>Não conta para o nível da trilha</Badge>}
             {competency.styles.map((id) => (
               <Badge key={id} tone="accent">
                 {catalog.styleById.get(id)?.name ?? id}
               </Badge>
             ))}
-          </>
-        }
-      />
-
-      <div className="split aside-first">
-        <div className={styles.main}>
-          <section aria-labelledby="criterios">
-            <h2 id="criterios" className="section-title">
-              Critérios de domínio
-              <span className="mono xsmall faint" aria-hidden="true">
-                {metCount}/{competency.mastery.length}
-              </span>
-            </h2>
-            <ol className={styles.criteria}>
-              {competency.mastery.map((criterion, index) => {
-                const cs = state?.criteria.find((c) => c.criterionId === criterion.id)
-                const exercise = catalog.exerciseById.get(criterion.exercise)
-                return (
-                  <li key={criterion.id} className={styles.criterion} data-met={cs?.met ?? false}>
-                    <span className={styles.check} aria-hidden="true">
-                      {cs?.met ? (
-                        <Icon name="check" size={14} />
-                      ) : (
-                        <span className="mono">{index + 1}</span>
-                      )}
-                    </span>
-                    <div className={styles.criterionBody}>
-                      <span className="eyebrow">{METHOD_LABEL[criterion.method]}</span>
-                      <Link
-                        to={paths.exercise(criterion.exercise)}
-                        className={styles.criterionLink}
-                      >
-                        {exercise?.title ?? criterion.exercise}
-                      </Link>
-                      {cs && (
-                        <span className="muted xsmall">
-                          {criterionDetail(cs, criterion.minScore)}
-                        </span>
-                      )}
-                    </div>
-                    {cs?.met ? (
-                      <Badge tone="success">Cumprido em {formatDate(cs.metAt ?? '')}</Badge>
-                    ) : (
-                      <Badge>Pendente</Badge>
-                    )}
-                  </li>
-                )
-              })}
-            </ol>
-          </section>
-
-          <div className={styles.path}>
-            <section aria-labelledby="pre-requisitos">
-              <h2 id="pre-requisitos" className="section-title">
-                Pré-requisitos
-              </h2>
-              {competency.prerequisites.length === 0 ? (
-                <p className="muted small">Nenhum — pode começar por aqui.</p>
-              ) : (
-                <ul className="list">
-                  {competency.prerequisites.map((id) => {
-                    const ps = snapshot.competencies.get(id)
-                    return (
-                      <li key={id} className={`link-row ${styles.pathItem}`}>
-                        <Link to={paths.competency(id)} className="plain">
-                          {catalog.competencyById.get(id)?.title ?? id}
-                        </Link>
-                        {ps && <StatusBadge status={ps.status} />}
-                      </li>
-                    )
-                  })}
-                </ul>
-              )}
-            </section>
-
-            <span className={styles.pathArrow} aria-hidden="true">
-              <Icon name="arrow" />
-            </span>
-
-            <section aria-labelledby="libera">
-              <h2 id="libera" className="section-title">
-                Depois desta, você pode estudar
-              </h2>
-              {dependents.length === 0 ? (
-                <p className="muted small">É um ponto de chegada nesta fatia do conteúdo.</p>
-              ) : (
-                <ul className="list">
-                  {dependents.map((dependent) => (
-                    <li key={dependent.id} className={`link-row ${styles.pathItem}`}>
-                      <Link to={paths.competency(dependent.id)} className="plain">
-                        {dependent.title}
-                      </Link>
-                      <span className="mono xsmall faint">
-                        {catalog.trackById.get(dependent.track)?.name} · N{dependent.level}
-                      </span>
-                    </li>
-                  ))}
-                </ul>
-              )}
-            </section>
           </div>
         </div>
 
-        <aside className="aside">
-          <section className="panel raised" aria-label="Situação">
-            <span className="eyebrow">Situação</span>
-            <div className={styles.state}>{state && <StatusBadge status={state.status} />}</div>
-            {state?.status === 'mastered' && state.masteredAt && (
-              <p className={styles.stateText}>
-                Você <strong>dominou</strong> esta competência em {formatDate(state.masteredAt)}.
-              </p>
-            )}
-            {state?.status !== 'mastered' && isDeclared && (
-              <p className={styles.stateText}>
-                Você declarou que já sabe isto em {formatDate(state?.declaredAt ?? '')}. Para
-                confirmar, faça os exercícios quando quiser.
-              </p>
-            )}
-            {!state?.satisfied && (
-              <p className={styles.stateText}>
-                Para dominar, cumpra todos os critérios. Se já sabe, pode só declarar.
-              </p>
-            )}
-            <div className={styles.actions}>
-              {state?.status !== 'mastered' &&
-                (isDeclared ? (
-                  <button
-                    type="button"
-                    className="button"
-                    onClick={() => void undeclareCompetencies([competency.id])}
-                  >
-                    Remover declaração
-                  </button>
-                ) : (
-                  <button
-                    type="button"
-                    className="button primary"
-                    onClick={() => void declareCompetencies([competency.id])}
-                  >
-                    Já sei isto
-                  </button>
-                ))}
-              {!state?.satisfied && missingAll.length > 0 && (
+        <section className={styles.standing} aria-label="Situação">
+          <span className={styles.standingLabel}>Situação</span>
+          <div className={styles.standingStatus}>
+            {state && <StatusBadge status={state.status} />}
+          </div>
+          {state?.status === 'mastered' && state.masteredAt && (
+            <p className={styles.standingText}>Dominada em {formatDate(state.masteredAt)}.</p>
+          )}
+          {state?.status !== 'mastered' && isDeclared && (
+            <p className={styles.standingText}>
+              Você declarou que já sabe isto em {formatDate(state?.declaredAt ?? '')}. Para
+              confirmar, faça os exercícios quando quiser.
+            </p>
+          )}
+          {!state?.satisfied && (
+            <p className={styles.standingText}>
+              Para dominar, cumpra os critérios. Se já sabe, pode só declarar.
+            </p>
+          )}
+          <div className={styles.actions}>
+            {state?.status !== 'mastered' &&
+              (isDeclared ? (
                 <button
                   type="button"
-                  className="button ghost sm"
-                  onClick={() => void declareCompetencies([...missingAll, competency.id])}
+                  className="button"
+                  onClick={() => void undeclareCompetencies([competency.id])}
                 >
-                  {missingAll.length === 1
-                    ? 'Já sei isto e o pré-requisito'
-                    : `Já sei isto e os ${missingAll.length} pré-requisitos`}
+                  Remover declaração
                 </button>
-              )}
+              ) : (
+                <button
+                  type="button"
+                  className="button primary"
+                  onClick={() => void declareCompetencies([competency.id])}
+                >
+                  Já sei isto
+                </button>
+              ))}
+            {!state?.satisfied && missingAll.length > 0 && (
+              <button
+                type="button"
+                className="button ghost sm"
+                onClick={() => void declareCompetencies([...missingAll, competency.id])}
+              >
+                {missingAll.length === 1
+                  ? 'Já sei isto e o pré-requisito'
+                  : `Já sei isto e os ${missingAll.length} pré-requisitos`}
+              </button>
+            )}
+          </div>
+        </section>
+      </header>
+
+      <KeyRule />
+
+      <div className={styles.body}>
+        <section className={styles.criteria} aria-labelledby="criterios">
+          <h2 id="criterios" className={styles.sectionTitle}>
+            Critérios de domínio
+            <span className={styles.count} aria-hidden="true">
+              {metCount} de {competency.mastery.length}
+            </span>
+          </h2>
+          <ol className={styles.criteriaList}>
+            {competency.mastery.map((criterion, index) => {
+              const cs = state?.criteria.find((c) => c.criterionId === criterion.id)
+              const exercise = catalog.exerciseById.get(criterion.exercise)
+              return (
+                <li key={criterion.id} className={styles.criterion} data-met={cs?.met ?? false}>
+                  <span className={styles.numeral} aria-hidden="true">
+                    {cs?.met ? <Icon name="check" size={22} /> : index + 1}
+                  </span>
+                  <div className={styles.criterionBody}>
+                    <span className={styles.method}>{METHOD_LABEL[criterion.method]}</span>
+                    <Link to={paths.exercise(criterion.exercise)} className={styles.criterionLink}>
+                      {exercise?.title ?? criterion.exercise}
+                    </Link>
+                    {cs && (
+                      <span className={styles.criterionDetail}>
+                        {criterionDetail(cs, criterion.minScore)}
+                      </span>
+                    )}
+                    {cs && cs.requiredDays > 1 && (
+                      <span className={styles.days} aria-hidden="true">
+                        {Array.from({ length: cs.requiredDays }, (_, i) => (
+                          <span key={i} data-on={i < cs.qualifyingDays} />
+                        ))}
+                      </span>
+                    )}
+                  </div>
+                  <span className={styles.criterionState}>
+                    {cs?.met ? `Cumprido em ${formatDate(cs.metAt ?? '')}` : 'Pendente'}
+                  </span>
+                </li>
+              )
+            })}
+          </ol>
+        </section>
+
+        <aside className={styles.side}>
+          <section aria-labelledby="caminho">
+            <h2 id="caminho" className={styles.sectionTitle}>
+              Caminho
+            </h2>
+            <div className={styles.path}>
+              <section aria-labelledby="pre-requisitos" className={styles.pathGroup}>
+                <h3 id="pre-requisitos" className={styles.pathLabel}>
+                  Pré-requisitos
+                </h3>
+                {competency.prerequisites.length === 0 ? (
+                  <p className={styles.pathEmpty}>Nenhum — pode começar por aqui.</p>
+                ) : (
+                  <ul className={styles.nodes}>
+                    {competency.prerequisites.map((id) => {
+                      const ps = snapshot.competencies.get(id)
+                      return (
+                        <li
+                          key={id}
+                          className={styles.node}
+                          data-satisfied={ps?.satisfied ?? false}
+                        >
+                          <Link to={paths.competency(id)} className="plain">
+                            {catalog.competencyById.get(id)?.title ?? id}
+                          </Link>
+                          {ps && <StatusBadge status={ps.status} />}
+                        </li>
+                      )
+                    })}
+                  </ul>
+                )}
+              </section>
+
+              <div className={styles.here} aria-hidden="true">
+                <span className={styles.hereNode} />
+                {competency.title}
+              </div>
+
+              <section aria-labelledby="libera" className={styles.pathGroup}>
+                <h3 id="libera" className={styles.pathLabel}>
+                  Depois desta, você pode estudar
+                </h3>
+                {dependents.length === 0 ? (
+                  <p className={styles.pathEmpty}>É um ponto de chegada nesta fatia do conteúdo.</p>
+                ) : (
+                  <ul className={styles.nodes}>
+                    {dependents.map((dependent) => (
+                      <li key={dependent.id} className={styles.node}>
+                        <Link to={paths.competency(dependent.id)} className="plain">
+                          {dependent.title}
+                        </Link>
+                        <span className={styles.nodeMeta}>
+                          {catalog.trackById.get(dependent.track)?.name} · nível {dependent.level}
+                        </span>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </section>
             </div>
           </section>
 
-          {lessons.length > 0 && (
-            <section className="panel" aria-labelledby="aulas">
-              <h2 id="aulas" className={`eyebrow ${styles.asideTitle}`}>
-                Aulas que trabalham esta competência
-              </h2>
-              <ul className={styles.asideList}>
-                {lessons.map((lesson) => (
-                  <li key={lesson.id}>
-                    <Link to={paths.lesson(lesson.id)} className="plain">
-                      {lesson.title}
-                    </Link>
-                    <span className="xsmall faint">
-                      {LESSON_STATUS[snapshot.lessons.get(lesson.id)?.status ?? 'not-started']}
-                    </span>
-                  </li>
-                ))}
-              </ul>
-            </section>
-          )}
-
-          {competency.concepts.length > 0 && (
-            <section className="panel sunken" aria-labelledby="conceitos">
-              <h2 id="conceitos" className={`eyebrow ${styles.asideTitle}`}>
-                Na Biblioteca
-              </h2>
-              <ul className={styles.asideList}>
-                {competency.concepts.map((id) => (
-                  <li key={id}>
-                    <Link to={paths.concept(id)} className="arrow-link small">
-                      {catalog.conceptById.get(id)?.title ?? id}
-                      <Icon name="arrow" size={14} />
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </section>
+          {(lessons.length > 0 || competency.concepts.length > 0) && (
+            <div className={styles.study}>
+              {lessons.length > 0 && (
+                <section aria-labelledby="aulas">
+                  <h2 id="aulas" className={styles.studyTitle}>
+                    Aulas que trabalham esta competência
+                  </h2>
+                  <ul className={styles.studyList}>
+                    {lessons.map((lesson) => (
+                      <li key={lesson.id}>
+                        <Link to={paths.lesson(lesson.id)} className="plain">
+                          {lesson.title}
+                        </Link>
+                        <span className={styles.nodeMeta}>
+                          {LESSON_STATUS[snapshot.lessons.get(lesson.id)?.status ?? 'not-started']}
+                        </span>
+                      </li>
+                    ))}
+                  </ul>
+                </section>
+              )}
+              {competency.concepts.length > 0 && (
+                <section aria-labelledby="conceitos">
+                  <h2 id="conceitos" className={styles.studyTitle}>
+                    Na Biblioteca
+                  </h2>
+                  <ul className={styles.studyList}>
+                    {competency.concepts.map((id) => (
+                      <li key={id}>
+                        <Link to={paths.concept(id)} className="arrow-link">
+                          {catalog.conceptById.get(id)?.title ?? id}
+                          <Icon name="arrow" size={14} />
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </section>
+              )}
+            </div>
           )}
         </aside>
       </div>
-    </>
+    </article>
   )
 }

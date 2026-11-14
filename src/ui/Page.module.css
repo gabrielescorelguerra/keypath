@@ -1,28 +1,27 @@
 .header {
+  margin-bottom: var(--space-7);
+}
+
+.top {
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
-  gap: var(--space-5);
+  gap: var(--space-6);
   padding-bottom: var(--space-5);
-  margin-bottom: var(--space-6);
-  border-bottom: 1px solid var(--color-border);
 }
 
 .main {
   min-width: 0;
-  max-width: 50rem;
+  max-width: 52rem;
 }
 
 .crumbs {
-  font-family: var(--font-mono);
-  font-size: 0.6875rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
+  font-size: var(--text-sm);
   color: var(--color-text-3);
 }
 
 .crumbs a {
-  color: var(--color-text-3);
+  color: var(--color-text-2);
   text-decoration: none;
 }
 
@@ -31,25 +30,25 @@
 }
 
 .sep {
-  margin: 0 0.6em;
-  color: var(--color-border-strong);
+  margin: 0 0.5em;
+  color: var(--color-text-3);
 }
 
 .title {
   margin: var(--space-2) 0 0;
   font-family: var(--font-display);
   font-optical-sizing: auto;
-  font-size: clamp(var(--text-2xl), 3.2vw, var(--text-3xl));
-  font-weight: 500;
-  line-height: 1.08;
-  letter-spacing: -0.02em;
+  font-size: clamp(2.25rem, 3.8vw, 3.25rem);
+  font-weight: 400;
+  line-height: 1.04;
+  letter-spacing: -0.025em;
   text-wrap: balance;
 }
 
 .subtitle {
   margin-top: var(--space-3);
-  max-width: 44rem;
-  font-size: var(--text-base);
+  max-width: 42rem;
+  font-size: 1.125rem;
   line-height: 1.55;
   color: var(--color-text-2);
   text-wrap: pretty;
@@ -70,11 +69,18 @@
   gap: var(--space-2);
 }
 
+.rule {
+  opacity: 0.9;
+}
+
 @media (max-width: 40rem) {
-  .header {
+  .top {
     flex-direction: column;
     align-items: flex-start;
-    margin-bottom: var(--space-5);
+  }
+
+  .header {
+    margin-bottom: var(--space-6);
   }
 }
 
