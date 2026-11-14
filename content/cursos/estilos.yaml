@@ -6,18 +6,15 @@ order: 4
 modules:
   - id: gospel
     title: Gospel contemporâneo
-    summary: Acordes com extensões, passing chords, cadências características e o acompanhamento de igreja.
+    summary: Acordes com extensões, acordes de passagem, cadências características e o acompanhamento de igreja.
     level: 3
     style: gospel
     prerequisites: [harmonia-e-tecnica.emprestimo-modal]
+    lessons: [acompanhamento.gospel-contemporaneo]
     upcoming:
-      - Características harmônicas
-      - Progressões características
-      - Vocabulário de acordes
-      - Padrões rítmicos
-      - Técnicas de acompanhamento
-      - Frases, riffs e recursos de improvisação
-      - Repertório e artistas de referência
+      - Levadas em 12/8 e em semicolcheias, passo a passo
+      - Frases, riffs e corridas (runs)
+      - Repertório comentado
 
   - id: worship
     title: Worship / CCM

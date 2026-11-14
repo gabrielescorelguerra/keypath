@@ -32,3 +32,21 @@
     - id: repertorio
       method: self-assessment
       exercise: acompanhamento.emprestimo-gospel.no-repertorio
+
+- id: acompanhamento.gospel-contemporaneo
+  track: acompanhamento
+  level: 3
+  title: Linguagem do gospel contemporâneo
+  description: Usa extensões, acordes de passagem (dominantes secundários, diminutos, substituição de trítono), resoluções sus e walk-ups para acompanhar no estilo gospel.
+  core: false
+  prerequisites:
+    [harmonia.funcoes-harmonicas, harmonia.tetrades, acompanhamento.inversoes-e-conducao]
+  styles: [gospel]
+  mastery:
+    - id: ouvido
+      method: quiz
+      exercise: acompanhamento.gospel.reconhecer
+    - id: teclado
+      method: self-assessment
+      exercise: acompanhamento.gospel.passagens-em-tons
+      distinctDays: 2

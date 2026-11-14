@@ -1,0 +1,36 @@
+id: acompanhamento.gospel.passagens-em-tons
+title: As passagens do gospel em vários tons
+type: performance
+stage: execution
+competencies: [acompanhamento.gospel-contemporaneo]
+prompt: |
+  Toque as três fórmulas abaixo em cada tom, com baixo na mão esquerda e a tétrade (ou o voicing
+  com extensão) na direita, conduzindo as vozes:
+
+  **1. O 3-6-2-5-1**
+
+  ::progression{key="C" degrees="IIIm7 VI7 IIm7 V7 I7M"}
+
+  **2. O IV com diminuto de passagem até o I com a quinta no baixo**
+
+  ::chords{symbols="Cmaj7 Fmaj7 F#dim7 C/G" key="C"}
+
+  **3. O 2-5-1 com extensões e resolução sus**
+
+  ::chords{symbols="Dm9 G7sus4 G13 Cmaj9" key="C"}
+parameters:
+  keys: [C, D, Eb, F, G, Ab, Bb]
+  startBpm: 60
+  targetBpm: 80
+  bpmStep: 5
+  hands: both
+checklist:
+  - id: tons
+    text: Toquei as três fórmulas em pelo menos cinco tons.
+  - id: conducao
+    text: A mão direita andou pouco entre os acordes (condução de vozes).
+  - id: baixo
+    text: No item 2, o baixo subiu em semitons (IV → ♯IV → V) sem saltos.
+challenges:
+  - No 3-6-2-5-1, troque o V7 pelo ♭II7 (substituição de trítono) e ouça o baixo descendo em semitons.
+  - Faça o item 2 nos 12 tons.

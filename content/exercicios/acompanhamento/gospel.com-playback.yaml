@@ -1,0 +1,32 @@
+id: acompanhamento.gospel.com-playback
+title: Acompanhar e preencher sobre o playback
+type: performance
+stage: application
+competencies: [acompanhamento.gospel-contemporaneo]
+prompt: |
+  O playback toca **I7M – VI7 – IIm7 – V7** em Dó. Sobre ele:
+
+  1. **Voltas 1–2:** só acompanhe — mão esquerda em oitavas no baixo, direita com voicings de
+     3 notas (terça, sétima e nona) no meio do teclado.
+  2. **Voltas 3–4:** no último tempo de cada acorde, coloque um **acorde de passagem** (ex.: o
+     E7 antes do A7, o A♭7 antes do G7).
+  3. **Voltas 5–6:** troque as passagens por uma **frase curta** na mão direita, usando a
+     pentatônica maior com a terça menor de passagem:
+
+  ::scale{root="C" type="major-pentatonic"}
+parameters:
+  keys: [C]
+  startBpm: 66
+  targetBpm: 84
+  bpmStep: 6
+  hands: both
+  backing: { key: C, degrees: I7M VI7 IIm7 V7, beatsPerChord: 4 }
+checklist:
+  - id: seis-voltas
+    text: Fiz as três etapas sem parar o playback.
+  - id: passagens
+    text: Coloquei acordes de passagem no último tempo sem atrasar a troca do compasso seguinte.
+  - id: frases
+    text: As frases terminaram em nota do acorde seguinte.
+challenges:
+  - Repita em Mi♭ e em Lá♭, tons muito comuns no gospel.

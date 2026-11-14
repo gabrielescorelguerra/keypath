@@ -1,0 +1,51 @@
+id: acompanhamento.gospel.reconhecer
+title: Gospel — reconhecer as cores e as passagens
+type: quiz
+stage: recognition
+competencies: [acompanhamento.gospel-contemporaneo]
+questions:
+  - id: sus-ou-resolvido
+    kind: single-choice
+    prompt: Este dominante está suspenso ou resolvido?
+    audio: { chord: G7sus4, play: together }
+    options: [Suspenso — 7(4), Resolvido — 7]
+    correct: [0]
+    explanation: Sem a terça (Si), com a quarta (Dó) no lugar — o som "flutua" esperando resolver no G7.
+  - id: cor-7m9
+    kind: single-choice
+    prompt: Qual destes é o I grau com a cor típica do gospel?
+    audio: { chord: Cmaj9, play: arpeggio }
+    options: [C (tríade), C7M(9), C7]
+    correct: [1]
+  - id: dominante-13
+    kind: single-choice
+    prompt: E este dominante, com uma nota a mais no topo?
+    audio: { chord: G13, play: arpeggio }
+    options: [G7(13), G7, G7M]
+    correct: [0]
+  - id: diminuto-passagem
+    kind: single-choice
+    prompt: Em Dó maior, qual acorde faz a ponte cromática de F7M para C/G?
+    options: [F♯°7, G7, B♭7M, E7]
+    correct: [0]
+    explanation: O baixo sobe Fá → Fá♯ → Sol; o F♯°7 é o diminuto de passagem (♯IV°7).
+  - id: tres-seis
+    kind: single-choice
+    prompt: Na cadência 3-6-2-5-1 em Dó, qual é o acorde do 6?
+    options: [A7, Am7, A7M, A°7]
+    correct: [0]
+    explanation: O VI vira dominante (A7) para "puxar" para o Dm7 — é um dominante secundário (V7 do II).
+  - id: subst-tritono
+    kind: single-choice
+    prompt: Qual acorde substitui o G7 em Dm7 – G7 – C7M por substituição de trítono?
+    options: [D♭7, A♭7, F7, B7]
+    correct: [0]
+    explanation: 'D♭7 e G7 compartilham o trítono Fá–Si (Dó♭). O baixo passa a descer em semitons, Ré → Ré♭ → Dó.'
+  - id: walk-up
+    kind: single-choice
+    prompt: 'O que é um walk-up como C – C/E – F?'
+    options:
+      - O baixo caminha por notas do acorde até o próximo grau
+      - Uma substituição de trítono
+      - Um acorde emprestado do menor
+    correct: [0]

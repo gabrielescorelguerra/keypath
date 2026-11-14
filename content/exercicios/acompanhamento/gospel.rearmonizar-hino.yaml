@@ -1,0 +1,27 @@
+id: acompanhamento.gospel.rearmonizar-hino
+title: Rearmonizar um hino no estilo gospel
+type: performance
+stage: creativity
+competencies: [acompanhamento.gospel-contemporaneo]
+prompt: |
+  Escolha um hino ou corinho tradicional que você conhece com harmonia simples (I, IV e V) e
+  crie uma versão gospel contemporânea:
+
+  - troque as tríades por tétrades com extensões (7M(9), m7(9), 7(13), 7(4));
+  - insira **pelo menos três** acordes de passagem (dominante secundário, diminuto de passagem
+    ou substituição de trítono);
+  - use um walk-up no baixo antes do refrão;
+  - termine com uma resolução sus (V7(4) → V7 → I).
+
+  Escreva a cifra nova e grave a versão.
+parameters:
+  keys: []
+checklist:
+  - id: cifra
+    text: Escrevi a nova cifra com as passagens marcadas.
+  - id: melodia
+    text: A melodia continua soando bem sobre todos os acordes novos.
+  - id: gravacao
+    text: Gravei e comparei com a versão original.
+challenges:
+  - Faça duas versões — uma discreta (para a congregação cantar) e uma "de solo" — e compare.
