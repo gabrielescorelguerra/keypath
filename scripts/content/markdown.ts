@@ -4,8 +4,8 @@ import remarkGfm from 'remark-gfm'
 import remarkParse from 'remark-parse'
 import { unified } from 'unified'
 import { SKIP, visit } from 'unist-util-visit'
-import type { CheckpointInput, MarkdownRef } from '../../src/domain/catalog/index.ts'
-import { SLUG_RE } from '../../src/domain/catalog/index.ts'
+import type { CheckpointInput, LessonStage, MarkdownRef } from '../../src/domain/catalog/index.ts'
+import { LESSON_STAGES, SLUG_RE } from '../../src/domain/catalog/index.ts'
 import {
   isScaleType,
   parseChord,
@@ -57,7 +57,7 @@ const intInRange = (name: string, value: string | undefined, min: number, max: n
 
 /**
  * Directives do KeyPath. Sintaxe:
- *   ::::checkpoint{id="..." title="..."}  …  ::::     (só em aulas, no nível de cima)
+ *   ::::checkpoint{id="..." title="..." stage="pratica"}  …  ::::  (só em aulas, no nível de cima)
  *   :::common-mistake{title="..."}  …  :::            (bloco de erro comum)
  *   :::note{title="..."}  …  :::                      (bloco de observação)
  *   ::concept{id="..."}                               (incorpora um conceito — só em aulas)
@@ -72,8 +72,13 @@ const DIRECTIVES: Readonly<Record<string, DirectiveSpec>> = {
     kind: 'containerDirective',
     contexts: ['lesson'],
     required: ['id', 'title'],
-    optional: [],
-    check: (a) => (SLUG_RE.test(a.id ?? '') ? [] : [`id de checkpoint inválido: "${a.id}"`]),
+    optional: ['stage'],
+    check: (a) => [
+      ...(SLUG_RE.test(a.id ?? '') ? [] : [`id de checkpoint inválido: "${a.id}"`]),
+      ...(a.stage === undefined || (LESSON_STAGES as readonly string[]).includes(a.stage)
+        ? []
+        : [`stage deve ser um de: ${LESSON_STAGES.join(', ')}`]),
+    ],
   },
   'common-mistake': {
     kind: 'containerDirective',
@@ -236,9 +241,13 @@ export function splitLesson(root: Root, lineOffset = 0): SplitLesson {
     const line = node.position?.start.line
     const at = line === undefined ? {} : { line: line + lineOffset }
     if (node.type === 'containerDirective' && node.name === 'checkpoint') {
+      const stage = node.attributes?.stage
       checkpoints.push({
         id: node.attributes?.id ?? '',
         title: node.attributes?.title ?? '',
+        stage: (LESSON_STAGES as readonly (string | null | undefined)[]).includes(stage)
+          ? (stage as LessonStage)
+          : null,
         body: stripPositions({ type: 'root', children: node.children }),
         ...at,
       })

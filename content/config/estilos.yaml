@@ -17,3 +17,13 @@
   name: Blues
 - id: classico
   name: Clássico
+- id: worship
+  name: Worship / CCM
+- id: neo-soul
+  name: Neo-soul e R&B
+- id: funk
+  name: Funk
+- id: rock-alternativo
+  name: Rock alternativo
+- id: post-hardcore
+  name: Post-hardcore e metalcore

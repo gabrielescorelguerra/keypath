@@ -1,0 +1,155 @@
+# Curso: Estilos — a linguagem de cada gênero no teclado.
+id: estilos
+title: Estilos
+summary: Harmonia, ritmo, vocabulário de acordes e acompanhamento de cada gênero, com repertório de referência.
+order: 4
+modules:
+  - id: gospel
+    title: Gospel contemporâneo
+    summary: Acordes com extensões, passing chords, cadências características e o acompanhamento de igreja.
+    level: 3
+    style: gospel
+    prerequisites: [harmonia-e-tecnica.emprestimo-modal]
+    upcoming:
+      - Características harmônicas
+      - Progressões características
+      - Vocabulário de acordes
+      - Padrões rítmicos
+      - Técnicas de acompanhamento
+      - Frases, riffs e recursos de improvisação
+      - Repertório e artistas de referência
+
+  - id: worship
+    title: Worship / CCM
+    summary: Harmonia simples com cor (sus, add9, baixo pedal), dinâmica em ondas e pads de ambiência.
+    level: 2
+    style: worship
+    prerequisites: [harmonia-e-tecnica.funcoes-e-progressoes]
+    upcoming:
+      - Características harmônicas
+      - Progressões características
+      - Vocabulário de acordes
+      - Padrões rítmicos
+      - Técnicas de acompanhamento
+      - Frases, riffs e recursos de improvisação
+      - Repertório e artistas de referência
+
+  - id: jazz
+    title: Jazz
+    summary: II–V–I, voicings sem fundamental, walking bass e a linguagem do bebop.
+    level: 4
+    style: jazz
+    prerequisites: [harmonia-e-tecnica.extensoes]
+    upcoming:
+      - Características harmônicas
+      - Progressões características
+      - Vocabulário de acordes
+      - Padrões rítmicos
+      - Técnicas de acompanhamento
+      - Frases, riffs e recursos de improvisação
+      - Repertório e artistas de referência
+
+  - id: blues
+    title: Blues
+    summary: O blues de 12 compassos, dominantes em todos os graus, shuffle e a escala blues.
+    level: 2
+    style: blues
+    prerequisites: [harmonia-e-tecnica.tetrades]
+    upcoming:
+      - Características harmônicas
+      - Progressões características
+      - Vocabulário de acordes
+      - Padrões rítmicos
+      - Técnicas de acompanhamento
+      - Frases, riffs e recursos de improvisação
+      - Repertório e artistas de referência
+
+  - id: neo-soul
+    title: Neo-soul e R&B
+    summary: Acordes m9 e 7M(9), voicings em quartas, groove atrasado e cromatismos.
+    level: 4
+    style: neo-soul
+    prerequisites: [harmonia-e-tecnica.extensoes]
+    upcoming:
+      - Características harmônicas
+      - Progressões características
+      - Vocabulário de acordes
+      - Padrões rítmicos
+      - Técnicas de acompanhamento
+      - Frases, riffs e recursos de improvisação
+      - Repertório e artistas de referência
+
+  - id: funk
+    title: Funk
+    summary: Riffs sincopados de clavinet e órgão, acordes dominantes com 9 e a semicolcheia como base.
+    level: 3
+    style: funk
+    prerequisites: [harmonia-e-tecnica.tetrades]
+    upcoming:
+      - Características harmônicas
+      - Progressões características
+      - Vocabulário de acordes
+      - Padrões rítmicos
+      - Técnicas de acompanhamento
+      - Frases, riffs e recursos de improvisação
+      - Repertório e artistas de referência
+
+  - id: pop
+    title: Pop
+    summary: Progressões de quatro acordes, add9 e sus, padrões rítmicos de piano pop e arranjo.
+    level: 2
+    style: pop
+    prerequisites: [harmonia-e-tecnica.funcoes-e-progressoes]
+    upcoming:
+      - Características harmônicas
+      - Progressões características
+      - Vocabulário de acordes
+      - Padrões rítmicos
+      - Técnicas de acompanhamento
+      - Frases, riffs e recursos de improvisação
+      - Repertório e artistas de referência
+
+  - id: rock-alternativo
+    title: Rock alternativo
+    summary: Power chords no teclado, acordes com baixo pedal, texturas e camadas de synth.
+    level: 2
+    style: rock-alternativo
+    prerequisites: [harmonia-e-tecnica.triades-e-campo-maior]
+    upcoming:
+      - Características harmônicas
+      - Progressões características
+      - Vocabulário de acordes
+      - Padrões rítmicos
+      - Técnicas de acompanhamento
+      - Frases, riffs e recursos de improvisação
+      - Repertório e artistas de referência
+
+  - id: post-hardcore
+    title: Post-hardcore e metalcore
+    summary: Modos menores e frígio, progressões épicas, pads, leads e o teclado como camada de arranjo.
+    level: 3
+    style: post-hardcore
+    prerequisites: [escalas-e-modos.modos-gregos]
+    upcoming:
+      - Características harmônicas
+      - Progressões características
+      - Vocabulário de acordes
+      - Padrões rítmicos
+      - Técnicas de acompanhamento
+      - Frases, riffs e recursos de improvisação
+      - Repertório e artistas de referência
+
+  - id: classica
+    title: Música clássica
+    summary: Leitura, cadências clássicas, Alberti bass, contraponto simples e repertório de referência.
+    level: 2
+    style: classico
+    prerequisites: [fundamentos.escalas-maior-e-menor]
+    upcoming:
+      - Características harmônicas
+      - Progressões características
+      - Vocabulário de acordes
+      - Padrões rítmicos
+      - Técnicas de acompanhamento
+      - Frases, riffs e recursos de improvisação
+      - Repertório e artistas de referência

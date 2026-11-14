@@ -1,0 +1,92 @@
+# Curso: Harmonia e técnica — dos acordes à reharmonização.
+id: harmonia-e-tecnica
+title: Harmonia e técnica
+summary: Acordes, arpejos, condução de vozes, campos harmônicos, progressões e reharmonização — da formação ao uso no teclado.
+order: 2
+modules:
+  - id: triades-e-campo-maior
+    title: Tríades e campo harmônico maior
+    summary: As quatro tríades, o campo maior e a leitura da música em graus.
+    level: 2
+    prerequisites: [fundamentos.intervalos]
+    lessons: [harmonia.revisao-campo-harmonico-maior]
+
+  - id: tetrades
+    title: Tétrades
+    summary: Os acordes de sétima — 7M, m7, 7, m7(♭5) e °7 — e o campo maior com sétimas.
+    level: 2
+    prerequisites: [harmonia-e-tecnica.triades-e-campo-maior]
+    lessons: [harmonia.tetrades-e-campo-com-setimas]
+
+  - id: arpejos
+    title: Arpejos
+    summary: Tocar os acordes nota por nota — tríades e tétrades, em todas as inversões e com as duas mãos.
+    level: 2
+    prerequisites: [harmonia-e-tecnica.triades-e-campo-maior]
+    upcoming:
+      - Arpejos de tríades e tétrades
+      - Arpejos em inversões, em duas oitavas
+
+  - id: inversoes-e-conducao
+    title: Inversões e condução de vozes
+    summary: Ligar acordes com o menor movimento possível — o segredo de um acompanhamento que soa profissional.
+    level: 2
+    prerequisites: [harmonia-e-tecnica.tetrades]
+    lessons: [acompanhamento.inversoes-e-conducao-de-vozes]
+
+  - id: funcoes-e-progressoes
+    title: Funções e progressões
+    summary: Tônica, subdominante e dominante; as progressões mais usadas e como variá-las.
+    level: 2
+    prerequisites: [harmonia-e-tecnica.tetrades]
+    lessons: [harmonia.funcoes-harmonicas]
+    upcoming:
+      - Progressões comuns e suas variações (II–V–I, I–V–VIm–IV, ciclo de quintas)
+
+  - id: campo-menor
+    title: Campo harmônico menor
+    summary: Os campos menor natural e menor harmônico, e de onde vem o V7 do tom menor.
+    level: 3
+    prerequisites: [harmonia-e-tecnica.funcoes-e-progressoes]
+    lessons: [harmonia.campo-harmonico-menor]
+
+  - id: extensoes
+    title: Extensões — 9, 11 e 13
+    summary: As notas além da sétima, quais combinam com cada acorde e como montá-las nas duas mãos.
+    level: 3
+    prerequisites: [harmonia-e-tecnica.tetrades, harmonia-e-tecnica.inversoes-e-conducao]
+    upcoming:
+      - Nonas, décimas primeiras e décimas terceiras
+      - Voicings com extensões nas duas mãos
+
+  - id: sus-add-e-barra
+    title: Acordes sus, add9 e com baixo invertido
+    summary: Acordes suspensos, add9 e slash chords — cores muito usadas no pop e no worship.
+    level: 3
+    prerequisites: [harmonia-e-tecnica.tetrades]
+    upcoming:
+      - Sus2, sus4 e 7sus4
+      - Add9 e acordes com baixo trocado (slash chords)
+
+  - id: emprestimo-modal
+    title: Empréstimo modal
+    summary: Acordes emprestados do tom homônimo — a subdominante menor, o ♭VI e o ♭VII.
+    level: 3
+    prerequisites: [harmonia-e-tecnica.campo-menor]
+    lessons:
+      - harmonia.emprestimo-modal-subdominante-menor
+      - harmonia.emprestimo-modal-bvi-bvii-gospel
+
+  - id: reharmonizacao
+    title: Reharmonização e substituições
+    summary: Trocar acordes mantendo a melodia — dominantes secundários, substituição de trítono, diminutos de passagem.
+    level: 4
+    prerequisites:
+      - harmonia-e-tecnica.funcoes-e-progressoes
+      - harmonia-e-tecnica.extensoes
+      - harmonia-e-tecnica.emprestimo-modal
+    upcoming:
+      - Dominantes secundários
+      - Substituição de trítono
+      - Diminutos de passagem
+      - Reharmonizar uma melodia conhecida

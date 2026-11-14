@@ -2,6 +2,7 @@ import type { ContentIssue } from './issues.ts'
 import type {
   CompetencySource,
   ConceptFrontmatter,
+  CourseSource,
   ExerciseSource,
   LessonFrontmatter,
   LevelSource,
@@ -15,7 +16,9 @@ import type {
   Exercise,
   Lesson,
   LevelNumber,
+  LessonStage,
   MarkdownRoot,
+  Module,
 } from './types.ts'
 
 /**
@@ -50,6 +53,7 @@ export interface ConceptInput {
 export interface CheckpointInput {
   readonly id: string
   readonly title: string
+  readonly stage: LessonStage | null
   readonly body: MarkdownRoot
   readonly line?: number
 }
@@ -69,6 +73,11 @@ export interface ExerciseInput {
   readonly refs: readonly MarkdownRef[]
 }
 
+export interface CourseInput {
+  readonly file: string
+  readonly data: CourseSource
+}
+
 export interface CatalogSources {
   readonly tracks: ConfigInput<TrackSource>
   readonly levels: ConfigInput<LevelSource>
@@ -77,6 +86,7 @@ export interface CatalogSources {
   readonly concepts: readonly ConceptInput[]
   readonly lessons: readonly LessonInput[]
   readonly exercises: readonly ExerciseInput[]
+  readonly courses?: readonly CourseInput[]
 }
 
 export interface CompileResult {
@@ -250,6 +260,59 @@ export function compileCatalog(sources: CatalogSources): CompileResult {
     }
   }
 
+  // --- Cursos e módulos -----------------------------------------------------
+  const courseSources = sources.courses ?? []
+  const courses = unique(
+    'Curso',
+    courseSources.map((c) => ({ file: c.file, id: c.data.id, value: c.data })),
+  )
+  const modules = unique(
+    'Módulo',
+    courseSources.flatMap((c) =>
+      c.data.modules.map((m) => ({ file: c.file, id: `${c.data.id}.${m.id}`, value: m })),
+    ),
+  )
+  const moduleOfLesson = new Map<string, string>()
+  for (const [moduleId, { file, value: m }] of modules) {
+    checkRefs(file, `${moduleId}: módulo pré-requisito`, m.prerequisites, modules)
+    checkRefs(file, `${moduleId}: aula`, m.lessons, lessons)
+    if (m.style !== undefined) checkRefs(file, `${moduleId}: estilo`, [m.style], styles)
+    if (m.prerequisites.includes(moduleId)) {
+      error(file, `${moduleId} não pode ser pré-requisito de si mesmo`)
+    }
+    if (m.lessons.length === 0 && m.upcoming.length === 0) {
+      error(file, `${moduleId}: o módulo precisa de aulas ou de tópicos em upcoming`)
+    }
+    for (const lessonId of m.lessons) {
+      const other = moduleOfLesson.get(lessonId)
+      if (other) error(file, `a aula "${lessonId}" está em dois módulos: ${other} e ${moduleId}`)
+      else moduleOfLesson.set(lessonId, moduleId)
+    }
+  }
+  if (courseSources.length > 0) {
+    for (const { file, value: lesson } of lessons.values()) {
+      if (!moduleOfLesson.has(lesson.frontmatter.id)) {
+        warning(file, `a aula "${lesson.frontmatter.id}" não está em nenhum módulo de curso`)
+      }
+    }
+  }
+  const visitingModules = new Set<string>()
+  const doneModules = new Set<string>()
+  const visitModule = (id: string, path: string[]): void => {
+    if (doneModules.has(id)) return
+    if (visitingModules.has(id)) {
+      error(modules.get(id)?.file ?? '?', `ciclo de módulos: ${[...path, id].join(' → ')}`)
+      return
+    }
+    visitingModules.add(id)
+    for (const p of modules.get(id)?.value.prerequisites ?? []) {
+      if (modules.has(p)) visitModule(p, [...path, id])
+    }
+    visitingModules.delete(id)
+    doneModules.add(id)
+  }
+  for (const id of modules.keys()) visitModule(id, [])
+
   // --- Ciclos de pré-requisitos ----------------------------------------------
   const visiting = new Set<string>()
   const done = new Set<string>()
@@ -376,8 +439,15 @@ export function compileCatalog(sources: CatalogSources): CompileResult {
       competencies: fm.competencies,
       styles: fm.styles,
       estimatedMinutes: fm.estimatedMinutes ?? null,
+      why: fm.why ?? null,
+      materials: fm.materials.map((m) => ({ ...m, note: m.note ?? null })),
       intro: lesson.intro,
-      checkpoints: lesson.checkpoints.map(({ id, title, body }) => ({ id, title, body })),
+      checkpoints: lesson.checkpoints.map(({ id, title, stage, body }) => ({
+        id,
+        title,
+        stage,
+        body,
+      })),
       level: Math.max(...worked.map((c) => c.level)) as LevelNumber,
       prerequisites,
     }
@@ -401,7 +471,9 @@ export function compileCatalog(sources: CatalogSources): CompileResult {
       prompt: value.prompt,
       competencies: data.competencies,
       styles: data.styles,
-    }
+      stage: data.stage ?? (data.type === 'quiz' ? 'recognition' : 'execution'),
+      challenges: data.challenges,
+    } as const
     if (data.type === 'quiz') {
       return {
         ...base,
@@ -413,6 +485,9 @@ export function compileCatalog(sources: CatalogSources): CompileResult {
           options: q.options,
           correct: q.correct,
           explanation: q.explanation ?? null,
+          audio: q.audio
+            ? { notes: q.audio.notes ?? null, chord: q.audio.chord ?? null, play: q.audio.play }
+            : null,
         })),
       }
     }
@@ -422,11 +497,41 @@ export function compileCatalog(sources: CatalogSources): CompileResult {
       parameters: {
         keys: data.parameters.keys,
         targetBpm: data.parameters.targetBpm ?? null,
+        startBpm: data.parameters.startBpm ?? null,
+        bpmStep: data.parameters.bpmStep ?? null,
         hands: data.parameters.hands ?? null,
+        backing: data.parameters.backing ?? null,
       },
       checklist: data.checklist,
     }
   })
+
+  const lessonMinutes = new Map(catalogLessons.map((l) => [l.id, l.estimatedMinutes]))
+  const catalogCourses = [...courses.values()]
+    .map(({ value }) => value)
+    .sort((a, b) => a.order - b.order || a.id.localeCompare(b.id))
+    .map((course) => ({
+      id: course.id,
+      title: course.title,
+      summary: course.summary,
+      modules: course.modules.map((m): Module => {
+        const minutes = m.lessons.map((id) => lessonMinutes.get(id) ?? null)
+        return {
+          id: `${course.id}.${m.id}`,
+          course: course.id,
+          title: m.title,
+          summary: m.summary,
+          level: m.level,
+          prerequisites: m.prerequisites,
+          lessons: m.lessons,
+          upcoming: m.upcoming,
+          style: m.style ?? null,
+          estimatedMinutes: minutes.some((n) => n !== null)
+            ? minutes.reduce<number>((sum, n) => sum + (n ?? 0), 0)
+            : null,
+        }
+      }),
+    }))
 
   return {
     catalog: {
@@ -437,6 +542,7 @@ export function compileCatalog(sources: CatalogSources): CompileResult {
       concepts: catalogConcepts,
       lessons: catalogLessons,
       exercises: catalogExercises,
+      courses: catalogCourses,
     },
     issues,
   }

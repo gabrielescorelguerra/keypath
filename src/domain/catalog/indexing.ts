@@ -1,4 +1,14 @@
-import type { Catalog, Competency, Concept, Exercise, Lesson, Style, Track } from './types.ts'
+import type {
+  Catalog,
+  Competency,
+  Concept,
+  Course,
+  Exercise,
+  Lesson,
+  Module,
+  Style,
+  Track,
+} from './types.ts'
 
 /** Catálogo com índices de consulta — calculados uma vez, ao carregar. */
 export interface CatalogIndex extends Catalog {
@@ -14,6 +24,12 @@ export interface CatalogIndex extends Catalog {
   readonly lessonsByCompetency: ReadonlyMap<string, readonly Lesson[]>
   /** Competências que dependem diretamente de cada competência. */
   readonly dependentsByCompetency: ReadonlyMap<string, readonly Competency[]>
+  readonly courseById: ReadonlyMap<string, Course>
+  readonly moduleById: ReadonlyMap<string, Module>
+  /** Todos os módulos, na ordem dos cursos. */
+  readonly modules: readonly Module[]
+  /** Módulo a que cada aula pertence. */
+  readonly moduleByLesson: ReadonlyMap<string, Module>
 }
 
 const byId = <T extends { id: string }>(items: readonly T[]) =>
@@ -43,5 +59,11 @@ export function indexCatalog(catalog: Catalog): CatalogIndex {
     competenciesByTrack: groupBy(catalog.competencies, (c) => [c.track]),
     lessonsByCompetency: groupBy(catalog.lessons, (l) => l.competencies),
     dependentsByCompetency: groupBy(catalog.competencies, (c) => c.prerequisites),
+    courseById: byId(catalog.courses),
+    moduleById: byId(catalog.courses.flatMap((c) => c.modules)),
+    modules: catalog.courses.flatMap((c) => c.modules),
+    moduleByLesson: new Map(
+      catalog.courses.flatMap((c) => c.modules.flatMap((m) => m.lessons.map((l) => [l, m]))),
+    ),
   }
 }

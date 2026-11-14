@@ -1,5 +1,6 @@
 import type { Root } from 'mdast'
 import { compileCatalog, type CatalogSources, type MarkdownRef } from './compile.ts'
+import type { CourseSource } from './schemas.ts'
 import type { CompetencySource, ExerciseSource } from './schemas.ts'
 
 const EMPTY: Root = { type: 'root', children: [] }
@@ -39,6 +40,7 @@ function quiz(
       type: 'quiz',
       competencies,
       styles: [],
+      challenges: [],
       questions: [
         { id: 'q', kind: 'single-choice', prompt: '?', options: ['a', 'b'], correct: [0] },
       ],
@@ -57,6 +59,7 @@ function performance(id: string, competencies: string[]) {
       type: 'performance' as const,
       competencies,
       styles: [],
+      challenges: [],
       parameters: { keys: [] },
       checklist: [{ id: 'ok', text: 'ok' }],
     },
@@ -75,9 +78,10 @@ function lesson(id: string, competencies: string[], checkpoints = ['a'], refs: M
       track: 'harmonia',
       competencies,
       styles: [],
+      materials: [],
     },
     intro: EMPTY,
-    checkpoints: checkpoints.map((c) => ({ id: c, title: c, body: EMPTY })),
+    checkpoints: checkpoints.map((c) => ({ id: c, title: c, stage: null, body: EMPTY })),
     refs,
   }
 }
@@ -277,5 +281,82 @@ describe('compileCatalog', () => {
       expect.stringContaining('teoria.intervalos ainda não é trabalhada'),
     )
     expect(warnings).toContainEqual(expect.stringContaining('pré-requisito de nível maior'))
+  })
+
+  describe('cursos e módulos', () => {
+    const mod = (id: string, extra: Partial<CourseSource['modules'][number]> = {}) => ({
+      id,
+      title: id,
+      summary: id,
+      level: 1 as const,
+      prerequisites: [],
+      lessons: [],
+      upcoming: ['algo'],
+      ...extra,
+    })
+    const course = (modules: CourseSource['modules'], id = 'harmonia-e-tecnica') => ({
+      file: `cursos/${id}.yaml`,
+      data: { id, title: id, summary: id, order: 0, modules },
+    })
+
+    it('monta módulos com id "<curso>.<módulo>" e tempo somado', () => {
+      const result = compileCatalog(
+        sources({
+          lessons: [
+            {
+              ...lesson('harmonia.aula', ['harmonia.triades']),
+              frontmatter: {
+                ...lesson('harmonia.aula', ['harmonia.triades']).frontmatter,
+                estimatedMinutes: 40,
+              },
+            },
+          ],
+          courses: [
+            course([
+              mod('base', { lessons: ['harmonia.aula'], upcoming: [] }),
+              mod('depois', { prerequisites: ['harmonia-e-tecnica.base'] }),
+            ]),
+          ],
+        }),
+      )
+      const modules = result.catalog?.courses[0]?.modules
+      expect(modules?.map((m) => m.id)).toEqual([
+        'harmonia-e-tecnica.base',
+        'harmonia-e-tecnica.depois',
+      ])
+      expect(modules?.[0]?.estimatedMinutes).toBe(40)
+      expect(modules?.[1]?.estimatedMinutes).toBeNull()
+    })
+
+    it('valida referências, aula em dois módulos, ciclos e módulo vazio', () => {
+      const errors = errorsOf(
+        sources({
+          courses: [
+            course([
+              mod('a', { lessons: ['harmonia.aula', 'harmonia.nao-existe'], upcoming: [] }),
+              mod('b', { lessons: ['harmonia.aula'], prerequisites: ['harmonia-e-tecnica.c'] }),
+              mod('c', { prerequisites: ['harmonia-e-tecnica.b', 'x.y'] }),
+              mod('d', { upcoming: [] }),
+            ]),
+          ],
+        }),
+      )
+      expect(errors).toContainEqual(
+        expect.stringContaining('aula "harmonia.nao-existe" não existe'),
+      )
+      expect(errors).toContainEqual(expect.stringContaining('está em dois módulos'))
+      expect(errors).toContainEqual(expect.stringContaining('ciclo de módulos'))
+      expect(errors).toContainEqual(
+        expect.stringContaining('módulo pré-requisito "x.y" não existe'),
+      )
+      expect(errors).toContainEqual(expect.stringContaining('precisa de aulas ou de tópicos'))
+    })
+
+    it('avisa sobre aula fora de módulo', () => {
+      const result = compileCatalog(sources({ courses: [course([mod('a')])] }))
+      expect(result.issues.map((i) => i.message)).toContainEqual(
+        expect.stringContaining('não está em nenhum módulo'),
+      )
+    })
   })
 })

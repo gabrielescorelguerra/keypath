@@ -17,8 +17,15 @@ import {
   type ContentIssue,
   type ExerciseInput,
   type LessonInput,
+  courseSchema,
+  type CourseInput,
 } from '../../src/domain/catalog/index.ts'
-import { parseKey } from '../../src/domain/music/index.ts'
+import {
+  noteToMidi,
+  parseChord,
+  parseKey,
+  progressionToChords,
+} from '../../src/domain/music/index.ts'
 import { parseMarkdown, splitFrontmatter, splitLesson, stripPositions } from './markdown.ts'
 
 /**
@@ -28,6 +35,7 @@ import { parseMarkdown, splitFrontmatter, splitLesson, stripPositions } from './
  *   conceitos/<pasta>/<id>.md
  *   aulas/<trilha>/<nome>.md          → id "<trilha>.<nome>"
  *   exercicios/<trilha>/<nome>.yaml   → id "<trilha>.<nome>"
+ *   cursos/<id>.yaml                  → curso com seus módulos
  */
 export interface LoadResult {
   readonly sources: CatalogSources | null
@@ -189,6 +197,29 @@ export async function loadContent(contentDir: string): Promise<LoadResult> {
           error(file, `parameters.keys: tonalidade inválida "${key}"`)
         }
       }
+      const backing = data.parameters.backing
+      if (backing) {
+        try {
+          progressionToChords(parseKey(backing.key).tonic, backing.degrees)
+        } catch (e) {
+          error(file, `parameters.backing: ${e instanceof Error ? e.message : String(e)}`)
+        }
+      }
+      const { startBpm, targetBpm } = data.parameters
+      if (startBpm !== undefined && targetBpm !== undefined && startBpm > targetBpm) {
+        error(file, 'parameters.startBpm não pode ser maior que targetBpm')
+      }
+    } else {
+      for (const question of data.questions) {
+        const audio = question.audio
+        if (!audio) continue
+        try {
+          if (audio.chord !== undefined) parseChord(audio.chord)
+          for (const note of audio.notes?.trim().split(/\s+/) ?? []) noteToMidi(note)
+        } catch (e) {
+          error(file, `${question.id}.audio: ${e instanceof Error ? e.message : String(e)}`)
+        }
+      }
     }
     let prompt = null
     let refs: ExerciseInput['refs'] = []
@@ -199,6 +230,18 @@ export async function loadContent(contentDir: string): Promise<LoadResult> {
       refs = markdown.refs
     }
     exercises.push({ file, data, prompt, refs })
+  }
+
+  // --- Cursos ----------------------------------------------------------------
+  const courses: CourseInput[] = []
+  for (const path of await listFiles('cursos', '.yaml')) {
+    const file = rel(path)
+    const data = await loadYaml(path, courseSchema)
+    if (!data) continue
+    if (data.id !== basename(path, '.yaml')) {
+      error(file, `o id "${data.id}" deve ser igual ao nome do arquivo`)
+    }
+    courses.push({ file, data })
   }
 
   if (issues.length > 0 || !tracks || !levels || !styles) {
@@ -214,6 +257,7 @@ export async function loadContent(contentDir: string): Promise<LoadResult> {
       concepts,
       lessons,
       exercises,
+      courses,
     },
     issues,
   }

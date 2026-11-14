@@ -56,8 +56,10 @@ function lesson(
     competencies,
     styles: [],
     estimatedMinutes: null,
+    why: null,
+    materials: [],
     intro: EMPTY,
-    checkpoints: checkpoints.map((c) => ({ id: c, title: c, body: EMPTY })),
+    checkpoints: checkpoints.map((c) => ({ id: c, title: c, stage: null, body: EMPTY })),
     level: 1,
     prerequisites: [],
     ...extra,
@@ -95,6 +97,8 @@ const quizExercise = (id: string, competencyId: string) => ({
   prompt: null,
   competencies: [competencyId],
   styles: [],
+  stage: 'recognition' as const,
+  challenges: [],
   type: 'quiz' as const,
   questions: [
     {
@@ -104,6 +108,7 @@ const quizExercise = (id: string, competencyId: string) => ({
       options: ['a', 'b'],
       correct: [0],
       explanation: null,
+      audio: null,
     },
     {
       id: 'q2',
@@ -112,6 +117,7 @@ const quizExercise = (id: string, competencyId: string) => ({
       options: ['a', 'b', 'c'],
       correct: [0, 2],
       explanation: null,
+      audio: null,
     },
   ],
 })
@@ -125,6 +131,7 @@ export const catalogData: Catalog = {
   styles: [{ id: 'gospel', name: 'Gospel' }],
   competencies,
   concepts: [],
+  courses: [],
   lessons: [
     lesson('harmonia.l1', ['harmonia.b'], ['x', 'y']),
     lesson('harmonia.l2', ['harmonia.c', 'harmonia.d'], ['z'], { level: 2, styles: ['gospel'] }),
@@ -138,8 +145,17 @@ export const catalogData: Catalog = {
       prompt: null,
       competencies: ['harmonia.b'],
       styles: [],
+      stage: 'execution',
+      challenges: [],
       type: 'performance',
-      parameters: { keys: [], targetBpm: null, hands: null },
+      parameters: {
+        keys: [],
+        targetBpm: null,
+        startBpm: null,
+        bpmStep: null,
+        hands: null,
+        backing: null,
+      },
       checklist: [
         { id: 'um', text: 'um' },
         { id: 'dois', text: 'dois' },

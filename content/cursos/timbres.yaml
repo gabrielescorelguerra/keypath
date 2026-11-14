@@ -1,0 +1,54 @@
+# Curso: Timbres e sound design — o som do teclado, além das notas.
+id: timbres
+title: Timbres e sound design
+summary: Como funciona um sintetizador, os tipos de timbre, camadas, divisão do teclado e efeitos — e como criar o som de cada estilo.
+order: 5
+modules:
+  - id: sintese
+    title: Fundamentos de síntese
+    summary: Osciladores, filtros, envelopes (ADSR) e LFOs — os blocos de qualquer sintetizador.
+    level: 2
+    upcoming:
+      - Osciladores, filtro, ADSR e LFO
+
+  - id: tipos-de-timbre
+    title: Pads, leads, plucks, keys, strings e órgãos
+    summary: O que define cada família de timbres e como construí-la a partir dos blocos da síntese.
+    level: 2
+    prerequisites: [timbres.sintese]
+    upcoming:
+      - Famílias de timbres e como montá-las
+
+  - id: layering-e-split
+    title: Camadas e divisão do teclado
+    summary: Sobrepor timbres (layer) e dividir o teclado (split) para tocar baixo e harmonia, pad e piano.
+    level: 2
+    prerequisites: [timbres.tipos-de-timbre]
+    upcoming:
+      - Layer e split na prática ao vivo
+
+  - id: efeitos
+    title: Efeitos e ambiência
+    summary: Reverb, delay, chorus e outros efeitos — o que cada um faz e quanto usar.
+    level: 2
+    prerequisites: [timbres.sintese]
+    upcoming:
+      - Reverb, delay, chorus, phaser e drive
+
+  - id: timbres-por-estilo
+    title: Timbres por estilo
+    summary: Criar e reproduzir sonoridades de bandas e artistas — do Rhodes do neo-soul ao lead do metalcore.
+    level: 3
+    prerequisites: [timbres.tipos-de-timbre, timbres.efeitos]
+    upcoming:
+      - Escutar e reconstruir um timbre de referência
+      - Timbres característicos por gênero
+
+  - id: ambiencias
+    title: Ambiências e texturas
+    summary: Pads, swells e texturas para worship e rock alternativo — tocar o espaço, não só as notas.
+    level: 3
+    prerequisites: [timbres.layering-e-split, timbres.efeitos]
+    upcoming:
+      - Pads de worship e transições entre músicas
+      - Texturas para rock alternativo

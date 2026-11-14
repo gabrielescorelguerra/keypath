@@ -1,0 +1,58 @@
+# Curso: Escalas e modos — como cada escala soa e onde usá-la.
+id: escalas-e-modos
+title: Escalas e modos
+summary: Os modos gregos, as escalas menores, pentatônica, blues e simétricas — pelo som e pelo uso, não só pela fórmula.
+order: 3
+modules:
+  - id: modos-gregos
+    title: Os sete modos
+    summary: Jônico, dórico, frígio, lídio, mixolídio, eólio e lócrio — a nota característica e a cor de cada um.
+    level: 3
+    prerequisites: [fundamentos.escalas-maior-e-menor]
+    upcoming:
+      - Os modos gregos pelo som
+
+  - id: modos-na-pratica
+    title: Modos na prática
+    summary: Usar cada modo sobre vamps e progressões — o que tocar, em que acorde, para conseguir que cor.
+    level: 3
+    prerequisites: [escalas-e-modos.modos-gregos]
+    upcoming:
+      - Vamps modais para improvisar
+      - Modos sobre progressões do campo maior
+
+  - id: menores-harmonica-e-melodica
+    title: Menor harmônica e menor melódica
+    summary: As escalas menores que criam a sensível, e os sons que nascem delas.
+    level: 3
+    prerequisites: [fundamentos.escalas-maior-e-menor]
+    upcoming:
+      - Menor harmônica e menor melódica na prática
+
+  - id: pentatonica-e-blues
+    title: Pentatônica e blues
+    summary: As escalas mais usadas para improvisar — por que funcionam e como fugir do clichê.
+    level: 2
+    prerequisites: [fundamentos.escalas-maior-e-menor]
+    upcoming:
+      - Pentatônicas maior e menor
+      - A escala blues e as blue notes
+
+  - id: simetricas-e-cromatica
+    title: Escalas cromática e simétricas
+    summary: Cromática, tons inteiros e diminuta — escalas que se repetem e geram tensão.
+    level: 4
+    prerequisites: [escalas-e-modos.modos-gregos]
+    upcoming:
+      - Tons inteiros e diminuta (tom–semitom / semitom–tom)
+
+  - id: escolher-escalas
+    title: Escolher escalas para improvisar
+    summary: Do acorde à escala — um método para decidir o que tocar sobre cada harmonia.
+    level: 4
+    prerequisites:
+      - escalas-e-modos.modos-na-pratica
+      - escalas-e-modos.pentatonica-e-blues
+      - harmonia-e-tecnica.tetrades
+    upcoming:
+      - Acorde-escala, notas-alvo e tensões

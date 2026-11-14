@@ -70,8 +70,28 @@ export interface Concept {
 export interface Checkpoint {
   readonly id: string
   readonly title: string
+  readonly stage: LessonStage | null
   readonly body: MarkdownRoot
 }
+
+export type MaterialKind =
+  'video' | 'article' | 'interactive' | 'course' | 'sheet' | 'backing-track' | 'song' | 'docs'
+
+/** Para que serve o material: entender, ver aplicado, ouvir, praticar. */
+export type MaterialPurpose = 'understand' | 'see' | 'listen' | 'practice'
+
+export interface Material {
+  readonly title: string
+  readonly url: string
+  readonly source: string
+  readonly kind: MaterialKind
+  readonly purpose: MaterialPurpose
+  readonly language: 'pt' | 'en' | 'es'
+  readonly note: string | null
+}
+
+/** Etapa da aula a que uma parte pertence (a introdução, o aprofundamento e o próximo passo são gerados). */
+export type LessonStage = 'fundamentos' | 'visualizacao' | 'aplicacao' | 'pratica' | 'revisao'
 
 export interface Lesson {
   readonly id: string
@@ -81,6 +101,8 @@ export interface Lesson {
   readonly competencies: readonly string[]
   readonly styles: readonly string[]
   readonly estimatedMinutes: number | null
+  readonly why: string | null
+  readonly materials: readonly Material[]
   readonly intro: MarkdownRoot
   readonly checkpoints: readonly Checkpoint[]
   /** Derivado: maior nível entre as competências trabalhadas. */
@@ -91,10 +113,18 @@ export interface Lesson {
 
 export type QuestionKind = 'single-choice' | 'multiple-choice'
 
+export interface QuestionAudio {
+  readonly notes: string | null
+  readonly chord: string | null
+  readonly play: 'together' | 'arpeggio' | 'melody'
+}
+
 export interface Question {
   readonly id: string
   readonly kind: QuestionKind
   readonly prompt: string
+  /** Questão de percepção: o som a ouvir. */
+  readonly audio: QuestionAudio | null
   readonly options: readonly string[]
   /** Índices (a partir de 0) das opções corretas. */
   readonly correct: readonly number[]
@@ -108,11 +138,23 @@ export interface ChecklistItem {
 
 export type Hands = 'left' | 'right' | 'both'
 
+export interface Backing {
+  readonly key: string
+  readonly degrees: string
+  readonly beatsPerChord: number
+}
+
 export interface PerformanceParameters {
   readonly keys: readonly string[]
   readonly targetBpm: number | null
+  readonly startBpm: number | null
+  readonly bpmStep: number | null
   readonly hands: Hands | null
+  readonly backing: Backing | null
 }
+
+/** Reconhecimento → execução → aplicação → criatividade. */
+export type ExerciseStage = 'recognition' | 'execution' | 'application' | 'creativity'
 
 interface ExerciseBase {
   readonly id: string
@@ -120,6 +162,8 @@ interface ExerciseBase {
   readonly prompt: MarkdownRoot | null
   readonly competencies: readonly string[]
   readonly styles: readonly string[]
+  readonly stage: ExerciseStage
+  readonly challenges: readonly string[]
 }
 
 export interface QuizExercise extends ExerciseBase {
@@ -136,6 +180,29 @@ export interface PerformanceExercise extends ExerciseBase {
 export type Exercise = QuizExercise | PerformanceExercise
 export type ExerciseType = Exercise['type']
 
+export interface Module {
+  /** "<curso>.<módulo>" */
+  readonly id: string
+  readonly course: string
+  readonly title: string
+  readonly summary: string
+  readonly level: LevelNumber
+  readonly prerequisites: readonly string[]
+  readonly lessons: readonly string[]
+  readonly upcoming: readonly string[]
+  readonly style: string | null
+  /** Derivado: soma do tempo estimado das aulas (null se nenhuma informa). */
+  readonly estimatedMinutes: number | null
+}
+
+/** Curso: uma área de estudo organizada em módulos, na ordem recomendada. */
+export interface Course {
+  readonly id: string
+  readonly title: string
+  readonly summary: string
+  readonly modules: readonly Module[]
+}
+
 export interface Catalog {
   readonly tracks: readonly Track[]
   readonly levels: readonly Level[]
@@ -144,4 +211,5 @@ export interface Catalog {
   readonly concepts: readonly Concept[]
   readonly lessons: readonly Lesson[]
   readonly exercises: readonly Exercise[]
+  readonly courses: readonly Course[]
 }

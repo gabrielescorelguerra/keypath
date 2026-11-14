@@ -80,6 +80,26 @@ export const conceptFrontmatterSchema = z.strictObject({
   related: list(slug),
 })
 
+/** Material externo de aprofundamento (vídeo, artigo, partitura…), separado por finalidade. */
+export const materialSchema = z.strictObject({
+  title: text,
+  url: z.url({ protocol: /^https$/, error: 'use um endereço https:// completo' }),
+  source: text,
+  kind: z.enum([
+    'video',
+    'article',
+    'interactive',
+    'course',
+    'sheet',
+    'backing-track',
+    'song',
+    'docs',
+  ]),
+  purpose: z.enum(['understand', 'see', 'listen', 'practice']),
+  language: z.enum(['pt', 'en', 'es']).default('en'),
+  note: text.optional(),
+})
+
 export const lessonFrontmatterSchema = z.strictObject({
   id: dottedId,
   title: text,
@@ -88,13 +108,50 @@ export const lessonFrontmatterSchema = z.strictObject({
   competencies: z.array(dottedId).min(1),
   styles: list(slug),
   estimatedMinutes: z.number().int().positive().optional(),
+  /** Por que isto importa — mostrado na introdução. */
+  why: text.optional(),
+  materials: list(materialSchema),
 })
+
+const moduleSchema = z.strictObject({
+  id: slug,
+  title: text,
+  summary: text,
+  level: levelSchema.shape.number,
+  /** Módulos recomendados antes ("<curso>.<módulo>"). */
+  prerequisites: list(dottedId),
+  /** Aulas do módulo, na ordem de estudo. */
+  lessons: list(dottedId),
+  /** Tópicos planejados que ainda não têm aula. */
+  upcoming: list(text),
+  style: slug.optional(),
+})
+
+export const courseSchema = z.strictObject({
+  id: slug,
+  title: text,
+  summary: text,
+  order: z.number().int().min(0),
+  modules: z.array(moduleSchema).min(1),
+})
+
+/** Som tocado numa questão de percepção: notas (C4 E4 G4) ou uma cifra. */
+const questionAudioSchema = z
+  .strictObject({
+    notes: text.optional(),
+    chord: text.optional(),
+    play: z.enum(['together', 'arpeggio', 'melody']).default('together'),
+  })
+  .refine((a) => (a.notes === undefined) !== (a.chord === undefined), {
+    message: 'informe notes ou chord (um dos dois)',
+  })
 
 const questionSchema = z
   .strictObject({
     id: slug,
     kind: z.enum(['single-choice', 'multiple-choice']),
     prompt: text,
+    audio: questionAudioSchema.optional(),
     options: z.array(text).min(2),
     correct: z.array(z.number().int().min(0)).min(1),
     explanation: text.optional(),
@@ -119,12 +176,26 @@ const questionSchema = z
     }
   })
 
+export const LESSON_STAGES = [
+  'fundamentos',
+  'visualizacao',
+  'aplicacao',
+  'pratica',
+  'revisao',
+] as const
+
+export const EXERCISE_STAGES = ['recognition', 'execution', 'application', 'creativity'] as const
+
 const exerciseBase = {
   id: dottedId,
   title: text,
   prompt: text.optional(),
   competencies: z.array(dottedId).min(1),
   styles: list(slug),
+  /** Etapa: reconhecimento, execução, aplicação ou criatividade. */
+  stage: z.enum(EXERCISE_STAGES).optional(),
+  /** Desafios extras, para quem já cumpriu o exercício. */
+  challenges: list(text),
 }
 
 export const quizExerciseSchema = z.strictObject({
@@ -140,7 +211,18 @@ export const performanceExerciseSchema = z.strictObject({
     .strictObject({
       keys: list(text),
       targetBpm: z.number().int().min(20).max(300).optional(),
+      /** Andamento para começar; sobe `bpmStep` a cada execução limpa até o alvo. */
+      startBpm: z.number().int().min(20).max(300).optional(),
+      bpmStep: z.number().int().min(1).max(40).optional(),
       hands: z.enum(['left', 'right', 'both']).optional(),
+      /** Acompanhamento para tocar junto: progressão em graus, em loop. */
+      backing: z
+        .strictObject({
+          key: text,
+          degrees: text,
+          beatsPerChord: z.number().int().min(1).max(8).default(4),
+        })
+        .optional(),
     })
     .default({ keys: [] }),
   checklist: z.array(z.strictObject({ id: slug, text })).min(1),
@@ -158,6 +240,7 @@ export type CompetencySource = z.output<typeof competencySchema>
 export type ConceptFrontmatter = z.output<typeof conceptFrontmatterSchema>
 export type LessonFrontmatter = z.output<typeof lessonFrontmatterSchema>
 export type ExerciseSource = z.output<typeof exerciseSchema>
+export type CourseSource = z.output<typeof courseSchema>
 
 /** Converte os erros do Zod em mensagens "campo.subcampo: mensagem". */
 export function formatSchemaIssues(error: z.ZodError): string[] {

@@ -23,6 +23,8 @@ const lesson = (id: string, competencies: string[]): Lesson => ({
   competencies,
   styles: [],
   estimatedMinutes: null,
+  why: null,
+  materials: [],
   intro: { type: 'root', children: [] },
   checkpoints: [],
   level: 1,
@@ -31,6 +33,7 @@ const lesson = (id: string, competencies: string[]): Lesson => ({
 
 it('indexa o catálogo', () => {
   const catalog: Catalog = {
+    courses: [],
     tracks: [],
     levels: [],
     styles: [],
