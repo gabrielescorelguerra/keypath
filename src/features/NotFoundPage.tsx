@@ -12,12 +12,3 @@ export function NotFoundPage() {
     </>
   )
 }
-
-export function ComingSoonPage({ what }: { readonly what: string }) {
-  return (
-    <>
-      <PageHeader title={what} crumbs={[{ label: 'Início', to: paths.home }]} />
-      <p className="muted">Em construção — chega nas próximas partes da etapa 6.</p>
-    </>
-  )
-}

@@ -1,4 +1,4 @@
-import { SplendidGrandPiano } from 'smplr'
+import type { SplendidGrandPiano } from 'smplr'
 
 /**
  * Reprodução de notas (D: interface AudioPlayer). Usa amostras de piano (smplr),
@@ -38,8 +38,22 @@ class WebAudioPlayer implements AudioPlayer {
   }
 
   private loadPiano(context: AudioContext, destination: AudioNode) {
+    // A biblioteca só é baixada no primeiro toque (deixa a abertura do app mais leve).
+    import('smplr').then(
+      ({ SplendidGrandPiano: createPiano }) => this.startPiano(createPiano, context, destination),
+      () => {
+        this.piano = null
+      },
+    )
+  }
+
+  private startPiano(
+    createPiano: typeof SplendidGrandPiano,
+    context: AudioContext,
+    destination: AudioNode,
+  ) {
     try {
-      const piano = SplendidGrandPiano(context, {
+      const piano = createPiano(context, {
         destination,
         // Uma camada de dinâmica e só a região usada nos exemplos: carrega rápido.
         notesToLoad: {

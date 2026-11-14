@@ -7,6 +7,11 @@ export default defineConfig({
   // Caminho relativo: o build funciona em qualquer subpasta (ex.: GitHub Pages).
   base: './',
   plugins: [react(), keypathContent()],
+  build: {
+    // App pessoal, carregado uma vez: ~200 kB compactados no pacote principal é aceitável.
+    // Dividir por página (React.lazy) fica para quando o tamanho fizer diferença.
+    chunkSizeWarningLimit: 1000,
+  },
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url)),

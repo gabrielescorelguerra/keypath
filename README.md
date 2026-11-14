@@ -6,7 +6,7 @@ Plataforma pessoal de aprendizado de teclado e piano. Reúne três áreas:
 - **Biblioteca:** consulta livre de conceitos musicais;
 - **Prática:** exercícios, sessões e repertório.
 
-> Status: em desenvolvimento (MVP). Etapas 1–5 concluídas: estrutura, motor de teoria musical, catálogo de conteúdo, regras de progresso e dados com backup.
+> Status: em desenvolvimento (MVP). Etapas 1–6 concluídas: estrutura, motor de teoria musical, catálogo de conteúdo, regras de progresso, dados com backup e interface completa (aulas, exercícios, Biblioteca, som).
 
 ## Documentação
 
