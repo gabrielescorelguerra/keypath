@@ -64,9 +64,7 @@ modules:
     summary: Acordes suspensos, add9 e slash chords — cores muito usadas no pop e no worship.
     level: 3
     prerequisites: [harmonia-e-tecnica.tetrades]
-    upcoming:
-      - Sus2, sus4 e 7sus4
-      - Add9 e acordes com baixo trocado (slash chords)
+    lessons: [harmonia.sus-add9-e-slash-chords]
 
   - id: emprestimo-modal
     title: Empréstimo modal

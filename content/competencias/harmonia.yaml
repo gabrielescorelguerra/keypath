@@ -172,3 +172,18 @@
       method: self-assessment
       exercise: harmonia.extensoes.dois-cinco-um
       distinctDays: 2
+
+- id: harmonia.sus-add-slash
+  track: harmonia
+  level: 3
+  title: Acordes sus, add9 e com baixo invertido
+  description: Forma e reconhece sus2, sus4, 7(4), (9) e acordes com baixo trocado, e os usa em linhas de baixo, pedais e resoluções.
+  prerequisites: [harmonia.tetrades, acompanhamento.inversoes-e-conducao]
+  styles: [worship, pop]
+  mastery:
+    - id: ouvido
+      method: quiz
+      exercise: harmonia.sus-add-slash.reconhecer
+    - id: teclado
+      method: self-assessment
+      exercise: harmonia.sus-add-slash.cores-em-tons

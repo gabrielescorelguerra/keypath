@@ -1,0 +1,38 @@
+id: harmonia.sus-add-slash.linha-de-baixo
+title: Linhas de baixo com slash chords
+type: performance
+stage: application
+competencies: [harmonia.sus-add-slash]
+prompt: |
+  Três linhas de baixo clássicas. A mão direita segura o acorde (em tríade ou com add9); a mão
+  esquerda toca **só o baixo indicado depois da barra**.
+
+  **1. Baixo descendente**
+
+  ::progression{key="C" degrees="I V/VII VIm VIm/V IV"}
+
+  **2. Pedal na tônica** — o baixo não sai do Dó:
+
+  ::chords{symbols="C F/C G/C C"}
+
+  **3. O dominante suspenso F/G resolvendo em C**
+
+  ::chords{symbols="Fmaj7 F/G C"}
+
+  Depois, ligue o playback e toque a linha descendente junto com ele.
+parameters:
+  keys: [C, G, D]
+  startBpm: 66
+  targetBpm: 84
+  bpmStep: 6
+  hands: both
+  backing: { key: C, degrees: I V/VII VIm VIm/V IV IV V V, beatsPerChord: 4 }
+checklist:
+  - id: tres-linhas
+    text: Toquei as três linhas nos três tons.
+  - id: baixo-ligado
+    text: O baixo andou por grau conjunto, sem saltos, na linha descendente.
+  - id: playback
+    text: Toquei a linha descendente junto com o playback por quatro voltas.
+challenges:
+  - Use o pedal (item 2) na introdução de uma música do repertório.

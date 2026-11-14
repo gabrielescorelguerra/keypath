@@ -1,0 +1,48 @@
+id: harmonia.sus-add-slash.reconhecer
+title: Sus, add9 e slash — reconhecer
+type: quiz
+stage: recognition
+competencies: [harmonia.sus-add-slash]
+questions:
+  - id: sus4
+    kind: single-choice
+    prompt: Que acorde é este?
+    audio: { chord: Dsus4, play: arpeggio }
+    options: [D (maior), Dsus4, Dsus2]
+    correct: [1]
+    explanation: Sem terça, com a quarta (Sol) no lugar — soa "suspenso", pedindo para descer ao Fá♯.
+  - id: sus2
+    kind: single-choice
+    prompt: E este?
+    audio: { chord: Dsus2, play: arpeggio }
+    options: [Dsus4, Dsus2, D(9)]
+    correct: [1]
+  - id: add9
+    kind: single-choice
+    prompt: Este acorde tem terça e nona. Qual é?
+    audio: { chord: Dadd9, play: arpeggio }
+    options: [Dsus2, D(9), D7(9)]
+    correct: [1]
+    explanation: O add9 mantém a terça (Fá♯) — continua soando maior — e acrescenta o Mi. No sus2, o Mi substitui a terça.
+  - id: inversao-ou-slash
+    kind: single-choice
+    prompt: Qual destes é uma inversão (o baixo é nota do acorde)?
+    options: [C/E, C/D, F/G]
+    correct: [0]
+    explanation: Mi faz parte de Dó maior. Ré e Sol não fazem parte dos acordes de cima — são baixos "estranhos" ao acorde.
+  - id: f-sobre-g
+    kind: single-choice
+    prompt: F/G funciona como qual acorde?
+    options: [G7(4)(9) — dominante suspenso, F7M, G menor]
+    correct: [0]
+    explanation: 'Fá, Lá, Dó sobre Sol: 7ª, 9ª e 4ª de Sol — um dominante suspenso, muito usado no pop e no gospel.'
+  - id: baixo-descendente
+    kind: single-choice
+    prompt: Em C – G/B – Am – Am/G – F, o que o baixo faz?
+    options: [Desce por grau conjunto, Sobe por terças, Fica parado]
+    correct: [0]
+  - id: pedal
+    kind: single-choice
+    prompt: Em C – F/C – G/C – C, como se chama o recurso do baixo?
+    options: [Pedal (baixo fixo), Walk-up, Substituição de trítono]
+    correct: [0]

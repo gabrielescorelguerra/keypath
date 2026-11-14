@@ -1,0 +1,24 @@
+id: harmonia.sus-add-slash.introducao
+title: Criar uma introdução com sus, add9 e baixo
+type: performance
+stage: creativity
+competencies: [harmonia.sus-add-slash]
+prompt: |
+  Crie uma introdução de 8 compassos para uma música do repertório, usando:
+
+  - pelo menos um acorde **sus** que resolve;
+  - pelo menos um **add9**;
+  - uma **linha de baixo** com slash chords (descendente, ascendente ou pedal).
+
+  Escreva a cifra e toque três vezes seguidas, sem parar.
+parameters:
+  keys: []
+checklist:
+  - id: cifra
+    text: Escrevi a cifra da introdução com os três recursos.
+  - id: tocar
+    text: Toquei a introdução três vezes seguidas, sem parar.
+  - id: entrada
+    text: A introdução leva naturalmente ao primeiro acorde da música.
+challenges:
+  - Faça uma versão só com pedal na tônica e outra com baixo descendente; qual combina mais com a letra?

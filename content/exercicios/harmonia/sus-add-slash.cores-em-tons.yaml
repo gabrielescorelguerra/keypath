@@ -1,0 +1,31 @@
+id: harmonia.sus-add-slash.cores-em-tons
+title: As cores sus e add9 em vários tons
+type: performance
+stage: execution
+competencies: [harmonia.sus-add-slash]
+prompt: |
+  Para cada tom, toque esta sequência sobre a mesma fundamental, mudando **só a nota do meio**:
+
+  ::chords{symbols="Dsus2 D Dsus4 D Dadd9"}
+
+  Na mão direita: **1 2 5**, **1 3 5**, **1 4 5**, **1 3 5**, e por fim o add9 como **1 3 5 9**
+  (ou o voicing aberto 1 · 5 9 3, com a nona no meio).
+
+  Depois, toque a resolução do dominante suspenso:
+
+  ::chords{symbols="A7sus4 A7 D"}
+parameters:
+  keys: [D, G, C, A, E, F]
+  startBpm: 60
+  targetBpm: 88
+  bpmStep: 4
+  hands: right
+checklist:
+  - id: tons
+    text: Toquei a sequência nos seis tons.
+  - id: so-uma-nota
+    text: Mudei só a nota do meio — os dedos da fundamental e da quinta ficaram parados.
+  - id: resolucao
+    text: Toquei a resolução 7(4) → 7 → I em todos os tons.
+challenges:
+  - Toque Dm – Dsus2 – Dm – Dsus4 – Dm e perceba que o mesmo sus serve tanto para o acorde maior quanto para o menor.
