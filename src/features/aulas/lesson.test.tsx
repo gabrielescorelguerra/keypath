@@ -50,7 +50,7 @@ describe('Aula', () => {
     expect(screen.getByText(/Concluída · 4\/4/)).toBeInTheDocument()
 
     // Desfazer a última parte
-    await user.click(screen.getByRole('button', { name: '✓ Parte concluída (desfazer)' }))
+    await user.click(screen.getByRole('button', { name: 'Parte concluída (desfazer)' }))
     expect(await screen.findByText(/Em andamento · 3\/4/)).toBeInTheDocument()
   })
 

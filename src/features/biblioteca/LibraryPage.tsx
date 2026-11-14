@@ -2,6 +2,7 @@ import { useMemo } from 'react'
 import { Link, useSearchParams } from 'react-router'
 import { catalog } from '@/content'
 import type { Concept } from '@/domain/catalog'
+import { Icon } from '@/ui/Icon'
 import { PageHeader } from '@/ui/Page'
 import { paths } from '@/ui/paths'
 import styles from './Library.module.css'
@@ -11,11 +12,11 @@ const conceptSearch = createConceptSearch(catalog.concepts)
 
 function ConceptItem({ concept }: { readonly concept: Concept }) {
   return (
-    <li className="stack" style={{ gap: 'var(--space-1)' }}>
-      <Link to={paths.concept(concept.id)} className="plain">
-        <strong>{concept.title}</strong>
+    <li className={styles.entry}>
+      <Link to={paths.concept(concept.id)} className={`plain ${styles.entryTitle}`}>
+        {concept.title}
       </Link>
-      <span className="muted small">{concept.summary}</span>
+      <span className={styles.entrySummary}>{concept.summary}</span>
     </li>
   )
 }
@@ -46,18 +47,21 @@ export function LibraryPage() {
   return (
     <>
       <PageHeader
+        eyebrow="Consulta livre"
         title="Biblioteca"
-        subtitle="Consulte acordes, escalas, harmonia e teoria — a mesma fonte usada nas aulas."
+        subtitle="Acordes, escalas, harmonia e teoria — a mesma fonte usada nas aulas."
+        aside={<span className="mono xsmall faint">{catalog.concepts.length} verbetes</span>}
       />
 
       <search className={styles.search}>
+        <Icon name="search" size={20} className={styles.searchIcon} />
         <label htmlFor="busca" className="visually-hidden">
           Buscar na Biblioteca
         </label>
         <input
           id="busca"
           type="search"
-          placeholder="Buscar: campo harmônico, tríade, intervalo…"
+          placeholder="Buscar: campo harmônico, tríade, empréstimo…"
           value={query}
           autoComplete="off"
           onChange={(event) => {
@@ -68,11 +72,16 @@ export function LibraryPage() {
       </search>
 
       {query ? (
-        <section className="section" aria-label="Resultados da busca">
+        <section className={styles.results} aria-label="Resultados da busca">
+          <span className="eyebrow">
+            {results.length === 0
+              ? 'Nenhum resultado'
+              : `${results.length} ${results.length === 1 ? 'resultado' : 'resultados'}`}
+          </span>
           {results.length === 0 ? (
             <p className="muted">Nada encontrado para “{query}”.</p>
           ) : (
-            <ul className="list">
+            <ul className={styles.entries}>
               {results.map((concept) => (
                 <ConceptItem key={concept.id} concept={concept} />
               ))}
@@ -80,11 +89,16 @@ export function LibraryPage() {
           )}
         </section>
       ) : (
-        <>
+        <div className={styles.index}>
           {byTrack.map(({ track, concepts }) => (
-            <section key={track.id} className="section" aria-labelledby={`bib-${track.id}`}>
-              <h2 id={`bib-${track.id}`}>{track.name}</h2>
-              <ul className="list">
+            <section key={track.id} className={styles.group} aria-labelledby={`bib-${track.id}`}>
+              <h2 id={`bib-${track.id}`} className={styles.groupTitle}>
+                {track.name}
+                <span className="mono xsmall faint" aria-hidden="true">
+                  {concepts.length}
+                </span>
+              </h2>
+              <ul className={styles.entries}>
                 {concepts.map((concept) => (
                   <ConceptItem key={concept.id} concept={concept} />
                 ))}
@@ -92,16 +106,18 @@ export function LibraryPage() {
             </section>
           ))}
           {general.length > 0 && (
-            <section className="section" aria-labelledby="bib-geral">
-              <h2 id="bib-geral">Geral</h2>
-              <ul className="list">
+            <section className={styles.group} aria-labelledby="bib-geral">
+              <h2 id="bib-geral" className={styles.groupTitle}>
+                Geral
+              </h2>
+              <ul className={styles.entries}>
                 {general.map((concept) => (
                   <ConceptItem key={concept.id} concept={concept} />
                 ))}
               </ul>
             </section>
           )}
-        </>
+        </div>
       )}
     </>
   )

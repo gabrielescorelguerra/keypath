@@ -110,7 +110,8 @@ function QuizRunner({
             data-result={result ? (result.correct ? 'ok' : 'wrong') : undefined}
           >
             <legend className={styles.prompt}>
-              {index + 1}. {question.prompt}
+              <span className={styles.qNumber}>{String(index + 1).padStart(2, '0')}</span>
+              {question.prompt}
               {multiple && <span className="muted small"> (marque todas as corretas)</span>}
             </legend>
             {question.options.map((option, optionIndex) => {
@@ -120,6 +121,7 @@ function QuizRunner({
                 <label
                   key={optionIndex}
                   className={styles.option}
+                  data-checked={checked}
                   data-mark={
                     grade ? (isCorrect ? 'correct' : checked ? 'wrong' : undefined) : undefined
                   }
@@ -130,8 +132,12 @@ function QuizRunner({
                     checked={checked}
                     disabled={grade !== null}
                     onChange={() => choose(question.id, optionIndex, multiple)}
+                    className="visually-hidden"
                   />
-                  {option}
+                  <span className={styles.letter} aria-hidden="true" data-multiple={multiple}>
+                    {String.fromCharCode(65 + optionIndex)}
+                  </span>
+                  <span>{option}</span>
                 </label>
               )
             })}
@@ -255,7 +261,11 @@ function PerformanceRunner({
       <fieldset className={styles.question}>
         <legend className={styles.prompt}>Depois de tocar, marque o que você conseguiu:</legend>
         {exercise.checklist.map((item) => (
-          <label key={item.id} className={styles.option}>
+          <label
+            key={item.id}
+            className={`${styles.option} ${styles.checkItem}`}
+            data-checked={checked[item.id] ?? false}
+          >
             <input
               type="checkbox"
               checked={checked[item.id] ?? false}

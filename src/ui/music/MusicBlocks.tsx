@@ -19,6 +19,7 @@ import {
   type NoteName,
   type ScaleType,
 } from '@/domain/music'
+import { Icon } from '../Icon.tsx'
 import { Keyboard } from './Keyboard.tsx'
 import { noteList } from './names.ts'
 import styles from './Music.module.css'
@@ -37,8 +38,11 @@ function PlayButton({
   const { enabled } = useAudio()
   if (!enabled) return null
   return (
-    <button type="button" className={`button ${styles.play}`} onClick={onPlay}>
-      ▶ {label}
+    <button type="button" className={styles.play} onClick={onPlay}>
+      <span className={styles.playIcon} aria-hidden="true">
+        <Icon name="play" size={14} />
+      </span>
+      {label}
     </button>
   )
 }
@@ -66,13 +70,15 @@ export function ChordBlock({
       <figcaption className={styles.header}>
         <span className={styles.chordName}>{formatChord(chord)}</span>
         {degree && <span className={styles.degree}>{degree}</span>}
-        <span className="muted small">
+        <span className={styles.caption}>
           {chordQualityName(chord.quality)}
           {inversion > 0 && ` · ${inversion}ª inversão`}
         </span>
         <PlayButton onPlay={() => player.playChord(notesToMidi(notes))} />
       </figcaption>
-      <Keyboard notes={notes} naming={naming} />
+      <div className={styles.keys}>
+        <Keyboard notes={notes} naming={naming} />
+      </div>
       <p className={styles.notes}>{noteList(notes, naming)}</p>
     </figure>
   )
@@ -119,7 +125,7 @@ function ChordSequence({
   return (
     <figure className={styles.block}>
       <figcaption className={styles.header}>
-        {caption && <span className="muted small">{caption}</span>}
+        {caption && <span className={styles.caption}>{caption}</span>}
         <PlayButton onPlay={playAll} label="Tocar a sequência" />
       </figcaption>
       <div className={styles.chips} role="group" aria-label="Acordes">
@@ -139,7 +145,9 @@ function ChordSequence({
           </button>
         ))}
       </div>
-      <Keyboard notes={current} naming={naming} />
+      <div className={styles.keys}>
+        <Keyboard notes={current} naming={naming} />
+      </div>
       <p className={styles.notes}>{noteList(current, naming)}</p>
     </figure>
   )
@@ -206,8 +214,7 @@ export function ScaleBlock({
   return (
     <figure className={styles.block}>
       <figcaption className={styles.header}>
-        <span className={styles.chordName}>Escala</span>
-        <span>{title}</span>
+        <span className={styles.chordName}>{title}</span>
         <PlayButton
           onPlay={() =>
             player.playSequence(
@@ -218,7 +225,9 @@ export function ScaleBlock({
           label="Tocar a escala"
         />
       </figcaption>
-      <Keyboard notes={notes} naming={naming} minOctaves={octaves + 1} />
+      <div className={styles.keys}>
+        <Keyboard notes={notes} naming={naming} minOctaves={octaves + 1} />
+      </div>
       <p className={styles.notes}>{noteList(notes.slice(0, -1), naming)}</p>
     </figure>
   )
