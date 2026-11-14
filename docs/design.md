@@ -141,15 +141,15 @@ Com `prefers-reduced-motion`, todo o movimento é desligado.
 
 ## 6. Diagnóstico da v1 (tema escuro)
 
-| Problema | Evidência |
-|---|---|
-| Cards demais, todos parecidos | Início: 4 recipientes com 3 estilos de caixa diferentes. Competência: caixas dentro de caixas (critérios, situação, biblioteca) |
-| Superfícies sem contraste real | Fundo `#101114`, superfície `#17181C` e console `#0A0B0D` são quase iguais; a borda é que separa tudo |
-| Esqueleto único | Título → linha → `split` 2fr/1fr em Início, Competência, Prática, Música e Sessão |
-| Mono maiúsculo em excesso | 6 rótulos em caixa alta espaçada só no Início; trilha de navegação, tabelas e badges também em mono |
-| Espaço sem intenção | Coluna "Pré-requisitos: nenhum"; painel "0 · 0 · 0"; metade inferior do Início vazia |
-| Clichês de template | Faixa colorida à esquerda do destaque, pílulas de status, ícone em círculo na área de importação |
-| Pouca música | O teclado só aparece dentro dos blocos musicais. Nível e progresso não têm nada de musical |
+| Problema                       | Evidência                                                                                                                       |
+| ------------------------------ | ------------------------------------------------------------------------------------------------------------------------------- |
+| Cards demais, todos parecidos  | Início: 4 recipientes com 3 estilos de caixa diferentes. Competência: caixas dentro de caixas (critérios, situação, biblioteca) |
+| Superfícies sem contraste real | Fundo `#101114`, superfície `#17181C` e console `#0A0B0D` são quase iguais; a borda é que separa tudo                           |
+| Esqueleto único                | Título → linha → `split` 2fr/1fr em Início, Competência, Prática, Música e Sessão                                               |
+| Mono maiúsculo em excesso      | 6 rótulos em caixa alta espaçada só no Início; trilha de navegação, tabelas e badges também em mono                             |
+| Espaço sem intenção            | Coluna "Pré-requisitos: nenhum"; painel "0 · 0 · 0"; metade inferior do Início vazia                                            |
+| Clichês de template            | Faixa colorida à esquerda do destaque, pílulas de status, ícone em círculo na área de importação                                |
+| Pouca música                   | O teclado só aparece dentro dos blocos musicais. Nível e progresso não têm nada de musical                                      |
 
 ## 7. Sistema v2
 
@@ -157,31 +157,31 @@ Com `prefers-reduced-motion`, todo o movimento é desligado.
 
 ### 7.1 Superfícies: tom, não borda
 
-| Token | Escuro | Uso |
-|---|---|---|
-| `--ink-0` | `#0B0B0D` | console lateral (o plano mais fundo) |
-| `--bg` | `#121214` | página (área aberta, sem caixas) |
-| `--ink-1` | `#18181B` | superfície rara: controles, teclas, painel de transporte |
-| `--ink-2` | `#202024` | hover e item selecionado |
-| `--line` / `--line-strong` | `#26262A` / `#36363C` | divisórias finas: agrupam sem encaixotar |
-| `--text` / `--text-2` / `--text-3` | `#ECE8DF` / `#A29E95` / `#6C6963` | marfim, dois níveis de apoio |
-| `--accent` | `#EE8A3E` | laranja: ação, progresso, tecla acesa |
-| `--sage` / `--slate` / `--rose` | `#8DBF9B` / `#93AAC4` / `#E2867A` | dominada / declarada / erro |
-| `--key-ivory` / `--felt` | `#E7E1D2` / `#7A2E2A` | teclas brancas / feltro vermelho do teclado |
+| Token                              | Escuro                            | Uso                                                      |
+| ---------------------------------- | --------------------------------- | -------------------------------------------------------- |
+| `--ink-0`                          | `#0B0B0D`                         | console lateral (o plano mais fundo)                     |
+| `--bg`                             | `#121214`                         | página (área aberta, sem caixas)                         |
+| `--ink-1`                          | `#18181B`                         | superfície rara: controles, teclas, painel de transporte |
+| `--ink-2`                          | `#202024`                         | hover e item selecionado                                 |
+| `--line` / `--line-strong`         | `#26262A` / `#36363C`             | divisórias finas: agrupam sem encaixotar                 |
+| `--text` / `--text-2` / `--text-3` | `#ECE8DF` / `#A29E95` / `#6C6963` | marfim, dois níveis de apoio                             |
+| `--accent`                         | `#EE8A3E`                         | laranja: ação, progresso, tecla acesa                    |
+| `--sage` / `--slate` / `--rose`    | `#8DBF9B` / `#93AAC4` / `#E2867A` | dominada / declarada / erro                              |
+| `--key-ivory` / `--felt`           | `#E7E1D2` / `#7A2E2A`             | teclas brancas / feltro vermelho do teclado              |
 
 O tema claro segue a mesma lógica: papel `#F2EFE7` e tinta.
 
 ### 7.2 Tipografia
 
-| Papel | Estilo |
-|---|---|
-| Destaque (título-herói) | Fraunces 400, 56–72 px, `opsz` alto, entrelinha 1,02 |
-| Título de página | Fraunces 400, 40–48 px |
-| Título de seção | Fraunces 500, 22 px, **sem caixa alta e sem linha decorativa** |
-| Subtítulo / lead | Plex Sans 400, 18 px, `--text-2` |
-| Corpo | Plex Sans 400, 16 px / 1,6 |
-| Rótulo | Plex Sans 500, 13 px, **sentence case**, `--text-3` |
-| Dados | Plex Mono **só para números**: bpm, tempo, graus, contagens |
+| Papel                   | Estilo                                                         |
+| ----------------------- | -------------------------------------------------------------- |
+| Destaque (título-herói) | Fraunces 400, 56–72 px, `opsz` alto, entrelinha 1,02           |
+| Título de página        | Fraunces 400, 40–48 px                                         |
+| Título de seção         | Fraunces 500, 22 px, **sem caixa alta e sem linha decorativa** |
+| Subtítulo / lead        | Plex Sans 400, 18 px, `--text-2`                               |
+| Corpo                   | Plex Sans 400, 16 px / 1,6                                     |
+| Rótulo                  | Plex Sans 500, 13 px, **sentence case**, `--text-3`            |
+| Dados                   | Plex Mono **só para números**: bpm, tempo, graus, contagens    |
 
 Rótulos em mono maiúsculo deixam de existir. A hierarquia vem de tamanho, peso e cor.
 
@@ -194,13 +194,13 @@ Rótulos em mono maiúsculo deixam de existir. A hierarquia vem de tamanho, peso
 
 ### 7.4 Elementos musicais (assinatura)
 
-| Elemento | Substitui | Desenho |
-|---|---|---|
-| **Medidor de oitava** | barra de 5 segmentos | Uma oitava de teclado em que as **5 teclas pretas são os 5 níveis**: acesas em laranja até o nível atual, a próxima parcialmente acesa |
-| **Compassos** | barra de progresso da aula | Uma parte por compasso, separados por barras de compasso, com barra dupla final; compasso concluído preenchido |
-| **Régua de teclado** | linha sob o cabeçalho | Faixa fina com o padrão das teclas de uma oitava |
-| **Feltro** | moldura do teclado | Linha vermelho-escura no topo dos diagramas, como o feltro de um piano |
-| **Tecla-botão** | botão primário genérico | Laranja, cantos de 3 px e uma sombra interna inferior que afunda 1 px ao pressionar |
+| Elemento              | Substitui                  | Desenho                                                                                                                                |
+| --------------------- | -------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
+| **Medidor de oitava** | barra de 5 segmentos       | Uma oitava de teclado em que as **5 teclas pretas são os 5 níveis**: acesas em laranja até o nível atual, a próxima parcialmente acesa |
+| **Compassos**         | barra de progresso da aula | Uma parte por compasso, separados por barras de compasso, com barra dupla final; compasso concluído preenchido                         |
+| **Régua de teclado**  | linha sob o cabeçalho      | Faixa fina com o padrão das teclas de uma oitava                                                                                       |
+| **Feltro**            | moldura do teclado         | Linha vermelho-escura no topo dos diagramas, como o feltro de um piano                                                                 |
+| **Tecla-botão**       | botão primário genérico    | Laranja, cantos de 3 px e uma sombra interna inferior que afunda 1 px ao pressionar                                                    |
 
 ### 7.5 Páginas-piloto
 
