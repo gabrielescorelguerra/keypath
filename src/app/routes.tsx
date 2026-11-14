@@ -1,4 +1,6 @@
 import type { RouteObject } from 'react-router'
+import { ConceptPage } from '@/features/biblioteca/ConceptPage'
+import { LibraryPage } from '@/features/biblioteca/LibraryPage'
 import { CompetencyPage } from '@/features/competencias/CompetencyPage'
 import { SettingsPage } from '@/features/configuracoes/SettingsPage'
 import { DiagnosisPage } from '@/features/diagnostico/DiagnosisPage'
@@ -17,8 +19,8 @@ export const routes: RouteObject[] = [
       { path: 'competencias/:competencyId', element: <CompetencyPage /> },
       { path: 'aulas/:lessonId', element: <ComingSoonPage what="Aula" /> },
       { path: 'exercicios/:exerciseId', element: <ComingSoonPage what="Exercício" /> },
-      { path: 'biblioteca', element: <ComingSoonPage what="Biblioteca" /> },
-      { path: 'biblioteca/:conceptId', element: <ComingSoonPage what="Biblioteca" /> },
+      { path: 'biblioteca', element: <LibraryPage /> },
+      { path: 'biblioteca/:conceptId', element: <ConceptPage /> },
       { path: 'diagnostico', element: <DiagnosisPage /> },
       { path: 'configuracoes', element: <SettingsPage /> },
       { path: '*', element: <NotFoundPage /> },

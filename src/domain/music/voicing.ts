@@ -71,3 +71,49 @@ function octaveOfBase(note: NoteName): number {
 export function notesToMidi(notes: readonly NoteName[]): readonly number[] {
   return notes.map(noteToMidi)
 }
+
+/**
+ * Distribui uma sequência de acordes com condução de vozes simples: o primeiro em
+ * posição fundamental; cada seguinte na inversão (e oitava) cujo centro fica mais
+ * perto do acorde anterior — como um tecladista faria, sem pular pelo teclado.
+ */
+export function voiceLead(
+  chords: readonly Chord[],
+  options: { octave?: number } = {},
+): NoteName[][] {
+  const { octave = 4 } = options
+  const center = (notes: readonly NoteName[], chord: Chord) => {
+    const upper = chord.bass ? notes.slice(1) : notes
+    const midis = upper.map(noteToMidi)
+    return midis.reduce((sum, m) => sum + m, 0) / midis.length
+  }
+
+  const result: NoteName[][] = []
+  let previous: number | null = null
+  for (const chord of chords) {
+    if (previous === null) {
+      const first = [...voiceChord(chord, { octave })]
+      result.push(first)
+      previous = center(first, chord)
+      continue
+    }
+    const size = getChordQuality(chord.quality).intervals.length
+    let best: NoteName[] | null = null
+    let bestDistance = Infinity
+    for (const o of [octave - 1, octave]) {
+      for (let inversion = 0; inversion < size; inversion++) {
+        const candidate = [...voiceChord(chord, { octave: o, inversion })]
+        const distance = Math.abs(center(candidate, chord) - previous)
+        if (distance < bestDistance - 1e-9) {
+          best = candidate
+          bestDistance = distance
+        }
+      }
+    }
+    if (best) {
+      result.push(best)
+      previous = center(best, chord)
+    }
+  }
+  return result
+}

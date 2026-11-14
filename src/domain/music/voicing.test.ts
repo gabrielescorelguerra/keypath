@@ -1,5 +1,5 @@
 import { parseChord } from './chords.ts'
-import { notesToMidi, voiceChord, voiceScale } from './voicing.ts'
+import { notesToMidi, voiceChord, voiceLead, voiceScale } from './voicing.ts'
 
 describe('voiceChord', () => {
   it('posição fundamental na oitava 4', () => {
@@ -49,5 +49,33 @@ describe('voiceScale', () => {
     expect(midi[0]).toBe(62)
     expect(midi.at(-1)).toBe(86)
     expect([...midi].sort((a, b) => a - b)).toEqual(midi)
+  })
+})
+
+describe('voiceLead', () => {
+  const lead = (symbols: string) => voiceLead(symbols.split(' ').map((s) => parseChord(s)))
+
+  it('I–IV–V–I em Dó com o menor movimento', () => {
+    expect(lead('C F G C')).toEqual([
+      ['C4', 'E4', 'G4'],
+      ['C4', 'F4', 'A4'],
+      ['B3', 'D4', 'G4'],
+      ['C4', 'E4', 'G4'],
+    ])
+  })
+
+  it('mantém o baixo dos acordes com baixo invertido', () => {
+    const [, second = []] = lead('C G/B')
+    expect(second[0]?.startsWith('B')).toBe(true)
+    const midis = notesToMidi(second)
+    expect(Math.min(...midis)).toBe(midis[0])
+  })
+
+  it('nenhum acorde se afasta muito do anterior', () => {
+    const voicings = lead('G G7 C Cm G Eb F G')
+    const centers = voicings.map((v) => notesToMidi(v).reduce((a, b) => a + b, 0) / v.length)
+    for (let i = 1; i < centers.length; i++) {
+      expect(Math.abs((centers[i] ?? 0) - (centers[i - 1] ?? 0))).toBeLessThanOrEqual(4)
+    }
   })
 })

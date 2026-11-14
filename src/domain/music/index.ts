@@ -56,7 +56,13 @@ export {
   type HarmonicFieldType,
   type HarmonicFunction,
 } from './harmonicField.ts'
-export { notesToMidi, voiceChord, voiceScale, type ChordVoicingOptions } from './voicing.ts'
+export {
+  notesToMidi,
+  voiceChord,
+  voiceLead,
+  voiceScale,
+  type ChordVoicingOptions,
+} from './voicing.ts'
 export {
   DEFAULT_NOTE_NAMING,
   chordQualityName,

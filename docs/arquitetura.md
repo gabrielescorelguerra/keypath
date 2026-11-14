@@ -107,9 +107,25 @@ O código de `domain/` e `scripts/` usa extensão `.ts` explícita nos imports r
 
 ## 7. Áudio
 
-- A interface `AudioPlayer` tem os métodos `playNotes`, `playChord`, `playSequence` e `stop`. A implementação usa amostras de piano carregadas sob demanda, no primeiro clique, como exigem os navegadores.
-- O metrônomo (v0.2) usa o mesmo relógio do Web Audio.
-- Quando o MIDI chegar, haverá a opção "não tocar som quando o teclado estiver conectado", porque o próprio teclado já produz o som.
+- `src/audio/player.ts` implementa a interface `AudioPlayer` (`playChord`, `playSequence`, `stop`, `setVolume`). O `AudioContext` é criado no primeiro toque, como exigem os navegadores.
+- **Piano de verdade:** amostras do `smplr` (SplendidGrandPiano), baixadas da internet no primeiro toque. Para carregar rápido, só uma camada de dinâmica e as notas de C2 a C7.
+- **Sem espera e sem internet:** enquanto as amostras carregam, ou se o download falhar, o player toca com um sintetizador simples de Web Audio (seno e triângulo com decaimento). O som sempre responde. Para uso offline de verdade (PWA), as amostras precisarão ser hospedadas no próprio app.
+- `useAudio()` aplica as Configurações: com o som desligado, os botões de tocar nem aparecem; o volume vem do controle.
+- **Condução de vozes:** sequências de acordes usam `voiceLead` (`domain/music`), que escolhe a inversão mais próxima do acorde anterior.
+- O metrônomo (v0.2) vai usar o mesmo relógio do Web Audio.
+- Quando o MIDI chegar, haverá a opção "não tocar som quando o teclado estiver conectado".
+
+## 7.1 Markdown e blocos musicais
+
+- `src/ui/markdown/Markdown.tsx` renderiza a árvore já interpretada no build (mdast) com componentes React próprios. HTML bruto do conteúdo nunca é exibido. Títulos do conteúdo começam em `h2`, porque o `h1` é o título da página.
+- Blocos musicais (`src/ui/music`): `::chord`, `::chords`, `::progression` e `::scale` mostram o teclado em SVG com as notas destacadas e nomeadas conforme a configuração, a cifra brasileira, os graus e o botão de tocar. Em sequências, clicar num acorde mostra e toca aquele acorde, e "Tocar a sequência" acompanha o destaque.
+- `::concept` e `::exercise` são resolvidos por quem usa o renderizador (a página da aula), por meio de `embeds`.
+
+## 7.2 Biblioteca e busca
+
+- MiniSearch no navegador, com índice montado uma vez a partir dos conceitos (título, sinônimos, resumo e texto).
+- Ignora acentos e maiúsculas ("harmonico" encontra "harmônico"), busca por prefixo, aceita erro de digitação em palavras de mais de 4 letras e exige todos os termos. O título vale mais que os sinônimos, que valem mais que o texto.
+- A busca fica no endereço (`#/biblioteca?q=...`), então dá para voltar a ela pelo histórico.
 
 ## 8. Preparação para MIDI (sem implementação no MVP)
 

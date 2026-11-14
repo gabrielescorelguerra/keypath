@@ -75,12 +75,14 @@ describe('Diagnóstico', () => {
     await user.click(
       await screen.findByRole('button', { name: 'Já sei tudo de Teoria musical até o nível 1' }),
     )
-    expect(await screen.findByRole('checkbox', { name: /Escala maior/ })).toBeChecked()
-    expect(screen.getByRole('checkbox', { name: /Intervalos/ })).toBeChecked()
+    await vi.waitFor(() => {
+      expect(screen.getByRole('checkbox', { name: /Escala maior/ })).toBeChecked()
+      expect(screen.getByRole('checkbox', { name: /Intervalos/ })).toBeChecked()
+    })
 
     await user.click(screen.getByRole('link', { name: 'Início' }))
     const tracks = await screen.findByRole('region', { name: 'Suas trilhas' })
-    expect(within(tracks).getByText('Nível 1 · Iniciante')).toBeInTheDocument()
+    expect(await within(tracks).findByText('Nível 1 · Iniciante')).toBeInTheDocument()
   })
 })
 
@@ -89,11 +91,35 @@ describe('Configurações', () => {
     const { user } = renderRoute('/configuracoes')
     await user.click(await screen.findByRole('radio', { name: /Dó, Ré, Mi/ }))
     await vi.waitFor(async () => expect((await getSettings()).noteNaming).toBe('latin'))
-    expect(screen.getByRole('radio', { name: /Dó, Ré, Mi/ })).toBeChecked()
+    await vi.waitFor(() => expect(screen.getByRole('radio', { name: /Dó, Ré, Mi/ })).toBeChecked())
   })
 
   it('mostra o painel de dados com o lembrete de backup', async () => {
     renderRoute('/configuracoes')
     expect(await screen.findByRole('button', { name: 'Exportar backup' })).toBeInTheDocument()
+  })
+})
+
+describe('Biblioteca', () => {
+  it('busca sem acento e abre o verbete com tabela e exemplo tocável', async () => {
+    const { user } = renderRoute('/biblioteca')
+    await user.type(await screen.findByRole('searchbox'), 'harmonico')
+    const results = await screen.findByRole('region', { name: 'Resultados da busca' })
+    await user.click(within(results).getByRole('link', { name: 'Campo harmônico' }))
+
+    expect(
+      await screen.findByRole('heading', { level: 1, name: 'Campo harmônico' }),
+    ).toBeInTheDocument()
+    expect(screen.getByRole('table')).toBeInTheDocument()
+    expect(screen.getByRole('group', { name: 'Acordes' })).toBeInTheDocument()
+    expect(
+      screen.getByRole('link', { name: /Competência: Campo harmônico maior/ }),
+    ).toBeInTheDocument()
+  })
+
+  it('sem busca, lista os conceitos por trilha', async () => {
+    renderRoute('/biblioteca')
+    expect(await screen.findByRole('heading', { name: 'Teoria musical' })).toBeInTheDocument()
+    expect(screen.getByRole('link', { name: 'Intervalo' })).toBeInTheDocument()
   })
 })
