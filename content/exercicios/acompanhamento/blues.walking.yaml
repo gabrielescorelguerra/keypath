@@ -1,0 +1,29 @@
+id: acompanhamento.blues.walking
+title: Walking bass e riffs na mão direita
+type: performance
+stage: application
+competencies: [acompanhamento.blues]
+prompt: |
+  Com o playback do blues em Fá:
+
+  1. **Walking bass na esquerda**, uma nota por tempo: 1 3 5 6 no primeiro compasso de cada
+     acorde, e no último tempo antes da troca uma **aproximação cromática** (meio tom abaixo ou
+     acima da fundamental seguinte). De Fá7 para Si♭7: Fá Lá Dó **Si** → Si♭.
+  2. **Mão direita:** riffs em terças ou sextas (Lá+Dó, Si♭+Ré…), **tremolos** (alternar duas
+     notas bem rápido) e uma frase em tercinas no turnaround.
+parameters:
+  keys: [F]
+  startBpm: 90
+  targetBpm: 130
+  bpmStep: 8
+  hands: both
+  backing: { key: F, degrees: I7 IV7 I7 I7 IV7 IV7 I7 I7 V7 IV7 I7 V7, beatsPerChord: 4 }
+checklist:
+  - id: walking
+    text: O walking bass andou em semínimas, com aproximação cromática em cada troca.
+  - id: direita
+    text: Usei terças/sextas, tremolo e uma frase em tercinas.
+  - id: voltas
+    text: Toquei duas voltas inteiras da forma sem me perder.
+challenges:
+  - Alterne uma volta de boogie e uma de walking bass.

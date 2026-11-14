@@ -1,0 +1,16 @@
+id: acompanhamento.blues.compor-menor
+title: Um slow blues menor seu
+type: performance
+stage: creativity
+competencies: [acompanhamento.blues]
+prompt: |
+  Componha um slow blues menor de 12 compassos com uma introdução de 4 compassos (sobre o V7) e
+  um final com a frase descendo da blues menor até a tônica. Escolha o tom pela sua voz ou pelo
+  instrumento que vai solar com você.
+parameters:
+  keys: []
+checklist:
+  - id: forma
+    text: Introdução sobre o V7, forma de 12 compassos e final.
+  - id: tocar
+    text: Toquei do começo ao fim em 12/8.

@@ -1,0 +1,33 @@
+id: acompanhamento.blues.menor
+title: Blues menor e slow blues em 12/8
+type: performance
+stage: application
+competencies: [acompanhamento.blues]
+prompt: |
+  O **blues menor** usa a mesma forma de 12 compassos com acordes menores, e a virada característica
+  ♭VI7 → V7 nos compassos 9 e 10:
+
+  ::progression{key="C" degrees="Im7 Im7 Im7 Im7 IVm7 IVm7 Im7 Im7 bVI7 V7 Im7 V7"}
+
+  Toque como **slow blues em 12/8** (cada tempo dividido em três):
+
+  1. **Esquerda:** fundamental e quinta no tempo 1, com uma passagem nas tercinas do tempo 4.
+  2. **Direita:** só **3ª e 7ª** de cada acorde, nas tercinas — leves.
+  3. Depois, improvise com a **blues menor de Dó** (Dó Mi♭ Fá Sol♭ Sol Si♭), com notas de enfeite
+     (grace notes) e tremolos nas notas longas.
+parameters:
+  keys: [C, A, E]
+  startBpm: 48
+  targetBpm: 60
+  bpmStep: 3
+  hands: both
+  backing: { key: C, degrees: Im7 Im7 Im7 Im7 IVm7 IVm7 Im7 Im7 bVI7 V7 Im7 V7, beatsPerChord: 4 }
+checklist:
+  - id: forma
+    text: Toquei a forma do blues menor de memória, com o ♭VI7 → V7.
+  - id: tercinas
+    text: Mantive a sensação de 12/8 nas tercinas da direita.
+  - id: improviso
+    text: Improvisei uma volta inteira com a blues menor, usando grace notes e tremolos.
+challenges:
+  - Troque o ♭VI7 – V7 por IIm7(♭5) – V7 e compare.

@@ -1,0 +1,31 @@
+id: acompanhamento.blues.boogie
+title: Boogie-woogie na mão esquerda
+type: performance
+stage: execution
+competencies: [acompanhamento.blues]
+prompt: |
+  O padrão clássico de boogie sobe e desce pelas notas do acorde dominante, em colcheias
+  suingadas, um compasso por acorde. Em Dó:
+
+  **Dó Mi Sol Lá · Si♭ Lá Sol Mi** (1 3 5 6 · ♭7 6 5 3)
+
+  Transponha a mesma forma para o Fá7 (Fá Lá Dó Ré · Mi♭ Ré Dó Lá) e o Sol7 (Sol Si Ré Mi ·
+  Fá Mi Ré Si) e toque a forma de 12 compassos inteira.
+
+  ::progression{key="C" degrees="I7 I7 I7 I7 IV7 IV7 I7 I7 V7 IV7 I7 V7"}
+parameters:
+  keys: [C, F, G]
+  startBpm: 80
+  targetBpm: 140
+  bpmStep: 6
+  hands: left
+checklist:
+  - id: forma
+    text: Toquei a forma de 12 compassos inteira com o padrão, nos três tons.
+  - id: suingue
+    text: As colcheias ficaram suingadas e regulares.
+  - id: andamento
+    text: Cheguei a 120 bpm ou mais sem tensão na mão.
+challenges:
+  - Dobre o padrão em oitavas na mão esquerda.
+  - Toque o padrão em oitavas quebradas (oitava, nota) — o "walking boogie".

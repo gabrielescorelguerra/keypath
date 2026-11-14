@@ -41,10 +41,10 @@ modules:
     level: 2
     style: blues
     prerequisites: [harmonia-e-tecnica.tetrades, escalas-e-modos.pentatonica-e-blues]
-    lessons: [acompanhamento.blues-no-teclado]
-    upcoming:
-      - Boogie-woogie e walking bass
-      - Blues menor e slow blues
+    lessons:
+      - acompanhamento.blues-no-teclado
+      - acompanhamento.blues-boogie-e-walking
+      - acompanhamento.blues-menor-e-slow-blues
 
   - id: neo-soul
     title: Neo-soul e R&B

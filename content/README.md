@@ -96,7 +96,7 @@ Só entra link verificado: a página precisa existir e tratar do assunto. Prefir
 
 ## Estado atual
 
-- **5 cursos e 34 módulos**, todos com pelo menos uma aula: Fundamentos, Harmonia e técnica, Escalas e modos, Estilos (gospel, worship, jazz, blues, neo-soul, funk, pop, rock alternativo, post-hardcore/metalcore, clássico) e Timbres e sound design.
-- **35 aulas**, 42 competências, 16 conceitos e 126 exercícios. As aulas novas seguem as etapas (fundamentos, visualização, aplicação, prática guiada, revisão), têm materiais externos verificados e exercícios de reconhecimento a criatividade.
-- Alguns módulos listam tópicos extras em preparação (por exemplo, dominantes alterados, boogie-woogie, levadas em 6/8).
+- **5 cursos e 34 módulos**, todos completos — nenhum tópico em preparação.
+- **45 aulas**, 44 competências, 16 conceitos e 149 exercícios, todas em etapas, com materiais externos verificados e exercícios de reconhecimento a criatividade.
+- As aulas de "escuta guiada" (gospel e worship) trazem um roteiro para analisar as músicas do próprio repertório, em vez de cifras de músicas escritas de memória.
 - O conteúdo musical ainda precisa de **revisão do autor**.
