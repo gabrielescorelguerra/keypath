@@ -22,7 +22,26 @@
       {
         "allow": ["**/*.css", "@testing-library/jest-dom/vitest"]
       }
+    ],
+    "no-restricted-imports": [
+      "error",
+      {
+        "paths": [
+          {
+            "name": "tonal",
+            "message": "Use @/domain/music \u2014 s\u00f3 o motor de teoria musical usa a tonal diretamente."
+          }
+        ]
+      }
     ]
   },
-  "ignorePatterns": ["dist", "node_modules", "coverage"]
+  "ignorePatterns": ["dist", "node_modules", "coverage"],
+  "overrides": [
+    {
+      "files": ["src/domain/music/**"],
+      "rules": {
+        "no-restricted-imports": "off"
+      }
+    }
+  ]
 }

@@ -12,10 +12,30 @@ export default defineConfig({
     },
   },
   test: {
-    globals: true,
-    environment: 'jsdom',
-    setupFiles: ['./src/test/setup.ts'],
-    include: ['src/**/*.test.{ts,tsx}', 'scripts/**/*.test.ts'],
     css: { modules: { classNameStrategy: 'non-scoped' } },
+    projects: [
+      {
+        // Lógica pura (teoria musical, regras, scripts): sem navegador simulado.
+        extends: true,
+        test: {
+          name: 'logic',
+          environment: 'node',
+          include: ['src/domain/**/*.test.ts', 'scripts/**/*.test.ts'],
+        },
+      },
+      {
+        // Componentes e telas: com DOM simulado.
+        extends: true,
+        test: {
+          name: 'ui',
+          environment: 'jsdom',
+          globals: true,
+          setupFiles: ['./src/test/setup.ts'],
+          include: ['src/**/*.test.{ts,tsx}'],
+          exclude: ['src/domain/**'],
+        },
+      },
+    ],
+    globals: true,
   },
 })
