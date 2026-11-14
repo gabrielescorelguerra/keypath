@@ -9,6 +9,9 @@
   --color-text-muted: #6b675e;
   --color-accent: #3b5bdb;
   --color-accent-contrast: #ffffff;
+  --color-success: #2b7a3d;
+  --color-warning: #9a5b00;
+  --color-danger: #b42318;
 
   --font-sans: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
   --text-sm: 0.875rem;
@@ -37,6 +40,9 @@
     --color-text-muted: #a3a097;
     --color-accent: #7c94f0;
     --color-accent-contrast: #10131f;
+    --color-success: #6fcf86;
+    --color-warning: #f0b45a;
+    --color-danger: #f28b82;
   }
 }
 
@@ -50,4 +56,7 @@
   --color-text-muted: #a3a097;
   --color-accent: #7c94f0;
   --color-accent-contrast: #10131f;
+  --color-success: #6fcf86;
+  --color-warning: #f0b45a;
+  --color-danger: #f28b82;
 }

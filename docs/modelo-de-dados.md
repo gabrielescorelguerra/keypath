@@ -382,5 +382,5 @@ Estas situações geram apenas **avisos**: um pré-requisito com nível maior qu
 }
 ```
 
-- **MVP:** um arquivo `.json`. A importação **substitui** todos os dados, depois de uma confirmação, e aplica as migrações a partir de `schemaVersion`.
+- **MVP:** um arquivo `.json` (`keypath-backup-AAAA-MM-DD.json`). Se faltarem as configurações (`settings`), valem as padrão. A data do último backup é do dispositivo e não vai no arquivo. A importação **substitui** todos os dados, depois de uma confirmação, e aplica as migrações a partir de `schemaVersion`.
 - **v0.2:** quando houver anexos, o backup passa a ser um `.zip` com `backup.json` e uma pasta `files/`. O mesmo `schemaVersion` controla a migração.

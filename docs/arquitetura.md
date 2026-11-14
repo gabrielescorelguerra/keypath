@@ -97,11 +97,13 @@ O código de `domain/` e `scripts/` usa extensão `.ts` explícita nos imports r
 
 ## 6. Persistência e backup
 
-- **Dexie**, com estas tabelas no MVP: `attempts`, `declarations`, `lessonProgress`, `settings`. Na v0.2 entram `songs`, `attachments`, `blobs` e `practiceSessions`.
-- A interface acessa os dados por **repositórios** em `data/`, com consultas reativas (`useLiveQuery`) que mantêm as telas atualizadas.
-- Ao iniciar, o app pede ao navegador **armazenamento persistente** (`navigator.storage.persist()`) para reduzir o risco de os dados serem apagados automaticamente.
-- **Backup:** exportação e importação descritas no [modelo §9](modelo-de-dados.md#9-formato-do-backup). A tela de Configurações mostra a data do último backup e lembra o usuário de fazer um quando passar muito tempo.
+- **Dexie** (`src/data/db.ts`), banco `keypath`, versão 1, com as tabelas `attempts`, `declarations`, `lessonProgress`, `settings` e `meta` (metadados do dispositivo, como a data do último backup, que não entram no backup). Na v0.2 entram `songs`, `attachments`, `blobs` e `practiceSessions`. Para mudar o formato, crie uma nova `version(n)` com `.upgrade()` e nunca altere uma versão publicada.
+- Toda gravação passa pelos **repositórios** em `src/data/repositories.ts`. A interface lê por hooks reativos (`useUserFacts`, `useSettings`, `useLastBackupAt`, baseados em `useLiveQuery`), e `useProgress` (em `src/app`) recalcula o estado derivado a cada gravação.
+- O pedido de **armazenamento persistente** (`navigator.storage.persist()`) é feito na **primeira gravação** da sessão, e não ao abrir o app, porque o Firefox mostra uma pergunta ao usuário. O Chrome decide sozinho, com base no uso do site. A situação aparece em "Seus dados".
+- **Backup** (`src/data/backup.ts`): exportação e importação descritas no [modelo §9](modelo-de-dados.md#9-formato-do-backup). A importação valida com Zod, aplica as migrações (`MIGRATIONS`, por versão de origem), recusa backups de versão mais nova e substitui tudo depois de uma confirmação.
+- **Lembrete de backup** (`src/data/reminder.ts`): aparece quando há dados e nunca houve backup, ou quando há atividade nova e o último backup tem mais de 7 dias.
 - **Arquivos pessoais** (v0.2) ficam no IndexedDB como Blob e nunca no repositório. O `.gitignore` também cobre arquivos de backup.
+- **Testes:** usam `fake-indexeddb`, um IndexedDB simulado em memória. `src/test/db.ts` limpa o banco entre os testes.
 
 ## 7. Áudio
 
