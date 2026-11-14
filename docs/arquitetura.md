@@ -1,6 +1,6 @@
 # KeyPath — Arquitetura técnica
 
-> Versão 0.2 · 14/11/2026 · Status: **em revisão**
+> Versão 0.2 · 14/11/2026 · Status: **aprovada**
 >
 > As bibliotecas citadas são escolhas iniciais. As versões exatas serão fixadas na implementação.
 

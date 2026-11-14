@@ -1,6 +1,6 @@
 # KeyPath — Plano da fatia vertical de Harmonia
 
-> Versão 0.1 · 14/11/2026 · Status: **rascunho para revisão musical**
+> Versão 0.1 · 14/11/2026 · Status: **estrutura aprovada · conteúdo musical a revisar**
 >
 > Objetivo: ir da revisão de campo harmônico até o empréstimo modal, com aplicações no gospel. Esta fatia serve para testar o modelo inteiro: Biblioteca, aulas, exercícios, critérios e progresso.
 
@@ -46,7 +46,6 @@ graph LR
     CH7 --> CHM
     CHM --> EMP[empréstimo modal · conceito]
     FUN --> EMP
-    MOD -.-> EMP
     EMP --> SDM[subdominante menor]
     EMP --> B67[bVI e bVII]
     TRI --> INV[acomp. inversões e condução]
@@ -55,7 +54,7 @@ graph LR
     INV --> GOS
 ```
 
-A seta tracejada é uma decisão em aberto: `teoria.modos` é pré-requisito do empréstimo modal ou só enriquece o tema? Para empréstimos do menor paralelo, os modos não são necessários. Minha proposta é **não** tornar `teoria.modos` pré-requisito nesta fatia.
+`teoria.modos` **não** é pré-requisito do empréstimo modal ([D22](decisoes.md)): a fatia trata de empréstimos do menor paralelo. Os modos aparecem nas aulas apenas como enriquecimento.
 
 ## 2. Aulas (7, profundas)
 

@@ -1,6 +1,6 @@
 # KeyPath — Modelo de dados
 
-> Versão 0.2 · 14/11/2026 · Status: **em revisão**
+> Versão 0.2 · 14/11/2026 · Status: **aprovada**
 >
 > Convenção: **estrutura em inglês** (nomes de entidades, campos e chaves dos arquivos) e **conteúdo em português** (textos e identificadores/slugs). Ver [D19](decisoes.md).
 

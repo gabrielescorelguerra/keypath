@@ -1,6 +1,6 @@
 # KeyPath — Especificação do produto
 
-> Versão 0.2 · 14/11/2026 · Status: **em revisão** (nada implementado ainda)
+> Versão 0.2 · 14/11/2026 · Status: **aprovada**
 >
 > Documentos relacionados: [Modelo de dados](modelo-de-dados.md) · [Arquitetura](arquitetura.md) · [Decisões](decisoes.md) · [Plano da fatia de Harmonia](plano-fatia-harmonia.md)
 
