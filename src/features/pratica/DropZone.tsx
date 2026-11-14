@@ -1,4 +1,5 @@
 import { useRef, useState, type ReactNode } from 'react'
+import { Icon } from '@/ui/Icon'
 import styles from './Pratica.module.css'
 
 const ACCEPT = '.pdf,.png,.jpg,.jpeg,.webp,.gif,.heic,.mid,.midi,application/pdf,image/*,audio/midi'
@@ -8,10 +9,12 @@ export function DropZone({
   onFiles,
   children,
   label = 'Escolher arquivos',
+  compact = false,
 }: {
   readonly onFiles: (files: File[]) => void
   readonly children?: ReactNode
   readonly label?: string
+  readonly compact?: boolean
 }) {
   const input = useRef<HTMLInputElement>(null)
   const [over, setOver] = useState(false)
@@ -20,6 +23,7 @@ export function DropZone({
     <div
       className={styles.dropZone}
       data-over={over}
+      data-compact={compact}
       onDragOver={(event) => {
         event.preventDefault()
         setOver(true)
@@ -32,8 +36,11 @@ export function DropZone({
         if (files.length > 0) onFiles(files)
       }}
     >
+      <span className={styles.dropIcon} aria-hidden="true">
+        <Icon name="upload" size={20} />
+      </span>
       <div className={styles.dropText}>{children}</div>
-      <button type="button" className="button" onClick={() => input.current?.click()}>
+      <button type="button" className="button sm" onClick={() => input.current?.click()}>
         {label}
       </button>
       <input

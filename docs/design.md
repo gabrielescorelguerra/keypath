@@ -1,6 +1,6 @@
 # KeyPath — Direção de design
 
-> Versão 1.0 · 14/11/2026 · Redesign visual: diagnóstico, proposta e sistema.
+> Versão 1.1 · 14/11/2026 · Redesign visual: diagnóstico, proposta e sistema. **Status: implementado** (R1–R4).
 
 ## 1. Diagnóstico (antes)
 
@@ -117,3 +117,18 @@ Com `prefers-reduced-motion`, todo o movimento é desligado.
 - Tokens em `src/styles/tokens.css`. Componentes globais em `src/styles/components.css`. Ícones SVG próprios em `src/ui/Icon.tsx`, com traço de 1,5 px e 16 a 20 px.
 - Acessibilidade mantida: contraste AA, foco visível em âmbar e alvos de toque de pelo menos 36 px.
 - Celular: a barra lateral vira uma barra superior compacta, as grades de duas colunas viram uma, e as tabelas viram listas.
+
+## 5. Implementação (R1–R4)
+
+| Etapa             | O que mudou                                                                                                                                                                              |
+| ----------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **R1. Fundação**  | Tokens (claro e escuro), fontes hospedadas no app, componentes globais (`src/styles/components.css`), ícones (`src/ui/Icon.tsx`), console lateral, cabeçalho de página e entrada animada |
+| **R2. Progresso** | Início assimétrico, escada de níveis na Trilha, Competência com painel fixo, Diagnóstico e Configurações em coluna de rótulos                                                            |
+| **R3. Conteúdo**  | Aula com linha do tempo das partes e medida de leitura, quiz com opções por letra, índice editorial da Biblioteca, verbete com painel lateral, blocos musicais como instrumento          |
+| **R4. Prática**   | Barra de transporte da sessão, metrônomo como equipamento, repertório em tabela (lista no celular), música com partitura em destaque                                                     |
+
+**Verificações:**
+
+- Os 300 testes automáticos passam. Os testes usam nomes acessíveis, então os ajustes feitos neles refletem mudanças intencionais de texto ou estrutura, não de comportamento.
+- Todas as páginas foram conferidas nos temas claro e escuro e na largura de 390 px, sem rolagem horizontal.
+- As classes globais antigas (`.card`, `.list`, `.row`, `.badge`…) foram mantidas e reestilizadas; novas páginas devem preferir os padrões `split`, `ladder`, `panel` e `section-title`.

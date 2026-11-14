@@ -8,6 +8,10 @@ beforeEach(async () => {
   vi.spyOn(window, 'confirm').mockReturnValue(true)
 })
 
+/** Células da tabela cujo texto (inclusive o oculto para leitores de tela) é `text`. */
+const cells = (container: HTMLElement, text: string) =>
+  within(container).queryAllByText((_, el) => el?.tagName === 'TD' && el.textContent === text)
+
 const pdf = (name: string) => new File(['%PDF-1.4 cifra'], name, { type: 'application/pdf' })
 
 describe('Repertório', () => {
@@ -30,9 +34,9 @@ describe('Repertório', () => {
 
     const list = await screen.findByRole('region', { name: 'Músicas' })
     expect(await within(list).findByRole('link', { name: 'Oceanos' })).toBeInTheDocument()
-    expect(within(list).getByText('Tom D')).toBeInTheDocument()
-    expect(within(list).getByText('Tom G')).toBeInTheDocument()
-    expect(within(list).getAllByText('1 anexo')).toHaveLength(2)
+    expect(cells(list, 'Tom D')).toHaveLength(1)
+    expect(cells(list, 'Tom G')).toHaveLength(1)
+    expect(cells(list, '1 anexo')).toHaveLength(2)
   })
 
   it('filtra por situação e busca sem acento', async () => {

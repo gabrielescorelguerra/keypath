@@ -2,9 +2,11 @@ import { useEffect, useState } from 'react'
 import { deleteAttachment, getAttachmentBlob } from '@/data'
 import { formatFileSize, parseYouTube, youTubeEmbedUrl, type Attachment } from '@/domain/practice'
 import { Badge } from '@/ui/Badges'
+import { Icon } from '@/ui/Icon'
 import styles from './Pratica.module.css'
 
 const KIND_LABEL = { pdf: 'PDF', image: 'Imagem', midi: 'MIDI', youtube: 'YouTube' } as const
+const KIND_ICON = { pdf: 'file', image: 'image', midi: 'note', youtube: 'video' } as const
 
 /** URL temporária para o arquivo do anexo (liberada ao sair da tela). */
 function useObjectUrl(attachment: Attachment): string | null {
@@ -52,10 +54,12 @@ function FileContent({ attachment }: { readonly attachment: Attachment }) {
         </p>
       )}
       <span className="row" style={{ justifyContent: 'flex-start' }}>
-        <a href={url} target="_blank" rel="noopener noreferrer" className="small">
+        <a href={url} target="_blank" rel="noopener noreferrer" className="arrow-link xsmall">
+          <Icon name="external" size={14} />
           Abrir em outra aba
         </a>
-        <a href={url} download={attachment.name} className="small">
+        <a href={url} download={attachment.name} className="arrow-link xsmall">
+          <Icon name="download" size={14} />
           Baixar
         </a>
       </span>
@@ -70,7 +74,8 @@ export function AttachmentView({ attachment }: { readonly attachment: Attachment
   return (
     <li className={styles.attachment}>
       <div className="row">
-        <span>
+        <span className={styles.attachmentName}>
+          <Icon name={KIND_ICON[attachment.kind]} size={16} />
           <Badge>{KIND_LABEL[attachment.kind]}</Badge> <strong>{attachment.name}</strong>
           {attachment.size !== null && (
             <span className="muted small"> · {formatFileSize(attachment.size)}</span>
@@ -78,7 +83,7 @@ export function AttachmentView({ attachment }: { readonly attachment: Attachment
         </span>
         <button
           type="button"
-          className="button"
+          className="button ghost sm"
           onClick={() => {
             if (window.confirm(`Remover o anexo "${attachment.name}"?`)) {
               void deleteAttachment(attachment.id)

@@ -4,6 +4,7 @@ import { useProgress } from '@/app/progress'
 import { catalog } from '@/content'
 import { deleteSession, updateSession, useSession, useSongs } from '@/data'
 import type { PracticeSession } from '@/domain/practice'
+import { Icon } from '@/ui/Icon'
 import { formatDateTime } from '@/ui/labels'
 import { Loading, PageHeader } from '@/ui/Page'
 import { paths } from '@/ui/paths'
@@ -34,84 +35,101 @@ function Summary({ session }: { readonly session: PracticeSession }) {
         ]
           .filter(Boolean)
           .join(' · ')}
+        aside={
+          duration !== null && (
+            <span className={styles.durationBig} aria-hidden="true">
+              {formatDuration(duration)}
+            </span>
+          )
+        }
       />
 
-      <section className="section" aria-labelledby="exercicios-sessao">
-        <h2 id="exercicios-sessao">Exercícios</h2>
-        {attempts.length === 0 ? (
-          <p className="muted">Nenhum exercício registrado nesta sessão.</p>
-        ) : (
-          <ul className="list">
-            {attempts.map((attempt) => {
-              const exercise = catalog.exerciseById.get(attempt.exerciseId)
-              const result = attempt.result
-              const summary =
-                result.type === 'quiz'
-                  ? `${Math.round(result.score * 100)}% de acertos`
-                  : `${Object.values(result.checked).filter(Boolean).length} de ${
-                      exercise?.type === 'performance' ? exercise.checklist.length : '?'
-                    } itens${result.bpm ? ` · ${result.bpm} bpm` : ''}`
-              return (
-                <li key={attempt.id} className="row">
-                  <Link to={paths.exercise(attempt.exerciseId)} className="plain">
-                    {exercise?.title ?? attempt.exerciseId}
-                  </Link>
-                  <span className="muted small">{summary}</span>
-                </li>
-              )
-            })}
-          </ul>
-        )}
-      </section>
+      <div className="split">
+        <div className={styles.column}>
+          <section aria-labelledby="exercicios-sessao">
+            <h2 id="exercicios-sessao" className="section-title">
+              Exercícios
+            </h2>
+            {attempts.length === 0 ? (
+              <p className="muted">Nenhum exercício registrado nesta sessão.</p>
+            ) : (
+              <ul className="list">
+                {attempts.map((attempt) => {
+                  const exercise = catalog.exerciseById.get(attempt.exerciseId)
+                  const result = attempt.result
+                  const summary =
+                    result.type === 'quiz'
+                      ? `${Math.round(result.score * 100)}% de acertos`
+                      : `${Object.values(result.checked).filter(Boolean).length} de ${
+                          exercise?.type === 'performance' ? exercise.checklist.length : '?'
+                        } itens${result.bpm ? ` · ${result.bpm} bpm` : ''}`
+                  return (
+                    <li key={attempt.id} className="row link-row">
+                      <Link to={paths.exercise(attempt.exerciseId)} className="plain">
+                        {exercise?.title ?? attempt.exerciseId}
+                      </Link>
+                      <span className="mono xsmall faint">{summary}</span>
+                    </li>
+                  )
+                })}
+              </ul>
+            )}
+          </section>
 
-      <section className="section" aria-labelledby="musicas-sessao">
-        <h2 id="musicas-sessao">Músicas</h2>
-        {session.songs.length === 0 ? (
-          <p className="muted">Nenhuma música registrada nesta sessão.</p>
-        ) : (
-          <ul className="list">
-            {session.songs.map((entry) => (
-              <li key={entry.songId} className="row">
-                <Link to={practicePaths.song(entry.songId)} className="plain">
-                  {songById.get(entry.songId)?.title ?? 'Música removida'}
-                </Link>
-                <span className="muted small">
-                  {entry.minutes} min{entry.note ? ` · ${entry.note}` : ''}
-                </span>
-              </li>
-            ))}
-          </ul>
-        )}
-      </section>
+          <section aria-labelledby="musicas-sessao">
+            <h2 id="musicas-sessao" className="section-title">
+              Músicas
+            </h2>
+            {session.songs.length === 0 ? (
+              <p className="muted">Nenhuma música registrada nesta sessão.</p>
+            ) : (
+              <ul className="list">
+                {session.songs.map((entry) => (
+                  <li key={entry.songId} className="row link-row">
+                    <Link to={practicePaths.song(entry.songId)} className="plain">
+                      {songById.get(entry.songId)?.title ?? 'Música removida'}
+                    </Link>
+                    <span className="mono xsmall faint">
+                      {entry.minutes} min{entry.note ? ` · ${entry.note}` : ''}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+            )}
+          </section>
+        </div>
 
-      <section className="section" aria-labelledby="anotacoes-sessao">
-        <h2 id="anotacoes-sessao">Anotações</h2>
-        <textarea
-          className={styles.textarea}
-          aria-labelledby="anotacoes-sessao"
-          value={notes}
-          onChange={(event) => setNotes(event.target.value)}
-          onBlur={() => notes !== session.notes && void updateSession(session.id, { notes })}
-        />
-      </section>
-
-      <section className="section">
-        <button
-          type="button"
-          className="button"
-          onClick={() => {
-            if (
-              window.confirm(
-                'Apagar o registro desta sessão? Os exercícios feitos continuam contando.',
-              )
-            ) {
-              void deleteSession(session.id).then(() => navigate(practicePaths.home))
-            }
-          }}
-        >
-          Apagar sessão
-        </button>
-      </section>
+        <aside className="aside">
+          <section aria-labelledby="anotacoes-sessao">
+            <h2 id="anotacoes-sessao" className="eyebrow" style={{ margin: '0 0 var(--space-2)' }}>
+              Anotações
+            </h2>
+            <textarea
+              className="textarea"
+              aria-labelledby="anotacoes-sessao"
+              value={notes}
+              onChange={(event) => setNotes(event.target.value)}
+              onBlur={() => notes !== session.notes && void updateSession(session.id, { notes })}
+            />
+          </section>
+          <button
+            type="button"
+            className={`button ghost sm ${styles.danger}`}
+            onClick={() => {
+              if (
+                window.confirm(
+                  'Apagar o registro desta sessão? Os exercícios feitos continuam contando.',
+                )
+              ) {
+                void deleteSession(session.id).then(() => navigate(practicePaths.home))
+              }
+            }}
+          >
+            <Icon name="trash" size={16} />
+            Apagar sessão
+          </button>
+        </aside>
+      </div>
     </>
   )
 }
