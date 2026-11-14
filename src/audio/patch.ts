@@ -15,7 +15,23 @@ export interface SynthPatch {
   /** LFO no corte do filtro: frequência (Hz) e profundidade (0–1). */
   readonly lfoRate: number
   readonly lfoDepth: number
+  /** Efeitos: chorus (mix 0–1), delay (tempo em s, realimentação 0–0,9, mix 0–1) e reverb (tamanho em s, mix 0–1). */
+  readonly chorus: number
+  readonly delayTime: number
+  readonly delayFeedback: number
+  readonly delayMix: number
+  readonly reverbSize: number
+  readonly reverbMix: number
 }
+
+const DRY = {
+  chorus: 0,
+  delayTime: 0.375,
+  delayFeedback: 0.3,
+  delayMix: 0,
+  reverbSize: 2.5,
+  reverbMix: 0,
+} as const
 
 export type PresetId = 'pad' | 'pluck' | 'lead' | 'strings' | 'organ' | 'bass'
 
@@ -35,6 +51,12 @@ export const PRESETS: Readonly<
       release: 1.8,
       lfoRate: 0.25,
       lfoDepth: 0.3,
+      chorus: 0.3,
+      delayTime: 0.5,
+      delayFeedback: 0.3,
+      delayMix: 0.1,
+      reverbSize: 4,
+      reverbMix: 0.45,
     },
   },
   pluck: {
@@ -50,6 +72,12 @@ export const PRESETS: Readonly<
       release: 0.25,
       lfoRate: 0,
       lfoDepth: 0,
+      chorus: 0,
+      delayTime: 0.375,
+      delayFeedback: 0.35,
+      delayMix: 0.3,
+      reverbSize: 2.5,
+      reverbMix: 0.2,
     },
   },
   lead: {
@@ -65,6 +93,12 @@ export const PRESETS: Readonly<
       release: 0.15,
       lfoRate: 5.5,
       lfoDepth: 0.08,
+      chorus: 0.1,
+      delayTime: 0.3,
+      delayFeedback: 0.25,
+      delayMix: 0.2,
+      reverbSize: 2,
+      reverbMix: 0.15,
     },
   },
   strings: {
@@ -80,6 +114,12 @@ export const PRESETS: Readonly<
       release: 0.9,
       lfoRate: 4.5,
       lfoDepth: 0.04,
+      chorus: 0.2,
+      delayTime: 0.375,
+      delayFeedback: 0.2,
+      delayMix: 0,
+      reverbSize: 3,
+      reverbMix: 0.35,
     },
   },
   organ: {
@@ -95,6 +135,12 @@ export const PRESETS: Readonly<
       release: 0.06,
       lfoRate: 6,
       lfoDepth: 0.05,
+      chorus: 0.4,
+      delayTime: 0.375,
+      delayFeedback: 0.2,
+      delayMix: 0,
+      reverbSize: 1.5,
+      reverbMix: 0.15,
     },
   },
   bass: {
@@ -110,6 +156,7 @@ export const PRESETS: Readonly<
       release: 0.1,
       lfoRate: 0,
       lfoDepth: 0,
+      ...DRY,
     },
   },
 }

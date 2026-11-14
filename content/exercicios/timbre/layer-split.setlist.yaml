@@ -1,0 +1,15 @@
+id: timbre.layer-split.setlist
+title: Montar os registros de um setlist
+type: performance
+stage: creativity
+competencies: [timbre.layer-split]
+prompt: |
+  Monte os registros (performances, sets, favoritos) do seu teclado para um setlist de quatro
+  músicas, com pelo menos um split e um layer, e ensaie as trocas entre músicas sem silêncio.
+parameters:
+  keys: []
+checklist:
+  - id: registros
+    text: Os quatro registros estão salvos em ordem.
+  - id: trocas
+    text: Ensaiei as trocas entre músicas sem buracos de som.

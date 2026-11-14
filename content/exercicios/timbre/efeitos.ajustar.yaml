@@ -1,0 +1,26 @@
+id: timbre.efeitos.ajustar
+title: Ajustar efeitos para três situações
+type: performance
+stage: execution
+competencies: [timbre.efeitos]
+prompt: |
+  No laboratório, ajuste os efeitos para cada situação e anote os valores:
+
+  1. **Pad de oração** (70 bpm): reverb grande (4 s ou mais) e mix alto; delay discreto.
+  2. **Pluck rítmico** (120 bpm): delay de colcheia pontuada — a semínima a 120 bpm dura 0,5 s,
+     então a colcheia pontuada dura 0,375 s. Repetições em torno de 35%.
+  3. **Lead de solo**: chorus leve, delay curto e reverb médio — presença sem "lavar" o som.
+
+  Fórmula: **semínima = 60 ÷ bpm** (em segundos). Colcheia = metade; colcheia pontuada = 0,75 da
+  semínima.
+parameters:
+  keys: []
+checklist:
+  - id: tres
+    text: Ajustei os três timbres e anotei os valores.
+  - id: calculo
+    text: Calculei o tempo do delay a partir do bpm.
+  - id: escuta
+    text: Comparei cada timbre com os efeitos desligados e percebi a diferença.
+challenges:
+  - Calcule o delay de colcheia pontuada para 72, 96 e 140 bpm.

@@ -190,7 +190,15 @@ function MusicOrEmbed({
       )
     case 'synth': {
       const preset = attr(attributes, 'preset') ?? 'pad'
-      return <SynthLab preset={isPresetId(preset) ? preset : 'pad'} />
+      const split = attr(attributes, 'split')
+      const layer = attr(attributes, 'layer')
+      return (
+        <SynthLab
+          preset={isPresetId(preset) ? preset : 'pad'}
+          split={split && isPresetId(split) ? split : undefined}
+          layer={layer && isPresetId(layer) ? layer : undefined}
+        />
+      )
     }
     case 'interval':
       return (

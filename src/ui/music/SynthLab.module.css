@@ -128,3 +128,9 @@
   font-size: var(--text-sm);
   color: var(--color-text-3);
 }
+
+.mode {
+  margin: 0;
+  font-size: var(--text-sm);
+  color: var(--color-accent-text);
+}

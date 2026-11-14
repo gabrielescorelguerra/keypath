@@ -1,0 +1,43 @@
+id: timbre.familias.reconhecer
+title: Famílias de timbres — função e envelope
+type: quiz
+stage: recognition
+competencies: [timbre.familias]
+questions:
+  - id: pad
+    kind: single-choice
+    prompt: Qual família tem ataque lento, sustentação alta e release longo, e fica "por baixo" da banda?
+    options: [Pad, Pluck, Lead]
+    correct: [0]
+  - id: pluck
+    kind: single-choice
+    prompt: E a família com ataque instantâneo e sem sustentação — o som "morre" mesmo com a tecla pressionada?
+    options: [Pluck, Órgão, Strings]
+    correct: [0]
+  - id: orgao
+    kind: single-choice
+    prompt: Qual família liga e desliga quase instantaneamente, sem decaimento, enquanto a tecla está pressionada?
+    options: [Órgão, Piano, Pluck]
+    correct: [0]
+    explanation: O órgão não tem a queda natural do piano — por isso funciona para notas longas e acordes sustentados com volume constante.
+  - id: lead
+    kind: single-choice
+    prompt: Qual família é feita para tocar uma linha de uma nota só, à frente do arranjo?
+    options: [Lead, Pad, Keys]
+    correct: [0]
+  - id: keys
+    kind: single-choice
+    prompt: No vocabulário dos tecladistas, o que costuma ser chamado de "keys"?
+    options:
+      - Pianos elétricos (Rhodes, Wurlitzer), clavinet e pianos
+      - Qualquer timbre sintetizado
+      - Só os órgãos
+    correct: [0]
+  - id: strings
+    kind: single-choice
+    prompt: Por que os strings de synth costumam ter dois osciladores bem desafinados entre si?
+    options:
+      - Para imitar o efeito de muitos instrumentos tocando juntos, levemente fora de afinação
+      - Para soar mais grave
+      - Para encurtar o release
+    correct: [0]

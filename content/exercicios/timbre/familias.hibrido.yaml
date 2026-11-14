@@ -1,0 +1,16 @@
+id: timbre.familias.hibrido
+title: Criar um timbre híbrido
+type: performance
+stage: creativity
+competencies: [timbre.familias]
+prompt: |
+  Misture duas famílias num timbre só — por exemplo, um **pluck com cauda de pad** (sem
+  sustentação, mas com reverb e delay longos) ou um **lead com ataque de strings**. Dê um nome,
+  anote os valores e use numa introdução.
+parameters:
+  keys: []
+checklist:
+  - id: hibrido
+    text: Criei um timbre que mistura duas famílias de forma reconhecível.
+  - id: uso
+    text: Usei o timbre num trecho real de música.

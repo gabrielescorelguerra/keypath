@@ -1,0 +1,29 @@
+id: timbre.familias.construir
+title: Seis famílias a partir do mesmo sintetizador
+type: performance
+stage: execution
+competencies: [timbre.familias]
+prompt: |
+  No laboratório da aula, carregue cada timbre pronto e **altere uma coisa de cada vez** até
+  entender o que define a família. Depois, comece do Órgão e reconstrua cada família sem olhar
+  os timbres prontos, anotando os valores.
+
+  | Família | O que define |
+  | --- | --- |
+  | Pad | ataque e release longos, filtro médio, LFO lento |
+  | Pluck | sem sustentação, queda curta |
+  | Lead | sustentação alta, ataque curto, onda brilhante |
+  | Strings | desafinação alta, ataque médio, vibrato leve |
+  | Órgão | envelope "liga-desliga", onda quadrada |
+  | Baixo | corte baixo, ressonância, queda curta |
+parameters:
+  keys: []
+checklist:
+  - id: seis
+    text: Reconstruí as seis famílias a partir do Órgão.
+  - id: valores
+    text: Anotei os valores de cada uma.
+  - id: uma-coisa
+    text: Para cada família, sei qual é o parâmetro mais importante.
+challenges:
+  - 'Faça um pad com ataque: ataque curto, mas release longo e reverb alto. Em que estilo ele funcionaria?'

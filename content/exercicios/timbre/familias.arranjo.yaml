@@ -1,0 +1,27 @@
+id: timbre.familias.arranjo
+title: Escolher timbres para um arranjo
+type: performance
+stage: application
+competencies: [timbre.familias]
+prompt: |
+  Escolha uma música do repertório e defina **um timbre por seção** no seu teclado:
+
+  | Seção | Função | Sugestão |
+  | --- | --- | --- |
+  | Introdução | atmosfera | pad |
+  | Estrofe | apoio discreto | piano ou keys |
+  | Refrão | energia | piano + strings (layer) |
+  | Ponte | crescendo | pad abrindo o filtro |
+  | Solo / riff | destaque | lead ou pluck |
+
+  Programe os timbres (ou registre os números dos presets) e toque a música inteira trocando no
+  lugar certo.
+parameters:
+  keys: []
+checklist:
+  - id: mapa
+    text: Fiz o mapa de timbres da música.
+  - id: trocas
+    text: Troquei de timbre no tempo certo, sem interromper a música.
+challenges:
+  - Toque o mesmo trecho com o timbre "errado" (lead na estrofe, por exemplo) e descreva por que não funciona.

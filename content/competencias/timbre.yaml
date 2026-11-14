@@ -11,3 +11,46 @@
     - id: laboratorio
       method: self-assessment
       exercise: timbre.sintese.recriar
+
+- id: timbre.familias
+  track: timbre
+  level: 2
+  title: Famílias de timbres
+  description: Reconhece e constrói pads, leads, plucks, strings, órgãos e baixos de synth, e escolhe a família certa para cada função no arranjo.
+  prerequisites: [timbre.sintese-basica]
+  mastery:
+    - id: ouvido
+      method: quiz
+      exercise: timbre.familias.reconhecer
+    - id: laboratorio
+      method: self-assessment
+      exercise: timbre.familias.construir
+
+- id: timbre.efeitos
+  track: timbre
+  level: 2
+  title: Efeitos e ambiência
+  description: Sabe o que fazem reverb, delay, chorus, phaser e drive, e ajusta tempo, repetições e mix para cada timbre e estilo.
+  prerequisites: [timbre.sintese-basica]
+  mastery:
+    - id: teoria
+      method: quiz
+      exercise: timbre.efeitos.reconhecer
+    - id: laboratorio
+      method: self-assessment
+      exercise: timbre.efeitos.ajustar
+
+- id: timbre.layer-split
+  track: timbre
+  level: 2
+  title: Camadas e divisão do teclado
+  description: Monta layers e splits equilibrados (volume, região, efeitos) e toca com eles ao vivo — baixo e piano, pad e piano, piano e strings.
+  prerequisites: [timbre.familias, timbre.efeitos]
+  mastery:
+    - id: teoria
+      method: quiz
+      exercise: timbre.layer-split.reconhecer
+    - id: teclado
+      method: self-assessment
+      exercise: timbre.layer-split.tocar
+      distinctDays: 2

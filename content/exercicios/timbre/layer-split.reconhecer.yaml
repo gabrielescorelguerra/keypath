@@ -1,0 +1,38 @@
+id: timbre.layer-split.reconhecer
+title: Layer e split — conceitos
+type: quiz
+stage: recognition
+competencies: [timbre.layer-split]
+questions:
+  - id: layer
+    kind: single-choice
+    prompt: O que é um layer (camada)?
+    options:
+      - Dois ou mais timbres soando juntos, em toda a extensão do teclado
+      - Timbres diferentes em regiões diferentes do teclado
+      - Um efeito de eco
+    correct: [0]
+  - id: split
+    kind: single-choice
+    prompt: E o split (divisão)?
+    options:
+      - Timbres diferentes em regiões diferentes, separadas por um ponto de divisão
+      - Dois timbres sobrepostos
+      - Trocar de timbre com o pedal
+    correct: [0]
+  - id: ponto
+    kind: single-choice
+    prompt: Por que manter o mesmo ponto de divisão em todas as músicas?
+    options:
+      - Para a mão não precisar se reacostumar a cada música
+      - Porque o teclado não permite mudar
+      - Para economizar memória
+    correct: [0]
+  - id: volume
+    kind: single-choice
+    prompt: Num layer piano + strings, qual costuma ser o papel das strings?
+    options:
+      - Uma camada mais baixa que dá corpo e sustentação ao piano
+      - Ficar mais alta que o piano
+      - Tocar só no grave
+    correct: [0]

@@ -1,0 +1,30 @@
+id: timbre.layer-split.tocar
+title: Tocar com split e com layer
+type: performance
+stage: execution
+competencies: [timbre.layer-split]
+prompt: |
+  **1. Split baixo + pad** (laboratório da aula): mão esquerda faz o baixo abaixo de Dó3 — uma
+  nota por compasso, fundamental — e a direita faz o pad em acordes.
+
+  ::progression{key="D" degrees="I V VIm IV"}
+
+  **2. Layer pad + strings:** toque a mesma progressão em acordes, devagar, e ajuste o volume
+  das camadas até nenhuma "sumir".
+
+  **3. No seu teclado:** monte um split baixo + piano e um layer piano + strings, salve como
+  registro/performance e toque a progressão nos dois.
+parameters:
+  keys: [D, G]
+  startBpm: 70
+  targetBpm: 80
+  hands: both
+checklist:
+  - id: split
+    text: Toquei a progressão com o split, sem invadir a região da outra mão.
+  - id: layer
+    text: Equilibrei o layer de modo que as duas camadas sejam ouvidas.
+  - id: salvo
+    text: Salvei split e layer no meu instrumento.
+challenges:
+  - Faça um split com o ponto de divisão em Dó4 e compare com Dó3 — qual deixa mais espaço para a mão direita?

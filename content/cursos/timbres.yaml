@@ -15,24 +15,21 @@ modules:
     summary: O que define cada família de timbres e como construí-la a partir dos blocos da síntese.
     level: 2
     prerequisites: [timbres.sintese]
-    upcoming:
-      - Famílias de timbres e como montá-las
+    lessons: [timbre.familias-de-timbres]
 
   - id: layering-e-split
     title: Camadas e divisão do teclado
     summary: Sobrepor timbres (layer) e dividir o teclado (split) para tocar baixo e harmonia, pad e piano.
     level: 2
     prerequisites: [timbres.tipos-de-timbre]
-    upcoming:
-      - Layer e split na prática ao vivo
+    lessons: [timbre.camadas-e-divisao]
 
   - id: efeitos
     title: Efeitos e ambiência
     summary: Reverb, delay, chorus e outros efeitos — o que cada um faz e quanto usar.
     level: 2
     prerequisites: [timbres.sintese]
-    upcoming:
-      - Reverb, delay, chorus, phaser e drive
+    lessons: [timbre.efeitos-e-ambiencia]
 
   - id: timbres-por-estilo
     title: Timbres por estilo

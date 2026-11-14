@@ -68,7 +68,7 @@ const intInRange = (name: string, value: string | undefined, min: number, max: n
  *   ::chords{symbols="G G7 C Cm G" key="G"}
  *   ::arpeggio{symbol="Cmaj7" octaves="2" inversion="0"}
  *   ::interval{from="C4" to="E4"}                    (duas notas e o nome do intervalo)
- *   ::synth{preset="pad"}                             (laboratório de síntese)
+ *   ::synth{preset="pad" split="bass"}               (laboratório de síntese; split ou layer opcionais)
  *   ::progression{key="G" degrees="I I7 IV iv I"}
  *   ::scale{root="D" type="harmonic-minor" octaves="2"}
  */
@@ -126,11 +126,18 @@ const DIRECTIVES: Readonly<Record<string, DirectiveSpec>> = {
     kind: 'leafDirective',
     contexts: ALL,
     required: [],
-    optional: ['preset'],
-    check: (a) =>
-      a.preset === undefined || isPresetId(a.preset)
-        ? []
-        : [`preset desconhecido: "${a.preset}" (use ${Object.keys(PRESETS).join(', ')})`],
+    optional: ['preset', 'split', 'layer'],
+    check: (a) => [
+      ...['preset', 'split', 'layer'].flatMap((name) => {
+        const value = a[name]
+        return value === undefined || isPresetId(value)
+          ? []
+          : [`${name} desconhecido: "${value}" (use ${Object.keys(PRESETS).join(', ')})`]
+      }),
+      ...(a.split !== undefined && a.layer !== undefined
+        ? ['use split ou layer, não os dois']
+        : []),
+    ],
   },
   arpeggio: {
     kind: 'leafDirective',

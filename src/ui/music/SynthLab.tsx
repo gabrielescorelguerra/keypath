@@ -18,6 +18,9 @@ const WAVES: readonly { id: SynthPatch['wave']; label: string }[] = [
   { id: 'square', label: 'Quadrada' },
 ]
 
+/** Ponto de divisão do teclado: Dó3 (MIDI 48). */
+const SPLIT_POINT = 48
+
 const MIN_CUTOFF = 80
 const MAX_CUTOFF = 12000
 const toCutoff = (v: number) => Math.round(MIN_CUTOFF * (MAX_CUTOFF / MIN_CUTOFF) ** (v / 1000))
@@ -85,7 +88,17 @@ function EnvelopeCurve({ patch }: { readonly patch: SynthPatch }) {
  * ::synth — laboratório de síntese subtrativa: oscilador, filtro, envelope ADSR e LFO,
  * tocado no teclado da tela. Para ouvir o efeito de cada parâmetro na hora.
  */
-export function SynthLab({ preset = 'pad' }: { readonly preset?: PresetId }) {
+export function SynthLab({
+  preset = 'pad',
+  split,
+  layer,
+}: {
+  readonly preset?: PresetId
+  /** Timbre da mão esquerda, abaixo de Dó3 (divisão do teclado). */
+  readonly split?: PresetId | undefined
+  /** Timbre sobreposto ao principal, no teclado inteiro (camada). */
+  readonly layer?: PresetId | undefined
+}) {
   const { enabled } = useAudio()
   const settings = useSettings() ?? DEFAULT_SETTINGS
   const [patch, setPatch] = useState<SynthPatch>(PRESETS[preset].patch)
@@ -93,16 +106,30 @@ export function SynthLab({ preset = 'pad' }: { readonly preset?: PresetId }) {
   const [held, setHeld] = useState<ReadonlySet<number>>(new Set())
   const engine = useRef<SynthEngine | null>(null)
   engine.current ??= new SynthEngine(patch)
+  const second = useRef<SynthEngine | null>(null)
+  const secondPreset = split ?? layer
+  second.current ??= secondPreset ? new SynthEngine(PRESETS[secondPreset].patch) : null
+  /** Qual motor toca cada tecla: na divisão, abaixo de Dó3 vai para o timbre da esquerda. */
+  const enginesFor = (midi: number) => {
+    const main = engine.current
+    const other = second.current
+    if (split && other) return [midi < SPLIT_POINT ? other : main]
+    if (layer && other) return [main, other]
+    return [main]
+  }
 
   useEffect(() => {
     engine.current?.setPatch(patch)
   }, [patch])
   useEffect(() => {
     engine.current?.setVolume(settings.volume)
+    second.current?.setVolume(settings.volume * 0.85)
   }, [settings.volume])
   useEffect(() => {
-    const synth = engine.current
-    return () => synth?.stopAll()
+    const synths = [engine.current, second.current]
+    return () => {
+      for (const synth of synths) synth?.dispose()
+    }
   }, [])
 
   const set = (changes: Partial<SynthPatch>) => {
@@ -232,6 +259,64 @@ export function SynthLab({ preset = 'pad' }: { readonly preset?: PresetId }) {
         </fieldset>
 
         <fieldset className={styles.module}>
+          <legend>Efeitos</legend>
+          <Slider
+            label="Chorus"
+            value={patch.chorus}
+            display={`${Math.round(patch.chorus * 100)}%`}
+            min={0}
+            max={1}
+            step={0.01}
+            onChange={(chorus) => set({ chorus })}
+          />
+          <Slider
+            label="Delay — tempo"
+            value={patch.delayTime}
+            display={seconds(patch.delayTime)}
+            min={0.05}
+            max={1.5}
+            step={0.005}
+            onChange={(delayTime) => set({ delayTime })}
+          />
+          <Slider
+            label="Delay — repetições"
+            value={patch.delayFeedback}
+            display={`${Math.round(patch.delayFeedback * 100)}%`}
+            min={0}
+            max={0.9}
+            step={0.01}
+            onChange={(delayFeedback) => set({ delayFeedback })}
+          />
+          <Slider
+            label="Delay — mix"
+            value={patch.delayMix}
+            display={`${Math.round(patch.delayMix * 100)}%`}
+            min={0}
+            max={1}
+            step={0.01}
+            onChange={(delayMix) => set({ delayMix })}
+          />
+          <Slider
+            label="Reverb — tamanho"
+            value={patch.reverbSize}
+            display={seconds(patch.reverbSize)}
+            min={0.3}
+            max={8}
+            step={0.1}
+            onChange={(reverbSize) => set({ reverbSize })}
+          />
+          <Slider
+            label="Reverb — mix"
+            value={patch.reverbMix}
+            display={`${Math.round(patch.reverbMix * 100)}%`}
+            min={0}
+            max={1}
+            step={0.01}
+            onChange={(reverbMix) => set({ reverbMix })}
+          />
+        </fieldset>
+
+        <fieldset className={styles.module}>
           <legend>LFO → corte do filtro</legend>
           <Slider
             label="Velocidade"
@@ -258,14 +343,14 @@ export function SynthLab({ preset = 'pad' }: { readonly preset?: PresetId }) {
         <Keyboard
           notes={[]}
           naming={settings.noteNaming}
-          minOctaves={2}
+          minOctaves={split ? 3 : 2}
           pressed={held}
           onPress={(midi) => {
-            engine.current?.noteOn(midi)
+            for (const synth of enginesFor(midi)) synth?.noteOn(midi)
             setHeld((current) => new Set(current).add(midi))
           }}
           onRelease={(midi) => {
-            engine.current?.noteOff(midi)
+            for (const synth of enginesFor(midi)) synth?.noteOff(midi)
             setHeld((current) => {
               if (!current.has(midi)) return current
               const next = new Set(current)
@@ -275,6 +360,13 @@ export function SynthLab({ preset = 'pad' }: { readonly preset?: PresetId }) {
           }}
         />
       </div>
+      {secondPreset && (
+        <p className={styles.mode}>
+          {split
+            ? `Teclado dividido: ${PRESETS[secondPreset].name} na mão esquerda (abaixo de Dó3) e o timbre editável na direita.`
+            : `Camada: ${PRESETS[secondPreset].name} soando junto com o timbre editável em todo o teclado.`}
+        </p>
+      )}
       <p className={styles.hint}>
         Segure uma tecla para ouvir ataque, queda e sustentação; solte para ouvir o release.
       </p>

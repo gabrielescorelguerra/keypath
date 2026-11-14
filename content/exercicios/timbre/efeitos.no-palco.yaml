@@ -1,0 +1,19 @@
+id: timbre.efeitos.no-palco
+title: Efeitos no seu teclado, música a música
+type: performance
+stage: application
+competencies: [timbre.efeitos]
+prompt: |
+  No seu teclado ou instrumento virtual, crie (ou ajuste) os efeitos de três músicas do
+  repertório com andamentos diferentes. Para cada uma: delay sincronizado com o bpm da música,
+  reverb de acordo com o momento (menor na música rápida, maior na de adoração) e chorus só onde
+  o timbre precisar de largura.
+parameters:
+  keys: []
+checklist:
+  - id: tres
+    text: Ajustei os efeitos das três músicas no meu instrumento.
+  - id: bpm
+    text: Os delays estão sincronizados com o andamento de cada música.
+challenges:
+  - Use o tap tempo (se o seu teclado tiver) para sincronizar o delay tocando junto com a banda.

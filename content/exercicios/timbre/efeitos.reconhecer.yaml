@@ -1,0 +1,42 @@
+id: timbre.efeitos.reconhecer
+title: Efeitos — o que cada um faz
+type: quiz
+stage: recognition
+competencies: [timbre.efeitos]
+questions:
+  - id: reverb
+    kind: single-choice
+    prompt: Qual efeito simula o espaço (sala, igreja, salão) em que o som acontece?
+    options: [Reverb, Chorus, Drive]
+    correct: [0]
+  - id: delay
+    kind: single-choice
+    prompt: Qual efeito repete o som em ecos distintos, a intervalos regulares?
+    options: [Delay, Reverb, Phaser]
+    correct: [0]
+  - id: chorus
+    kind: single-choice
+    prompt: Qual efeito "engrossa" e alarga o som somando uma cópia levemente desafinada e oscilante?
+    options: [Chorus, Delay, Compressor]
+    correct: [0]
+  - id: modulacao
+    kind: single-choice
+    prompt: Chorus, flanger e phaser são efeitos de…
+    options: [Modulação, Tempo (espaço), Dinâmica]
+    correct: [0]
+  - id: delay-tempo
+    kind: single-choice
+    prompt: A 80 bpm, um delay de colcheia pontuada (muito usado no worship e no rock alternativo) dura aproximadamente…
+    options: [560 ms, 375 ms, 1 s]
+    correct: [0]
+    explanation: Uma semínima a 80 bpm dura 750 ms; a colcheia, 375 ms; a colcheia pontuada, 375 × 1,5 ≈ 560 ms.
+  - id: baixo-seco
+    kind: single-choice
+    prompt: Num split baixo + piano, por que se costuma deixar o baixo sem reverb?
+    options:
+      [
+        Reverb no grave embola e tira a definição do baixo,
+        O baixo já tem reverb natural,
+        Para economizar processamento,
+      ]
+    correct: [0]
