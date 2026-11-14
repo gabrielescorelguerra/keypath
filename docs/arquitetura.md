@@ -2,7 +2,7 @@
 
 > Versão 0.2 · 14/11/2026 · Status: **aprovada**
 >
-> As bibliotecas citadas são escolhas iniciais. As versões exatas serão fixadas na implementação.
+> As bibliotecas citadas são escolhas iniciais. Base instalada na etapa 1: Node 22+, TypeScript 7, React 19, Vite 8, Vitest 5.
 
 ## 1. Visão geral
 
@@ -30,21 +30,21 @@ O KeyPath é uma **aplicação web estática** (SPA), sem backend:
 
 ## 2. Stack
 
-| Necessidade | Escolha | Motivo |
-|---|---|---|
-| Linguagem | TypeScript (modo estrito) | O modelo de dados é rico e os tipos protegem as relações |
-| UI | React + Vite | Ecossistema maduro e build estático simples |
-| Rotas | React Router | Padrão de mercado |
-| Estilos | CSS Modules + variáveis CSS (tokens) | Sem dependência pesada, com tema claro e escuro |
-| Validação | Zod | Mesmos schemas para o conteúdo (build), o backup (importação) e a geração dos tipos |
-| Markdown | unified / remark + `remark-directive` | O conteúdo continua sendo texto puro; as *directives* viram componentes React |
-| Teoria musical | Tonal (`tonal`), **encapsulado** em `domain/music` | Grafia correta, acordes e escalas; o app nunca chama a biblioteca diretamente |
-| Áudio | Web Audio com amostras de piano (`smplr`), atrás da interface `AudioPlayer` | Som de piano real, carregado sob demanda |
-| Persistência | IndexedDB via Dexie | Guarda volume e arquivos (anexos na v0.2) e tem versionamento de schema |
-| Busca | MiniSearch | Busca de texto completo no cliente, ignorando acentos |
-| Testes | Vitest + Testing Library; Playwright depois | |
-| Qualidade | ESLint + Prettier | |
-| Deploy | GitHub Actions → GitHub Pages | Gratuito e sem servidor |
+| Necessidade    | Escolha                                                                     | Motivo                                                                              |
+| -------------- | --------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| Linguagem      | TypeScript (modo estrito)                                                   | O modelo de dados é rico e os tipos protegem as relações                            |
+| UI             | React + Vite                                                                | Ecossistema maduro e build estático simples                                         |
+| Rotas          | React Router                                                                | Padrão de mercado                                                                   |
+| Estilos        | CSS Modules + variáveis CSS (tokens)                                        | Sem dependência pesada, com tema claro e escuro                                     |
+| Validação      | Zod                                                                         | Mesmos schemas para o conteúdo (build), o backup (importação) e a geração dos tipos |
+| Markdown       | unified / remark + `remark-directive`                                       | O conteúdo continua sendo texto puro; as _directives_ viram componentes React       |
+| Teoria musical | Tonal (`tonal`), **encapsulado** em `domain/music`                          | Grafia correta, acordes e escalas; o app nunca chama a biblioteca diretamente       |
+| Áudio          | Web Audio com amostras de piano (`smplr`), atrás da interface `AudioPlayer` | Som de piano real, carregado sob demanda                                            |
+| Persistência   | IndexedDB via Dexie                                                         | Guarda volume e arquivos (anexos na v0.2) e tem versionamento de schema             |
+| Busca          | MiniSearch                                                                  | Busca de texto completo no cliente, ignorando acentos                               |
+| Testes         | Vitest + Testing Library; Playwright depois                                 |                                                                                     |
+| Qualidade      | oxlint + Prettier                                                           | oxlint é o linter padrão do template atual do Vite e muito rápido                   |
+| Deploy         | GitHub Actions → GitHub Pages                                               | Gratuito e sem servidor                                                             |
 
 ## 3. Estrutura de diretórios
 
@@ -129,12 +129,12 @@ Restrições conhecidas: o Web MIDI funciona em Chrome, Edge e Firefox, **mas n�
 
 ## 10. Testes
 
-| Alvo | Tipo |
-|---|---|
-| `domain/music` | Unitários extensos: grafia, campos e graus em todos os tons |
-| `domain/progress` | Unitários com cenários: declarar, demonstrar, `distinctDays`, nível com lacunas, recomendação |
-| `scripts/build-content` | Unitários com conteúdo inválido de propósito |
-| `data/` | Ida e volta do backup e migrações |
-| Telas | Testes de componente nos fluxos principais; Playwright (e2e) depois |
+| Alvo                    | Tipo                                                                                          |
+| ----------------------- | --------------------------------------------------------------------------------------------- |
+| `domain/music`          | Unitários extensos: grafia, campos e graus em todos os tons                                   |
+| `domain/progress`       | Unitários com cenários: declarar, demonstrar, `distinctDays`, nível com lacunas, recomendação |
+| `scripts/build-content` | Unitários com conteúdo inválido de propósito                                                  |
+| `data/`                 | Ida e volta do backup e migrações                                                             |
+| Telas                   | Testes de componente nos fluxos principais; Playwright (e2e) depois                           |
 
 O próprio build de conteúdo funciona como teste: o conteúdo publicado sempre passa nas regras de integridade.

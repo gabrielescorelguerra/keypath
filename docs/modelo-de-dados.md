@@ -28,26 +28,26 @@ Regras de referência:
 
 ## 2. Glossário
 
-| Termo | Entidade | Camada | No MVP |
-|---|---|---|---|
-| Trilha | `Track` | Conteúdo (config) | ✅ |
-| Nível | `Level` | Conteúdo (config) | ✅ |
-| Estilo | `Style` | Conteúdo (config) | ✅ |
-| Competência | `Competency` | Conteúdo | ✅ |
-| Critério de domínio | `MasteryCriterion` | Conteúdo (dentro de `Competency`) | ✅ |
-| Conceito (verbete) | `Concept` | Conteúdo | ✅ |
-| Aula | `Lesson` | Conteúdo | ✅ |
-| Ponto de verificação | `Checkpoint` | Conteúdo (dentro de `Lesson`) | ✅ |
-| Exercício | `Exercise` | Conteúdo | ✅ |
-| Curso | `Course` | Conteúdo | ⏳ v0.2 |
-| Módulo | `Module` | Conteúdo (dentro de `Course`) | ⏳ v0.2 |
-| Tentativa | `Attempt` | Usuário | ✅ |
-| Declaração | `Declaration` | Usuário | ✅ |
-| Progresso de aula | `LessonProgress` | Usuário | ✅ |
-| Configurações | `Settings` | Usuário | ✅ |
-| Música | `Song` | Usuário | ⏳ v0.2 |
-| Anexo | `Attachment` | Usuário | ⏳ v0.2 |
-| Sessão de prática | `PracticeSession` | Usuário | ⏳ v0.2 |
+| Termo                | Entidade           | Camada                            | No MVP  |
+| -------------------- | ------------------ | --------------------------------- | ------- |
+| Trilha               | `Track`            | Conteúdo (config)                 | ✅      |
+| Nível                | `Level`            | Conteúdo (config)                 | ✅      |
+| Estilo               | `Style`            | Conteúdo (config)                 | ✅      |
+| Competência          | `Competency`       | Conteúdo                          | ✅      |
+| Critério de domínio  | `MasteryCriterion` | Conteúdo (dentro de `Competency`) | ✅      |
+| Conceito (verbete)   | `Concept`          | Conteúdo                          | ✅      |
+| Aula                 | `Lesson`           | Conteúdo                          | ✅      |
+| Ponto de verificação | `Checkpoint`       | Conteúdo (dentro de `Lesson`)     | ✅      |
+| Exercício            | `Exercise`         | Conteúdo                          | ✅      |
+| Curso                | `Course`           | Conteúdo                          | ⏳ v0.2 |
+| Módulo               | `Module`           | Conteúdo (dentro de `Course`)     | ⏳ v0.2 |
+| Tentativa            | `Attempt`          | Usuário                           | ✅      |
+| Declaração           | `Declaration`      | Usuário                           | ✅      |
+| Progresso de aula    | `LessonProgress`   | Usuário                           | ✅      |
+| Configurações        | `Settings`         | Usuário                           | ✅      |
+| Música               | `Song`             | Usuário                           | ⏳ v0.2 |
+| Anexo                | `Attachment`       | Usuário                           | ⏳ v0.2 |
+| Sessão de prática    | `PracticeSession`  | Usuário                           | ⏳ v0.2 |
 
 ## 3. Diagramas de relações
 
@@ -92,64 +92,64 @@ erDiagram
 
 São listas fixas em `content/config/`. Não há tela para editá-las.
 
-| Entidade | Campos |
-|---|---|
-| `Track` | `id` (`harmonia`), `name`, `description`, `kind` (`discipline` \| `application`), `order` |
-| `Level` | `number` (1–5), `name` |
-| `Style` | `id` (`gospel`), `name` |
+| Entidade | Campos                                                                                    |
+| -------- | ----------------------------------------------------------------------------------------- |
+| `Track`  | `id` (`harmonia`), `name`, `description`, `kind` (`discipline` \| `application`), `order` |
+| `Level`  | `number` (1–5), `name`                                                                    |
+| `Style`  | `id` (`gospel`), `name`                                                                   |
 
 ### 4.2 `Competency`
 
-| Campo | Tipo | Descrição |
-|---|---|---|
-| `id` | slug | `<trilha>.<nome>`. Exemplo: `harmonia.campo-harmonico-maior-triades` |
-| `track` | `Track.id` | Exatamente uma trilha |
-| `level` | 1–5 | Dificuldade |
-| `title`, `description` | texto | Descrição observável ("forma, toca e nomeia…") |
-| `core` | boolean (padrão `true`) | Se entra no cálculo de nível |
-| `prerequisites` | `Competency.id[]` | Pode apontar para outras trilhas |
-| `concepts` | `Concept.id[]` | Verbetes da Biblioteca |
-| `styles` | `Style.id[]` | Etiquetas |
-| `mastery` | `MasteryCriterion[]` (≥ 1) | **Todos** precisam ser cumpridos (E lógico) |
+| Campo                  | Tipo                       | Descrição                                                            |
+| ---------------------- | -------------------------- | -------------------------------------------------------------------- |
+| `id`                   | slug                       | `<trilha>.<nome>`. Exemplo: `harmonia.campo-harmonico-maior-triades` |
+| `track`                | `Track.id`                 | Exatamente uma trilha                                                |
+| `level`                | 1–5                        | Dificuldade                                                          |
+| `title`, `description` | texto                      | Descrição observável ("forma, toca e nomeia…")                       |
+| `core`                 | boolean (padrão `true`)    | Se entra no cálculo de nível                                         |
+| `prerequisites`        | `Competency.id[]`          | Pode apontar para outras trilhas                                     |
+| `concepts`             | `Concept.id[]`             | Verbetes da Biblioteca                                               |
+| `styles`               | `Style.id[]`               | Etiquetas                                                            |
+| `mastery`              | `MasteryCriterion[]` (≥ 1) | **Todos** precisam ser cumpridos (E lógico)                          |
 
 A competência é dona dos critérios de domínio porque o domínio pode ser demonstrado sem passar por aula nenhuma.
 
 ### 4.3 `MasteryCriterion`
 
-| Campo | Tipo | Descrição |
-|---|---|---|
-| `id` | slug local | Único dentro da competência |
-| `method` | `quiz` \| `self-assessment` \| `performance`⏳ \| `review`⏳ | Como o critério é verificado |
-| `exercise` | `Exercise.id` | O exercício usado como evidência |
-| `minScore` | 0–1 (padrão 0.8) | Apenas para `quiz` |
-| `distinctDays` | inteiro (padrão 1) | Quantos dias diferentes o critério precisa ser cumprido |
+| Campo          | Tipo                                                         | Descrição                                               |
+| -------------- | ------------------------------------------------------------ | ------------------------------------------------------- |
+| `id`           | slug local                                                   | Único dentro da competência                             |
+| `method`       | `quiz` \| `self-assessment` \| `performance`⏳ \| `review`⏳ | Como o critério é verificado                            |
+| `exercise`     | `Exercise.id`                                                | O exercício usado como evidência                        |
+| `minScore`     | 0–1 (padrão 0.8)                                             | Apenas para `quiz`                                      |
+| `distinctDays` | inteiro (padrão 1)                                           | Quantos dias diferentes o critério precisa ser cumprido |
 
 O **tipo do exercício** (o que se faz) é diferente do **método do critério** (como se verifica). Um exercício de execução é verificado por `self-assessment` no MVP. Quando houver MIDI, o mesmo exercício pode ser verificado por `performance`, sem mudar o restante do modelo.
 
 ### 4.4 `Concept`
 
-| Campo | Tipo | Descrição |
-|---|---|---|
-| `id` | slug | Exemplo: `emprestimo-modal` |
-| `title` | texto | |
-| `aliases` | texto[] | Sinônimos para a busca ("mistura modal", "modal interchange") |
-| `summary` | texto | Uma ou duas frases, usadas nos resultados de busca e nas prévias |
-| `tracks` | `Track.id[]` | Pode pertencer a várias trilhas (só serve para filtro) |
-| `styles` | `Style.id[]` | |
-| `related` | `Concept.id[]` | |
-| `body` | Markdown | Texto do verbete, com blocos musicais |
+| Campo     | Tipo           | Descrição                                                        |
+| --------- | -------------- | ---------------------------------------------------------------- |
+| `id`      | slug           | Exemplo: `emprestimo-modal`                                      |
+| `title`   | texto          |                                                                  |
+| `aliases` | texto[]        | Sinônimos para a busca ("mistura modal", "modal interchange")    |
+| `summary` | texto          | Uma ou duas frases, usadas nos resultados de busca e nas prévias |
+| `tracks`  | `Track.id[]`   | Pode pertencer a várias trilhas (só serve para filtro)           |
+| `styles`  | `Style.id[]`   |                                                                  |
+| `related` | `Concept.id[]` |                                                                  |
+| `body`    | Markdown       | Texto do verbete, com blocos musicais                            |
 
 ### 4.5 `Lesson` e `Checkpoint`
 
-| Campo | Tipo | Descrição |
-|---|---|---|
-| `id` | slug | `harmonia.emprestimo-modal-subdominante-menor` |
-| `title`, `summary` | texto | |
-| `track` | `Track.id` | Trilha principal, usada para exibição |
-| `competencies` | `Competency.id[]` (≥ 1) | Competências trabalhadas |
-| `styles` | `Style.id[]` | |
-| `estimatedMinutes` | inteiro | Opcional |
-| `body` | Markdown | Introdução e checkpoints |
+| Campo              | Tipo                    | Descrição                                      |
+| ------------------ | ----------------------- | ---------------------------------------------- |
+| `id`               | slug                    | `harmonia.emprestimo-modal-subdominante-menor` |
+| `title`, `summary` | texto                   |                                                |
+| `track`            | `Track.id`              | Trilha principal, usada para exibição          |
+| `competencies`     | `Competency.id[]` (≥ 1) | Competências trabalhadas                       |
+| `styles`           | `Style.id[]`            |                                                |
+| `estimatedMinutes` | inteiro                 | Opcional                                       |
+| `body`             | Markdown                | Introdução e checkpoints                       |
 
 Os **checkpoints** são declarados no corpo da aula (ver §7.3). Cada um tem `id` (único na aula) e `title`, e pode conter conceitos incorporados, exemplos musicais, exercícios e blocos de erros comuns.
 
@@ -162,17 +162,17 @@ Campos **derivados** (não são escritos à mão):
 
 ### 4.6 `Exercise`
 
-| Campo | Tipo | Descrição |
-|---|---|---|
-| `id` | slug | `harmonia.campo-maior.quiz` |
-| `title`, `prompt` | texto / Markdown | |
-| `type` | `quiz` \| `performance` | |
-| `competencies` | `Competency.id[]` (≥ 1) | Competências que o exercício treina |
-| `styles` | `Style.id[]` | |
-| `questions` | `Question[]` | Apenas `quiz` |
-| `parameters` | `{ keys?: string[], targetBpm?: number, hands?: 'left' \| 'right' \| 'both' }` | Apenas `performance` |
-| `checklist` | `{ id, text }[]` | Apenas `performance`. São os itens de autoavaliação |
-| `example` | bloco musical | Opcional. Referência tocável |
+| Campo             | Tipo                                                                           | Descrição                                           |
+| ----------------- | ------------------------------------------------------------------------------ | --------------------------------------------------- |
+| `id`              | slug                                                                           | `harmonia.campo-maior.quiz`                         |
+| `title`, `prompt` | texto / Markdown                                                               |                                                     |
+| `type`            | `quiz` \| `performance`                                                        |                                                     |
+| `competencies`    | `Competency.id[]` (≥ 1)                                                        | Competências que o exercício treina                 |
+| `styles`          | `Style.id[]`                                                                   |                                                     |
+| `questions`       | `Question[]`                                                                   | Apenas `quiz`                                       |
+| `parameters`      | `{ keys?: string[], targetBpm?: number, hands?: 'left' \| 'right' \| 'both' }` | Apenas `performance`                                |
+| `checklist`       | `{ id, text }[]`                                                               | Apenas `performance`. São os itens de autoavaliação |
+| `example`         | bloco musical                                                                  | Opcional. Referência tocável                        |
 
 `Question`:
 
@@ -182,7 +182,7 @@ Campos **derivados** (não são escritos à mão):
 - `correct`: índices das opções corretas;
 - `explanation`.
 
-### 4.7 `Course` e `Module` *(v0.2)*
+### 4.7 `Course` e `Module` _(v0.2)_
 
 - `Course`: `id`, `title`, `description`, `styles`, `modules: Module[]`.
 - `Module`: `id`, `title`, `items: ({ lesson } | { exercise })[]`.
@@ -195,12 +195,12 @@ São armazenados no IndexedDB. Todo registro tem `id` (UUID) e datas no formato 
 
 ### 5.1 `Attempt` — tentativa de exercício
 
-| Campo | Tipo | Descrição |
-|---|---|---|
-| `exerciseId` | `Exercise.id` | |
-| `startedAt`, `finishedAt` | data | |
-| `context` | `{ lessonId?, checkpointId?, sessionId?⏳ }` | De onde a tentativa foi feita |
-| `result` | `QuizResult` \| `SelfAssessmentResult` | |
+| Campo                     | Tipo                                         | Descrição                     |
+| ------------------------- | -------------------------------------------- | ----------------------------- |
+| `exerciseId`              | `Exercise.id`                                |                               |
+| `startedAt`, `finishedAt` | data                                         |                               |
+| `context`                 | `{ lessonId?, checkpointId?, sessionId?⏳ }` | De onde a tentativa foi feita |
+| `result`                  | `QuizResult` \| `SelfAssessmentResult`       |                               |
 
 - `QuizResult`: `{ answers: Record<questionId, number[]>, score: 0–1 }`
 - `SelfAssessmentResult`: `{ checked: Record<itemId, boolean>, keysPlayed?: string[], bpm?: number, note?: string }`
@@ -218,7 +218,7 @@ São armazenados no IndexedDB. Todo registro tem `id` (UUID) e datas no formato 
 
 `{ noteNaming: 'latin' | 'letters' | 'both', chordSymbols: 'br', soundEnabled, volume }`. É um registro único.
 
-### 5.5 `Song`, `Attachment`, `PracticeSession` *(v0.2)*
+### 5.5 `Song`, `Attachment`, `PracticeSession` _(v0.2)_
 
 - `Song`:
   - `title`, `artist?`, `key?`, `bpm?`;
@@ -234,17 +234,17 @@ São armazenados no IndexedDB. Todo registro tem `id` (UUID) e datas no formato 
 
 São funções puras do tipo `(catálogo, fatos do usuário, data atual) → estado`. Ficam em `src/domain/progress` e são cobertas por testes unitários.
 
-| Regra | Definição |
-|---|---|
-| **Critério cumprido** | `quiz`: o número de dias distintos com uma tentativa do exercício com `score ≥ minScore` é ≥ `distinctDays`. `self-assessment`: o número de dias distintos com uma tentativa em que **todos** os itens do checklist foram marcados é ≥ `distinctDays`. |
-| **Competência dominada** | Todos os critérios estão cumpridos. `masteredAt` é a data em que o último deles foi cumprido. |
-| **Status da competência** | `mastered` › `declared` › `in-progress` (há tentativa de um exercício da competência ou checkpoint concluído em aula que a trabalha) › `not-started` |
-| **Competência satisfeita** | `mastered` ou `declared` |
-| **Pré-requisitos atendidos** | Todos os pré-requisitos diretos estão satisfeitos. Apenas informa, não bloqueia. |
-| **Competência pronta** | Pré-requisitos atendidos e a competência ainda não está satisfeita |
-| **Nível da trilha** | O maior N em que todas as competências `core` da trilha, dos níveis 1 a N, estão satisfeitas. Um nível sem competências interrompe a contagem. O resultado 0 significa "sem nível". |
-| **Status da aula** | `completed` (todos os checkpoints concluídos), `in-progress` (algum concluído) ou `not-started` |
-| **Recomendação** | Ver [produto §5](produto.md#5-recomendação-mvp) |
+| Regra                        | Definição                                                                                                                                                                                                                                              |
+| ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **Critério cumprido**        | `quiz`: o número de dias distintos com uma tentativa do exercício com `score ≥ minScore` é ≥ `distinctDays`. `self-assessment`: o número de dias distintos com uma tentativa em que **todos** os itens do checklist foram marcados é ≥ `distinctDays`. |
+| **Competência dominada**     | Todos os critérios estão cumpridos. `masteredAt` é a data em que o último deles foi cumprido.                                                                                                                                                          |
+| **Status da competência**    | `mastered` › `declared` › `in-progress` (há tentativa de um exercício da competência ou checkpoint concluído em aula que a trabalha) › `not-started`                                                                                                   |
+| **Competência satisfeita**   | `mastered` ou `declared`                                                                                                                                                                                                                               |
+| **Pré-requisitos atendidos** | Todos os pré-requisitos diretos estão satisfeitos. Apenas informa, não bloqueia.                                                                                                                                                                       |
+| **Competência pronta**       | Pré-requisitos atendidos e a competência ainda não está satisfeita                                                                                                                                                                                     |
+| **Nível da trilha**          | O maior N em que todas as competências `core` da trilha, dos níveis 1 a N, estão satisfeitas. Um nível sem competências interrompe a contagem. O resultado 0 significa "sem nível".                                                                    |
+| **Status da aula**           | `completed` (todos os checkpoints concluídos), `in-progress` (algum concluído) ou `not-started`                                                                                                                                                        |
+| **Recomendação**             | Ver [produto §5](produto.md#5-recomendação-mvp)                                                                                                                                                                                                        |
 
 Esta separação existe por três motivos:
 
@@ -293,9 +293,9 @@ checklist:
     text: Nomeei corretamente o grau de cada acorde.
 ```
 
-### 7.3 Aulas e conceitos — Markdown com *directives*
+### 7.3 Aulas e conceitos — Markdown com _directives_
 
-O texto é Markdown comum. As partes interativas são *directives* (sintaxe `:::`), o que mantém o conteúdo como texto puro, sem código.
+O texto é Markdown comum. As partes interativas são _directives_ (sintaxe `:::`), o que mantém o conteúdo como texto puro, sem código.
 
 ```markdown
 ---
@@ -328,12 +328,12 @@ Achar que o iv menor "muda de tom". A tônica continua sendo G.
 
 Blocos musicais do MVP:
 
-| Bloco | Exemplo |
-|---|---|
-| Um acorde | `::chord{symbol="Cm7" inversion="1"}` |
-| Lista de acordes | `::chords{symbols="G G7 C Cm G" key="G"}` |
+| Bloco                | Exemplo                                      |
+| -------------------- | -------------------------------------------- |
+| Um acorde            | `::chord{symbol="Cm7" inversion="1"}`        |
+| Lista de acordes     | `::chords{symbols="G G7 C Cm G" key="G"}`    |
 | Progressão por graus | `::progression{key="G" degrees="I IV iv I"}` |
-| Escala | `::scale{root="D" type="harmonic-minor"}` |
+| Escala               | `::scale{root="D" type="harmonic-minor"}`    |
 
 Todos são renderizados com teclado visual, nomes das notas conforme a configuração, graus (quando há `key`) e botão para tocar.
 
@@ -344,7 +344,7 @@ A **notação canônica** dentro dos arquivos usa letras com `#` e `b` (C, Eb, F
 O build falha se alguma destas regras for violada:
 
 1. Os `id` são únicos por tipo de entidade e seguem o formato de slug.
-2. Toda referência existe: trilha, nível, estilo, pré-requisito, conceito, exercício, competência e os `id` usados nas *directives*.
+2. Toda referência existe: trilha, nível, estilo, pré-requisito, conceito, exercício, competência e os `id` usados nas _directives_.
 3. O grafo de pré-requisitos é **acíclico**.
 4. Toda competência tem pelo menos um critério.
 5. Um critério `quiz` aponta para um exercício `quiz`, e um critério `self-assessment` aponta para um exercício `performance`.

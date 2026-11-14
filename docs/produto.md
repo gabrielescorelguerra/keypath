@@ -8,11 +8,11 @@
 
 O KeyPath é uma escola de música digital pessoal para teclado e piano. Ele reúne três experiências sobre **uma mesma base de conhecimento**:
 
-| Área | Pergunta que responde |
-|---|---|
-| **Aprendizado guiado** | "O que eu estudo agora?" |
-| **Biblioteca** (aprendizado livre) | "Como funciona X?" |
-| **Prática** | "O que eu treino hoje e como estou evoluindo?" |
+| Área                               | Pergunta que responde                          |
+| ---------------------------------- | ---------------------------------------------- |
+| **Aprendizado guiado**             | "O que eu estudo agora?"                       |
+| **Biblioteca** (aprendizado livre) | "Como funciona X?"                             |
+| **Prática**                        | "O que eu treino hoje e como estou evoluindo?" |
 
 ## 2. Usuário
 
@@ -43,14 +43,14 @@ Não há autenticação, múltiplos usuários nem backend.
 
 São seis trilhas, que funcionam como os eixos de progresso. Repertório deixou de ser trilha e passou para a área de Prática (ver [D12](decisoes.md)).
 
-| Trilha | Natureza |
-|---|---|
-| Teoria musical | Disciplina |
-| Harmonia | Disciplina |
-| Técnica | Disciplina |
-| Percepção auditiva | Disciplina |
-| Acompanhamento | Aplicação: integra as disciplinas |
-| Improvisação | Aplicação: integra as disciplinas |
+| Trilha             | Natureza                          |
+| ------------------ | --------------------------------- |
+| Teoria musical     | Disciplina                        |
+| Harmonia           | Disciplina                        |
+| Técnica            | Disciplina                        |
+| Percepção auditiva | Disciplina                        |
+| Acompanhamento     | Aplicação: integra as disciplinas |
+| Improvisação       | Aplicação: integra as disciplinas |
 
 ### 4.2 Níveis
 
@@ -61,7 +61,7 @@ O nível **não contém** conteúdo. Ele aparece de duas formas:
 - como **atributo de dificuldade** de cada competência;
 - como **resultado calculado** do aluno em cada trilha.
 
-**Regra de cálculo:** o nível de uma trilha é o maior *N* para o qual todas as competências *essenciais* daquela trilha, do nível 1 até *N*, estão dominadas ou declaradas. Um nível sem nenhuma competência cadastrada interrompe a contagem. Se o nível 1 não estiver completo, a trilha aparece como "sem nível". A interface também mostra o progresso dentro do próximo nível, por exemplo "Nível 2 · 3 de 5 competências do nível 3".
+**Regra de cálculo:** o nível de uma trilha é o maior _N_ para o qual todas as competências _essenciais_ daquela trilha, do nível 1 até _N_, estão dominadas ou declaradas. Um nível sem nenhuma competência cadastrada interrompe a contagem. Se o nível 1 não estiver completo, a trilha aparece como "sem nível". A interface também mostra o progresso dentro do próximo nível, por exemplo "Nível 2 · 3 de 5 competências do nível 3".
 
 ### 4.3 Competências
 
@@ -77,12 +77,12 @@ Cada competência:
 
 ### 4.4 Domínio de uma competência
 
-| Situação | Como se chega a ela |
-|---|---|
-| **Dominada** | Todos os critérios de domínio foram cumpridos. |
-| **Declarada** | O aluno afirmou que já sabe (conhecimento prévio). |
+| Situação         | Como se chega a ela                                                                             |
+| ---------------- | ----------------------------------------------------------------------------------------------- |
+| **Dominada**     | Todos os critérios de domínio foram cumpridos.                                                  |
+| **Declarada**    | O aluno afirmou que já sabe (conhecimento prévio).                                              |
 | **Em andamento** | Há alguma atividade relacionada: uma tentativa de exercício ou um checkpoint de aula concluído. |
-| **Não iniciada** | Nenhuma atividade. |
+| **Não iniciada** | Nenhuma atividade.                                                                              |
 
 Para fins de pré-requisitos e de cálculo de nível, **dominada e declarada valem igualmente**. Na interface, uma competência declarada aparece de forma distinta e pode ser **demonstrada** a qualquer momento.
 
@@ -93,12 +93,12 @@ O aluno tem dois caminhos para não precisar repetir conteúdo introdutório:
 
 **Métodos de verificação dos critérios:**
 
-| Método | Situação no MVP |
-|---|---|
-| Quiz | ✅ Corrigido automaticamente |
-| Autoavaliação | ✅ Checklist com metas objetivas, opcionalmente exigida em dias diferentes |
-| Execução verificada por MIDI | ⏳ Pós-MVP. O mesmo exercício de execução ganha correção automática. |
-| Revisão espaçada | ⏳ Pós-MVP. As datas já ficam registradas desde o MVP. |
+| Método                       | Situação no MVP                                                            |
+| ---------------------------- | -------------------------------------------------------------------------- |
+| Quiz                         | ✅ Corrigido automaticamente                                               |
+| Autoavaliação                | ✅ Checklist com metas objetivas, opcionalmente exigida em dias diferentes |
+| Execução verificada por MIDI | ⏳ Pós-MVP. O mesmo exercício de execução ganha correção automática.       |
+| Revisão espaçada             | ⏳ Pós-MVP. As datas já ficam registradas desde o MVP.                     |
 
 No MVP, os exercícios de execução são avaliados por **autoavaliação estruturada**. Por exemplo: "toquei nas 12 tonalidades a 60 bpm sem parar".
 
@@ -110,18 +110,18 @@ Um conceito é um verbete de referência: o que é, como se forma, tabelas, vari
 
 Uma aula é um percurso pedagógico profundo. Ela trabalha uma ou mais competências e é dividida em **pontos de verificação** (checkpoints), que permitem salvar o progresso parcial.
 
-| Seção | Origem | Obrigatória |
-|---|---|---|
-| Introdução | Escrita na aula | Sim |
-| Objetivos de aprendizagem | **Gerados** das competências trabalhadas | Automática |
-| Pré-requisitos | **Gerados** dos pré-requisitos das competências | Automática |
-| Explicação teórica | Conceitos incorporados da Biblioteca e texto específico da aula | Não |
-| Exemplos musicais | Blocos tocáveis (acordes, progressões, escalas) | Não |
-| Aplicação no teclado | Escrita na aula | Não |
-| Exercícios | Exercícios incorporados (entidades independentes) | Não |
-| Erros comuns | Blocos de destaque | Não |
-| Critérios de domínio | **Gerados** dos critérios das competências | Automática |
-| Referências | Escrita na aula | Não |
+| Seção                     | Origem                                                          | Obrigatória |
+| ------------------------- | --------------------------------------------------------------- | ----------- |
+| Introdução                | Escrita na aula                                                 | Sim         |
+| Objetivos de aprendizagem | **Gerados** das competências trabalhadas                        | Automática  |
+| Pré-requisitos            | **Gerados** dos pré-requisitos das competências                 | Automática  |
+| Explicação teórica        | Conceitos incorporados da Biblioteca e texto específico da aula | Não         |
+| Exemplos musicais         | Blocos tocáveis (acordes, progressões, escalas)                 | Não         |
+| Aplicação no teclado      | Escrita na aula                                                 | Não         |
+| Exercícios                | Exercícios incorporados (entidades independentes)               | Não         |
+| Erros comuns              | Blocos de destaque                                              | Não         |
+| Critérios de domínio      | **Gerados** dos critérios das competências                      | Automática  |
+| Referências               | Escrita na aula                                                 | Não         |
 
 Concluir uma aula significa ter concluído todos os seus checkpoints. Isso **não** equivale a dominar as competências, porque o domínio vem dos critérios.
 
@@ -136,11 +136,11 @@ Um exercício é uma entidade independente e reutilizável: aparece em aulas, em
 
 Estilos (gospel, MPB, pop, jazz…) são **etiquetas**. Podem ser aplicados a competências, conceitos, aulas, exercícios e músicas, e servem para filtrar e priorizar. Não são trilhas e não têm progresso próprio.
 
-### 4.9 Cursos e módulos *(pós-MVP)*
+### 4.9 Cursos e módulos _(pós-MVP)_
 
 Um curso é uma sequência curada de aulas, organizada em módulos, que pode passar por várias trilhas. Exemplo: "Harmonia Gospel". O curso não tem estado próprio: o progresso dele é derivado das aulas e competências que contém. Ficou fora do MVP porque a fatia de Harmonia é organizada naturalmente pelo grafo de competências.
 
-### 4.10 Músicas e repertório *(pós-MVP, área de Prática)*
+### 4.10 Músicas e repertório _(pós-MVP, área de Prática)_
 
 Uma música faz parte do repertório pessoal. Tem título, artista, tom, estilos, situação (quero aprender, estudando, pronta), anotações e **anexos**: PDF, imagem, arquivo MIDI ou link do YouTube. Pode indicar as competências que exige. É dado pessoal: fica no dispositivo e **nunca** vai para o Git.
 
