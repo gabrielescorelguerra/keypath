@@ -1,0 +1,31 @@
+id: acompanhamento.funk.levada
+title: Vamp funk com semicolcheias
+type: performance
+stage: application
+competencies: [acompanhamento.funk]
+prompt: |
+  O playback toca **Em7 – A7(9)**, dois compassos cada (vamp dórico). Com timbre de clavinet,
+  Rhodes ou órgão:
+
+  1. **Mão esquerda:** Mi em oitava no tempo 1, e uma nota curta no "e" do 2.
+  2. **Mão direita:** acordes de três notas **curtos** (staccato), tocando só algumas das
+     semicolcheias — conte "1 e a 2 e a…" e acerte, por exemplo, o "e" do 1, o "a" do 2 e o 4.
+  3. **Notas fantasma:** entre os acordes, toques bem leves que mantêm a mão no ritmo.
+
+  ::chords{symbols="Em7 A9 Em7 A9"}
+parameters:
+  keys: [E, A, D]
+  startBpm: 84
+  targetBpm: 104
+  bpmStep: 5
+  hands: both
+  backing: { key: E, degrees: Im7 Im7 IV7(9) IV7(9), beatsPerChord: 4 }
+checklist:
+  - id: curtos
+    text: Os acordes ficaram curtos e precisos, sem pedal.
+  - id: padrao
+    text: Repeti o mesmo padrão rítmico por quatro voltas sem variar sem querer.
+  - id: fantasma
+    text: Usei notas fantasma sem que elas soassem como acordes.
+challenges:
+  - Crie uma segunda levada que "responda" à primeira (pergunta e resposta) e alterne a cada volta.

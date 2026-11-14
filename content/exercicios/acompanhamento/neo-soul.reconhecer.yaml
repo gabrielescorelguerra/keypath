@@ -1,0 +1,41 @@
+id: acompanhamento.neo-soul.reconhecer
+title: Neo-soul — acordes e groove
+type: quiz
+stage: recognition
+competencies: [acompanhamento.neo-soul]
+questions:
+  - id: m9
+    kind: single-choice
+    prompt: Qual destes é o acorde menor mais característico do neo-soul?
+    audio: { chord: Am9, play: together }
+    options: [Am7(9), Am, Am6]
+    correct: [0]
+  - id: quartas
+    kind: single-choice
+    prompt: O que é um voicing em quartas?
+    options:
+      [
+        Notas empilhadas em quartas justas,
+        em vez de terças,
+        Uma tríade invertida,
+        Um acorde de quatro notas qualquer,
+      ]
+    correct: [0]
+  - id: groove
+    kind: single-choice
+    prompt: O que caracteriza o groove do neo-soul?
+    options:
+      - Semicolcheias levemente suingadas e tocadas "atrás" do tempo
+      - Colcheias perfeitamente retas e adiantadas
+      - Tercinas rápidas
+    correct: [0]
+  - id: rhodes
+    kind: single-choice
+    prompt: Qual timbre é a referência do neo-soul?
+    options: [Piano elétrico (Rhodes), Órgão de tubos, Cravo]
+    correct: [0]
+  - id: cluster
+    kind: single-choice
+    prompt: Num cluster, as notas do voicing ficam…
+    options: [Bem próximas, com segundas, Separadas por oitavas, Só na região grave]
+    correct: [0]

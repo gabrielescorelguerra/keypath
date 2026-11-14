@@ -1,0 +1,43 @@
+id: acompanhamento.funk.reconhecer
+title: Funk — ritmo, acordes e papel
+type: quiz
+stage: recognition
+competencies: [acompanhamento.funk]
+questions:
+  - id: subdivisao
+    kind: single-choice
+    prompt: Qual é a subdivisão básica do funk?
+    options: [Semicolcheias, Tercinas, Semínimas]
+    correct: [0]
+  - id: dominante9
+    kind: single-choice
+    prompt: Qual acorde é marca registrada do funk?
+    audio: { chord: E9, play: together }
+    options: [7(9) — dominante com nona, 7M, m7(♭5)]
+    correct: [0]
+  - id: vamp
+    kind: single-choice
+    prompt: Como costuma ser a harmonia de uma música funk?
+    options:
+      [
+        Vamps de um ou dois acordes,
+        com o groove no centro,
+        Muitas modulações,
+        Só progressões II–V–I,
+      ]
+    correct: [0]
+  - id: fantasma
+    kind: single-choice
+    prompt: O que é uma nota fantasma no clavinet ou no piano?
+    options:
+      [
+        Uma nota bem fraca e curta que marca o ritmo sem soar como acorde,
+        Uma nota sustentada com pedal,
+        Uma nota fora do tom,
+      ]
+    correct: [0]
+  - id: dorico
+    kind: single-choice
+    prompt: Em – A (Im7 – IV7) é um vamp típico do funk em qual modo?
+    options: [Dórico, Eólio, Lídio]
+    correct: [0]

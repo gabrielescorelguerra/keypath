@@ -1,0 +1,15 @@
+id: acompanhamento.pop.criar
+title: Arranjo de piano para uma música pop
+type: performance
+stage: creativity
+competencies: [acompanhamento.pop]
+prompt: |
+  Escolha uma música pop que você conhece e faça um arranjo de piano com introdução (ostinato),
+  estrofe (padrão leve), pré-refrão (crescendo) e refrão (padrão cheio). Escreva o mapa e toque.
+parameters:
+  keys: []
+checklist:
+  - id: mapa
+    text: Escrevi o mapa com um padrão por seção.
+  - id: tocar
+    text: Toquei o arranjo inteiro com as trocas no lugar certo.

@@ -1,0 +1,42 @@
+id: acompanhamento.rock-alternativo.reconhecer
+title: Rock alternativo — papel e harmonia
+type: quiz
+stage: recognition
+competencies: [acompanhamento.rock-alternativo]
+questions:
+  - id: power-chord
+    kind: single-choice
+    prompt: O que é um power chord no teclado?
+    audio: { notes: E3 B3 E4, play: together }
+    options: [Fundamental + quinta (+ oitava), sem terça, Uma tríade menor, Um acorde de sétima]
+    correct: [0]
+  - id: eolio
+    kind: single-choice
+    prompt: Em – C – G – D (Im – ♭VI – ♭III – ♭VII) é típico de qual cor?
+    options: [Eólio (menor natural), Lídio, Mixolídio]
+    correct: [0]
+  - id: pedal
+    kind: single-choice
+    prompt: Num pedal, o que acontece?
+    options:
+      [
+        Uma nota fica fixa (no baixo ou no topo) enquanto os acordes mudam,
+        Os acordes ficam parados,
+        O pedal de sustentação fica pressionado,
+      ]
+    correct: [0]
+  - id: grave
+    kind: single-choice
+    prompt: Numa banda com baixo e duas guitarras distorcidas, onde o teclado costuma soar melhor?
+    options:
+      [
+        Acima das guitarras ou em texturas sustentadas,
+        Dobrando o baixo no grave,
+        Nos mesmos acordes e região da guitarra base,
+      ]
+    correct: [0]
+  - id: piano-colcheias
+    kind: single-choice
+    prompt: O piano "motor" do rock alternativo costuma tocar…
+    options: [Acordes em colcheias repetidas, Arpejos clássicos rápidos, Acordes só no tempo 1]
+    correct: [0]

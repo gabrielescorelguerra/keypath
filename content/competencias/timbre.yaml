@@ -54,3 +54,33 @@
       method: self-assessment
       exercise: timbre.layer-split.tocar
       distinctDays: 2
+
+- id: timbre.por-estilo
+  track: timbre
+  level: 3
+  title: Timbres por estilo
+  description: Reconhece e reconstrói os timbres característicos de cada estilo — Rhodes, Wurlitzer, órgão com drawbars, clavinet, pads, leads e cordas — e reproduz o som de uma referência.
+  prerequisites: [timbre.familias, timbre.efeitos]
+  mastery:
+    - id: ouvido
+      method: quiz
+      exercise: timbre.por-estilo.reconhecer
+    - id: laboratorio
+      method: self-assessment
+      exercise: timbre.por-estilo.referencia
+
+- id: timbre.ambiencias
+  track: timbre
+  level: 3
+  title: Ambiências e texturas
+  description: Cria ambiências com pads, swells, drones de tônica e quinta, delays e reverbs longos para worship e rock alternativo, inclusive nas transições.
+  prerequisites: [timbre.layer-split, timbre.efeitos]
+  styles: [worship, rock-alternativo]
+  mastery:
+    - id: teoria
+      method: quiz
+      exercise: timbre.ambiencias.reconhecer
+    - id: teclado
+      method: self-assessment
+      exercise: timbre.ambiencias.drone
+      distinctDays: 2

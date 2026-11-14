@@ -1,0 +1,31 @@
+id: acompanhamento.post-hardcore.levada
+title: Camadas para uma progressão épica em Ré menor
+type: performance
+stage: application
+competencies: [acompanhamento.post-hardcore]
+prompt: |
+  O playback toca **Dm – B♭ – C – Dm** (Im – ♭VI – ♭VII – Im). Monte três camadas, uma por vez:
+
+  1. **Pad escuro:** tônica e quinta na esquerda (Ré–Lá) segurando o compasso inteiro; filtro baixo.
+  2. **Cordas:** tríades na região média, mudando com os acordes, ataque médio.
+  3. **Pluck ou arpejo de synth:** colcheias com as notas do acorde, na região aguda, com delay.
+
+  Use o laboratório de síntese (curso de Timbres) ou os timbres do seu teclado.
+
+  ::progression{key="D" degrees="Im bVI bVII Im"}
+parameters:
+  keys: [D, C]
+  startBpm: 70
+  targetBpm: 90
+  bpmStep: 5
+  hands: both
+  backing: { key: D, degrees: Im bVI bVII Im, beatsPerChord: 4 }
+checklist:
+  - id: camadas
+    text: Toquei as três camadas, uma de cada vez, sobre o playback.
+  - id: regioes
+    text: Cada camada ficou numa região diferente do teclado.
+  - id: grave
+    text: Mantive o grave limpo (o pad não desceu abaixo de Ré2).
+challenges:
+  - 'Faça uma versão frígia: Dm – E♭ – Dm – E♭ — e use o Mi♭ no topo das cordas.'

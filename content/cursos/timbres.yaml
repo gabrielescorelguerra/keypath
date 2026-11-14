@@ -36,15 +36,11 @@ modules:
     summary: Criar e reproduzir sonoridades de bandas e artistas — do Rhodes do neo-soul ao lead do metalcore.
     level: 3
     prerequisites: [timbres.tipos-de-timbre, timbres.efeitos]
-    upcoming:
-      - Escutar e reconstruir um timbre de referência
-      - Timbres característicos por gênero
+    lessons: [timbre.timbres-por-estilo]
 
   - id: ambiencias
     title: Ambiências e texturas
     summary: Pads, swells e texturas para worship e rock alternativo — tocar o espaço, não só as notas.
     level: 3
     prerequisites: [timbres.layering-e-split, timbres.efeitos]
-    upcoming:
-      - Pads de worship e transições entre músicas
-      - Texturas para rock alternativo
+    lessons: [timbre.ambiencias-e-texturas]

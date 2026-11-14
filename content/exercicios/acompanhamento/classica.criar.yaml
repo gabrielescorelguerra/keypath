@@ -1,0 +1,16 @@
+id: acompanhamento.classica.criar
+title: Uma frase clássica de 8 compassos
+type: performance
+stage: creativity
+competencies: [acompanhamento.classica]
+prompt: |
+  Componha uma frase de 8 compassos no estilo clássico: 4 compassos terminando numa cadência
+  suspensiva (no V) e 4 respondendo com uma cadência autêntica (no I). Use baixo de Alberti na
+  esquerda.
+parameters:
+  keys: [C, G]
+checklist:
+  - id: forma
+    text: A frase tem pergunta (termina no V) e resposta (termina no I).
+  - id: alberti
+    text: Usei baixo de Alberti do começo ao fim.

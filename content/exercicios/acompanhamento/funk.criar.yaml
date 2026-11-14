@@ -1,0 +1,16 @@
+id: acompanhamento.funk.criar
+title: Um riff funk de clavinet
+type: performance
+stage: creativity
+competencies: [acompanhamento.funk]
+prompt: |
+  Crie um riff de 1 compasso, de uma nota ou de duas, com semicolcheias, notas fantasma e pelo
+  menos uma pausa no tempo forte. Repita sobre um vamp de E9 e varie só o último tempo a cada
+  quatro compassos.
+parameters:
+  keys: []
+checklist:
+  - id: riff
+    text: O riff tem semicolcheias, notas fantasma e uma pausa em tempo forte.
+  - id: variacao
+    text: Variei o último tempo a cada quatro compassos mantendo o groove.

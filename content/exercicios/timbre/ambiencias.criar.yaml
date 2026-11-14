@@ -1,0 +1,16 @@
+id: timbre.ambiencias.criar
+title: Uma paisagem sonora para um momento de oração
+type: performance
+stage: creativity
+competencies: [timbre.ambiencias]
+prompt: |
+  Crie 2 a 3 minutos de ambiência para um momento de oração ou leitura: drone, swells, um motivo
+  com delay e uma mudança de cor no meio (por exemplo, trocando a nota do drone de tônica para
+  subdominante). Grave e escute com fone.
+parameters:
+  keys: []
+checklist:
+  - id: duracao
+    text: A ambiência tem entre 2 e 3 minutos e se sustenta sem ficar repetitiva.
+  - id: mudanca
+    text: Há uma mudança de cor perceptível no meio.

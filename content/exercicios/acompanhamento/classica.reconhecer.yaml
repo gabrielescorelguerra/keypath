@@ -1,0 +1,32 @@
+id: acompanhamento.classica.reconhecer
+title: Linguagem clássica — cadências e figuras
+type: quiz
+stage: recognition
+competencies: [acompanhamento.classica]
+questions:
+  - id: alberti
+    kind: single-choice
+    prompt: Qual é a ordem das notas no baixo de Alberti (para Dó–Mi–Sol)?
+    options: [Dó Sol Mi Sol, Dó Mi Sol Mi, Sol Mi Dó Mi]
+    correct: [0]
+    explanation: Grave, agudo, meio, agudo — 1-5-3-5.
+  - id: perfeita
+    kind: single-choice
+    prompt: Qual cadência termina V → I e soa conclusiva?
+    options: [Autêntica (perfeita), Plagal, Suspensiva]
+    correct: [0]
+  - id: plagal
+    kind: single-choice
+    prompt: IV → I é a cadência…
+    options: [Plagal (o "amém"), Autêntica, De engano]
+    correct: [0]
+  - id: suspensiva
+    kind: single-choice
+    prompt: Uma frase que termina no V é uma cadência…
+    options: [Suspensiva (meia cadência), Autêntica, Plagal]
+    correct: [0]
+  - id: engano
+    kind: single-choice
+    prompt: V → VIm, em vez de V → I, é a cadência…
+    options: [De engano (interrompida), Plagal, Autêntica]
+    correct: [0]

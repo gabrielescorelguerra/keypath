@@ -1,0 +1,31 @@
+id: acompanhamento.classica.levada
+title: Baixo de Alberti e cadências em quatro vozes
+type: performance
+stage: execution
+competencies: [acompanhamento.classica]
+prompt: |
+  **1. Baixo de Alberti** na mão esquerda sobre **I – IV – V7 – I**, em semicolcheias
+  (1-5-3-5), com uma melodia simples de semínimas na direita:
+
+  ::progression{key="C" degrees="I IV V7 I"}
+
+  **2. Cadências em quatro vozes** (baixo na esquerda, três vozes na direita, cada voz andando o
+  mínimo possível): autêntica (V7 – I), plagal (IV – I), suspensiva (termina em V) e de engano
+  (V7 – VIm).
+
+  ::chords{symbols="G7 C F C G7 Am" key="C"}
+parameters:
+  keys: [C, G, F]
+  startBpm: 60
+  targetBpm: 100
+  bpmStep: 5
+  hands: both
+checklist:
+  - id: alberti
+    text: O baixo de Alberti ficou regular e mais suave que a melodia.
+  - id: cadencias
+    text: Toquei as quatro cadências nos três tons, conduzindo as vozes.
+  - id: andamento
+    text: Cheguei a 100 bpm no Alberti em semicolcheias.
+challenges:
+  - Toque o primeiro movimento da Sonatina Op. 36 nº 1 de Clementi (partitura no Aprofundamento), só os primeiros 8 compassos.

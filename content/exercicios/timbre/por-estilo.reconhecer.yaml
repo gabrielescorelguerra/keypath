@@ -1,0 +1,42 @@
+id: timbre.por-estilo.reconhecer
+title: Qual timbre para qual estilo?
+type: quiz
+stage: recognition
+competencies: [timbre.por-estilo]
+questions:
+  - id: neo-soul
+    kind: single-choice
+    prompt: Qual timbre é a assinatura do neo-soul?
+    options: [Rhodes (piano elétrico), Cravo, Órgão de tubos]
+    correct: [0]
+  - id: funk
+    kind: single-choice
+    prompt: E do funk dos anos 70?
+    options: [Clavinet, Pad de cordas, Piano de cauda]
+    correct: [0]
+  - id: drawbars
+    kind: single-choice
+    prompt: No órgão Hammond, o que fazem os drawbars?
+    options:
+      - Somam harmônicos (tons puros) em proporções diferentes — síntese aditiva
+      - Mudam a afinação
+      - Ligam o reverb
+    correct: [0]
+  - id: leslie
+    kind: single-choice
+    prompt: O que a caixa Leslie (rotativa) faz com o som do órgão?
+    options:
+      [
+        Cria movimento com alto-falantes girando — lento (chorale) ou rápido (tremolo),
+        Distorce,
+        Corta o grave,
+      ]
+    correct: [0]
+  - id: metodo
+    kind: single-choice
+    prompt: Para reproduzir o timbre de uma gravação, por onde começar?
+    options:
+      - Identificar a família e o envelope, depois o brilho (filtro) e por fim os efeitos
+      - Pelos efeitos
+      - Procurando o mesmo teclado do artista
+    correct: [0]

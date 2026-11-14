@@ -1,0 +1,23 @@
+id: timbre.por-estilo.drawbars
+title: Três registros de órgão nos drawbars
+type: performance
+stage: execution
+competencies: [timbre.por-estilo]
+prompt: |
+  Se o seu teclado ou instrumento virtual tem órgão com drawbars, monte três registros clássicos
+  (cada número é um drawbar, de 0 a 8):
+
+  | Registro | Drawbars | Uso |
+  | --- | --- | --- |
+  | Básico | 88 8000 000 | louvor, gospel, base |
+  | Rock / Jimmy Smith | 88 8800 000 | rock, blues, soul-jazz |
+  | Comping de blues e jazz | 80 8000 008 | comping leve |
+
+  Toque o mesmo trecho com cada registro, com a Leslie lenta e depois rápida.
+parameters:
+  keys: []
+checklist:
+  - id: tres
+    text: Montei os três registros.
+  - id: leslie
+    text: Usei a Leslie lenta e rápida e percebi a diferença.

@@ -84,3 +84,122 @@
       method: self-assessment
       exercise: acompanhamento.blues.shuffle
       distinctDays: 2
+
+- id: acompanhamento.jazz
+  track: acompanhamento
+  level: 4
+  title: Jazz no teclado
+  description: 'Toca II–V–I com shells e voicings sem fundamental, faz comping com suingue e reconhece a forma e o vocabulário do jazz.'
+  core: false
+  prerequisites: [harmonia.extensoes, teoria.escolha-de-escalas]
+  styles: [jazz]
+  mastery:
+    - id: teoria
+      method: quiz
+      exercise: acompanhamento.jazz.reconhecer
+    - id: teclado
+      method: self-assessment
+      exercise: acompanhamento.jazz.levada
+      distinctDays: 2
+
+- id: acompanhamento.neo-soul
+  track: acompanhamento
+  level: 3
+  title: Neo-soul e R&B no teclado
+  description: 'Usa acordes m9, 7M(9) e 7(4)(9), voicings em quartas e clusters, cromatismos e o groove "atrasado" do neo-soul.'
+  core: false
+  prerequisites: [harmonia.extensoes]
+  styles: [neo-soul]
+  mastery:
+    - id: teoria
+      method: quiz
+      exercise: acompanhamento.neo-soul.reconhecer
+    - id: teclado
+      method: self-assessment
+      exercise: acompanhamento.neo-soul.levada
+      distinctDays: 2
+
+- id: acompanhamento.funk
+  track: acompanhamento
+  level: 3
+  title: Funk no teclado
+  description: 'Toca vamps de um ou dois acordes com semicolcheias sincopadas, notas fantasma e mão esquerda em oitavas, dialogando com a guitarra.'
+  core: false
+  prerequisites: [harmonia.tetrades, teoria.modos]
+  styles: [funk]
+  mastery:
+    - id: teoria
+      method: quiz
+      exercise: acompanhamento.funk.reconhecer
+    - id: teclado
+      method: self-assessment
+      exercise: acompanhamento.funk.levada
+      distinctDays: 2
+
+- id: acompanhamento.pop
+  track: acompanhamento
+  level: 3
+  title: Pop no teclado
+  description: 'Acompanha músicas pop com padrões de mão direita e esquerda, ostinatos, sus2 e dinâmica por seção.'
+  core: false
+  prerequisites: [harmonia.campo-harmonico-maior-triades, acompanhamento.inversoes-e-conducao]
+  styles: [pop]
+  mastery:
+    - id: teoria
+      method: quiz
+      exercise: acompanhamento.pop.reconhecer
+    - id: teclado
+      method: self-assessment
+      exercise: acompanhamento.pop.levada
+      distinctDays: 2
+
+- id: acompanhamento.rock-alternativo
+  track: acompanhamento
+  level: 3
+  title: Rock alternativo no teclado
+  description: 'Ocupa o espaço certo numa banda de rock: piano em colcheias, power chords, pedais, progressões modais, pads e leads.'
+  core: false
+  prerequisites: [harmonia.sus-add-slash, teoria.modos-aplicados]
+  styles: [rock-alternativo]
+  mastery:
+    - id: teoria
+      method: quiz
+      exercise: acompanhamento.rock-alternativo.reconhecer
+    - id: teclado
+      method: self-assessment
+      exercise: acompanhamento.rock-alternativo.levada
+      distinctDays: 2
+
+- id: acompanhamento.post-hardcore
+  track: acompanhamento
+  level: 3
+  title: Post-hardcore e metalcore no teclado
+  description: 'Cria camadas de pads, cordas, coros e synths para músicas pesadas em tom menor, com progressões épicas, frígio e cuidado com o grave.'
+  core: false
+  prerequisites: [teoria.modos-aplicados, teoria.menores-avancadas]
+  styles: [post-hardcore]
+  mastery:
+    - id: teoria
+      method: quiz
+      exercise: acompanhamento.post-hardcore.reconhecer
+    - id: teclado
+      method: self-assessment
+      exercise: acompanhamento.post-hardcore.levada
+      distinctDays: 2
+
+- id: acompanhamento.classica
+  track: acompanhamento
+  level: 3
+  title: Linguagem clássica ao piano
+  description: 'Toca baixo de Alberti, as cadências clássicas e progressões em quatro vozes, e lê e toca uma sonatina simples.'
+  core: false
+  prerequisites: [harmonia.funcoes-harmonicas, tecnica.arpejos-triades]
+  styles: [classico]
+  mastery:
+    - id: teoria
+      method: quiz
+      exercise: acompanhamento.classica.reconhecer
+    - id: teclado
+      method: self-assessment
+      exercise: acompanhamento.classica.levada
+      distinctDays: 2

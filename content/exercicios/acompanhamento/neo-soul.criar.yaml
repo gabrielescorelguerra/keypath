@@ -1,0 +1,15 @@
+id: acompanhamento.neo-soul.criar
+title: Um loop neo-soul seu
+type: performance
+stage: creativity
+competencies: [acompanhamento.neo-soul]
+prompt: |
+  Crie um loop de 4 compassos com acordes m9, 7M(9) e um 7(4)(9), voicings em quartas ou clusters
+  e uma linha de baixo que desce cromaticamente em pelo menos um ponto. Toque com timbre de Rhodes.
+parameters:
+  keys: []
+checklist:
+  - id: loop
+    text: O loop tem os três tipos de acorde e um cromatismo no baixo.
+  - id: timbre
+    text: Toquei com timbre de piano elétrico e groove atrasado.

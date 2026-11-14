@@ -1,0 +1,49 @@
+id: acompanhamento.pop.reconhecer
+title: Pop — progressões e padrões
+type: quiz
+stage: recognition
+competencies: [acompanhamento.pop]
+questions:
+  - id: quatro-acordes
+    kind: single-choice
+    prompt: Qual é a progressão mais comum do pop?
+    options: [I – V – VIm – IV, I – IV – V – I, IIm – V – I]
+    correct: [0]
+  - id: ostinato
+    kind: single-choice
+    prompt: O que é um ostinato na mão direita?
+    options:
+      [
+        Uma figura que se repete enquanto os acordes mudam embaixo,
+        Um acorde tocado uma vez só,
+        Uma escala rápida,
+      ]
+    correct: [0]
+  - id: sus2
+    kind: single-choice
+    prompt: Por que o sus2 é tão usado em pop?
+    audio: { chord: Csus2, play: together }
+    options:
+      [
+        Soa aberto e moderno,
+        sem a definição maior/menor da terça,
+        Porque é dissonante,
+        Porque só tem duas notas,
+      ]
+    correct: [0]
+  - id: esquerda
+    kind: single-choice
+    prompt: Um padrão comum de mão esquerda no piano pop é…
+    options:
+      [
+        Fundamental,
+        quinta e oitava em colcheias ou semínimas,
+        Acordes de cinco notas no grave,
+        Escala cromática,
+      ]
+    correct: [0]
+  - id: dinamica
+    kind: single-choice
+    prompt: Como o piano costuma mudar entre estrofe e refrão?
+    options: [Fica mais denso e mais rítmico no refrão, Fica igual, Some no refrão]
+    correct: [0]

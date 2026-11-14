@@ -1,0 +1,34 @@
+id: timbre.ambiencias.reconhecer
+title: Ambiências — recursos
+type: quiz
+stage: recognition
+competencies: [timbre.ambiencias]
+questions:
+  - id: drone
+    kind: single-choice
+    prompt: Por que um pad de tônica e quinta (sem terça) funciona sob quase toda a música?
+    options:
+      [
+        Sem terça,
+        ele não é maior nem menor e combina com os acordes do tom,
+        Porque é mais grave,
+        Porque tem mais notas,
+      ]
+    correct: [0]
+  - id: swell
+    kind: single-choice
+    prompt: O que é um swell?
+    options:
+      [Um som que cresce de volume aos poucos a partir do silêncio, Um eco rápido, Um acorde curto]
+    correct: [0]
+  - id: shimmer
+    kind: single-choice
+    prompt: O reverb "shimmer" acrescenta…
+    options: [Uma cópia uma oitava acima na cauda do reverb, Distorção, Um delay curto]
+    correct: [0]
+  - id: transicao
+    kind: single-choice
+    prompt: Para que serve a ambiência entre duas músicas num culto?
+    options:
+      [Manter a atmosfera e ligar os tons sem silêncio, Afinar os instrumentos, Mostrar um solo]
+    correct: [0]

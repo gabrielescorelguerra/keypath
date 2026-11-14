@@ -1,0 +1,31 @@
+id: acompanhamento.pop.levada
+title: Três padrões de piano pop
+type: performance
+stage: application
+competencies: [acompanhamento.pop]
+prompt: |
+  O playback toca **C – G – Am – F**. Toque três voltas de cada padrão:
+
+  1. **Balada:** esquerda em semibreves (fundamental), direita com a tríade em semínimas.
+  2. **Ostinato:** a direita repete Mi–Sol no topo (um "popstinato") em colcheias, enquanto o
+     baixo muda; ouça como a mesma figura muda de cor sobre cada acorde.
+  3. **Refrão:** esquerda em 1·5·8 em colcheias; direita com acordes em colcheias acentuando os
+     tempos 2 e 4.
+
+  ::progression{key="C" degrees="I V VIm IV"}
+parameters:
+  keys: [C, G, D]
+  startBpm: 76
+  targetBpm: 100
+  bpmStep: 6
+  hands: both
+  backing: { key: C, degrees: I V VIm IV, beatsPerChord: 4 }
+checklist:
+  - id: tres
+    text: Toquei os três padrões sem parar o playback.
+  - id: ostinato
+    text: No ostinato, a figura do topo ficou igual sobre os quatro acordes.
+  - id: contraste
+    text: Dá para ouvir a diferença de energia entre o padrão 1 e o 3.
+challenges:
+  - Troque o C e o F por Csus2 e Fsus2 e compare.

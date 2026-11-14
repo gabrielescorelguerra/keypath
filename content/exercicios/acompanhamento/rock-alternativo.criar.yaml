@@ -1,0 +1,16 @@
+id: acompanhamento.rock-alternativo.criar
+title: Uma parte de teclado para uma música de rock
+type: performance
+stage: creativity
+competencies: [acompanhamento.rock-alternativo]
+prompt: |
+  Escolha uma música de rock (do repertório ou que você goste) e escreva uma parte de teclado
+  que **não dobre** a guitarra: um pedal agudo, um pad escuro, um riff de synth ou um piano motor.
+  Toque com a gravação original.
+parameters:
+  keys: []
+checklist:
+  - id: espaco
+    text: A parte ocupa um espaço que a guitarra não ocupa.
+  - id: gravacao
+    text: Toquei junto com a gravação original do começo ao fim.

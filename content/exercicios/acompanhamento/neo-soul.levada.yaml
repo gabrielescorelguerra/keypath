@@ -1,0 +1,30 @@
+id: acompanhamento.neo-soul.levada
+title: Progressão neo-soul com voicings de quatro notas
+type: performance
+stage: application
+competencies: [acompanhamento.neo-soul]
+prompt: |
+  O playback toca **F7M(9) – Em7 – Dm7(9) – C7M(9)** em Dó, devagar. Na mão direita, voicings de
+  quatro notas sem fundamental; na esquerda, só a fundamental:
+
+  ::chords{symbols="Fmaj9 Em7 Dm9 Cmaj9" key="C"}
+
+  1. Toque cada acorde no tempo 1 e segure.
+  2. Depois, toque em semicolcheias **suingadas**, atrasando um pouco o ataque (atrás do tempo).
+  3. Entre o Dm7(9) e o C7M(9), coloque um acorde de passagem meio tom acima (D♭7M(9)) no último tempo.
+parameters:
+  keys: [C, Eb, F]
+  startBpm: 66
+  targetBpm: 84
+  bpmStep: 6
+  hands: both
+  backing: { key: C, degrees: IV7M(9) IIIm7 IIm7(9) I7M(9), beatsPerChord: 4 }
+checklist:
+  - id: voicings
+    text: Toquei os voicings de quatro notas conduzindo as vozes.
+  - id: groove
+    text: Mantive o groove atrasado sem perder o tempo do playback.
+  - id: cromatico
+    text: Usei o acorde de passagem cromático no lugar certo.
+challenges:
+  - Troque os voicings por quartas empilhadas (por exemplo, Mi–Lá–Ré–Sol sobre o Dm).

@@ -1,0 +1,16 @@
+id: acompanhamento.jazz.criar
+title: Arranjo jazz de uma melodia conhecida
+type: performance
+stage: creativity
+competencies: [acompanhamento.jazz]
+prompt: |
+  Escolha uma melodia simples (um hino, uma canção folclórica) e transforme em jazz: tétrades
+  com extensões, um II–V antes de cada acorde importante, comping em Charleston e um final com
+  turnaround I – VI7 – IIm7 – V7.
+parameters:
+  keys: []
+checklist:
+  - id: harmonia
+    text: Reharmonizei com II–V e extensões.
+  - id: ritmo
+    text: Toquei com colcheias suingadas e comping rítmico.

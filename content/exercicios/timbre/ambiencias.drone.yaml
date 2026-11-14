@@ -1,0 +1,30 @@
+id: timbre.ambiencias.drone
+title: Drone, swells e textura sobre uma progressão
+type: performance
+stage: application
+competencies: [timbre.ambiencias]
+prompt: |
+  Com um pad (laboratório ou teclado), faça três camadas de ambiência sobre o playback em Ré:
+
+  1. **Drone:** Ré e Lá (tônica e quinta) segurados na mão esquerda o tempo todo.
+  2. **Swells:** na direita, notas longas que crescem do silêncio — use o pedal de volume, o
+     ataque lento do timbre ou a expressão.
+  3. **Textura:** um motivo de duas ou três notas no agudo, com delay longo, repetido a cada
+     dois compassos.
+
+  ::chords{symbols="D A/D Bm/D G/D"}
+parameters:
+  keys: [D, E, G]
+  startBpm: 66
+  targetBpm: 72
+  hands: both
+  backing: { key: D, degrees: I V VIm IV, beatsPerChord: 8 }
+checklist:
+  - id: drone
+    text: O drone ficou contínuo, sem cortes nas trocas de acorde.
+  - id: swells
+    text: Os swells começaram do silêncio, sem ataque audível.
+  - id: textura
+    text: O motivo agudo com delay ficou em segundo plano.
+challenges:
+  - Faça uma transição de Ré para Mi usando só o drone, mudando a nota de baixo para Mi no último compasso.

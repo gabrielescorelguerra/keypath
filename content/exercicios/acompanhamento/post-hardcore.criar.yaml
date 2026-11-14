@@ -1,0 +1,16 @@
+id: acompanhamento.post-hardcore.criar
+title: Introdução atmosférica para uma música pesada
+type: performance
+stage: creativity
+competencies: [acompanhamento.post-hardcore]
+prompt: |
+  Crie uma introdução de 8 a 16 compassos para uma música pesada: comece só com pad e um motivo
+  de piano ou pluck, acrescente cordas na segunda metade e termine num "drop" (silêncio de um
+  tempo antes da banda entrar).
+parameters:
+  keys: []
+checklist:
+  - id: crescimento
+    text: A introdução cresce em camadas.
+  - id: drop
+    text: Há um silêncio claro antes da entrada da banda.

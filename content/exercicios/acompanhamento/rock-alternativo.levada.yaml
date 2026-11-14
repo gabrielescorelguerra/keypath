@@ -1,0 +1,30 @@
+id: acompanhamento.rock-alternativo.levada
+title: Piano motor e power chords sobre progressão eólia
+type: performance
+stage: application
+competencies: [acompanhamento.rock-alternativo]
+prompt: |
+  O playback toca **Em – C – G – D**. Três texturas, duas voltas cada:
+
+  1. **Piano motor:** acordes em colcheias repetidas na direita (sem pedal), oitava no baixo.
+  2. **Power chords:** só fundamental e quinta (com oitava), nas duas mãos — som "de guitarra".
+  3. **Pedal no topo:** mantenha um Si agudo repetindo em colcheias sobre os quatro acordes
+     (é nota de todos eles? confira: Em, G — sim; C — 7M; D — 6ª).
+
+  ::progression{key="E" degrees="Im bVI bIII bVII"}
+parameters:
+  keys: [E, A, D]
+  startBpm: 100
+  targetBpm: 132
+  bpmStep: 8
+  hands: both
+  backing: { key: E, degrees: Im bVI bIII bVII, beatsPerChord: 4 }
+checklist:
+  - id: tres
+    text: Toquei as três texturas sem parar.
+  - id: colcheias
+    text: As colcheias do piano motor ficaram regulares e com o mesmo volume.
+  - id: pedal
+    text: O pedal no topo ficou fixo enquanto o baixo mudava.
+challenges:
+  - Troque o C por Cadd9 e o G por G/B e repare na linha de baixo.

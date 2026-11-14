@@ -1,0 +1,26 @@
+id: timbre.por-estilo.referencia
+title: Reconstruir o timbre de uma gravação
+type: performance
+stage: application
+competencies: [timbre.por-estilo]
+prompt: |
+  Escolha uma gravação com um timbre de teclado marcante e reconstrua-o no seu instrumento (ou
+  no laboratório), seguindo a ordem:
+
+  1. **Família:** pad, lead, pluck, keys, órgão, cordas?
+  2. **Envelope:** como começa (ataque) e como termina (release)?
+  3. **Brilho:** filtro aberto ou fechado? Muda com o tempo?
+  4. **Movimento:** há LFO, chorus, tremolo, Leslie?
+  5. **Espaço:** quanto reverb e delay? O delay está no tempo?
+  6. **Região:** em que oitava ele toca na gravação?
+
+  Toque junto com a gravação e ajuste até ficar difícil distinguir.
+parameters:
+  keys: []
+checklist:
+  - id: seis-passos
+    text: Anotei as respostas dos seis passos.
+  - id: junto
+    text: Toquei junto com a gravação e ajustei pelo menos três parâmetros.
+challenges:
+  - Faça o mesmo com um timbre de outro estilo e compare as receitas.

@@ -1,0 +1,54 @@
+id: acompanhamento.post-hardcore.reconhecer
+title: Post-hardcore e metalcore — camadas e harmonia
+type: quiz
+stage: recognition
+competencies: [acompanhamento.post-hardcore]
+questions:
+  - id: papel
+    kind: single-choice
+    prompt: Qual é o papel mais comum do teclado no metalcore moderno?
+    options:
+      [
+        Camadas de pads,
+        cordas,
+        coros e synths por trás das guitarras,
+        Solos de piano em todas as músicas,
+        Dobrar o baixo,
+      ]
+    correct: [0]
+  - id: frigio
+    kind: single-choice
+    prompt: Em – F (Im – ♭II) dá o som sombrio de qual modo?
+    options: [Frígio, Dórico, Lídio]
+    correct: [0]
+  - id: grave
+    kind: single-choice
+    prompt: Por que cortar os graves dos pads e coros numa mixagem pesada?
+    options:
+      [
+        Eles acumulam frequências graves que embolam guitarras e baixo,
+        Para soarem mais altos,
+        Porque o teclado não tem grave,
+      ]
+    correct: [0]
+  - id: sidechain
+    kind: single-choice
+    prompt: O que o sidechain faz com o pad quando o bumbo toca?
+    options:
+      [
+        Abaixa o volume do pad a cada batida,
+        deixando espaço e criando "pulsação",
+        Aumenta o reverb,
+        Muda a nota,
+      ]
+    correct: [0]
+  - id: afinacao
+    kind: single-choice
+    prompt: Se as guitarras estão em drop C (afinação mais baixa), o que o tecladista precisa conferir?
+    options:
+      [
+        O tom real da música — que costuma ser diferente do desenho da guitarra,
+        Nada,
+        Só o andamento,
+      ]
+    correct: [0]

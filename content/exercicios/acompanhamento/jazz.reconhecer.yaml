@@ -1,0 +1,38 @@
+id: acompanhamento.jazz.reconhecer
+title: Jazz — vocabulário e forma
+type: quiz
+stage: recognition
+competencies: [acompanhamento.jazz]
+questions:
+  - id: shell
+    kind: single-choice
+    prompt: O que é um voicing "shell" (casca)?
+    options: [Fundamental + 3ª + 7ª (ou fundamental + 7ª + 3ª), Só a tríade, Fundamental + 5ª]
+    correct: [0]
+  - id: rootless-a
+    kind: single-choice
+    prompt: Num voicing sem fundamental tipo A, qual nota fica embaixo?
+    options: [A 3ª, A 7ª, A fundamental]
+    correct: [0]
+    explanation: Tipo A começa na 3ª (3-5-7-9); tipo B começa na 7ª (7-9-3-5). Alternar os dois conduz as vozes no II–V–I.
+  - id: swing
+    kind: single-choice
+    prompt: Como soam as colcheias no swing?
+    options: [Longa-curta, como em tercinas, Exatamente iguais, Curta-longa]
+    correct: [0]
+  - id: charleston
+    kind: single-choice
+    prompt: O ritmo de comping "Charleston" toca o acorde em quais pontos do compasso?
+    options: [No tempo 1 e no "e" do 2, Em todos os tempos, Só no tempo 4]
+    correct: [0]
+  - id: turnaround
+    kind: single-choice
+    prompt: I – VI7 – IIm7 – V7 é um…
+    options: [Turnaround, Blues menor, Vamp modal]
+    correct: [0]
+  - id: ouvido
+    kind: single-choice
+    prompt: Este acorde tem a cor típica do V no jazz. Qual é?
+    audio: { chord: G13, play: together }
+    options: [G7(13), G7M, Gm7]
+    correct: [0]

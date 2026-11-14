@@ -33,14 +33,7 @@ modules:
     level: 4
     style: jazz
     prerequisites: [harmonia-e-tecnica.extensoes]
-    upcoming:
-      - Características harmônicas
-      - Progressões características
-      - Vocabulário de acordes
-      - Padrões rítmicos
-      - Técnicas de acompanhamento
-      - Frases, riffs e recursos de improvisação
-      - Repertório e artistas de referência
+    lessons: [acompanhamento.jazz-no-teclado]
 
   - id: blues
     title: Blues
@@ -59,14 +52,7 @@ modules:
     level: 4
     style: neo-soul
     prerequisites: [harmonia-e-tecnica.extensoes]
-    upcoming:
-      - Características harmônicas
-      - Progressões características
-      - Vocabulário de acordes
-      - Padrões rítmicos
-      - Técnicas de acompanhamento
-      - Frases, riffs e recursos de improvisação
-      - Repertório e artistas de referência
+    lessons: [acompanhamento.neo-soul-e-rnb]
 
   - id: funk
     title: Funk
@@ -74,14 +60,7 @@ modules:
     level: 3
     style: funk
     prerequisites: [harmonia-e-tecnica.tetrades]
-    upcoming:
-      - Características harmônicas
-      - Progressões características
-      - Vocabulário de acordes
-      - Padrões rítmicos
-      - Técnicas de acompanhamento
-      - Frases, riffs e recursos de improvisação
-      - Repertório e artistas de referência
+    lessons: [acompanhamento.funk-no-teclado]
 
   - id: pop
     title: Pop
@@ -89,14 +68,7 @@ modules:
     level: 2
     style: pop
     prerequisites: [harmonia-e-tecnica.funcoes-e-progressoes]
-    upcoming:
-      - Características harmônicas
-      - Progressões características
-      - Vocabulário de acordes
-      - Padrões rítmicos
-      - Técnicas de acompanhamento
-      - Frases, riffs e recursos de improvisação
-      - Repertório e artistas de referência
+    lessons: [acompanhamento.pop-no-teclado]
 
   - id: rock-alternativo
     title: Rock alternativo
@@ -104,14 +76,7 @@ modules:
     level: 2
     style: rock-alternativo
     prerequisites: [harmonia-e-tecnica.triades-e-campo-maior]
-    upcoming:
-      - Características harmônicas
-      - Progressões características
-      - Vocabulário de acordes
-      - Padrões rítmicos
-      - Técnicas de acompanhamento
-      - Frases, riffs e recursos de improvisação
-      - Repertório e artistas de referência
+    lessons: [acompanhamento.rock-alternativo-no-teclado]
 
   - id: post-hardcore
     title: Post-hardcore e metalcore
@@ -119,14 +84,7 @@ modules:
     level: 3
     style: post-hardcore
     prerequisites: [escalas-e-modos.modos-gregos]
-    upcoming:
-      - Características harmônicas
-      - Progressões características
-      - Vocabulário de acordes
-      - Padrões rítmicos
-      - Técnicas de acompanhamento
-      - Frases, riffs e recursos de improvisação
-      - Repertório e artistas de referência
+    lessons: [acompanhamento.post-hardcore-e-metalcore]
 
   - id: classica
     title: Música clássica
@@ -134,11 +92,4 @@ modules:
     level: 2
     style: classico
     prerequisites: [fundamentos.escalas-maior-e-menor]
-    upcoming:
-      - Características harmônicas
-      - Progressões características
-      - Vocabulário de acordes
-      - Padrões rítmicos
-      - Técnicas de acompanhamento
-      - Frases, riffs e recursos de improvisação
-      - Repertório e artistas de referência
+    lessons: [acompanhamento.linguagem-classica]
