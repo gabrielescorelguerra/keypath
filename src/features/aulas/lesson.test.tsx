@@ -52,9 +52,14 @@ describe('Aula', () => {
       within(completed).getByText(/não marca as competências como dominadas/),
     ).toBeInTheDocument()
     expect(screen.getByText(/Concluída · 4\/4/)).toBeInTheDocument()
+    // Com materiais, a aula termina no Aprofundamento, com o próximo passo
+    expect(screen.getByRole('heading', { name: /Aprofundamento/ })).toBeInTheDocument()
+    expect(screen.getByRole('region', { name: 'Próximo passo' })).toBeInTheDocument()
 
-    // Desfazer a última parte
-    await user.click(screen.getByRole('button', { name: 'Parte concluída (desfazer)' }))
+    // Voltar à última parte e desfazer
+    const steps = screen.getByRole('navigation', { name: 'Etapas da aula' })
+    await user.click(within(steps).getByRole('button', { name: /No teclado, em todos os tons/ }))
+    await user.click(await screen.findByRole('button', { name: 'Parte concluída (desfazer)' }))
     expect(await screen.findByText(/Em andamento · 3\/4/)).toBeInTheDocument()
   })
 
