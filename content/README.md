@@ -53,7 +53,7 @@ Texto do erro comum.
 
 Um bloco dentro de outro precisa de mais `:` no bloco de fora (`::::checkpoint` contém `:::common-mistake`).
 
-Tipos de escala: `major`, `natural-minor`, `harmonic-minor`, `melodic-minor`, `ionian`, `dorian`, `phrygian`, `lydian`, `mixolydian`, `aeolian`, `locrian`, `major-pentatonic`, `minor-pentatonic`, `blues`.
+Tipos de escala: `major`, `natural-minor`, `harmonic-minor`, `melodic-minor`, `ionian`, `dorian`, `phrygian`, `lydian`, `mixolydian`, `aeolian`, `locrian`, `major-pentatonic`, `minor-pentatonic`, `blues` (blues menor), `major-blues`.
 
 ## Cursos, módulos e aulas
 

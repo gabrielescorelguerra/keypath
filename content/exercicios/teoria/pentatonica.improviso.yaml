@@ -1,0 +1,30 @@
+id: teoria.pentatonica.improviso
+title: Improvisar com a pentatônica sobre o playback
+type: performance
+stage: application
+competencies: [teoria.pentatonica-e-blues]
+prompt: |
+  O playback toca **I – V – VIm – IV** em Sol. Improvise na mão direita com a **pentatônica de
+  Sol maior** (Sol Lá Si Ré Mi):
+
+  1. Voltas 1–2: frases de 2 a 4 notas, uma por compasso, sempre terminando em Sol, Si ou Ré.
+  2. Voltas 3–4: **pergunta e resposta** — uma frase subindo, outra descendo.
+  3. Voltas 5–6: acrescente o **Si♭** de passagem para o Si (a "blue note" do maior).
+
+  ::scale{root="G" type="major-pentatonic"}
+parameters:
+  keys: [G]
+  startBpm: 72
+  targetBpm: 96
+  bpmStep: 6
+  hands: right
+  backing: { key: G, degrees: I V VIm IV, beatsPerChord: 4 }
+checklist:
+  - id: voltas
+    text: Improvisei por seis voltas sem parar.
+  - id: frases
+    text: Deixei espaço entre as frases (pelo menos um tempo de silêncio).
+  - id: blue
+    text: Usei o Si♭ como nota de passagem, resolvendo no Si.
+challenges:
+  - Repita sobre a mesma progressão usando a pentatônica de Mi menor — repare que são as mesmas notas, mas as frases passam a terminar em Mi.

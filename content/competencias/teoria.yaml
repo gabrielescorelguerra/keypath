@@ -59,3 +59,19 @@
       method: self-assessment
       exercise: teoria.modos.no-teclado
       distinctDays: 2
+
+- id: teoria.pentatonica-e-blues
+  track: teoria
+  level: 2
+  title: Pentatônicas e escala blues
+  description: Toca as pentatônicas maior e menor e as escalas blues em vários tons, sabe por que elas funcionam e as usa para improvisar sobre progressões maiores e menores.
+  prerequisites: [teoria.escala-maior, teoria.escalas-menores]
+  styles: [blues, pop, rock-alternativo, gospel]
+  mastery:
+    - id: ouvido
+      method: quiz
+      exercise: teoria.pentatonica.reconhecer
+    - id: teclado
+      method: self-assessment
+      exercise: teoria.pentatonica.cinco-tons
+      distinctDays: 2

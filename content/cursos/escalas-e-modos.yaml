@@ -33,9 +33,7 @@ modules:
     summary: As escalas mais usadas para improvisar — por que funcionam e como fugir do clichê.
     level: 2
     prerequisites: [fundamentos.escalas-maior-e-menor]
-    upcoming:
-      - Pentatônicas maior e menor
-      - A escala blues e as blue notes
+    lessons: [teoria.pentatonicas-e-escala-blues]
 
   - id: simetricas-e-cromatica
     title: Escalas cromática e simétricas

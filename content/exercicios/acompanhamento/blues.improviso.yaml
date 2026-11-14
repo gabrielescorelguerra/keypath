@@ -1,0 +1,31 @@
+id: acompanhamento.blues.improviso
+title: Improvisar sobre o blues com o playback
+type: performance
+stage: application
+competencies: [acompanhamento.blues]
+prompt: |
+  O playback toca o blues em Dó, um acorde por compasso. Improvise na direita com a **blues menor
+  de Dó** (Dó Mi♭ Fá Sol♭ Sol Si♭):
+
+  1. **Riff:** escolha uma frase de 2 compassos e repita sobre o I7, o IV7 e de novo o I7 — o
+     mesmo riff sobre acordes diferentes é a essência do blues.
+  2. **Blue note:** deslize Mi♭ → Mi e Sol♭ → Sol.
+  3. **Turnaround:** nos compassos 11–12, desça a escala até o Sol e volte ao início.
+
+  ::scale{root="C" type="blues"}
+parameters:
+  keys: [C]
+  startBpm: 80
+  targetBpm: 100
+  bpmStep: 5
+  hands: right
+  backing: { key: C, degrees: I7 IV7 I7 I7 IV7 IV7 I7 I7 V7 IV7 I7 V7, beatsPerChord: 4 }
+checklist:
+  - id: voltas
+    text: Improvisei por três voltas da forma sem me perder.
+  - id: riff
+    text: Repeti um riff sobre acordes diferentes.
+  - id: blue
+    text: Usei as blue notes de passagem.
+challenges:
+  - Alterne a blues menor com a blues maior (Dó Ré Mi♭ Mi Sol Lá) a cada volta e compare.

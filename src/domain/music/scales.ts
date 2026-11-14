@@ -17,6 +17,7 @@ export type ScaleType =
   | 'major-pentatonic'
   | 'minor-pentatonic'
   | 'blues'
+  | 'major-blues'
 
 interface ScaleDef {
   readonly tonalName: string
@@ -37,7 +38,8 @@ export const SCALE_TYPES: Readonly<Record<ScaleType, ScaleDef>> = {
   locrian: { tonalName: 'locrian', name: 'Lócrio' },
   'major-pentatonic': { tonalName: 'major pentatonic', name: 'Pentatônica maior' },
   'minor-pentatonic': { tonalName: 'minor pentatonic', name: 'Pentatônica menor' },
-  blues: { tonalName: 'minor blues', name: 'Blues' },
+  blues: { tonalName: 'minor blues', name: 'Blues (menor)' },
+  'major-blues': { tonalName: 'major blues', name: 'Blues maior' },
 }
 
 export function isScaleType(value: string): value is ScaleType {

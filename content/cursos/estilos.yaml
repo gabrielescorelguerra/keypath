@@ -47,15 +47,11 @@ modules:
     summary: O blues de 12 compassos, dominantes em todos os graus, shuffle e a escala blues.
     level: 2
     style: blues
-    prerequisites: [harmonia-e-tecnica.tetrades]
+    prerequisites: [harmonia-e-tecnica.tetrades, escalas-e-modos.pentatonica-e-blues]
+    lessons: [acompanhamento.blues-no-teclado]
     upcoming:
-      - Características harmônicas
-      - Progressões características
-      - Vocabulário de acordes
-      - Padrões rítmicos
-      - Técnicas de acompanhamento
-      - Frases, riffs e recursos de improvisação
-      - Repertório e artistas de referência
+      - Boogie-woogie e walking bass
+      - Blues menor e slow blues
 
   - id: neo-soul
     title: Neo-soul e R&B

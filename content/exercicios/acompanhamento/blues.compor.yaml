@@ -1,0 +1,21 @@
+id: acompanhamento.blues.compor
+title: Compor um blues de 12 compassos
+type: performance
+stage: creativity
+competencies: [acompanhamento.blues]
+prompt: |
+  Componha um blues próprio:
+
+  - escolha o tom e o andamento;
+  - crie uma melodia (ou riff) para os compassos 1–4, repita nos 5–8 sobre o IV e responda nos
+    9–12 — a forma **AAB** das letras de blues;
+  - escreva uma introdução de 4 compassos e um final com turnaround.
+parameters:
+  keys: []
+checklist:
+  - id: forma
+    text: O blues tem 12 compassos com a estrutura AAB.
+  - id: tocar
+    text: Toquei melodia e acompanhamento juntos, do começo ao fim.
+challenges:
+  - Faça uma versão em tom menor (Im7 · IVm7 · V7).

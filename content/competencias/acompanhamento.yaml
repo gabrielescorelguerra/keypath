@@ -67,3 +67,20 @@
       method: self-assessment
       exercise: acompanhamento.worship.pulsacao
       distinctDays: 2
+
+- id: acompanhamento.blues
+  track: acompanhamento
+  level: 2
+  title: Blues no teclado
+  description: Toca a forma de 12 compassos com shuffle na mão esquerda e acordes dominantes na direita, em vários tons, e improvisa com a escala blues por cima.
+  core: false
+  prerequisites: [harmonia.tetrades, teoria.pentatonica-e-blues]
+  styles: [blues]
+  mastery:
+    - id: forma
+      method: quiz
+      exercise: acompanhamento.blues.forma
+    - id: teclado
+      method: self-assessment
+      exercise: acompanhamento.blues.shuffle
+      distinctDays: 2

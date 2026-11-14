@@ -1,0 +1,32 @@
+id: acompanhamento.blues.shuffle
+title: A forma de 12 compassos com shuffle
+type: performance
+stage: execution
+competencies: [acompanhamento.blues]
+prompt: |
+  **Mão esquerda — o shuffle:** em cada acorde, alterne **5ª e 6ª** sobre a fundamental, em
+  colcheias suingadas (longa-curta). Em Dó: Dó+Sol, Dó+Lá, Dó+Sol, Dó+Lá…
+
+  **Mão direita:** o acorde dominante (ou só 3ª e 7ª) no tempo 2 e no "e" do 4.
+
+  A forma em Dó, um acorde por compasso:
+
+  ::progression{key="C" degrees="I7 IV7 I7 I7 IV7 IV7 I7 I7 V7 IV7 I7 V7"}
+
+  (Esta é a versão com o IV no compasso 2, a "quick change". Na versão básica, o compasso 2 é I7.)
+parameters:
+  keys: [C, F, G]
+  startBpm: 70
+  targetBpm: 110
+  bpmStep: 5
+  hands: both
+checklist:
+  - id: forma
+    text: Toquei a forma inteira de memória, nos três tons.
+  - id: suingue
+    text: As colcheias da esquerda ficaram suingadas e regulares.
+  - id: andamento
+    text: Cheguei a 110 bpm, duas voltas seguidas, sem parar.
+challenges:
+  - Troque o shuffle por uma linha de baixo em semínimas que sobe 1-3-5-6 e desce 7-6-5-3.
+  - Faça a forma em Si♭ e Mi♭, tons comuns para sopros.

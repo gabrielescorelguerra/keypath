@@ -1,0 +1,40 @@
+id: acompanhamento.blues.forma
+title: Blues — a forma de 12 compassos
+type: quiz
+stage: recognition
+competencies: [acompanhamento.blues]
+questions:
+  - id: forma
+    kind: single-choice
+    prompt: Na forma básica de 12 compassos, quais acordes estão nos compassos 1–4, 5–6, 7–8, 9, 10 e 11–12?
+    options:
+      - I · IV · I · V · IV · I (e V no último, para voltar)
+      - I · V · IV · I · V · IV
+      - IV · I · V · I · IV · V
+    correct: [0]
+  - id: dominantes
+    kind: single-choice
+    prompt: No blues, que tipo de acorde aparece nos três graus (I, IV e V)?
+    options: [Dominante (7), 7M, Menor com sétima]
+    correct: [0]
+    explanation: Todos os acordes viram 7 — inclusive o I, o que não acontece na harmonia "tradicional".
+  - id: shuffle
+    kind: single-choice
+    prompt: O que é a levada shuffle?
+    options:
+      - Colcheias "suingadas" — a primeira longa e a segunda curta, como numa tercina
+      - Colcheias perfeitamente iguais
+      - Semicolcheias constantes
+    correct: [0]
+  - id: ouvir-dominante
+    kind: single-choice
+    prompt: Este acorde é o I do blues em Fá. Qual é?
+    audio: { chord: F7, play: arpeggio }
+    options: [F7, F7M, Fm7]
+    correct: [0]
+  - id: turnaround
+    kind: single-choice
+    prompt: Para que serve o V7 no compasso 12?
+    options:
+      [Para voltar ao início da forma (turnaround), Para terminar a música, Para mudar de tom]
+    correct: [0]

@@ -1,0 +1,23 @@
+id: teoria.pentatonica.licks
+title: Criar quatro frases (licks) próprias
+type: performance
+stage: creativity
+competencies: [teoria.pentatonica-e-blues]
+prompt: |
+  Crie **quatro frases curtas** (1 a 2 compassos) com a pentatônica ou a escala blues:
+
+  - uma subindo, uma descendo;
+  - uma com nota repetida e ritmo marcante;
+  - uma com a blue note.
+
+  Toque cada uma em três tons diferentes e dê um nome a cada uma — você vai usá-las nos módulos
+  de estilo.
+parameters:
+  keys: []
+checklist:
+  - id: quatro
+    text: Criei as quatro frases e consigo tocá-las de memória.
+  - id: tons
+    text: Toquei cada frase em três tons.
+challenges:
+  - Use duas das frases numa introdução de música do repertório.

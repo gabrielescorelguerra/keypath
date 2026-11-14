@@ -1,0 +1,41 @@
+id: teoria.pentatonica.reconhecer
+title: Pentatônicas e blues — reconhecer
+type: quiz
+stage: recognition
+competencies: [teoria.pentatonica-e-blues]
+questions:
+  - id: maior-ou-menor
+    kind: single-choice
+    prompt: Pentatônica maior ou menor?
+    audio: { notes: C4 D4 E4 G4 A4 C5, play: melody }
+    options: [Maior, Menor]
+    correct: [0]
+  - id: menor
+    kind: single-choice
+    prompt: E esta?
+    audio: { notes: A3 C4 D4 E4 G4 A4, play: melody }
+    options: [Maior, Menor]
+    correct: [1]
+    explanation: São as mesmas notas da anterior (Dó maior pentatônica), começando em Lá — a relativa menor.
+  - id: blue-note
+    kind: single-choice
+    prompt: Qual nota a escala blues menor acrescenta à pentatônica menor?
+    audio: { notes: C4 Eb4 F4 Gb4 G4 Bb4 C5, play: melody }
+    options: [A quinta diminuta (♭5), A segunda maior, A sétima maior]
+    correct: [0]
+  - id: tiradas
+    kind: single-choice
+    prompt: Quais graus da escala maior a pentatônica maior deixa de fora?
+    options: [4 e 7, 2 e 6, 3 e 5]
+    correct: [0]
+    explanation: São justamente as notas a meio tom de outras (Fá–Mi, Si–Dó) — por isso a escala quase não "erra".
+  - id: teclas-pretas
+    kind: single-choice
+    prompt: As cinco teclas pretas formam qual escala?
+    options: [Fá♯ (ou Sol♭) pentatônica maior, Dó maior, Si menor harmônica]
+    correct: [0]
+  - id: relativa
+    kind: single-choice
+    prompt: Sol maior pentatônica tem as mesmas notas de qual pentatônica menor?
+    options: [Mi menor, Ré menor, Si menor]
+    correct: [0]

@@ -1,0 +1,34 @@
+id: teoria.pentatonica.cinco-tons
+title: Pentatônicas e blues em cinco tons
+type: performance
+stage: execution
+competencies: [teoria.pentatonica-e-blues]
+prompt: |
+  Em cada tom, toque subindo e descendo duas oitavas, mão direita:
+
+  1. pentatônica **maior**;
+  2. pentatônica **menor** da relativa (mesmas notas, começando na 6ª);
+  3. escala **blues menor** a partir da tônica menor;
+  4. em **grupos de três**: 1-2-3, 2-3-4, 3-4-5… (sequência), a pentatônica maior.
+
+  ::scale{root="C" type="major-pentatonic" octaves="2"}
+
+  ::scale{root="A" type="minor-pentatonic" octaves="2"}
+
+  ::scale{root="A" type="blues" octaves="2"}
+parameters:
+  keys: [C, G, D, F, Bb]
+  startBpm: 60
+  targetBpm: 100
+  bpmStep: 5
+  hands: right
+checklist:
+  - id: tons
+    text: Toquei os quatro itens nos cinco tons.
+  - id: relativa
+    text: Encontrei a relativa menor de cada pentatônica sem consultar.
+  - id: grupos
+    text: Toquei a sequência em grupos de três a pelo menos 80 bpm, em colcheias.
+challenges:
+  - Toque a pentatônica maior de Fá♯ só nas teclas pretas, de olhos fechados.
+  - Faça a escala blues maior (1 2 ♭3 3 5 6) nos mesmos tons.
