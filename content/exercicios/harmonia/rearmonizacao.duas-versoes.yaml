@@ -1,0 +1,25 @@
+id: harmonia.rearmonizacao.duas-versoes
+title: Duas reharmonizações de uma música do repertório
+type: performance
+stage: creativity
+competencies: [harmonia.rearmonizacao]
+prompt: |
+  Escolha uma música do seu repertório e escreva **duas** versões de um trecho de 8 compassos:
+
+  - **Discreta** — para a congregação cantar: só substituições diatônicas, um dominante
+    secundário e uma cor de empréstimo.
+  - **Ousada** — para um momento instrumental: II–V secundários, trítonos e diminutos.
+
+  Toque as duas e anote onde a ousada "puxa" a atenção para o teclado — e se isso é o que a música
+  pede naquele momento.
+parameters:
+  keys: []
+checklist:
+  - id: duas
+    text: Escrevi e toquei as duas versões.
+  - id: melodia
+    text: As duas respeitam a melodia.
+  - id: escolha
+    text: Decidi onde usar cada uma num arranjo real.
+challenges:
+  - Toque a versão ousada para alguém e peça que cante a melodia junto — ficou difícil cantar?

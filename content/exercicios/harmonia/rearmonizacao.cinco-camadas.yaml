@@ -1,0 +1,44 @@
+id: harmonia.rearmonizacao.cinco-camadas
+title: Uma progressão em cinco camadas de reharmonização
+type: performance
+stage: execution
+competencies: [harmonia.rearmonizacao]
+prompt: |
+  Toque a mesma progressão crescendo em complexidade — uma camada de cada vez, ouvindo o que
+  cada técnica acrescenta. Em Dó:
+
+  **0. Original**
+
+  ::progression{key="C" degrees="I7M VIm7 IIm7 V7"}
+
+  **1. Substituição diatônica** (III no lugar do I no segundo compasso)
+
+  ::progression{key="C" degrees="I7M IIIm7 VIm7 IIm7 V7"}
+
+  **2. Dominante secundário** (o VI vira V7 do II)
+
+  ::progression{key="C" degrees="I7M VI7 IIm7 V7"}
+
+  **3. Substituição de trítono** (♭III7 no lugar do VI7, ♭II7 no lugar do V7)
+
+  ::progression{key="C" degrees="I7M bIII7 IIm7 bII7 I7M"}
+
+  **4. Diminutos de passagem** (o baixo sobe por semitons)
+
+  ::progression{key="C" degrees="I7M #Idim7 IIm7 #IIdim7 IIIm7"}
+parameters:
+  keys: [C, F, G, Bb]
+  startBpm: 60
+  targetBpm: 84
+  bpmStep: 6
+  hands: both
+checklist:
+  - id: camadas
+    text: Toquei as cinco camadas nos quatro tons.
+  - id: baixo
+    text: Nas camadas 3 e 4, o baixo andou por semitons, como esperado.
+  - id: escuta
+    text: Consigo descrever em uma frase o que cada camada muda no som.
+challenges:
+  - 'Combine camadas: prepare o Am7 com o II–V secundário Bm7(♭5) – E7 e, depois, troque o G7 por D♭7.'
+  - Faça as camadas 2 e 3 em Mi♭ e Lá♭.

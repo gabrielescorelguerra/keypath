@@ -1,0 +1,45 @@
+id: harmonia.rearmonizacao.melodia
+title: Reharmonizar uma melodia de domínio público
+type: performance
+stage: application
+competencies: [harmonia.rearmonizacao]
+prompt: |
+  O tema da "Ode à Alegria" (Beethoven, domínio público), em Dó, com a harmonia simples:
+
+  | Compasso | Melodia | Harmonia original |
+  | --- | --- | --- |
+  | 1 | Mi Mi Fá Sol | C |
+  | 2 | Sol Fá Mi Ré | G |
+  | 3 | Dó Dó Ré Mi | C |
+  | 4 | Mi — Ré Ré | G |
+
+  Toque a melodia na mão direita e reharmonize com a esquerda (ou com as duas mãos), usando
+  **pelo menos três técnicas diferentes** da aula. Sugestões para começar:
+
+  - compasso 1: C7M nos tempos 1–2 e A7 nos tempos 3–4 (Fá = ♭13, Sol = ♭7) — dominante
+    secundário indo para o Dm7;
+  - compasso 2: Dm7 – G7 (II–V no lugar do V; Sol = 11ª do Dm7, Mi = 13ª do G7);
+  - compasso 3: C7M nos tempos 1–3 e C♯°7 só no tempo 4 (Mi = terça menor do C♯°7) — diminuto de
+    passagem para o Dm7;
+  - compasso 4: Dm7 (Mi = 9ª) – G7 (Ré = 5ª).
+
+  Repare que o D♭7 **não** cabe no compasso 4: o Ré da melodia ficaria meio tom acima do Ré♭.
+  Guarde o trítono para lugares em que a melodia esteja em Fá ou em Si.
+
+  Para cada acorde novo, confira: a nota da melodia é nota do acorde ou uma extensão boa?
+parameters:
+  keys: [C]
+  startBpm: 60
+  targetBpm: 80
+  bpmStep: 5
+  hands: both
+checklist:
+  - id: tres-tecnicas
+    text: Usei pelo menos três técnicas diferentes nos quatro compassos.
+  - id: melodia
+    text: Conferi a melodia contra cada acorde novo, sem choques de meio tom.
+  - id: fluencia
+    text: Toquei melodia e harmonia juntas, do começo ao fim, a 60 bpm.
+challenges:
+  - Continue pelos compassos 5 a 8 do tema (repetição com final em Dó).
+  - Faça uma segunda versão só com empréstimo modal (IVm, ♭VI, ♭VII).

@@ -187,3 +187,21 @@
     - id: teclado
       method: self-assessment
       exercise: harmonia.sus-add-slash.cores-em-tons
+
+- id: harmonia.rearmonizacao
+  track: harmonia
+  level: 4
+  title: Reharmonização e substituições
+  description: Reharmoniza uma progressão ou melodia com substituição diatônica, dominantes secundários, II–V secundários, substituição de trítono, diminutos de passagem e empréstimo modal, respeitando a melodia.
+  prerequisites: [harmonia.funcoes-harmonicas, harmonia.extensoes, harmonia.subdominante-menor]
+  mastery:
+    - id: teoria
+      method: quiz
+      exercise: harmonia.rearmonizacao.reconhecer
+    - id: teclado
+      method: self-assessment
+      exercise: harmonia.rearmonizacao.cinco-camadas
+      distinctDays: 2
+    - id: melodia
+      method: self-assessment
+      exercise: harmonia.rearmonizacao.melodia

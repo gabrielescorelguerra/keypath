@@ -83,8 +83,4 @@ modules:
       - harmonia-e-tecnica.funcoes-e-progressoes
       - harmonia-e-tecnica.extensoes
       - harmonia-e-tecnica.emprestimo-modal
-    upcoming:
-      - Dominantes secundários
-      - Substituição de trítono
-      - Diminutos de passagem
-      - Reharmonizar uma melodia conhecida
+    lessons: [harmonia.rearmonizacao-e-substituicoes]

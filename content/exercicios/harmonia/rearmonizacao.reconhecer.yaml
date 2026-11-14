@@ -1,0 +1,49 @@
+id: harmonia.rearmonizacao.reconhecer
+title: Reharmonização — identificar a técnica
+type: quiz
+stage: recognition
+competencies: [harmonia.rearmonizacao]
+questions:
+  - id: diatonica
+    kind: single-choice
+    prompt: Em Dó, trocar C7M por Em7 (mantendo a melodia em Mi ou Sol) é que tipo de substituição?
+    options: [Diatônica — mesma função (tônica), Substituição de trítono, Empréstimo modal]
+    correct: [0]
+    explanation: Em7 e C7M compartilham Mi, Sol e Si — os dois têm função de tônica.
+  - id: secundario
+    kind: single-choice
+    prompt: Em C7M – A7 – Dm7 – G7, o que o A7 está fazendo?
+    options:
+      [É o V7 do Dm7 (dominante secundário), É o VI grau do campo, É uma substituição de trítono]
+    correct: [0]
+    explanation: O campo tem Am7; trocar a terça (Dó → Dó♯) o transforma em dominante do II.
+  - id: ii-v-secundario
+    kind: single-choice
+    prompt: Qual II–V secundário leva até o Am7 (VI grau) em Dó?
+    options: [Bm7(♭5) – E7, Dm7 – G7, F♯m7 – B7]
+    correct: [0]
+    explanation: Am é menor, então o II–V dele usa o meio-diminuto, como no tom menor.
+  - id: tritono
+    kind: single-choice
+    prompt: Qual substituição de trítono troca o A7 em C7M – A7 – Dm7?
+    options: [E♭7, D♭7, F7]
+    correct: [0]
+    explanation: E♭7 e A7 compartilham o trítono Sol–Dó♯ (Ré♭). O baixo fica cromático, Dó → Mi♭ → Ré.
+  - id: diminuto
+    kind: single-choice
+    prompt: Entre C7M e Dm7, qual diminuto de passagem faz o baixo subir por semitom?
+    options: [C♯°7, E♭°7, B°7]
+    correct: [0]
+  - id: emprestimo
+    kind: single-choice
+    prompt: Trocar o F7M (IV) por Fm6 antes do C7M é…
+    options: [Empréstimo modal (subdominante menor), Dominante secundário, Substituição diatônica]
+    correct: [0]
+  - id: melodia
+    kind: single-choice
+    prompt: Qual é a regra que decide se uma reharmonização funciona?
+    options:
+      - A nota da melodia precisa ser nota do novo acorde ou uma extensão que soe bem sobre ele
+      - Usar o maior número possível de acordes diferentes
+      - Manter sempre o mesmo baixo
+    correct: [0]
