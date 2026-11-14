@@ -6,11 +6,24 @@ track: harmonia
 competencies: [harmonia.tetrades, harmonia.campo-harmonico-maior-tetrades]
 styles: [gospel]
 estimatedMinutes: 90
+why: Os acordes de sétima são o som padrão do louvor contemporâneo, do gospel e do jazz. Entender as cinco tétrades e o campo com sétimas é a ponte para extensões e reharmonização.
+materials:
+  - title: Seventh Chords
+    url: https://musictheory.net/lessons/45
+    source: musictheory.net
+    kind: interactive
+    purpose: understand
+  - title: Diatonic Seventh Chords
+    url: https://musictheory.net/lessons/46
+    source: musictheory.net
+    kind: interactive
+    purpose: understand
+    note: As sete tétrades do campo maior e do menor.
 ---
 
 A tríade é o esqueleto; a **sétima** dá a cor. É ela que faz um acorde soar "mais bonito", mais aberto e mais moderno. No louvor contemporâneo, quase todo acorde tem uma sétima ou uma extensão. Nesta aula você monta as tétrades e o campo maior com sétimas.
 
-::::checkpoint{id="tetrades" title="Os tipos de tétrade"}
+::::checkpoint{id="tetrades" title="Os tipos de tétrade" stage="fundamentos"}
 
 ::concept{id="tetrade"}
 
@@ -26,7 +39,7 @@ Tocar **G7** quando a cifra pede **G7M**, ou o contrário. Leia com atenção: "
 
 ::::
 
-::::checkpoint{id="campo-setimas" title="O campo maior com tétrades"}
+::::checkpoint{id="campo-setimas" title="O campo maior com tétrades" stage="visualizacao"}
 
 Empilhando mais uma terça em cada acorde do campo, o padrão fica:
 
@@ -44,7 +57,7 @@ E a cadência IIm7 – V7 – I7M, base de muitos finais:
 
 ::::
 
-::::checkpoint{id="no-teclado" title="No teclado"}
+::::checkpoint{id="no-teclado" title="No teclado" stage="pratica"}
 
 Primeiro as tétrades soltas, sobre todas as notas; depois o campo inteiro em todos os tons.
 

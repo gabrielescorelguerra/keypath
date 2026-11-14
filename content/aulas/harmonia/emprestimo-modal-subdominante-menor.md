@@ -6,11 +6,29 @@ track: harmonia
 competencies: [harmonia.emprestimo-modal-conceito, harmonia.subdominante-menor]
 styles: [gospel]
 estimatedMinutes: 120
+why: O IVm é uma das cores mais emocionantes do louvor e da música popular. Entender o empréstimo modal transforma esse "acorde bonito" numa ferramenta que você usa de propósito.
+materials:
+  - title: An introduction to mode mixture
+    url: https://intmus.github.io/inttheory/17-mode-mixture/a1-ex-intromodemix.html
+    source: Integrated Music Theory
+    kind: article
+    purpose: understand
+    note: Empréstimo modal (mistura de modos) com exemplos.
+  - title: Modal Interchange Explained For Jazz Pianists
+    url: https://www.freejazzlessons.com/modal-interchange-explained-for-jazz-pianists/
+    source: Free Jazz Lessons
+    kind: article
+    purpose: see
+  - title: Modal Interchanges Made Easy
+    url: https://fachords.com/modal-interchanges
+    source: FaChords
+    kind: article
+    purpose: practice
 ---
 
 Você já ouviu isto muitas vezes: a música está alegre, em tom maior, e de repente, no final da frase, o acorde do IV vira menor. A sensação é de emoção, de quase-tristeza que logo se resolve em casa. Isso é **empréstimo modal**, e o acorde é o **IVm**, o representante mais famoso da **subdominante menor**.
 
-::::checkpoint{id="conceito" title="O que é emprestar de outro modo"}
+::::checkpoint{id="conceito" title="O que é emprestar de outro modo" stage="fundamentos"}
 
 ::concept{id="tom-homonimo"}
 
@@ -20,7 +38,7 @@ Você já ouviu isto muitas vezes: a música está alegre, em tom maior, e de re
 
 ::::
 
-::::checkpoint{id="ivm" title="O IVm e a cadência IV → IVm → I"}
+::::checkpoint{id="ivm" title="O IVm e a cadência IV → IVm → I" stage="visualizacao"}
 
 ::concept{id="subdominante-menor"}
 
@@ -34,7 +52,7 @@ Uma variação muito usada no gospel, passando pelo I7 (que "puxa" para o IV):
 
 ::::
 
-::::checkpoint{id="familia" title="A família: IVm6, IIm7(♭5) e ♭VI7M"}
+::::checkpoint{id="familia" title="A família: IVm6, IIm7(♭5) e ♭VI7M" stage="aplicacao"}
 
 O IVm não é o único. Os outros acordes da família têm a mesma nota-chave, o **♭6 do tom** (em Sol: Mi♭), e podem aparecer no lugar dele:
 
@@ -52,7 +70,7 @@ Usar o IVm em todo lugar e "gastar" o efeito. Ele brilha em momentos-chave: fina
 
 ::::
 
-::::checkpoint{id="no-teclado" title="No teclado e no seu repertório"}
+::::checkpoint{id="no-teclado" title="No teclado e no seu repertório" stage="pratica"}
 
 ::exercise{id="harmonia.subdominante-menor.12-tons"}
 

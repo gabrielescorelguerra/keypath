@@ -6,11 +6,29 @@ track: harmonia
 competencies: [harmonia.bvi-bvii, acompanhamento.emprestimo-gospel]
 styles: [gospel]
 estimatedMinutes: 120
+why: O ♭VI e o ♭VII criam alguns dos finais mais marcantes do gospel e do rock. São os acordes emprestados que mais aparecem em músicas que você já toca.
+materials:
+  - title: Expanding our chord colour pallet with Modal Interchange
+    url: https://www.piano-composer-teacher-london.co.uk/post/expanding-our-chord-colour-pallet-with-modal-interchange
+    source: Piano Composer Teacher London
+    kind: article
+    purpose: understand
+  - title: 'Future Rock: Speeding Down the Modal Interchange Highway'
+    url: https://www.premierguitar.com/future-rock-speeding-down-the-modal-interchange-highway
+    source: Premier Guitar
+    kind: article
+    purpose: see
+    note: Empréstimo modal no rock (para guitarra; a harmonia é a mesma).
+  - title: Borrowed chords
+    url: https://blog.discmakers.com/2023/01/borrowed-chords/
+    source: Disc Makers Blog
+    kind: article
+    purpose: listen
 ---
 
 Se o IVm traz emoção, o **♭VI** e o **♭VII** trazem **grandeza**. São os acordes daquele final épico em que a banda inteira sobe junto: em Sol, **E♭ – F – G**. Nesta aula você aprende de onde eles vêm, as duas cadências principais e, no fim, junta tudo em progressões de louvor.
 
-::::checkpoint{id="bvi-bvii" title="♭VI e ♭VII: de onde vêm"}
+::::checkpoint{id="bvi-bvii" title="♭VI e ♭VII: de onde vêm" stage="fundamentos"}
 
 Os dois vêm do homônimo menor. Em Sol menor natural, o VI e o VII são **E♭** e **F**. Escritos em relação a Sol maior, são **♭VI** e **♭VII**:
 
@@ -22,7 +40,7 @@ O ♭VII também é o acorde característico do **mixolídio**, a escala maior c
 
 ::::
 
-::::checkpoint{id="cadencias" title="As cadências ♭VI → ♭VII → I e ♭VII7 → I"}
+::::checkpoint{id="cadencias" title="As cadências ♭VI → ♭VII → I e ♭VII7 → I" stage="visualizacao"}
 
 A cadência mais grandiosa: ♭VI → ♭VII → I. Ouça como a fundamental sobe por graus até a tônica:
 
@@ -46,7 +64,7 @@ Achar que o ♭VII "está errado" porque não é do campo. Ele é emprestado e, 
 
 ::::
 
-::::checkpoint{id="gospel" title="Juntando tudo no louvor"}
+::::checkpoint{id="gospel" title="Juntando tudo no louvor" stage="aplicacao"}
 
 Quatro progressões que reúnem os empréstimos estudados. Toque com baixo na esquerda e condução de vozes na direita.
 
@@ -70,7 +88,7 @@ Para ministração, começando no VIm:
 
 ::::
 
-::::checkpoint{id="repertorio" title="No seu repertório"}
+::::checkpoint{id="repertorio" title="No seu repertório" stage="pratica"}
 
 O último passo é levar isso para a música real. Escolha uma música que você toca e use um empréstimo onde ele faz sentido.
 

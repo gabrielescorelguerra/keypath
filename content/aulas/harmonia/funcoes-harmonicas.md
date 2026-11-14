@@ -6,11 +6,25 @@ track: harmonia
 competencies: [harmonia.funcoes-harmonicas]
 styles: [gospel]
 estimatedMinutes: 75
+why: Saber a função de cada acorde — repouso, afastamento ou tensão — é o que permite trocar acordes com segurança, variar progressões e, mais tarde, reharmonizar.
+materials:
+  - title: Harmonic Functions
+    url: https://human.libretexts.org/Bookshelves/Music/Open_Music_Theory_1e/03:_Harmony/3.02:_Harmonic_Functions
+    source: Open Music Theory (LibreTexts)
+    kind: article
+    purpose: understand
+    note: Tônica, pré-dominante e dominante.
+  - title: Introduction to Harmony, Cadences, and Phrase Endings
+    url: https://human.libretexts.org/Bookshelves/Music/Music_Theory/Open_Music_Theory_2e_(Gotham_et_al.)/04%3A_Diatonic_Harmony_Tonicization_and_Modulation/4.01%3A_Introduction_to_Harmony_Cadences_and_Phrase_Endings
+    source: Open Music Theory (LibreTexts)
+    kind: article
+    purpose: understand
+    note: As funções no modelo de frase e nas cadências.
 ---
 
 Saber **quais** acordes estão no campo é o primeiro passo; entender **o que cada um faz** é o que permite criar. As funções harmônicas explicam a sensação de repouso, movimento e tensão, e mostram quais acordes podem ocupar o lugar de outros. Essa ideia vai ser essencial para entender o **empréstimo modal**, que é justamente trocar um acorde por outro de mesma função, com outra cor.
 
-::::checkpoint{id="tres-funcoes" title="Repouso, afastamento e tensão"}
+::::checkpoint{id="tres-funcoes" title="Repouso, afastamento e tensão" stage="fundamentos"}
 
 ::concept{id="funcoes-harmonicas"}
 
@@ -22,7 +36,7 @@ Ouça a diferença entre parar no V7 e resolver no I:
 
 ::::
 
-::::checkpoint{id="substituicoes" title="Trocando acordes de mesma função"}
+::::checkpoint{id="substituicoes" title="Trocando acordes de mesma função" stage="aplicacao"}
 
 Uma progressão simples:
 
@@ -44,7 +58,7 @@ Achar que "qualquer acorde serve". A substituição funciona porque os acordes d
 
 ::::
 
-::::checkpoint{id="no-teclado" title="Criando variações"}
+::::checkpoint{id="no-teclado" title="Criando variações" stage="pratica"}
 
 ::exercise{id="harmonia.funcoes.substituicoes"}
 

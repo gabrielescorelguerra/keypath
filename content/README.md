@@ -99,5 +99,4 @@ Só entra link verificado: a página precisa existir e tratar do assunto. Prefir
 - **5 cursos e 34 módulos**, todos com pelo menos uma aula: Fundamentos, Harmonia e técnica, Escalas e modos, Estilos (gospel, worship, jazz, blues, neo-soul, funk, pop, rock alternativo, post-hardcore/metalcore, clássico) e Timbres e sound design.
 - **35 aulas**, 42 competências, 16 conceitos e 126 exercícios. As aulas novas seguem as etapas (fundamentos, visualização, aplicação, prática guiada, revisão), têm materiais externos verificados e exercícios de reconhecimento a criatividade.
 - Alguns módulos listam tópicos extras em preparação (por exemplo, dominantes alterados, boogie-woogie, levadas em 6/8).
-- As 7 aulas da fatia de Harmonia original ainda não têm materiais externos nem etapas marcadas.
 - O conteúdo musical ainda precisa de **revisão do autor**.
