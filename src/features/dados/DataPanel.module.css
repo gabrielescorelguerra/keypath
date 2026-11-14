@@ -1,40 +1,54 @@
 .panel {
+  padding-bottom: var(--space-4);
+  background: var(--color-surface);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
-  background: var(--color-surface);
-  padding: var(--space-4);
+  overflow: hidden;
 }
 
 .stats {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
-  gap: var(--space-3);
+  grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
   margin: 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.stats > div {
+  padding: var(--space-4) var(--space-5);
+}
+
+.stats > div + div {
+  border-left: 1px solid var(--color-border);
 }
 
 .stats dt {
-  color: var(--color-text-muted);
-  font-size: var(--text-sm);
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-text-3);
 }
 
 .stats dd {
-  margin: 0;
-  font-weight: 600;
+  margin: var(--space-1) 0 0;
+  font-family: var(--font-mono);
+  font-size: var(--text-lg);
+  font-weight: 500;
 }
 
 .actions {
   display: flex;
   flex-wrap: wrap;
   gap: var(--space-2);
-  margin-top: var(--space-4);
+  padding: var(--space-4) var(--space-5) 0;
 }
 
 .reminder,
 .ok,
 .error,
 .note {
-  margin: var(--space-3) 0 0;
-  font-size: var(--text-sm);
+  margin: var(--space-3) var(--space-5) 0;
+  font-size: var(--text-md);
 }
 
 .reminder {
@@ -50,5 +64,6 @@
 }
 
 .note {
-  color: var(--color-text-muted);
+  color: var(--color-text-2);
+  font-size: var(--text-sm);
 }

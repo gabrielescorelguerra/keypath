@@ -1,0 +1,145 @@
+.levelBox {
+  display: grid;
+  justify-items: end;
+  gap: 2px;
+  padding-left: var(--space-5);
+  border-left: 1px solid var(--color-border);
+}
+
+.levelValue {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-1);
+}
+
+.levelNumber {
+  font-size: var(--text-4xl);
+  font-weight: 500;
+  line-height: 1;
+  color: var(--color-accent-text);
+}
+
+.levelOf {
+  font-family: var(--font-mono);
+  color: var(--color-text-3);
+}
+
+.levelName {
+  font-size: var(--text-sm);
+  color: var(--color-text-2);
+}
+
+.meterRow {
+  display: grid;
+  gap: var(--space-2);
+  width: 100%;
+  max-width: 26rem;
+}
+
+.levels {
+  display: grid;
+  gap: var(--space-7);
+}
+
+.levelLabel {
+  margin: 0;
+  display: grid;
+  gap: var(--space-1);
+}
+
+.levelIndex {
+  font-size: var(--text-3xl);
+  font-weight: 400;
+  line-height: 1;
+  color: var(--color-text-3);
+  transition: color var(--t-base) var(--ease);
+}
+
+.level[data-reached='true'] .levelIndex {
+  color: var(--color-accent-text);
+}
+
+.levelTitle {
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  font-weight: 500;
+}
+
+.competencies {
+  display: grid;
+}
+
+.competency {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: var(--space-4);
+  align-items: start;
+  padding: var(--space-4) var(--space-5) !important;
+}
+
+.competencyMain {
+  display: grid;
+  gap: var(--space-1);
+  min-width: 0;
+}
+
+.competencyTitle {
+  font-weight: 600;
+}
+
+.missing {
+  font-size: var(--text-sm);
+  color: var(--color-text-3);
+}
+
+.competencySide {
+  display: grid;
+  justify-items: end;
+  gap: var(--space-2);
+  padding-top: 2px;
+}
+
+.tableWrap {
+  overflow-x: auto;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-1) var(--space-2);
+}
+
+.tableWrap tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.narrow {
+  width: 1%;
+  white-space: nowrap;
+}
+
+.lessonTitle {
+  font-weight: 600;
+}
+
+.lessonSummary {
+  display: block;
+  margin-top: 2px;
+  max-width: 40rem;
+}
+
+@media (max-width: 40rem) {
+  .levelBox {
+    justify-items: start;
+    padding-left: 0;
+    border-left: 0;
+  }
+
+  .competency {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .competencySide {
+    justify-items: start;
+    grid-auto-flow: column;
+    justify-content: start;
+  }
+}

@@ -134,6 +134,11 @@
   .split > .aside {
     position: static;
   }
+
+  /* Em telas estreitas, o painel vem antes quando contém as ações principais. */
+  .split.aside-first > .aside {
+    order: -1;
+  }
 }
 
 @media (max-width: 40rem) {
