@@ -17,4 +17,11 @@ describe('App', () => {
     expect(within(section).getAllByRole('listitem')).toHaveLength(6)
     expect(within(section).getByText('Harmonia')).toBeInTheDocument()
   })
+
+  it('mostra os próximos passos recomendados', () => {
+    render(<App />)
+
+    const section = screen.getByRole('region', { name: 'Próximos passos' })
+    expect(within(section).getByText('Demonstrar a competência: Intervalos')).toBeInTheDocument()
+  })
 })

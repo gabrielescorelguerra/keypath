@@ -1,6 +1,8 @@
 import { cp, mkdtemp, rm, writeFile } from 'node:fs/promises'
 import { tmpdir } from 'node:os'
 import { join, resolve } from 'node:path'
+import { indexCatalog } from '../../src/domain/catalog/index.ts'
+import { computeProgress, NO_FACTS, recommend } from '../../src/domain/progress/index.ts'
 import { buildCatalog } from './build.ts'
 
 const CONTENT_DIR = resolve(__dirname, '../../content')
@@ -11,6 +13,19 @@ describe('conteúdo real (content/)', () => {
     expect(issues.filter((i) => i.severity === 'error')).toEqual([])
     expect(catalog?.tracks).toHaveLength(6)
     expect(catalog?.levels).toHaveLength(5)
+  })
+
+  it('as regras de progresso funcionam com o catálogo real', async () => {
+    const { catalog } = await buildCatalog(CONTENT_DIR)
+    if (!catalog) throw new Error('catálogo inválido')
+    const index = indexCatalog(catalog)
+    const snapshot = computeProgress(index, NO_FACTS)
+    expect(snapshot.competencies.size).toBe(catalog.competencies.length)
+    expect([...snapshot.tracks.values()].every((t) => t.level === 0)).toBe(true)
+    expect(recommend(index, snapshot)[0]).toEqual({
+      kind: 'demonstrate',
+      competencyId: 'teoria.intervalos',
+    })
   })
 })
 

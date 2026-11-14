@@ -201,8 +201,8 @@ São armazenados no IndexedDB. Todo registro tem `id` (UUID) e datas no formato 
 | `context`                 | `{ lessonId?, checkpointId?, sessionId?⏳ }` | De onde a tentativa foi feita |
 | `result`                  | `QuizResult` \| `SelfAssessmentResult`       |                               |
 
-- `QuizResult`: `{ answers: Record<questionId, number[]>, score: 0–1 }`
-- `SelfAssessmentResult`: `{ checked: Record<itemId, boolean>, keysPlayed?: string[], bpm?: number, note?: string }`
+- `QuizResult`: `{ type: 'quiz', answers: Record<questionId, number[]>, score: 0–1 }`. Uma questão está certa quando o conjunto escolhido é exatamente o conjunto correto.
+- `SelfAssessmentResult`: `{ type: 'self-assessment', checked: Record<itemId, boolean>, keysPlayed?: string[], bpm?: number, note?: string }`
 - (futuro) `PerformanceResult`: os eventos MIDI capturados e a avaliação automática.
 
 ### 5.2 `Declaration` — conhecimento prévio
@@ -244,6 +244,13 @@ São funções puras do tipo `(catálogo, fatos do usuário, data atual) → est
 | **Nível da trilha**          | O maior N em que todas as competências `core` da trilha, dos níveis 1 a N, estão satisfeitas. Um nível sem competências interrompe a contagem. O resultado 0 significa "sem nível".                                                                    |
 | **Status da aula**           | `completed` (todos os checkpoints concluídos), `in-progress` (algum concluído) ou `not-started`                                                                                                                                                        |
 | **Recomendação**             | Ver [produto §5](produto.md#5-recomendação-mvp)                                                                                                                                                                                                        |
+
+Detalhes definidos na implementação (`src/domain/progress`):
+
+- **"Dias diferentes"** são dias do calendário **local** (fuso do dispositivo).
+- A autoavaliação é comparada com o checklist **atual** do exercício. Se um item novo for adicionado ao exercício, tentativas antigas deixam de contar para aquele critério.
+- Uma aula só está **em andamento** depois do primeiro checkpoint concluído; abrir a aula não basta. Checkpoints que não existem mais na aula são ignorados.
+- Na recomendação, o filtro de **estilo** aceita uma competência quando ela própria ou uma aula que a trabalha tem a etiqueta. A mesma aula nunca aparece duas vezes, mesmo quando trabalha várias competências prontas. Uma competência cuja aula já foi concluída, mas que ainda não está dominada, recebe "demonstrar".
 
 Esta separação existe por três motivos:
 
