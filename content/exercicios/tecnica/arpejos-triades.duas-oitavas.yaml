@@ -1,0 +1,37 @@
+id: tecnica.arpejos-triades.duas-oitavas
+title: Arpejos de tríades em duas oitavas
+type: performance
+stage: execution
+competencies: [tecnica.arpejos-triades]
+prompt: |
+  Para cada tom, toque o arpejo **maior** e depois o **menor**, subindo e descendo duas oitavas.
+  Primeiro a mão direita, depois a esquerda, por fim as duas juntas (em oitavas).
+
+  - Mão direita: **1 2 3 · 1 2 3 · 5**, polegar passando por baixo depois do 3.
+  - Mão esquerda: **5 4 2 1 · 4 2 1**, o 4 (ou o 3) cruzando por cima do polegar.
+  - Uma nota por tempo no começo (semínimas); quando estiver limpo, duas por tempo (colcheias).
+
+  ::arpeggio{symbol="C" octaves="2"}
+
+  ::arpeggio{symbol="Cm" octaves="2"}
+
+  Depois, faça os mesmos tons com a tríade **diminuta** e a **aumentada** (só a mão direita basta).
+parameters:
+  keys: [C, G, D, A, E, F]
+  startBpm: 60
+  targetBpm: 96
+  bpmStep: 4
+  hands: both
+checklist:
+  - id: tons
+    text: Toquei maior e menor nos seis tons, subindo e descendo duas oitavas.
+  - id: dedilhado
+    text: Usei o dedilhado indicado, sem "pular" a mão na passagem do polegar.
+  - id: andamento
+    text: Cheguei a 96 bpm em colcheias com as notas igualmente espaçadas e no mesmo volume.
+  - id: maos-juntas
+    text: Toquei pelo menos três tons com as duas mãos juntas.
+challenges:
+  - Faça os seis tons restantes (B, F♯, D♭, A♭, E♭, B♭) — nas teclas pretas o dedilhado muda; consulte a tabela do Aprofundamento.
+  - Comece cada arpejo da 1ª e da 2ª inversão (da terça e da quinta).
+  - Toque em movimento contrário — as mãos se afastando a partir do mesmo Dó central.

@@ -1,0 +1,36 @@
+id: tecnica.arpejos-tetrades.duas-oitavas
+title: Arpejos de tétrades em duas oitavas
+type: performance
+stage: execution
+competencies: [tecnica.arpejos-tetrades]
+prompt: |
+  Sobre cada nota, toque em sequência os arpejos de **7M, m7, 7, m7(♭5) e °7**, subindo e descendo
+  duas oitavas. Mude só uma nota de cada vez e preste atenção ao que muda no som:
+
+  | De → para | O que muda |
+  | --- | --- |
+  | 7M → 7 | a sétima desce um semitom |
+  | 7 → m7 | a terça desce um semitom |
+  | m7 → m7(♭5) | a quinta desce um semitom |
+  | m7(♭5) → °7 | a sétima desce mais um semitom |
+
+  Dedilhado: mão direita **1 2 3 4 · 1 2 3 4 · 5**; mão esquerda **5 4 3 2 1 · 4 3 2 1**.
+
+  ::arpeggio{symbol="Cmaj7" octaves="2"}
+parameters:
+  keys: [C, F, G, D, Bb]
+  startBpm: 56
+  targetBpm: 88
+  bpmStep: 4
+  hands: right
+checklist:
+  - id: cinco-tipos
+    text: Toquei os cinco tipos em sequência nas cinco notas.
+  - id: escuta
+    text: Consegui dizer, só ouvindo, qual nota mudou de um tipo para o outro.
+  - id: andamento
+    text: Cheguei a 88 bpm em colcheias, sem acentuar a passagem do polegar.
+challenges:
+  - Repita com a mão esquerda e depois com as duas mãos em oitavas.
+  - Toque o arpejo de °7 começando em Dó, Mi♭, Fá♯ e Lá — e perceba que são as mesmas quatro notas.
+  - Toque os arpejos das tétrades do campo de Dó maior (C7M, Dm7, Em7, F7M, G7, Am7, Bm7(♭5)) seguidos, sem parar.

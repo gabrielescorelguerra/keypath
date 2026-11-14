@@ -171,7 +171,7 @@ export function LessonPage() {
                     {done.has(checkpoint.id) ? <Icon name="check" size={12} /> : index + 1}
                   </span>
                   <span className={styles.partTitle}>
-                    {checkpoint.stage && (
+                    {checkpoint.stage && STAGE_LABEL[checkpoint.stage] !== checkpoint.title && (
                       <span className={styles.partStage}>{STAGE_LABEL[checkpoint.stage]}</span>
                     )}
                     {checkpoint.title}
@@ -251,7 +251,9 @@ export function LessonPage() {
                 <ol>
                   {lesson.checkpoints.map((c) => (
                     <li key={c.id}>
-                      {c.stage && <span className={styles.partStage}>{STAGE_LABEL[c.stage]}</span>}
+                      {c.stage && STAGE_LABEL[c.stage] !== c.title && (
+                        <span className={styles.partStage}>{STAGE_LABEL[c.stage]}</span>
+                      )}
                       {c.title}
                     </li>
                   ))}
@@ -277,7 +279,9 @@ export function LessonPage() {
               <h2 id="parte-atual" className={styles.partHeading}>
                 <span className={styles.partNumber}>
                   Parte {currentIndex + 1} de {total}
-                  {current.stage && ` · ${STAGE_LABEL[current.stage]}`}
+                  {current.stage &&
+                    STAGE_LABEL[current.stage] !== current.title &&
+                    ` · ${STAGE_LABEL[current.stage]}`}
                   <span className="visually-hidden"> · </span>
                 </span>
                 <span className={styles.partName}>{current.title}</span>

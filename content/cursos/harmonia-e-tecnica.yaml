@@ -23,9 +23,9 @@ modules:
     summary: Tocar os acordes nota por nota — tríades e tétrades, em todas as inversões e com as duas mãos.
     level: 2
     prerequisites: [harmonia-e-tecnica.triades-e-campo-maior]
+    lessons: [tecnica.arpejos-de-triades-e-tetrades]
     upcoming:
-      - Arpejos de tríades e tétrades
-      - Arpejos em inversões, em duas oitavas
+      - Arpejos em inversões e em movimento contrário
 
   - id: inversoes-e-conducao
     title: Inversões e condução de vozes

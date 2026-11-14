@@ -1,0 +1,27 @@
+id: tecnica.arpejos.criar-padrao
+title: Criar um padrão de arpejo para uma música
+type: performance
+stage: creativity
+competencies: [tecnica.arpejos-tetrades]
+prompt: |
+  Escolha uma música do seu repertório com andamento lento ou médio (uma balada de louvor
+  funciona muito bem) e crie um **padrão de acompanhamento arpejado** próprio:
+
+  - defina uma figura rítmica (ex.: colcheias, ou semínima pontuada + colcheia);
+  - escolha quais notas do acorde entram e em que ordem — inclua pelo menos uma vez a 9ª;
+  - mantenha o padrão na introdução e varie (mais notas, região mais aguda) no refrão.
+
+  Grave 30 segundos no celular e escute: o padrão deixa espaço para a voz?
+parameters:
+  keys: []
+  startBpm: 60
+  targetBpm: 80
+checklist:
+  - id: padrao
+    text: Criei um padrão e consigo descrevê-lo (ritmo e ordem das notas).
+  - id: musica
+    text: Toquei a música inteira com o padrão, variando entre estrofe e refrão.
+  - id: escuta
+    text: Gravei, escutei e ajustei pelo menos uma coisa (dinâmica, região, densidade).
+challenges:
+  - Faça uma versão do mesmo trecho só com arpejos de tríades com 9ª (add9) e compare a cor.

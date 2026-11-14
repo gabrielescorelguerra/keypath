@@ -1,0 +1,34 @@
+- id: tecnica.arpejos-triades
+  track: tecnica
+  level: 1
+  title: Arpejos de tríades
+  description: Toca arpejos de tríades maiores, menores, diminutas e aumentadas em duas oitavas, com o dedilhado padrão, nas duas mãos.
+  prerequisites: [harmonia.triades]
+  concepts: [triade]
+  mastery:
+    - id: ouvido
+      method: quiz
+      exercise: tecnica.arpejos.reconhecer
+    - id: teclado
+      method: self-assessment
+      exercise: tecnica.arpejos-triades.duas-oitavas
+      distinctDays: 2
+
+- id: tecnica.arpejos-tetrades
+  track: tecnica
+  level: 2
+  title: Arpejos de tétrades
+  description: Toca arpejos de 7M, m7, 7, m7(♭5) e °7 em duas oitavas e os usa para acompanhar uma progressão.
+  prerequisites: [tecnica.arpejos-triades, harmonia.tetrades]
+  concepts: [tetrade]
+  mastery:
+    - id: ouvido
+      method: quiz
+      exercise: tecnica.arpejos.reconhecer
+    - id: teclado
+      method: self-assessment
+      exercise: tecnica.arpejos-tetrades.duas-oitavas
+      distinctDays: 2
+    - id: aplicacao
+      method: self-assessment
+      exercise: tecnica.arpejos.no-campo

@@ -1,0 +1,31 @@
+id: tecnica.arpejos.no-campo
+title: Acompanhar uma progressão com arpejos
+type: performance
+stage: application
+competencies: [tecnica.arpejos-tetrades]
+prompt: |
+  Ligue o playback e acompanhe **I7M – VIm7 – IIm7 – V7** em Sol maior, um acorde por compasso.
+
+  1. Mão esquerda: a fundamental, em semibreve.
+  2. Mão direita: o arpejo da tétrade subindo em colcheias (8 notas por compasso: 1-3-5-7-8-7-5-3).
+  3. Na troca de acorde, vá para a nota **mais próxima** do acorde seguinte, em vez de voltar
+     sempre à fundamental — é condução de vozes aplicada ao arpejo.
+
+  ::progression{key="G" degrees="I7M VIm7 IIm7 V7"}
+parameters:
+  keys: [G, D, C]
+  startBpm: 60
+  targetBpm: 84
+  bpmStep: 4
+  hands: both
+  backing: { key: G, degrees: I7M VIm7 IIm7 V7, beatsPerChord: 4 }
+checklist:
+  - id: tempo
+    text: Toquei junto com o playback por quatro voltas sem perder o primeiro tempo do compasso.
+  - id: trocas
+    text: Troquei de acorde exatamente no tempo 1, sem atrasar a mão direita.
+  - id: conducao
+    text: Pelo menos em uma volta, comecei cada arpejo pela nota mais próxima do acorde anterior.
+challenges:
+  - Troque o padrão para 1-5-8-10 na mão esquerda (fundamental, quinta, oitava e décima) e só a tríade na direita — o desenho clássico de balada.
+  - Faça o mesmo em Ré e em Dó com o playback.

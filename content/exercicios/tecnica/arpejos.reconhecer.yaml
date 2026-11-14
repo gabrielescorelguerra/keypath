@@ -1,0 +1,66 @@
+id: tecnica.arpejos.reconhecer
+title: Arpejos — reconhecer de ouvido e no papel
+type: quiz
+stage: recognition
+competencies: [tecnica.arpejos-triades, tecnica.arpejos-tetrades]
+prompt: |
+  Ouça cada arpejo quantas vezes quiser. Antes de responder, tente cantar a nota mais aguda e
+  perceber se a terça soa "clara" (maior) ou "escura" (menor).
+questions:
+  - id: ouvido-maior-menor
+    kind: single-choice
+    prompt: Que tríade é esta?
+    audio: { chord: Am, play: arpeggio }
+    options: [Maior, Menor, Diminuta, Aumentada]
+    correct: [1]
+    explanation: A terça menor (Lá–Dó) dá o som mais escuro. Compare com Lá maior (Lá–Dó♯).
+  - id: ouvido-diminuta
+    kind: single-choice
+    prompt: E esta?
+    audio: { chord: Bdim, play: arpeggio }
+    options: [Maior, Menor, Diminuta, Aumentada]
+    correct: [2]
+    explanation: Duas terças menores empilhadas — a quinta diminuta deixa o som tenso, "pedindo" resolução.
+  - id: ouvido-aumentada
+    kind: single-choice
+    prompt: E esta?
+    audio: { chord: Caug, play: arpeggio }
+    options: [Maior, Menor, Diminuta, Aumentada]
+    correct: [3]
+    explanation: Duas terças maiores — a quinta aumentada soa "suspensa", como uma pergunta sem resposta.
+  - id: ouvido-7m-ou-7
+    kind: single-choice
+    prompt: Esta tétrade é 7M ou 7 (dominante)?
+    audio: { chord: Fmaj7, play: arpeggio }
+    options: [7M — sétima maior, 7 — sétima menor]
+    correct: [0]
+    explanation: Na 7M, a sétima fica um semitom abaixo da oitava — um som aberto e "sonhador". Na dominante, a sétima menor cria tensão.
+  - id: ouvido-dominante
+    kind: single-choice
+    prompt: E esta?
+    audio: { chord: G7, play: arpeggio }
+    options: [7M, '7', m7, m7(♭5)]
+    correct: [1]
+  - id: ouvido-meio-diminuto
+    kind: single-choice
+    prompt: Esta tétrade começa como uma tríade diminuta. Qual é?
+    audio: { chord: Bm7b5, play: arpeggio }
+    options: [m7(♭5) — meio-diminuto, °7 — diminuto]
+    correct: [0]
+    explanation: No meio-diminuto, a sétima é menor (Si–Lá). No diminuto ela seria diminuta (Si–Lá♭), e todos os intervalos seriam terças menores.
+  - id: notas-cm7
+    kind: single-choice
+    prompt: Quais notas você toca, subindo, no arpejo de Cm7?
+    options: [Dó Mi♭ Sol Si♭ Dó, Dó Mi Sol Si Dó, Dó Mi♭ Sol♭ Si♭ Dó, Dó Mi Sol Si♭ Dó]
+    correct: [0]
+  - id: dedilhado-md
+    kind: single-choice
+    prompt: Dedilhado padrão da mão direita para o arpejo de Dó maior em duas oitavas, subindo?
+    options: [1 2 3 1 2 3 5, 1 2 3 4 1 2 3 4, 1 3 5 1 3 5, 5 4 2 1 4 2 1]
+    correct: [0]
+    explanation: O polegar passa por baixo depois do 3. "5 4 2 1 4 2 1" é o da mão esquerda.
+  - id: dedilhado-tetrade
+    kind: single-choice
+    prompt: Numa tétrade (quatro notas por oitava), qual dedilhado da mão direita costuma funcionar?
+    options: [1 2 3 4 · 1 2 3 4 · 5, 1 2 3 · 1 2 3 · 5, 1 3 5 · 1 3 5]
+    correct: [0]
