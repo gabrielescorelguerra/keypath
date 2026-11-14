@@ -1,8 +1,8 @@
-import { degreeToString } from './degrees'
-import { formatChord } from './format'
-import { harmonicField } from './harmonicField'
-import { MAJOR_KEYS, MINOR_KEYS } from './keys'
-import { scaleNotes } from './scales'
+import { degreeToString } from './degrees.ts'
+import { formatChord } from './format.ts'
+import { harmonicField } from './harmonicField.ts'
+import { MAJOR_KEYS, MINOR_KEYS } from './keys.ts'
+import { scaleNotes } from './scales.ts'
 
 const degreesOf = (field: ReturnType<typeof harmonicField>) =>
   field.map((c) => degreeToString(c.degree)).join(' ')

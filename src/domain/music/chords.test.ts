@@ -1,5 +1,5 @@
-import { CHORD_QUALITIES, identifyChordQuality, parseChord, tryParseChord } from './chords'
-import { MusicParseError } from './errors'
+import { CHORD_QUALITIES, identifyChordQuality, parseChord, tryParseChord } from './chords.ts'
+import { MusicParseError } from './errors.ts'
 
 describe('parseChord', () => {
   it.each([

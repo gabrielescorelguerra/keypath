@@ -1,12 +1,12 @@
-import { parseChord } from './chords'
-import { parseDegree } from './degrees'
+import { parseChord } from './chords.ts'
+import { parseDegree } from './degrees.ts'
 import {
   chordQualityName,
   formatChord,
   formatDegree,
   formatPitchClass,
   prettyAccidentals,
-} from './format'
+} from './format.ts'
 
 describe('formatPitchClass', () => {
   it('padrão: os dois nomes', () => {

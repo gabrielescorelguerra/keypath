@@ -1,4 +1,4 @@
-import { MusicParseError } from './errors'
+import { MusicParseError } from './errors.ts'
 import {
   intervalBetween,
   normalizeAccidentals,
@@ -6,7 +6,7 @@ import {
   simplifyInterval,
   transpose,
   type PitchClass,
-} from './notes'
+} from './notes.ts'
 
 export type ChordQualityId =
   | 'major'

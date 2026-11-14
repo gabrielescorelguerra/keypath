@@ -1,0 +1,17 @@
+id: harmonia.triades.todas-as-notas
+title: Os quatro tipos de tríade sobre todas as notas
+type: performance
+competencies: [harmonia.triades]
+prompt: |
+  Sobre cada nota, toque em sequência a tríade maior, menor, diminuta e aumentada.
+  Exemplo em Dó:
+
+  ::chords{symbols="C Cm Cdim Caug"}
+parameters:
+  keys: [C, G, D, A, E, B, F#, Db, Ab, Eb, Bb, F]
+  targetBpm: 60
+checklist:
+  - id: doze-notas
+    text: Fiz os quatro tipos sobre as 12 notas.
+  - id: fluencia
+    text: Troquei de acorde a cada tempo, a 60 bpm, sem parar.

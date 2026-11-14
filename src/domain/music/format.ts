@@ -1,6 +1,6 @@
-import { getChordQuality, type Chord, type ChordQualityId } from './chords'
-import { degreeToString, type ChordDegree } from './degrees'
-import { letterOf, type PitchClass } from './notes'
+import { getChordQuality, type Chord, type ChordQualityId } from './chords.ts'
+import { degreeToString, type ChordDegree } from './degrees.ts'
+import { letterOf, type PitchClass } from './notes.ts'
 
 /** Como exibir nomes de notas: "Dó", "C" ou "Dó (C)". */
 export type NoteNaming = 'latin' | 'letters' | 'both'

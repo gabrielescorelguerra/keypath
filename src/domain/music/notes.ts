@@ -1,5 +1,5 @@
 import { Interval, Note as TonalNote } from 'tonal'
-import { MusicParseError } from './errors'
+import { MusicParseError } from './errors.ts'
 
 /**
  * Classe de nota na notação canônica: letra maiúscula + acidentes ASCII.

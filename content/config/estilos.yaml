@@ -1,0 +1,19 @@
+# Estilos são etiquetas: filtram e priorizam conteúdo, mas não têm progresso próprio.
+- id: gospel
+  name: Gospel
+- id: mpb
+  name: MPB
+- id: bossa-nova
+  name: Bossa nova
+- id: samba
+  name: Samba
+- id: pop
+  name: Pop
+- id: rock
+  name: Rock
+- id: jazz
+  name: Jazz
+- id: blues
+  name: Blues
+- id: classico
+  name: Clássico

@@ -1,7 +1,7 @@
-import { MusicParseError } from './errors'
-import { MAJOR_KEYS, MINOR_KEYS, parseKey } from './keys'
-import { chroma } from './notes'
-import { SCALE_TYPES, isScaleType, scaleNotes, type ScaleType } from './scales'
+import { MusicParseError } from './errors.ts'
+import { MAJOR_KEYS, MINOR_KEYS, parseKey } from './keys.ts'
+import { chroma } from './notes.ts'
+import { SCALE_TYPES, isScaleType, scaleNotes, type ScaleType } from './scales.ts'
 
 describe('scaleNotes', () => {
   it.each<[string, ScaleType, string]>([

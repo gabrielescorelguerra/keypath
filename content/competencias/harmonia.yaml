@@ -1,0 +1,31 @@
+- id: harmonia.triades
+  track: harmonia
+  level: 1
+  title: Tríades
+  description: Forma e toca tríades maiores, menores, diminutas e aumentadas sobre qualquer nota.
+  prerequisites: [teoria.intervalos]
+  concepts: [triade]
+  mastery:
+    - id: teoria
+      method: quiz
+      exercise: harmonia.triades.quiz
+    - id: teclado
+      method: self-assessment
+      exercise: harmonia.triades.todas-as-notas
+      distinctDays: 2
+
+- id: harmonia.campo-harmonico-maior-triades
+  track: harmonia
+  level: 2
+  title: Campo harmônico maior (tríades)
+  description: Forma, toca e nomeia por grau as sete tríades do campo harmônico maior em qualquer tonalidade.
+  prerequisites: [harmonia.triades, teoria.escala-maior]
+  concepts: [campo-harmonico]
+  mastery:
+    - id: teoria
+      method: quiz
+      exercise: harmonia.campo-maior.quiz
+    - id: teclado
+      method: self-assessment
+      exercise: harmonia.campo-maior.12-tons
+      distinctDays: 2

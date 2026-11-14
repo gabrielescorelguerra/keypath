@@ -1,0 +1,28 @@
+id: teoria.intervalos.quiz
+title: Intervalos — quiz
+type: quiz
+competencies: [teoria.intervalos]
+prompt: Responda pensando nos nomes das notas, não só nas teclas.
+questions:
+  - id: terca-maior-re
+    kind: single-choice
+    prompt: Qual nota está uma terça maior acima de Ré?
+    options: [Fá♯, Fá, Mi, Sol]
+    correct: [0]
+    explanation: Terça maior = 4 semitons. Ré → Ré♯ → Mi → Fá → Fá♯. A letra precisa ser F (Ré, Mi, Fá).
+  - id: semitons-quinta
+    kind: single-choice
+    prompt: Quantos semitons tem uma quinta justa?
+    options: ['5', '7', '6', '8']
+    correct: [1]
+  - id: mi-sol
+    kind: single-choice
+    prompt: Que intervalo há de Mi até Sol?
+    options: [Terça menor, Terça maior, Quarta justa, Segunda maior]
+    correct: [0]
+    explanation: Três letras (Mi, Fá, Sol) e 3 semitons — terça menor.
+  - id: justos
+    kind: multiple-choice
+    prompt: Quais destes intervalos são chamados de justos?
+    options: [Quarta, Quinta, Terça, Oitava]
+    correct: [0, 1, 3]

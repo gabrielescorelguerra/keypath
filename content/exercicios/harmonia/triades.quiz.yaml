@@ -1,0 +1,24 @@
+id: harmonia.triades.quiz
+title: Tríades — quiz
+type: quiz
+competencies: [harmonia.triades]
+questions:
+  - id: fa-menor
+    kind: single-choice
+    prompt: Quais são as notas de Fá menor (Fm)?
+    options: [Fá Lá♭ Dó, Fá Lá Dó, Fá Lá♭ Dó♭, Fá Sol♯ Dó]
+    correct: [0]
+  - id: diminuta
+    kind: single-choice
+    prompt: Como se forma a tríade diminuta?
+    options:
+      - Terça menor + terça menor
+      - Terça maior + terça menor
+      - Terça menor + terça maior
+      - Terça maior + terça maior
+    correct: [0]
+  - id: aumentada
+    kind: single-choice
+    prompt: Dó, Mi e Sol♯ formam qual tríade?
+    options: [Aumentada, Maior, Diminuta, Menor]
+    correct: [0]

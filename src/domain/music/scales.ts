@@ -1,6 +1,6 @@
 import { Scale } from 'tonal'
-import { MusicParseError } from './errors'
-import type { PitchClass } from './notes'
+import { MusicParseError } from './errors.ts'
+import type { PitchClass } from './notes.ts'
 
 export type ScaleType =
   | 'major'

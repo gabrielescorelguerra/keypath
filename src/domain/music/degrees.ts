@@ -4,8 +4,8 @@ import {
   parseChordSuffix,
   type Chord,
   type ChordQualityId,
-} from './chords'
-import { MusicParseError } from './errors'
+} from './chords.ts'
+import { MusicParseError } from './errors.ts'
 import {
   alterPitchClass,
   chroma,
@@ -13,7 +13,7 @@ import {
   normalizeAccidentals,
   transpose,
   type PitchClass,
-} from './notes'
+} from './notes.ts'
 
 /**
  * Graus são sempre relativos à escala maior da tônica (convenção brasileira):

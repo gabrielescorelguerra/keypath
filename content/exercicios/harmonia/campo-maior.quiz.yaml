@@ -1,0 +1,25 @@
+id: harmonia.campo-maior.quiz
+title: Campo harmônico maior — quiz
+type: quiz
+competencies: [harmonia.campo-harmonico-maior-triades]
+questions:
+  - id: vi-re
+    kind: single-choice
+    prompt: Qual é o acorde do grau VIm em Ré maior?
+    options: [Bm, B, F♯m, Em]
+    correct: [0]
+  - id: am-em-sol
+    kind: single-choice
+    prompt: Em Sol maior, qual é o grau do acorde Am?
+    options: [IIm, VIm, IIIm, IV]
+    correct: [0]
+  - id: setimo-grau
+    kind: single-choice
+    prompt: Qual é a qualidade do acorde do VII grau no campo maior (tríades)?
+    options: [Diminuto, Menor, Maior, Aumentado]
+    correct: [0]
+  - id: maiores
+    kind: multiple-choice
+    prompt: Quais graus do campo maior formam acordes maiores?
+    options: [I, IV, V, IIm, VIm]
+    correct: [0, 1, 2]

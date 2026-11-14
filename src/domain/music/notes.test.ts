@@ -1,4 +1,4 @@
-import { MusicParseError } from './errors'
+import { MusicParseError } from './errors.ts'
 import {
   alterPitchClass,
   chroma,
@@ -7,7 +7,7 @@ import {
   parseNote,
   parsePitchClass,
   spellChroma,
-} from './notes'
+} from './notes.ts'
 
 describe('parsePitchClass', () => {
   it.each([

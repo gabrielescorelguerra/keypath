@@ -1,0 +1,29 @@
+- id: teoria.intervalos
+  track: teoria
+  level: 1
+  title: Intervalos
+  description: Reconhece e forma intervalos de segunda a oitava (maiores, menores e justos) a partir de qualquer nota.
+  concepts: [intervalo]
+  mastery:
+    - id: teoria
+      method: quiz
+      exercise: teoria.intervalos.quiz
+    - id: teclado
+      method: self-assessment
+      exercise: teoria.intervalos.no-teclado
+
+- id: teoria.escala-maior
+  track: teoria
+  level: 1
+  title: Escala maior
+  description: Constrói e toca a escala maior em todas as tonalidades, sabendo seus acidentes.
+  prerequisites: [teoria.intervalos]
+  concepts: [escala-maior]
+  mastery:
+    - id: teoria
+      method: quiz
+      exercise: teoria.escala-maior.quiz
+    - id: teclado
+      method: self-assessment
+      exercise: teoria.escala-maior.12-tons
+      distinctDays: 2

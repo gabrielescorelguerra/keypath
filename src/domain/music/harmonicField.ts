@@ -1,7 +1,7 @@
-import { buildChord, identifyChordQuality, type Chord } from './chords'
-import { chordToDegree, type ChordDegree } from './degrees'
-import type { PitchClass } from './notes'
-import { scaleNotes, type ScaleType } from './scales'
+import { buildChord, identifyChordQuality, type Chord } from './chords.ts'
+import { chordToDegree, type ChordDegree } from './degrees.ts'
+import type { PitchClass } from './notes.ts'
+import { scaleNotes, type ScaleType } from './scales.ts'
 
 export type HarmonicFieldType = Extract<
   ScaleType,

@@ -7,7 +7,7 @@
  * Notação canônica (arquivos de conteúdo e código): letras com # e b ("Eb", "F#m7").
  * A conversão para "Dó (C)", cifra brasileira e símbolos ♯ ♭ acontece em `format`.
  */
-export { MusicParseError } from './errors'
+export { MusicParseError } from './errors.ts'
 export {
   alterPitchClass,
   chroma,
@@ -22,7 +22,7 @@ export {
   transpose,
   type NoteName,
   type PitchClass,
-} from './notes'
+} from './notes.ts'
 export {
   CHORD_QUALITIES,
   buildChord,
@@ -33,9 +33,9 @@ export {
   type Chord,
   type ChordQuality,
   type ChordQualityId,
-} from './chords'
-export { SCALE_TYPES, isScaleType, scaleNotes, type ScaleType } from './scales'
-export { MAJOR_KEYS, MINOR_KEYS, parseKey, type Key, type KeyMode } from './keys'
+} from './chords.ts'
+export { SCALE_TYPES, isScaleType, scaleNotes, type ScaleType } from './scales.ts'
+export { MAJOR_KEYS, MINOR_KEYS, parseKey, type Key, type KeyMode } from './keys.ts'
 export {
   chordToDegree,
   degreeToChord,
@@ -47,7 +47,7 @@ export {
   type ChordDegree,
   type DegreeNumber,
   type ScaleDegree,
-} from './degrees'
+} from './degrees.ts'
 export {
   HARMONIC_FUNCTION_NAMES,
   harmonicField,
@@ -55,8 +55,8 @@ export {
   type HarmonicFieldSize,
   type HarmonicFieldType,
   type HarmonicFunction,
-} from './harmonicField'
-export { notesToMidi, voiceChord, voiceScale, type ChordVoicingOptions } from './voicing'
+} from './harmonicField.ts'
+export { notesToMidi, voiceChord, voiceScale, type ChordVoicingOptions } from './voicing.ts'
 export {
   DEFAULT_NOTE_NAMING,
   chordQualityName,
@@ -66,4 +66,4 @@ export {
   formatPitchClass,
   prettyAccidentals,
   type NoteNaming,
-} from './format'
+} from './format.ts'

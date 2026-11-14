@@ -1,4 +1,4 @@
-import { parseChord } from './chords'
+import { parseChord } from './chords.ts'
 import {
   chordToDegree,
   degreeToChord,
@@ -6,9 +6,9 @@ import {
   parseDegree,
   pitchClassToDegree,
   progressionToChords,
-} from './degrees'
-import { MusicParseError } from './errors'
-import { MAJOR_KEYS } from './keys'
+} from './degrees.ts'
+import { MusicParseError } from './errors.ts'
+import { MAJOR_KEYS } from './keys.ts'
 
 const symbolsIn = (tonic: string, degrees: string) =>
   progressionToChords(tonic, degrees)

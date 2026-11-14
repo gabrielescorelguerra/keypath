@@ -1,0 +1,25 @@
+id: teoria.escala-maior.quiz
+title: Escala maior — quiz
+type: quiz
+competencies: [teoria.escala-maior]
+questions:
+  - id: formula
+    kind: single-choice
+    prompt: Qual é a sequência de tons (T) e semitons (S) da escala maior?
+    options: [T T S T T T S, T S T T S T T, T T T S T T S, T T S T T S T]
+    correct: [0]
+  - id: mi-bemol
+    kind: single-choice
+    prompt: Quais são as notas de Mi♭ maior?
+    options:
+      - Mi♭ Fá Sol Lá♭ Si♭ Dó Ré
+      - Mi♭ Fá Sol Lá Si♭ Dó Ré
+      - Mi♭ Fá Sol♭ Lá♭ Si♭ Dó Ré
+      - Mi♭ Fá Sol Lá♭ Si♭ Dó Ré♭
+    correct: [0]
+  - id: sustenidos-la
+    kind: single-choice
+    prompt: Quantos sustenidos tem a escala de Lá maior?
+    options: ['3', '2', '4', '1']
+    correct: [0]
+    explanation: Lá maior tem Fá♯, Dó♯ e Sol♯.

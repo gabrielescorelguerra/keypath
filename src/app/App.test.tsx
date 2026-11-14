@@ -1,4 +1,4 @@
-import { render, screen } from '@testing-library/react'
+import { render, screen, within } from '@testing-library/react'
 import { App } from './App'
 
 describe('App', () => {
@@ -6,11 +6,15 @@ describe('App', () => {
     render(<App />)
 
     expect(screen.getByRole('heading', { level: 1, name: 'KeyPath' })).toBeInTheDocument()
-
     const areas = screen.getByRole('list', { name: 'Áreas do KeyPath' })
-    expect(areas.children).toHaveLength(3)
-    expect(screen.getByRole('heading', { name: 'Aprendizado guiado' })).toBeInTheDocument()
-    expect(screen.getByRole('heading', { name: 'Biblioteca' })).toBeInTheDocument()
-    expect(screen.getByRole('heading', { name: 'Prática' })).toBeInTheDocument()
+    expect(within(areas).getAllByRole('listitem')).toHaveLength(3)
+  })
+
+  it('lista as trilhas do catálogo de conteúdo', () => {
+    render(<App />)
+
+    const section = screen.getByRole('region', { name: 'Trilhas' })
+    expect(within(section).getAllByRole('listitem')).toHaveLength(6)
+    expect(within(section).getByText('Harmonia')).toBeInTheDocument()
   })
 })

@@ -1,11 +1,12 @@
 import { fileURLToPath } from 'node:url'
 import react from '@vitejs/plugin-react'
 import { defineConfig } from 'vitest/config'
+import { keypathContent } from './scripts/content/vite-plugin.ts'
 
 export default defineConfig({
   // Caminho relativo: o build funciona em qualquer subpasta (ex.: GitHub Pages).
   base: './',
-  plugins: [react()],
+  plugins: [react(), keypathContent()],
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url)),

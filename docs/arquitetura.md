@@ -56,7 +56,8 @@ content/                   conteúdo autoral (versionado no Git)
   aulas/<trilha>/          <id>.md
   exercicios/<trilha>/     <id>.yaml
 scripts/
-  build-content.ts         lê content/, valida e gera o catálogo
+  content/                 leitura de content/ (YAML, Markdown), plugin do Vite
+  check-content.ts         npm run content:check — lista erros e avisos do conteúdo
 src/
   domain/
     music/                 notas, grafia, intervalos, acordes, escalas, campos, graus, formatação
@@ -74,17 +75,14 @@ docs/
 
 ## 4. Pipeline de conteúdo
 
-1. O `scripts/build-content.ts` lê YAML e Markdown (com frontmatter) de `content/`.
-2. Valida cada arquivo com os schemas Zod de `domain/catalog`.
-3. Interpreta o Markdown (remark + directives) e coleta as referências e os checkpoints.
-4. Valida a **integridade** do conjunto ([modelo §8](modelo-de-dados.md#8-regras-de-integridade-validadas-no-build)):
-   - referências;
-   - ciclos no grafo de pré-requisitos;
-   - coerência entre critérios e exercícios;
-   - notação musical interpretável.
-5. Gera `catalog.json` (as árvores de Markdown já interpretadas e os campos derivados prontos) e o índice da Biblioteca.
+1. `scripts/content/load.ts` lê YAML e Markdown (com frontmatter) de `content/` e valida cada arquivo com os schemas Zod de `domain/catalog` (mensagens em português).
+2. `scripts/content/markdown.ts` interpreta o Markdown (remark + GFM + directives), valida directives e notação musical com `domain/music`, coleta referências e separa a introdução dos checkpoints.
+3. `domain/catalog/compile.ts` (função pura, testada) valida a **integridade** do conjunto ([modelo §8](modelo-de-dados.md#8-regras-de-integridade-validadas-no-build)) e calcula os campos derivados.
+4. O plugin `scripts/content/vite-plugin.ts` entrega o catálogo ao app como o módulo virtual `virtual:keypath-catalog` (JSON com as árvores de Markdown já interpretadas). `src/content` o importa e monta os índices de consulta.
 
-O script roda antes do `dev` e do `build`, e em modo de observação durante o desenvolvimento. Qualquer erro de conteúdo interrompe o build com a mensagem apontando arquivo e campo. No MVP o catálogo é pequeno (dezenas de entidades), então um único JSON basta. Separar por trilha fica para quando houver necessidade.
+Não há arquivo gerado no repositório. No `npm run dev`, qualquer alteração em `content/` recarrega a página; um erro de conteúdo aparece na tela com arquivo, linha e motivo. No `npm run build`, um erro interrompe o build. `npm run content:check` lista erros **e avisos** no terminal (também roda na CI).
+
+O código de `domain/` e `scripts/` usa extensão `.ts` explícita nos imports relativos. Assim ele roda direto no Node e na configuração do Vite, sem passar por um bundler.
 
 ## 5. Teoria musical e nomenclatura
 
@@ -129,12 +127,12 @@ Restrições conhecidas: o Web MIDI funciona em Chrome, Edge e Firefox, **mas n�
 
 ## 10. Testes
 
-| Alvo                    | Tipo                                                                                          |
-| ----------------------- | --------------------------------------------------------------------------------------------- |
-| `domain/music`          | Unitários extensos: grafia, campos e graus em todos os tons                                   |
-| `domain/progress`       | Unitários com cenários: declarar, demonstrar, `distinctDays`, nível com lacunas, recomendação |
-| `scripts/build-content` | Unitários com conteúdo inválido de propósito                                                  |
-| `data/`                 | Ida e volta do backup e migrações                                                             |
-| Telas                   | Testes de componente nos fluxos principais; Playwright (e2e) depois                           |
+| Alvo                                | Tipo                                                                                               |
+| ----------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `domain/music`                      | Unitários extensos: grafia, campos e graus em todos os tons                                        |
+| `domain/progress`                   | Unitários com cenários: declarar, demonstrar, `distinctDays`, nível com lacunas, recomendação      |
+| `domain/catalog`, `scripts/content` | Unitários com conteúdo inválido de propósito; o conteúdo real de `content/` é compilado nos testes |
+| `data/`                             | Ida e volta do backup e migrações                                                                  |
+| Telas                               | Testes de componente nos fluxos principais; Playwright (e2e) depois                                |
 
 O próprio build de conteúdo funciona como teste: o conteúdo publicado sempre passa nas regras de integridade.

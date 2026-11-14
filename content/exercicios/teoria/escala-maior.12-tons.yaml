@@ -1,0 +1,14 @@
+id: teoria.escala-maior.12-tons
+title: Escala maior nas 12 tonalidades
+type: performance
+competencies: [teoria.escala-maior]
+prompt: Toque a escala maior subindo e descendo, uma oitava, com a mão direita, seguindo o ciclo de quintas.
+parameters:
+  keys: [C, G, D, A, E, B, F#, Db, Ab, Eb, Bb, F]
+  targetBpm: 60
+  hands: right
+checklist:
+  - id: tonalidades
+    text: Toquei nas 12 tonalidades sem errar notas.
+  - id: andamento
+    text: Mantive o andamento de 60 bpm (uma nota por tempo) sem parar.

@@ -1,0 +1,25 @@
+# Trilhas: os eixos de progresso. A ordem aqui é a ordem de exibição.
+- id: teoria
+  name: Teoria musical
+  description: Notas, intervalos, escalas, ritmo e leitura — a base de tudo.
+  kind: discipline
+- id: harmonia
+  name: Harmonia
+  description: Acordes, campos harmônicos, funções, progressões e empréstimos.
+  kind: discipline
+- id: tecnica
+  name: Técnica
+  description: Dedilhado, independência das mãos, agilidade e controle de dinâmica.
+  kind: discipline
+- id: percepcao
+  name: Percepção auditiva
+  description: Reconhecer de ouvido intervalos, acordes, funções e progressões.
+  kind: discipline
+- id: acompanhamento
+  name: Acompanhamento
+  description: Tocar com voz e banda — voicings, condução de vozes, levadas e estilos.
+  kind: application
+- id: improvisacao
+  name: Improvisação
+  description: Criar frases, preencher espaços e solar sobre a harmonia.
+  kind: application

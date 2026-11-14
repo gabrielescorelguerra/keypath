@@ -165,14 +165,13 @@ Campos **derivados** (não são escritos à mão):
 | Campo             | Tipo                                                                           | Descrição                                           |
 | ----------------- | ------------------------------------------------------------------------------ | --------------------------------------------------- |
 | `id`              | slug                                                                           | `harmonia.campo-maior.quiz`                         |
-| `title`, `prompt` | texto / Markdown                                                               |                                                     |
+| `title`, `prompt` | texto / Markdown                                                               | O `prompt` aceita blocos musicais (`::chords` etc.) |
 | `type`            | `quiz` \| `performance`                                                        |                                                     |
 | `competencies`    | `Competency.id[]` (≥ 1)                                                        | Competências que o exercício treina                 |
 | `styles`          | `Style.id[]`                                                                   |                                                     |
 | `questions`       | `Question[]`                                                                   | Apenas `quiz`                                       |
 | `parameters`      | `{ keys?: string[], targetBpm?: number, hands?: 'left' \| 'right' \| 'both' }` | Apenas `performance`                                |
 | `checklist`       | `{ id, text }[]`                                                               | Apenas `performance`. São os itens de autoavaliação |
-| `example`         | bloco musical                                                                  | Opcional. Referência tocável                        |
 
 `Question`:
 
@@ -335,6 +334,14 @@ Blocos musicais do MVP:
 | Progressão por graus | `::progression{key="G" degrees="I IV iv I"}` |
 | Escala               | `::scale{root="D" type="harmonic-minor"}`    |
 
+Blocos de texto: `:::common-mistake` (erro comum) e `:::note` (observação), ambos com `title` opcional.
+
+| Directive                                 | Aula | Conceito | Enunciado de exercício |
+| ----------------------------------------- | ---- | -------- | ---------------------- |
+| `::::checkpoint` (só no nível de cima)    | ✅   |          |                        |
+| `::concept`, `::exercise`                 | ✅   |          |                        |
+| blocos musicais, `common-mistake`, `note` | ✅   | ✅       | ✅                     |
+
 Todos são renderizados com teclado visual, nomes das notas conforme a configuração, graus (quando há `key`) e botão para tocar.
 
 A **notação canônica** dentro dos arquivos usa letras com `#` e `b` (C, Eb, F#m7). Ela não é ambígua e é interpretada pelo motor de teoria. A conversão para "Dó (C)" e para a cifra brasileira acontece só na exibição.
@@ -351,6 +358,9 @@ O build falha se alguma destas regras for violada:
 6. Se um exercício é usado em um critério da competência C, então ele lista C em `competencies`.
 7. Toda aula tem pelo menos um checkpoint, e os `id` de checkpoint são únicos dentro da aula.
 8. Toda cifra, grau e escala dos blocos musicais é interpretável pelo motor de teoria.
+9. Os arquivos YAML e o frontmatter não têm chaves desconhecidas (pega erros de digitação).
+10. O `id` bate com o caminho do arquivo: aulas e exercícios usam `<pasta>.<nome do arquivo>`; conceitos usam o nome do arquivo; competências de `competencias/<trilha>.yaml` declaram `track: <trilha>`. Renomear um arquivo sem mudar o `id` (ou o contrário) é erro, o que protege o progresso salvo.
+11. Directives desconhecidas, atributos desconhecidos ou faltando são erro. Texto como "10:30" ou "Nota:Dó" continua texto normal.
 
 Estas situações geram apenas **avisos**: um pré-requisito com nível maior que o da competência, uma competência `core` sem nenhuma aula, e um conceito que nenhuma competência ou aula referencia.
 

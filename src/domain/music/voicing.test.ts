@@ -1,5 +1,5 @@
-import { parseChord } from './chords'
-import { notesToMidi, voiceChord, voiceScale } from './voicing'
+import { parseChord } from './chords.ts'
+import { notesToMidi, voiceChord, voiceScale } from './voicing.ts'
 
 describe('voiceChord', () => {
   it('posição fundamental na oitava 4', () => {

@@ -1,5 +1,5 @@
-import { MusicParseError } from './errors'
-import { normalizeAccidentals, parsePitchClass, type PitchClass } from './notes'
+import { MusicParseError } from './errors.ts'
+import { normalizeAccidentals, parsePitchClass, type PitchClass } from './notes.ts'
 
 export type KeyMode = 'major' | 'minor'
 

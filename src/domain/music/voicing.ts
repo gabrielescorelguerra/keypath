@@ -1,7 +1,7 @@
-import type { Chord } from './chords'
-import { getChordQuality } from './chords'
-import { noteToMidi, transpose, type NoteName, type PitchClass } from './notes'
-import { scaleNotes, type ScaleType } from './scales'
+import type { Chord } from './chords.ts'
+import { getChordQuality } from './chords.ts'
+import { noteToMidi, transpose, type NoteName, type PitchClass } from './notes.ts'
+import { scaleNotes, type ScaleType } from './scales.ts'
 
 export interface ChordVoicingOptions {
   /** Oitava da fundamental (padrão 4: o Dó central é C4). */

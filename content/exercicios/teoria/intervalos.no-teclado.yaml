@@ -1,0 +1,13 @@
+id: teoria.intervalos.no-teclado
+title: Intervalos no teclado
+type: performance
+competencies: [teoria.intervalos]
+prompt: |
+  Escolha uma nota qualquer e toque, a partir dela, a segunda maior, a terça menor,
+  a terça maior, a quarta justa, a quinta justa e a oitava. Repita a partir de cinco notas diferentes,
+  incluindo teclas pretas.
+checklist:
+  - id: cinco-notas
+    text: Fiz a sequência a partir de cinco notas diferentes, incluindo teclas pretas.
+  - id: sem-contar
+    text: Encontrei cada intervalo sem precisar contar tecla por tecla.

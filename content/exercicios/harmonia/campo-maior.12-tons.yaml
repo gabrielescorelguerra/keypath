@@ -1,0 +1,17 @@
+id: harmonia.campo-maior.12-tons
+title: Campo harmônico maior nas 12 tonalidades
+type: performance
+competencies: [harmonia.campo-harmonico-maior-triades]
+prompt: |
+  Toque as sete tríades do campo, subindo, dizendo em voz alta o grau de cada uma.
+  Em Sol maior:
+
+  ::progression{key="G" degrees="I IIm IIIm IV V VIm VII°"}
+parameters:
+  keys: [C, G, D, A, E, B, F#, Db, Ab, Eb, Bb, F]
+  targetBpm: 60
+checklist:
+  - id: tonalidades
+    text: Toquei o campo nas 12 tonalidades sem parar mais de dois tempos para pensar.
+  - id: graus
+    text: Nomeei corretamente o grau de cada acorde.
