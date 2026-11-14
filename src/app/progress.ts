@@ -1,9 +1,10 @@
 import { createContext, useContext } from 'react'
-import type { ProgressSnapshot, UserFacts } from '@/domain/progress'
+import type { ProgressSnapshot, StudyMap, UserFacts } from '@/domain/progress'
 
 export interface ProgressData {
   readonly facts: UserFacts
   readonly snapshot: ProgressSnapshot
+  readonly studyMap: StudyMap
 }
 
 export const ProgressContext = createContext<ProgressData | undefined>(undefined)

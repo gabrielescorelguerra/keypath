@@ -8,8 +8,8 @@ beforeEach(resetDatabase)
 const LESSON = '/aulas/harmonia.revisao-campo-harmonico-maior'
 
 describe('Aula', () => {
-  it('mostra objetivos, pré-requisitos, introdução e a primeira parte; registra a visita', async () => {
-    renderRoute(LESSON)
+  it('começa pela introdução (objetivos, pré-requisitos, roteiro) e registra a visita', async () => {
+    const { user } = renderRoute(LESSON)
     expect(
       await screen.findByRole('heading', {
         level: 1,
@@ -19,7 +19,10 @@ describe('Aula', () => {
     const before = screen.getByRole('region', { name: 'Antes de começar' })
     expect(within(before).getByRole('link', { name: 'Tríades' })).toBeInTheDocument()
     expect(within(before).getByRole('link', { name: 'Intervalos' })).toBeInTheDocument()
-    expect(screen.getByRole('heading', { name: /Parte 1 de 4/ })).toBeInTheDocument()
+    expect(screen.getByRole('region', { name: 'Roteiro da aula' })).toBeInTheDocument()
+
+    await user.click(screen.getByRole('button', { name: 'Começar a aula →' }))
+    expect(await screen.findByRole('heading', { name: /Parte 1 de 4/ })).toBeInTheDocument()
     // O conceito incorporado da Biblioteca e o exercício aparecem dentro da parte
     expect(screen.getAllByText('Da Biblioteca').length).toBeGreaterThan(0)
     expect(screen.getByRole('link', { name: 'Tríades — quiz' })).toBeInTheDocument()
@@ -33,6 +36,7 @@ describe('Aula', () => {
 
   it('concluir as partes avança e, no fim, mostra a aula concluída com os critérios', async () => {
     const { user } = renderRoute(LESSON)
+    await user.click(await screen.findByRole('button', { name: 'Começar a aula →' }))
     await user.click(await screen.findByRole('button', { name: 'Concluí esta parte · próxima →' }))
     expect(await screen.findByRole('heading', { name: /Parte 2 de 4/ })).toBeInTheDocument()
 
@@ -56,6 +60,7 @@ describe('Aula', () => {
 
   it('a aula em andamento passa a ser recomendada no início', async () => {
     const { user } = renderRoute(LESSON)
+    await user.click(await screen.findByRole('button', { name: 'Começar a aula →' }))
     await user.click(await screen.findByRole('button', { name: 'Concluí esta parte · próxima →' }))
     await screen.findByRole('heading', { name: /Parte 2 de 4/ })
 

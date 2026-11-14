@@ -44,12 +44,14 @@ export const lessonProgressSchema = z.object({
   startedAt: isoDate,
   lastVisitedAt: isoDate,
   checkpoints: z.record(z.string(), isoDate),
+  reviewedAt: isoDate.optional(),
 })
 
 export const settingsSchema = z.object({
   noteNaming: z.enum(['latin', 'letters', 'both']).default('both'),
   soundEnabled: z.boolean().default(true),
   volume: z.number().min(0).max(1).default(0.8),
+  goals: z.array(z.string()).default([]),
 })
 
 const nullableText = z.string().nullable().default(null)
@@ -98,7 +100,12 @@ export const backupDataSchema = z.object({
   attempts: z.array(attemptSchema),
   declarations: z.array(declarationSchema),
   lessonProgress: z.array(lessonProgressSchema),
-  settings: settingsSchema.default({ noteNaming: 'both', soundEnabled: true, volume: 0.8 }),
+  settings: settingsSchema.default({
+    noteNaming: 'both',
+    soundEnabled: true,
+    volume: 0.8,
+    goals: [],
+  }),
   songs: z.array(songSchema).default([]),
   attachments: z.array(attachmentSchema).default([]),
   practiceSessions: z.array(practiceSessionSchema).default([]),

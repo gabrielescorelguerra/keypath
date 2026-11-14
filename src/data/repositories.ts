@@ -63,6 +63,16 @@ export async function visitLesson(lessonId: string, now: Date = new Date()): Pro
   })
 }
 
+/** Marca a aula como revisada agora (zera o aviso de "revisar"). */
+export async function markLessonReviewed(lessonId: string, now: Date = new Date()): Promise<void> {
+  await db.transaction('rw', db.lessonProgress, async () => {
+    const current = await db.lessonProgress.get(lessonId)
+    if (!current) return
+    await db.lessonProgress.put({ ...current, reviewedAt: iso(now), lastVisitedAt: iso(now) })
+  })
+  afterWrite()
+}
+
 export async function setCheckpointCompleted(
   lessonId: string,
   checkpointId: string,

@@ -1,6 +1,6 @@
 import { catalog } from '@/content'
 import type { MasteryMethod } from '@/domain/catalog'
-import type { CompetencyStatus, LessonStatus } from '@/domain/progress'
+import type { CompetencyStatus, LessonStatus, StudyStatus } from '@/domain/progress'
 
 export const COMPETENCY_STATUS: Record<
   CompetencyStatus,
@@ -16,6 +16,26 @@ export const LESSON_STATUS: Record<LessonStatus, string> = {
   completed: 'Concluída',
   'in-progress': 'Em andamento',
   'not-started': 'Não iniciada',
+}
+
+export const STUDY_STATUS: Record<
+  StudyStatus,
+  { readonly label: string; readonly tone: 'success' | 'accent' | 'review' | 'neutral' | 'muted' }
+> = {
+  new: { label: 'Novo', tone: 'neutral' },
+  'in-progress': { label: 'Em andamento', tone: 'accent' },
+  completed: { label: 'Concluído', tone: 'success' },
+  review: { label: 'Revisar', tone: 'review' },
+  advanced: { label: 'Avançado', tone: 'muted' },
+  upcoming: { label: 'Em preparação', tone: 'muted' },
+}
+
+/** "cerca de 1 h 30 min" */
+export function formatMinutes(minutes: number): string {
+  if (minutes < 60) return `${minutes} min`
+  const h = Math.floor(minutes / 60)
+  const m = minutes % 60
+  return m === 0 ? `${h} h` : `${h} h ${m} min`
 }
 
 export const METHOD_LABEL: Record<MasteryMethod, string> = {

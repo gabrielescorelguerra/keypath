@@ -1,4 +1,6 @@
 import type { RouteObject } from 'react-router'
+import { LearnPage } from '@/features/aprender/LearnPage'
+import { ModulePage } from '@/features/aprender/ModulePage'
 import { ConceptPage } from '@/features/biblioteca/ConceptPage'
 import { LibraryPage } from '@/features/biblioteca/LibraryPage'
 import { LessonPage } from '@/features/aulas/LessonPage'
@@ -21,6 +23,8 @@ export const routes: RouteObject[] = [
     element: <Layout />,
     children: [
       { index: true, element: <HomePage /> },
+      { path: 'aprender', element: <LearnPage /> },
+      { path: 'aprender/:moduleId', element: <ModulePage /> },
       { path: 'trilhas/:trackId', element: <TrackPage /> },
       { path: 'competencias/:competencyId', element: <CompetencyPage /> },
       { path: 'aulas/:lessonId', element: <LessonPage /> },

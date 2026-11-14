@@ -10,6 +10,7 @@ import { ProgressProvider } from './ProgressProvider.tsx'
 
 const NAV: readonly { to: string; label: string; icon: IconName; end: boolean }[] = [
   { to: '/', label: 'Início', icon: 'home', end: true },
+  { to: '/aprender', label: 'Aprender', icon: 'book', end: false },
   { to: '/biblioteca', label: 'Biblioteca', icon: 'library', end: false },
   { to: '/pratica', label: 'Prática', icon: 'practice', end: false },
   { to: '/diagnostico', label: 'O que já sei', icon: 'checklist', end: false },

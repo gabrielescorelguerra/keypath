@@ -54,6 +54,8 @@ export interface LessonProgress {
   readonly lastVisitedAt: string
   /** Checkpoints concluídos: id → data. */
   readonly checkpoints: Readonly<Record<string, string>>
+  /** Última revisão marcada pelo aluno, depois de concluir a aula. */
+  readonly reviewedAt?: string
 }
 
 export interface UserFacts {
