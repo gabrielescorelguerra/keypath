@@ -50,7 +50,7 @@ describe('Sessão de prática', () => {
     )
 
     const nav = screen.getByRole('navigation', { name: 'Principal' })
-    await user.click(within(nav).getByRole('link', { name: 'Prática' }))
+    await user.click(within(nav).getByRole('link', { name: /^Prática/ }))
     expect(await screen.findByText(/1 exercício feito nesta sessão/)).toBeInTheDocument()
 
     await user.selectOptions(await screen.findByRole('combobox', { name: 'Música' }), 'Oceanos')

@@ -20,7 +20,13 @@
     "import/no-unassigned-import": [
       "warn",
       {
-        "allow": ["**/*.css", "@testing-library/jest-dom/vitest", "fake-indexeddb/auto"]
+        "allow": [
+          "**/*.css",
+          "@testing-library/jest-dom/vitest",
+          "fake-indexeddb/auto",
+          "@fontsource*/**",
+          "@fontsource/**"
+        ]
       }
     ],
     "no-restricted-imports": [

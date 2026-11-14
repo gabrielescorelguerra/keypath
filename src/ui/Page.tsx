@@ -8,17 +8,24 @@ export interface Crumb {
   readonly to: string
 }
 
-/** Cabeçalho de página: trilha de navegação, título e subtítulo. Também define o título da aba. */
+/**
+ * Cabeçalho de página: trilha de navegação (ou rótulo), título serifado,
+ * subtítulo, ações à direita e meta (linha de badges). Define o título da aba.
+ */
 export function PageHeader({
   title,
   crumbs = [],
+  eyebrow,
   subtitle,
   aside,
+  meta,
 }: {
   readonly title: string
   readonly crumbs?: readonly Crumb[]
+  readonly eyebrow?: string
   readonly subtitle?: ReactNode
   readonly aside?: ReactNode
+  readonly meta?: ReactNode
 }) {
   useEffect(() => {
     document.title = `${title} · KeyPath`
@@ -26,25 +33,38 @@ export function PageHeader({
 
   return (
     <header className={styles.header}>
-      {crumbs.length > 0 && (
-        <nav aria-label="Você está em" className={styles.crumbs}>
-          {crumbs.map((crumb, index) => (
-            <span key={crumb.to}>
-              {index > 0 && <span aria-hidden="true"> / </span>}
-              <Link to={crumb.to}>{crumb.label}</Link>
-            </span>
-          ))}
-        </nav>
-      )}
-      <div className={styles.titleRow}>
+      <div className={styles.main}>
+        {crumbs.length > 0 ? (
+          <nav aria-label="Você está em" className={styles.crumbs}>
+            {crumbs.map((crumb, index) => (
+              <span key={crumb.to}>
+                {index > 0 && (
+                  <span aria-hidden="true" className={styles.sep}>
+                    /
+                  </span>
+                )}
+                <Link to={crumb.to}>{crumb.label}</Link>
+              </span>
+            ))}
+          </nav>
+        ) : (
+          eyebrow && <span className="eyebrow accent">{eyebrow}</span>
+        )}
         <h1 className={styles.title}>{title}</h1>
-        {aside}
+        {subtitle && <div className={styles.subtitle}>{subtitle}</div>}
+        {meta && <div className={styles.meta}>{meta}</div>}
       </div>
-      {subtitle && <div className={styles.subtitle}>{subtitle}</div>}
+      {aside && <div className={styles.aside}>{aside}</div>}
     </header>
   )
 }
 
 export function Loading() {
-  return <p className="muted">Carregando…</p>
+  return (
+    <div className={styles.loading} role="status" aria-label="Carregando">
+      <span />
+      <span />
+      <span />
+    </div>
+  )
 }

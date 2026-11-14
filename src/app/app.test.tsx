@@ -23,7 +23,7 @@ describe('navegação', () => {
   it('menu lateral leva à trilha, e dela à competência', async () => {
     const { user } = renderRoute('/')
     const trackNav = await screen.findByRole('navigation', { name: 'Trilhas' })
-    await user.click(within(trackNav).getByRole('link', { name: 'Harmonia' }))
+    await user.click(within(trackNav).getByRole('link', { name: /^Harmonia/ }))
 
     expect(await screen.findByRole('heading', { level: 1, name: 'Harmonia' })).toBeInTheDocument()
     expect(screen.getByRole('heading', { name: 'Nível 1 · Iniciante' })).toBeInTheDocument()

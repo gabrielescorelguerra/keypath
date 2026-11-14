@@ -1,110 +1,234 @@
 .shell {
   min-height: 100vh;
   display: grid;
-  grid-template-columns: 14rem minmax(0, 1fr);
+  grid-template-columns: var(--sidebar-width) minmax(0, 1fr);
 }
 
+/* ---------- Console (barra lateral) ---------- */
 .sidebar {
   position: sticky;
   top: 0;
   height: 100vh;
   overflow-y: auto;
-  padding: var(--space-6) var(--space-3);
-  border-right: 1px solid var(--color-border);
-  background: var(--color-surface);
+  display: flex;
+  flex-direction: column;
+  padding: var(--space-5) var(--space-3) var(--space-4);
+  background: var(--console-bg);
+  color: var(--console-text);
+  border-right: 1px solid var(--console-line);
 }
 
 .brand {
-  display: block;
-  padding: 0 var(--space-3) var(--space-4);
-  font-size: var(--text-lg);
-  font-weight: 700;
-  color: var(--color-text);
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-1) var(--space-3) var(--space-5);
+  color: var(--console-active);
   text-decoration: none;
+}
+
+.brand:hover {
+  color: var(--console-active);
+}
+
+.brandName {
+  font-family: var(--font-display);
+  font-size: 1.1875rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
 }
 
 .nav,
 .tracks {
   display: grid;
-  gap: 2px;
+  gap: 1px;
 }
 
 .tracks {
   margin-top: var(--space-6);
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--console-line);
 }
 
 .navTitle {
-  padding: 0 var(--space-3) var(--space-1);
-  font-size: 0.75rem;
-  font-weight: 600;
+  padding: 0 var(--space-3) var(--space-2);
+  font-family: var(--font-mono);
+  font-size: 0.625rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
-  color: var(--color-text-muted);
+  color: var(--console-text-3);
 }
 
 .link {
-  padding: var(--space-2) var(--space-3);
-  border-radius: var(--radius-md);
-  color: var(--color-text);
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  min-height: 2.25rem;
+  padding: 0 var(--space-3);
+  border-radius: var(--radius-sm);
+  color: var(--console-text-2);
   text-decoration: none;
-  font-size: var(--text-sm);
+  font-size: var(--text-md);
+  transition:
+    color var(--t-fast) var(--ease),
+    background-color var(--t-fast) var(--ease);
 }
 
 .link:hover {
-  background: var(--color-bg);
+  color: var(--console-active);
+  background: var(--console-surface);
+}
+
+.icon {
+  flex-shrink: 0;
+  opacity: 0.85;
 }
 
 .active {
-  background: var(--color-bg);
+  color: var(--console-active);
+  background: var(--console-surface);
+}
+
+.active::before {
+  content: '';
+  position: absolute;
+  left: calc(-1 * var(--space-3));
+  top: 8px;
+  bottom: 8px;
+  width: 2px;
+  border-radius: 0 2px 2px 0;
+  background: var(--color-accent);
+}
+
+.active .icon {
   color: var(--color-accent);
-  font-weight: 600;
+  opacity: 1;
 }
 
+.rec {
+  margin-left: auto;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #e5484d;
+  box-shadow: 0 0 0 3px rgb(229 72 77 / 0.2);
+  animation: pulse 1.6s var(--ease) infinite;
+}
+
+.trackName {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.trackMeter {
+  display: inline-flex;
+}
+
+.trackMeter :global(.meter) {
+  width: 2.75rem;
+  gap: 2px;
+}
+
+.trackMeter :global(.meter > span) {
+  height: 5px;
+  background: var(--console-line);
+}
+
+.footer {
+  margin-top: auto;
+  padding: var(--space-4) var(--space-3) 0;
+  display: grid;
+  gap: 2px;
+}
+
+.footerLabel {
+  font-family: var(--font-mono);
+  font-size: 0.625rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--console-text-3);
+}
+
+.footerValue {
+  font-size: var(--text-sm);
+  color: var(--console-text-2);
+}
+
+/* ---------- Conteúdo ---------- */
 .main {
-  padding: var(--space-6) var(--space-6) calc(var(--space-6) * 2);
-  max-width: var(--content-width);
-  width: 100%;
+  min-width: 0;
+  padding: var(--space-6) clamp(var(--space-5), 4vw, var(--space-8)) var(--space-8);
 }
 
-/* Celular: navegação vira uma faixa rolável no topo. */
+.content {
+  max-width: var(--content-width);
+  margin: 0 auto;
+}
+
+/* ---------- Celular: console vira barra superior ---------- */
 @media (max-width: 48rem) {
   .shell {
     grid-template-columns: minmax(0, 1fr);
-    /* Barra só com a altura do conteúdo; o restante fica para a página. */
     grid-template-rows: auto 1fr;
   }
 
   .sidebar {
-    position: static;
+    position: sticky;
+    z-index: 10;
     height: auto;
-    display: flex;
+    flex-direction: row;
     align-items: center;
-    gap: var(--space-2);
-    padding: var(--space-2) var(--space-4);
+    gap: var(--space-1);
+    padding: var(--space-2) var(--space-3);
     overflow-x: auto;
-    border-right: none;
-    border-bottom: 1px solid var(--color-border);
+    scrollbar-width: none;
+    border-right: 0;
+    border-bottom: 1px solid var(--console-line);
   }
 
   .brand {
     padding: 0 var(--space-2) 0 0;
   }
 
+  .brandName {
+    display: none;
+  }
+
   .nav,
   .tracks {
     display: flex;
     margin: 0;
+    padding: 0;
+    border: 0;
   }
 
-  .navTitle {
+  .navTitle,
+  .trackMeter,
+  .footer {
     display: none;
   }
 
   .link {
     white-space: nowrap;
+    gap: var(--space-2);
+  }
+
+  .active::before {
+    left: 10px;
+    right: 10px;
+    top: auto;
+    bottom: 2px;
+    width: auto;
+    height: 2px;
+    border-radius: 2px;
   }
 
   .main {
-    padding: var(--space-4) var(--space-4) var(--space-6);
+    padding: var(--space-5) var(--space-4) var(--space-7);
   }
 }

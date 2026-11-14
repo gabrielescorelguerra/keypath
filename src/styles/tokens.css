@@ -1,62 +1,166 @@
-/* Tokens de design: toda cor, espaço e tipo vem daqui. */
+/*
+ * Tokens de design — direção "Estúdio" (docs/design.md).
+ * Toda cor, tipo, espaço e movimento vem daqui.
+ */
 :root {
   color-scheme: light;
 
-  --color-bg: #f8f7f4;
+  /* Superfícies */
+  --color-bg: #f4f2ec;
   --color-surface: #ffffff;
-  --color-border: #e3e0d8;
-  --color-text: #1c1b19;
-  --color-text-muted: #6b675e;
-  --color-accent: #3b5bdb;
-  --color-accent-contrast: #ffffff;
-  --color-success: #2b7a3d;
-  --color-warning: #9a5b00;
-  --color-danger: #b42318;
+  --color-surface-2: #faf9f5;
+  --color-sunken: #ece9e1;
+  --color-hover: rgb(23 24 28 / 0.04);
+  --color-press: rgb(23 24 28 / 0.08);
 
-  --font-sans: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
-  --text-sm: 0.875rem;
-  --text-base: 1rem;
-  --text-lg: 1.125rem;
-  --text-2xl: 1.75rem;
+  /* Texto */
+  --color-text: #17181c;
+  --color-text-2: #5b5d63;
+  --color-text-3: #8b8c90;
+  --color-text-muted: var(--color-text-2);
+  --color-ink: #17181c;
+  --color-on-ink: #f8f7f3;
 
+  /* Linhas */
+  --color-border: #e2ded4;
+  --color-border-strong: #cfc9bc;
+
+  /* Sinal (âmbar) e semântica */
+  --color-accent: #d9822b;
+  --color-accent-text: #9c5410;
+  --color-accent-soft: rgb(217 130 43 / 0.12);
+  --color-accent-contrast: #17181c;
+  --color-success: #2e7a4e;
+  --color-success-soft: rgb(46 122 78 / 0.1);
+  --color-warning: #a8660f;
+  --color-warning-soft: rgb(168 102 15 / 0.1);
+  --color-danger: #b23a2b;
+  --color-danger-soft: rgb(178 58 43 / 0.09);
+
+  /* Console (barra lateral) — escuro nos dois temas */
+  --console-bg: #141519;
+  --console-surface: #1c1d22;
+  --console-line: #2a2c33;
+  --console-text: #d4d5d9;
+  --console-text-2: #8b8e96;
+  --console-text-3: #5d6068;
+  --console-active: #ffffff;
+
+  /* Teclado */
+  --key-white: #fbfaf7;
+  --key-white-line: #cdc7ba;
+  --key-black: #1c1d22;
+
+  /* Tipografia */
+  --font-display: 'Fraunces Variable', 'Iowan Old Style', Georgia, serif;
+  --font-sans:
+    'IBM Plex Sans Variable', 'IBM Plex Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+
+  /* Escala 1,250 (terça maior) */
+  --text-xs: 0.75rem; /* 12 */
+  --text-sm: 0.8125rem; /* 13 */
+  --text-md: 0.875rem; /* 14 */
+  --text-base: 1rem; /* 16 */
+  --text-lg: 1.25rem; /* 20 */
+  --text-xl: 1.5625rem; /* 25 */
+  --text-2xl: 1.9375rem; /* 31 */
+  --text-3xl: 2.4375rem; /* 39 */
+  --text-4xl: 3.0625rem; /* 49 */
+
+  /* Espaço (base 4px) */
   --space-1: 0.25rem;
   --space-2: 0.5rem;
   --space-3: 0.75rem;
   --space-4: 1rem;
+  --space-5: 1.5rem;
   --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4rem;
 
-  --radius-md: 0.5rem;
-  --content-width: 64rem;
+  /* Forma e profundidade */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --shadow-raised: 0 1px 2px rgb(23 24 28 / 0.05), 0 4px 16px -8px rgb(23 24 28 / 0.12);
+
+  /* Grade */
+  --content-width: 76rem;
+  --measure: 40rem;
+  --sidebar-width: 15.5rem;
+
+  /* Movimento */
+  --ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+  --t-fast: 120ms;
+  --t-base: 180ms;
+  --t-slow: 240ms;
 }
 
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme='light']) {
     color-scheme: dark;
 
-    --color-bg: #151513;
-    --color-surface: #1e1e1b;
-    --color-border: #33322e;
-    --color-text: #ecebe6;
-    --color-text-muted: #a3a097;
-    --color-accent: #7c94f0;
-    --color-accent-contrast: #10131f;
-    --color-success: #6fcf86;
-    --color-warning: #f0b45a;
-    --color-danger: #f28b82;
+    --color-bg: #101114;
+    --color-surface: #17181c;
+    --color-surface-2: #1b1c21;
+    --color-sunken: #0c0d10;
+    --color-hover: rgb(255 255 255 / 0.04);
+    --color-press: rgb(255 255 255 / 0.08);
+    --color-text: #ecebe7;
+    --color-text-2: #a4a5aa;
+    --color-text-3: #6e7076;
+    --color-ink: #ecebe7;
+    --color-on-ink: #141519;
+    --color-border: #26282e;
+    --color-border-strong: #353841;
+    --color-accent: #f09a45;
+    --color-accent-text: #f5b06a;
+    --color-accent-soft: rgb(240 154 69 / 0.14);
+    --color-success: #6cc28f;
+    --color-success-soft: rgb(108 194 143 / 0.12);
+    --color-warning: #e9b066;
+    --color-warning-soft: rgb(233 176 102 / 0.12);
+    --color-danger: #f0897b;
+    --color-danger-soft: rgb(240 137 123 / 0.12);
+    --console-bg: #0a0b0d;
+    --console-surface: #131418;
+    --console-line: #1f2126;
+    --key-white: #e9e7e1;
+    --key-white-line: #9d998f;
+    --key-black: #0b0c0e;
+    --shadow-raised: 0 1px 2px rgb(0 0 0 / 0.4), 0 8px 24px -12px rgb(0 0 0 / 0.6);
   }
 }
 
 :root[data-theme='dark'] {
   color-scheme: dark;
 
-  --color-bg: #151513;
-  --color-surface: #1e1e1b;
-  --color-border: #33322e;
-  --color-text: #ecebe6;
-  --color-text-muted: #a3a097;
-  --color-accent: #7c94f0;
-  --color-accent-contrast: #10131f;
-  --color-success: #6fcf86;
-  --color-warning: #f0b45a;
-  --color-danger: #f28b82;
+  --color-bg: #101114;
+  --color-surface: #17181c;
+  --color-surface-2: #1b1c21;
+  --color-sunken: #0c0d10;
+  --color-hover: rgb(255 255 255 / 0.04);
+  --color-press: rgb(255 255 255 / 0.08);
+  --color-text: #ecebe7;
+  --color-text-2: #a4a5aa;
+  --color-text-3: #6e7076;
+  --color-ink: #ecebe7;
+  --color-on-ink: #141519;
+  --color-border: #26282e;
+  --color-border-strong: #353841;
+  --color-accent: #f09a45;
+  --color-accent-text: #f5b06a;
+  --color-accent-soft: rgb(240 154 69 / 0.14);
+  --color-success: #6cc28f;
+  --color-success-soft: rgb(108 194 143 / 0.12);
+  --color-warning: #e9b066;
+  --color-warning-soft: rgb(233 176 102 / 0.12);
+  --color-danger: #f0897b;
+  --color-danger-soft: rgb(240 137 123 / 0.12);
+  --console-bg: #0a0b0d;
+  --console-surface: #131418;
+  --console-line: #1f2126;
+  --key-white: #e9e7e1;
+  --key-white-line: #9d998f;
+  --key-black: #0b0c0e;
+  --shadow-raised: 0 1px 2px rgb(0 0 0 / 0.4), 0 8px 24px -12px rgb(0 0 0 / 0.6);
 }

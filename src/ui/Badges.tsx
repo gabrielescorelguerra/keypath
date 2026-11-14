@@ -1,11 +1,19 @@
+import type { ReactNode } from 'react'
 import type { CompetencyStatus } from '@/domain/progress'
 import { COMPETENCY_STATUS } from './labels.ts'
 
+const STATUS_TONE: Record<CompetencyStatus, string> = {
+  mastered: 'success',
+  declared: 'declared',
+  'in-progress': 'accent',
+  'not-started': 'neutral',
+}
+
+/** Ponto de estado + rótulo (dominada ● / declarada ◐ / em andamento ● / não iniciada ○). */
 export function StatusBadge({ status }: { readonly status: CompetencyStatus }) {
-  const { label, tone } = COMPETENCY_STATUS[status]
   return (
-    <span className="badge" data-tone={tone}>
-      {label}
+    <span className="status" data-tone={STATUS_TONE[status]}>
+      {COMPETENCY_STATUS[status].label}
     </span>
   )
 }
@@ -14,7 +22,7 @@ export function Badge({
   children,
   tone = 'neutral',
 }: {
-  readonly children: React.ReactNode
+  readonly children: ReactNode
   readonly tone?: 'success' | 'accent' | 'warning' | 'neutral'
 }) {
   return (
@@ -37,5 +45,38 @@ export function ProgressBar({ value, label }: { readonly value: number; readonly
     >
       <span style={{ width: `${percent}%` }} />
     </div>
+  )
+}
+
+/**
+ * Medidor de nível em 5 segmentos. Segmentos até `level` acesos; o seguinte,
+ * parcialmente aceso conforme o progresso no próximo nível.
+ */
+export function LevelMeter({
+  level,
+  next = 0,
+  label,
+  size = 'sm',
+}: {
+  readonly level: number
+  /** Progresso (0–1) no próximo nível. */
+  readonly next?: number
+  readonly label: string
+  readonly size?: 'sm' | 'lg'
+}) {
+  return (
+    <span
+      className={`meter ${size === 'lg' ? 'lg' : ''}`}
+      role="meter"
+      aria-label={label}
+      aria-valuemin={0}
+      aria-valuemax={5}
+      aria-valuenow={level}
+    >
+      {[1, 2, 3, 4, 5].map((segment) => {
+        const fill = segment <= level ? 1 : segment === level + 1 ? next : 0
+        return <span key={segment} style={{ ['--fill' as string]: `${Math.round(fill * 100)}%` }} />
+      })}
+    </span>
   )
 }

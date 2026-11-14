@@ -1,0 +1,569 @@
+/* Componentes globais — direção "Estúdio" (docs/design.md §2–3). */
+
+/* ---------- Texto utilitário ---------- */
+.muted {
+  color: var(--color-text-2);
+}
+
+.faint {
+  color: var(--color-text-3);
+}
+
+.small {
+  font-size: var(--text-md);
+}
+
+.xsmall {
+  font-size: var(--text-sm);
+}
+
+.mono {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+}
+
+.serif {
+  font-family: var(--font-display);
+  font-optical-sizing: auto;
+}
+
+/* Rótulo de seção (eyebrow): mono, maiúsculas, espaçado. */
+.eyebrow {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-text-3);
+}
+
+.eyebrow.accent {
+  color: var(--color-accent-text);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+/* ---------- Composição ---------- */
+.stack {
+  display: grid;
+  gap: var(--space-3);
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+}
+
+.cluster {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.section {
+  margin-top: var(--space-7);
+}
+
+.section > h2,
+.section-title {
+  margin: 0 0 var(--space-4);
+  font-size: var(--text-md);
+  font-weight: 600;
+  letter-spacing: 0;
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-3);
+}
+
+.section > h2::after,
+.section-title::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--color-border);
+  transform: translateY(-0.25em);
+}
+
+/* Principal + painel lateral (2fr / 1fr). */
+.split {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 20rem;
+  gap: var(--space-7);
+  align-items: start;
+}
+
+.split > .aside {
+  position: sticky;
+  top: var(--space-5);
+  display: grid;
+  gap: var(--space-5);
+}
+
+/* Coluna de rótulos + conteúdo. */
+.ladder {
+  display: grid;
+  grid-template-columns: 10rem minmax(0, 1fr);
+  gap: var(--space-5) var(--space-6);
+  align-items: start;
+}
+
+.ladder > .ladder-label {
+  position: sticky;
+  top: var(--space-5);
+  padding-top: var(--space-3);
+}
+
+@media (max-width: 64rem) {
+  .split {
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--space-6);
+  }
+
+  .split > .aside {
+    position: static;
+  }
+}
+
+@media (max-width: 40rem) {
+  .ladder {
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--space-2);
+  }
+
+  .ladder > .ladder-label {
+    position: static;
+    padding-top: 0;
+  }
+}
+
+/* ---------- Superfícies ---------- */
+.card,
+.panel {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-5);
+}
+
+.panel.raised {
+  box-shadow: var(--shadow-raised);
+  border-color: transparent;
+}
+
+.panel.sunken {
+  background: var(--color-sunken);
+  border-color: transparent;
+}
+
+.panel-title {
+  margin: 0 0 var(--space-3);
+}
+
+/* Lista com linhas finas e hover. */
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.list > li {
+  padding: var(--space-3) var(--space-4);
+  transition: background-color var(--t-fast) var(--ease);
+}
+
+.list > li + li {
+  border-top: 1px solid var(--color-border);
+}
+
+.list.flush {
+  background: transparent;
+  border: 0;
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+  border-radius: 0;
+}
+
+.list.flush > li {
+  padding-inline: 0;
+}
+
+/* Linha inteira clicável: o link principal recebe a seta. */
+.list > li.link-row:hover {
+  background: var(--color-hover);
+}
+
+.list.flush > li.link-row:hover {
+  background: transparent;
+}
+
+a.plain {
+  color: inherit;
+  text-decoration: none;
+}
+
+a.plain:hover {
+  color: var(--color-accent-text);
+}
+
+.arrow-link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  font-weight: 500;
+  text-decoration: none;
+  color: var(--color-text);
+}
+
+.arrow-link svg {
+  transition: transform var(--t-fast) var(--ease);
+}
+
+.arrow-link:hover svg,
+.link-row:hover .arrow-link svg {
+  transform: translateX(2px);
+}
+
+/* ---------- Botões ---------- */
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  min-height: 2.25rem;
+  padding: 0 var(--space-4);
+  font: inherit;
+  font-size: var(--text-md);
+  font-weight: 500;
+  line-height: 1;
+  white-space: nowrap;
+  color: var(--color-text);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  text-decoration: none;
+  transition:
+    background-color var(--t-fast) var(--ease),
+    border-color var(--t-fast) var(--ease),
+    color var(--t-fast) var(--ease),
+    transform var(--t-fast) var(--ease);
+}
+
+a.button {
+  text-decoration: none;
+}
+
+.button:hover {
+  background: var(--color-surface-2);
+  border-color: var(--color-text-3);
+  color: var(--color-text);
+}
+
+.button:active {
+  transform: scale(0.98);
+}
+
+.button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.button.primary {
+  background: var(--color-ink);
+  border-color: var(--color-ink);
+  color: var(--color-on-ink);
+}
+
+.button.primary:hover {
+  background: color-mix(in srgb, var(--color-ink) 86%, var(--color-accent));
+  border-color: transparent;
+  color: var(--color-on-ink);
+}
+
+.button.ghost {
+  background: transparent;
+  border-color: transparent;
+  color: var(--color-text-2);
+}
+
+.button.ghost:hover {
+  background: var(--color-hover);
+  color: var(--color-text);
+}
+
+.button.sm {
+  min-height: 1.875rem;
+  padding: 0 var(--space-3);
+  font-size: var(--text-sm);
+}
+
+.button.lg {
+  min-height: 2.75rem;
+  padding: 0 var(--space-5);
+  font-size: var(--text-base);
+}
+
+.button.icon {
+  padding: 0;
+  width: 2.25rem;
+}
+
+.button svg {
+  flex-shrink: 0;
+}
+
+/* ---------- Campos ---------- */
+.input,
+.select,
+.textarea {
+  font: inherit;
+  font-size: var(--text-md);
+  min-height: 2.25rem;
+  padding: var(--space-2) var(--space-3);
+  color: var(--color-text);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-sm);
+  transition:
+    border-color var(--t-fast) var(--ease),
+    box-shadow var(--t-fast) var(--ease);
+}
+
+.input::placeholder,
+.textarea::placeholder {
+  color: var(--color-text-3);
+}
+
+.input:hover,
+.select:hover,
+.textarea:hover {
+  border-color: var(--color-text-3);
+}
+
+.input:focus,
+.select:focus,
+.textarea:focus {
+  outline: none;
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 3px var(--color-accent-soft);
+}
+
+.textarea {
+  width: 100%;
+  min-height: 7rem;
+  line-height: 1.55;
+  resize: vertical;
+}
+
+input[type='checkbox'],
+input[type='radio'] {
+  accent-color: var(--color-ink);
+  width: 1rem;
+  height: 1rem;
+  margin: 0;
+}
+
+/* ---------- Indicadores ---------- */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35em;
+  padding: 0.125rem 0.5rem;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+  color: var(--color-text-2);
+  background: var(--color-sunken);
+}
+
+.badge[data-tone='success'] {
+  color: var(--color-success);
+  background: var(--color-success-soft);
+}
+
+.badge[data-tone='accent'] {
+  color: var(--color-accent-text);
+  background: var(--color-accent-soft);
+}
+
+.badge[data-tone='warning'] {
+  color: var(--color-warning);
+  background: var(--color-warning-soft);
+}
+
+/* Ponto de estado + rótulo. */
+.status {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45em;
+  font-size: var(--text-sm);
+  color: var(--color-text-2);
+  white-space: nowrap;
+}
+
+.status::before {
+  content: '';
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  border: 1.5px solid var(--color-text-3);
+  flex-shrink: 0;
+}
+
+.status[data-tone='success']::before {
+  background: var(--color-success);
+  border-color: var(--color-success);
+}
+
+.status[data-tone='declared']::before {
+  border-color: var(--color-success);
+  background: linear-gradient(90deg, var(--color-success) 50%, transparent 50%);
+}
+
+.status[data-tone='accent']::before {
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+}
+
+.progress {
+  height: 4px;
+  border-radius: 2px;
+  background: var(--color-sunken);
+  overflow: hidden;
+}
+
+.progress > span {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: var(--color-accent);
+  transition: width var(--t-slow) var(--ease);
+}
+
+/* Medidor de nível em 5 segmentos (VU-meter). */
+.meter {
+  display: inline-grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 3px;
+  width: 4.5rem;
+}
+
+.meter > span {
+  position: relative;
+  height: 6px;
+  border-radius: 1.5px;
+  background: var(--color-sunken);
+  overflow: hidden;
+}
+
+.meter > span::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  width: var(--fill, 0%);
+  background: var(--color-accent);
+  transition: width var(--t-slow) var(--ease);
+}
+
+.meter.lg {
+  width: 100%;
+  max-width: 22rem;
+  gap: 4px;
+}
+
+.meter.lg > span {
+  height: 10px;
+  border-radius: 2px;
+}
+
+.banner {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-sm);
+  font-size: var(--text-md);
+  color: var(--color-text);
+  background: var(--color-warning-soft);
+  border: 1px solid color-mix(in srgb, var(--color-warning) 30%, transparent);
+}
+
+.banner.info {
+  background: var(--color-accent-soft);
+  border-color: color-mix(in srgb, var(--color-accent) 35%, transparent);
+}
+
+.banner a {
+  font-weight: 500;
+}
+
+/* ---------- Tabelas ---------- */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--text-md);
+}
+
+.table th {
+  text-align: left;
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-text-3);
+  padding: var(--space-2) var(--space-3);
+  border-bottom: 1px solid var(--color-border-strong);
+}
+
+.table td {
+  padding: var(--space-3);
+  border-bottom: 1px solid var(--color-border);
+  vertical-align: middle;
+}
+
+.table tbody tr {
+  transition: background-color var(--t-fast) var(--ease);
+}
+
+.table tbody tr:hover {
+  background: var(--color-hover);
+}
+
+/* ---------- Movimento ---------- */
+@keyframes enter {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+}
+
+.page-enter {
+  animation: enter var(--t-slow) var(--ease) both;
+}
+
+@keyframes pulse {
+  50% {
+    opacity: 0.35;
+  }
+}
