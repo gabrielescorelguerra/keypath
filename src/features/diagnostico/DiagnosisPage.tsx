@@ -5,7 +5,7 @@ import { declareCompetencies, undeclareCompetencies } from '@/data'
 import type { LevelNumber } from '@/domain/catalog'
 import { competenciesUpToLevel } from '@/domain/progress'
 import { LevelMeter, StatusBadge } from '@/ui/Badges'
-import { levelName } from '@/ui/labels'
+import { emptyLevels, levelName } from '@/ui/labels'
 import { Loading, PageHeader } from '@/ui/Page'
 import { paths } from '@/ui/paths'
 import styles from './DiagnosisPage.module.css'
@@ -36,7 +36,11 @@ export function DiagnosisPage() {
                 <h2 id={`diag-${track.id}`} className={styles.trackTitle}>
                   {track.name}
                 </h2>
-                <LevelMeter level={state?.level ?? 0} label={`Nível ${state?.level ?? 0} de 5`} />
+                <LevelMeter
+                  level={state?.level ?? 0}
+                  label={`Nível ${state?.level ?? 0} de 5`}
+                  empty={emptyLevels(track.id)}
+                />
               </div>
               <div className={styles.levels}>
                 {levels.map((level) => {

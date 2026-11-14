@@ -3,7 +3,7 @@ import { useProgress } from '@/app/progress'
 import { catalog } from '@/content'
 import { Badge, LevelMeter, StatusBadge } from '@/ui/Badges'
 import { Icon } from '@/ui/Icon'
-import { LESSON_STATUS, levelName } from '@/ui/labels'
+import { emptyLevels, LESSON_STATUS, levelName } from '@/ui/labels'
 import { Loading, PageHeader } from '@/ui/Page'
 import { paths } from '@/ui/paths'
 import { NotFoundPage } from '../NotFoundPage.tsx'
@@ -22,6 +22,7 @@ export function TrackPage() {
   const next = state?.next
   const fraction = next && next.total > 0 ? next.satisfied / next.total : 0
   const competencies = catalog.competenciesByTrack.get(track.id) ?? []
+  const empty = emptyLevels(track.id)
   const levels = [...new Set(competencies.map((c) => c.level))].sort()
   const lessons = catalog.lessons.filter(
     (l) =>
@@ -47,7 +48,13 @@ export function TrackPage() {
         }
         meta={
           <div className={styles.meterRow}>
-            <LevelMeter level={level} next={fraction} size="lg" label={`Nível ${level} de 5`} />
+            <LevelMeter
+              level={level}
+              next={fraction}
+              size="lg"
+              label={`Nível ${level} de 5`}
+              empty={empty}
+            />
             {next && next.total > 0 && (
               <span className="muted small">
                 Rumo ao nível {next.level} · {levelName(next.level)}:{' '}
@@ -55,6 +62,12 @@ export function TrackPage() {
                   {next.satisfied} de {next.total}
                 </strong>{' '}
                 competências essenciais
+              </span>
+            )}
+            {next && next.total === 0 && level > 0 && (
+              <span className="muted small">
+                Você concluiu todo o conteúdo atual desta trilha. O nível {next.level} ainda não tem
+                competências cadastradas (teclas tracejadas).
               </span>
             )}
           </div>

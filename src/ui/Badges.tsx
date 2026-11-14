@@ -55,12 +55,15 @@ export function LevelMeter({
   next = 0,
   label,
   size = 'sm',
+  empty = [],
 }: {
   readonly level: number
   /** Progresso (0–1) no próximo nível. */
   readonly next?: number
   readonly label: string
   readonly size?: 'sm' | 'md' | 'lg'
+  /** Níveis sem conteúdo cadastrado na trilha. */
+  readonly empty?: readonly number[]
 }) {
-  return <OctaveMeter level={level} next={next} label={label} size={size} />
+  return <OctaveMeter level={level} next={next} label={label} size={size} empty={empty} />
 }

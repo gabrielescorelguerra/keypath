@@ -32,6 +32,12 @@ export function trackLevelLabel(level: number): string {
   return level === 0 ? 'Sem nível' : `Nível ${level} · ${levelName(level)}`
 }
 
+/** Níveis (1–5) sem nenhuma competência essencial cadastrada na trilha. */
+export function emptyLevels(trackId: string): readonly number[] {
+  const core = (catalog.competenciesByTrack.get(trackId) ?? []).filter((c) => c.core)
+  return [1, 2, 3, 4, 5].filter((n) => !core.some((c) => c.level === n))
+}
+
 const dateFormat = new Intl.DateTimeFormat('pt-BR', { dateStyle: 'medium' })
 const dateTimeFormat = new Intl.DateTimeFormat('pt-BR', { dateStyle: 'medium', timeStyle: 'short' })
 

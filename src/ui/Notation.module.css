@@ -29,6 +29,13 @@
   stroke-width: 0.8;
 }
 
+.black[data-empty='true'] {
+  fill: none;
+  stroke: var(--color-text-3);
+  stroke-width: 0.8;
+  stroke-dasharray: 2 1.5;
+}
+
 .lit {
   fill: var(--color-accent);
   transition:

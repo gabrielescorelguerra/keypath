@@ -12,7 +12,7 @@ import { weeklyPractice } from '@/domain/practice'
 import { recommend, type ProgressSnapshot, type Recommendation } from '@/domain/progress'
 import { LevelMeter } from '@/ui/Badges'
 import { Icon } from '@/ui/Icon'
-import { levelName, trackLevelLabel } from '@/ui/labels'
+import { emptyLevels, levelName, trackLevelLabel } from '@/ui/labels'
 import { KeyRule, Measures } from '@/ui/Notation'
 import { Loading } from '@/ui/Page'
 import { paths } from '@/ui/paths'
@@ -212,10 +212,14 @@ export function HomePage() {
                       next={fraction}
                       size="md"
                       label={`Nível ${state?.level ?? 0} de 5 em ${track.name}`}
+                      empty={emptyLevels(track.id)}
                     />
                     <span className={styles.trackText}>
                       <strong>{track.name}</strong>
                       <span>{trackLevelLabel(state?.level ?? 0)}</span>
+                      {next && next.total === 0 && (state?.level ?? 0) > 0 && (
+                        <span className={styles.trackNext}>Todo o conteúdo atual concluído</span>
+                      )}
                       {next && next.total > 0 && (
                         <span className={styles.trackNext}>
                           {next.satisfied} de {next.total} rumo ao{' '}

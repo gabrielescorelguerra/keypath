@@ -2,6 +2,7 @@ import { NavLink, Outlet, ScrollRestoration, useLocation } from 'react-router'
 import { catalog } from '@/content'
 import { useActiveSession } from '@/data'
 import { LevelMeter } from '@/ui/Badges'
+import { emptyLevels } from '@/ui/labels'
 import { BrandMark, Icon, type IconName } from '@/ui/Icon'
 import styles from './Layout.module.css'
 import { useProgress } from './progress.ts'
@@ -56,7 +57,13 @@ function Sidebar() {
                 <span className={styles.trackName}>{track.name}</span>
                 <span className="visually-hidden">, nível {state?.level ?? 0}</span>
                 <span className={styles.trackMeter} aria-hidden="true">
-                  <LevelMeter level={state?.level ?? 0} next={next} label="" size="sm" />
+                  <LevelMeter
+                    level={state?.level ?? 0}
+                    next={next}
+                    label=""
+                    size="sm"
+                    empty={emptyLevels(track.id)}
+                  />
                 </span>
               </NavLink>
             )

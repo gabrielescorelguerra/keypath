@@ -6,18 +6,21 @@ const BLACK_KEYS = [1, 2, 4, 5, 6] as const
 
 /**
  * Medidor de oitava: as 5 teclas pretas são os 5 níveis. Acesas até `level`;
- * a seguinte acende parcialmente conforme `next` (0–1).
+ * a seguinte acende parcialmente conforme `next` (0–1). Níveis em `empty`
+ * (sem conteúdo cadastrado) aparecem só contornados.
  */
 export function OctaveMeter({
   level,
   next = 0,
   label,
   size = 'sm',
+  empty = [],
 }: {
   readonly level: number
   readonly next?: number
   readonly label: string
   readonly size?: 'sm' | 'md' | 'lg'
+  readonly empty?: readonly number[]
 }) {
   const white = 10
   const height = 30
@@ -50,7 +53,15 @@ export function OctaveMeter({
         const x = position * white - 3.25
         return (
           <g key={n}>
-            <rect className={styles.black} x={x} y={0} width={6.5} height={18} rx={1} />
+            <rect
+              className={styles.black}
+              data-empty={empty.includes(n)}
+              x={x}
+              y={0}
+              width={6.5}
+              height={18}
+              rx={1}
+            />
             {state !== 'off' && (
               <rect
                 className={styles.lit}
