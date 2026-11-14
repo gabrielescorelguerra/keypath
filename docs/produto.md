@@ -181,6 +181,8 @@ A ordem de prioridade é:
   - **Sessões:** cronômetro, sugestões do que treinar, músicas praticadas, anotações e histórico.
   - **Backup:** passa a ser um ZIP com os arquivos.
 - ✅ Metrônomo, na sessão, nos exercícios no teclado e na página de cada música.
+- ✅ Teclado tocável nos exemplos: clicar ou arrastar toca as teclas, e as teclas que estão soando aparecem afundadas.
+- ✅ Câmera lenta nos exemplos: sequências e escalas mais devagar, acordes arpejados nota por nota.
 - ⏳ Cursos e módulos (pendente).
 
 ### Futuro

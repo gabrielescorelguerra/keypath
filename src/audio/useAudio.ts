@@ -5,6 +5,7 @@ import { audioPlayer, type AudioPlayer } from './player.ts'
 const SILENT: AudioPlayer = {
   playChord: () => {},
   playSequence: () => {},
+  playEvents: () => {},
   stop: () => {},
   setVolume: () => {},
 }

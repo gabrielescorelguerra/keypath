@@ -34,8 +34,44 @@
   color: var(--color-text-2);
 }
 
-.play {
+.controls {
   margin-left: auto;
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.slow {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  min-height: 2.25rem;
+  padding: 0 var(--space-3);
+  font: inherit;
+  font-size: var(--text-sm);
+  color: var(--color-text-2);
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  cursor: pointer;
+  transition:
+    color var(--t-fast) var(--ease),
+    border-color var(--t-fast) var(--ease),
+    background-color var(--t-fast) var(--ease);
+}
+
+.slow:hover {
+  color: var(--color-text);
+}
+
+.slow[aria-pressed='true'] {
+  color: var(--color-accent-text);
+  border-color: var(--color-accent);
+  background: var(--color-accent-soft);
+}
+
+.play {
   display: inline-flex;
   align-items: center;
   gap: var(--space-2);
@@ -170,8 +206,44 @@
   transition: fill var(--t-base) var(--ease);
 }
 
+/* Tecla soando: afunda (desce um pouco e escurece, como uma tecla real presa). */
+.keyboard rect {
+  transform-box: fill-box;
+  transition:
+    fill var(--t-base) var(--ease),
+    transform 60ms var(--ease);
+}
+
+.keyboard rect[data-pressed='true'] {
+  transform: translateY(1.5px) scaleY(0.985);
+  transition:
+    fill 40ms var(--ease),
+    transform 40ms var(--ease);
+}
+
+.white[data-pressed='true'],
+.whiteOn[data-pressed='true'] {
+  fill: var(--color-accent);
+}
+
+.black[data-pressed='true'],
+.blackOn[data-pressed='true'] {
+  fill: color-mix(in srgb, var(--color-accent) 75%, #000);
+}
+
+.keyboard[data-playable] rect {
+  cursor: pointer;
+  touch-action: none;
+}
+
+.keyboard[data-playable] {
+  user-select: none;
+  -webkit-user-select: none;
+}
+
 .keyLabelOnWhite,
 .keyLabelOnBlack {
+  pointer-events: none;
   font-size: 7.5px;
   font-weight: 600;
   text-anchor: middle;

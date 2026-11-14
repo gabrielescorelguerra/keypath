@@ -1,4 +1,4 @@
-export { audioPlayer, type AudioPlayer } from './player.ts'
+export { audioPlayer, PLAYBACK_LATENCY, type AudioPlayer, type NoteEvent } from './player.ts'
 export { useAudio } from './useAudio.ts'
 export { Metronome } from './metronome.ts'
 export { clampBpm, MAX_BPM, MIN_BPM } from './metronomeSchedule.ts'

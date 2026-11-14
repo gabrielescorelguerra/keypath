@@ -6,14 +6,26 @@ import { getAudio } from './context.ts'
  * carregadas da internet no primeiro toque; enquanto carregam — ou se falharem
  * (sem internet) — toca com um sintetizador simples, para o som responder na hora.
  */
+/** Notas que soam juntas a partir de `at` segundos (relativo ao início), por `seconds`. */
+export interface NoteEvent {
+  readonly midis: readonly number[]
+  readonly at: number
+  readonly seconds: number
+}
+
 export interface AudioPlayer {
   /** Toca notas juntas (acorde). */
   playChord(midis: readonly number[], seconds?: number): void
   /** Toca uma sequência de acordes/notas, um passo após o outro. */
   playSequence(steps: readonly (readonly number[])[], stepSeconds?: number): void
+  /** Toca eventos agendados, sem interromper o que já está soando. */
+  playEvents(events: readonly NoteEvent[]): void
   stop(): void
   setVolume(volume: number): void
 }
+
+/** Atraso (s) entre o pedido e o primeiro som; a animação do teclado usa o mesmo valor. */
+export const PLAYBACK_LATENCY = 0.04
 
 type Piano = ReturnType<typeof SplendidGrandPiano>
 
@@ -117,20 +129,26 @@ class WebAudioPlayer implements AudioPlayer {
   }
 
   playChord(midis: readonly number[], seconds = 1.6) {
-    const context = this.ensureContext()
-    if (!context) return
     this.stop()
-    this.playNotes(midis, context.currentTime + 0.03, seconds)
+    this.playEvents([{ midis, at: 0, seconds }])
   }
 
   playSequence(steps: readonly (readonly number[])[], stepSeconds = 0.9) {
+    this.stop()
+    this.playEvents(
+      steps.map((midis, index) => ({
+        midis,
+        at: index * stepSeconds,
+        seconds: stepSeconds * 0.95,
+      })),
+    )
+  }
+
+  playEvents(events: readonly NoteEvent[]) {
     const context = this.ensureContext()
     if (!context) return
-    this.stop()
-    const start = context.currentTime + 0.05
-    steps.forEach((notes, index) => {
-      this.playNotes(notes, start + index * stepSeconds, stepSeconds * 0.95)
-    })
+    const start = context.currentTime + PLAYBACK_LATENCY
+    for (const event of events) this.playNotes(event.midis, start + event.at, event.seconds)
   }
 
   stop() {

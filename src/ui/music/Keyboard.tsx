@@ -1,3 +1,4 @@
+import type { PointerEvent } from 'react'
 import {
   formatPitchClass,
   noteToMidi,
@@ -20,17 +21,43 @@ function keyLabel(note: NoteName, naming: NoteNaming): string {
 
 /**
  * Teclado com as notas destacadas. A extensão cobre as notas em oitavas completas
- * (de Dó a Si), com pelo menos `minOctaves`.
+ * (de Dó a Si), com pelo menos `minOctaves`. As teclas em `pressed` aparecem
+ * afundadas (soando); com `onPress`, as teclas podem ser tocadas com o mouse ou o
+ * dedo, inclusive arrastando de uma para outra.
  */
 export function Keyboard({
   notes,
   naming,
   minOctaves = 2,
+  pressed,
+  onPress,
+  onRelease,
 }: {
   readonly notes: readonly NoteName[]
   readonly naming: NoteNaming
   readonly minOctaves?: number
+  readonly pressed?: ReadonlySet<number>
+  readonly onPress?: (midi: number) => void
+  readonly onRelease?: (midi: number) => void
 }) {
+  const playable = onPress !== undefined
+  const keyProps = (midi: number) =>
+    playable
+      ? {
+          onPointerDown: (event: PointerEvent<SVGRectElement>) => {
+            event.preventDefault()
+            // Libera a captura para que arrastar passe às teclas vizinhas.
+            event.currentTarget.releasePointerCapture?.(event.pointerId)
+            onPress(midi)
+          },
+          onPointerEnter: (event: PointerEvent<SVGRectElement>) => {
+            if (event.buttons === 1) onPress(midi)
+          },
+          onPointerUp: () => onRelease?.(midi),
+          onPointerLeave: () => onRelease?.(midi),
+          onPointerCancel: () => onRelease?.(midi),
+        }
+      : {}
   const midis = notes.map(noteToMidi)
   const highlighted = new Map(notes.map((note) => [noteToMidi(note), note]))
   const lowest = midis.length ? Math.min(...midis) : 60
@@ -54,6 +81,7 @@ export function Keyboard({
   return (
     <svg
       className={styles.keyboard}
+      data-playable={playable || undefined}
       viewBox={`0 0 ${width} ${WHITE_HEIGHT + 1}`}
       role="img"
       aria-label={label}
@@ -72,6 +100,8 @@ export function Keyboard({
               className={note ? styles.whiteOn : styles.white}
               data-midi={midi}
               data-on={note ? 'true' : undefined}
+              data-pressed={pressed?.has(midi) ? 'true' : undefined}
+              {...keyProps(midi)}
             />
             {note && (
               <text
@@ -102,6 +132,8 @@ export function Keyboard({
                 className={note ? styles.blackOn : styles.black}
                 data-midi={midi}
                 data-on={note ? 'true' : undefined}
+                data-pressed={pressed?.has(midi) ? 'true' : undefined}
+                {...keyProps(midi)}
               />
               {note && (
                 <text
