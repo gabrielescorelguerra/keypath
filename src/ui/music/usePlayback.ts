@@ -1,24 +1,32 @@
 import { useCallback, useEffect, useRef, useState, useSyncExternalStore } from 'react'
 import { PLAYBACK_LATENCY, useAudio, type NoteEvent } from '@/audio'
 
-// --- Câmera lenta: escolha compartilhada pelos exemplos da página (não é salva) ---
-let slowMotion = false
-const listeners = new Set<() => void>()
-
-export function setSlowMotion(value: boolean) {
-  slowMotion = value
-  for (const listener of listeners) listener()
-}
-
-export function useSlowMotion(): boolean {
-  return useSyncExternalStore(
-    (listener) => {
-      listeners.add(listener)
-      return () => listeners.delete(listener)
+// --- Opções de visualização compartilhadas pelos exemplos da página (não são salvas) ---
+function sharedToggle() {
+  let value = false
+  const listeners = new Set<() => void>()
+  const subscribe = (listener: () => void) => {
+    listeners.add(listener)
+    return () => listeners.delete(listener)
+  }
+  return {
+    set(next: boolean) {
+      value = next
+      for (const listener of listeners) listener()
     },
-    () => slowMotion,
-  )
+    use: () => useSyncExternalStore(subscribe, () => value),
+  }
 }
+
+const slowMotion = sharedToggle()
+const intervals = sharedToggle()
+
+/** Câmera lenta: sequências mais devagar e acordes arpejados. */
+export const setSlowMotion = slowMotion.set
+export const useSlowMotion = slowMotion.use
+/** Mostrar os graus (1, ♭3, 5…) nas teclas em vez dos nomes das notas. */
+export const setShowIntervals = intervals.set
+export const useShowIntervals = intervals.use
 
 /** Conta quantos eventos mantêm cada tecla presa (a mesma nota pode se sobrepor). */
 function bump(current: ReadonlyMap<number, number>, midis: readonly number[], delta: number) {
@@ -85,6 +93,12 @@ export function usePlayback() {
     })
   }, [])
 
+  const stop = useCallback(() => {
+    clearTimers()
+    setScheduled(new Map())
+    player.stop()
+  }, [player, clearTimers])
+
   const pressed = new Set([...scheduled.keys(), ...held])
-  return { pressed, play, press, release }
+  return { pressed, play, press, release, stop }
 }

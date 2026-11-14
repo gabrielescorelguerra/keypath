@@ -8,9 +8,18 @@ import { formatPitchClass, parseKey } from '@/domain/music'
 import { gradeQuiz, type AttemptContext, type QuizGrade } from '@/domain/progress'
 import { Badge } from '@/ui/Badges'
 import { Markdown } from '@/ui/markdown/Markdown'
+import { BackingTrack } from '@/ui/music/BackingTrack'
+import { ListenButton } from '@/ui/music/ListenButton'
 import { MetronomeControl } from '@/ui/music/MetronomeControl'
 import { paths } from '@/ui/paths'
 import styles from './Exercise.module.css'
+
+const STAGE_LABEL = {
+  recognition: 'Reconhecimento',
+  execution: 'Execução',
+  application: 'Aplicação',
+  creativity: 'Criatividade',
+} as const
 
 const HANDS = { left: 'Mão esquerda', right: 'Mão direita', both: 'Duas mãos' } as const
 
@@ -114,6 +123,7 @@ function QuizRunner({
               {question.prompt}
               {multiple && <span className="muted small"> (marque todas as corretas)</span>}
             </legend>
+            {question.audio && <ListenButton audio={question.audio} />}
             {question.options.map((option, optionIndex) => {
               const checked = answers[question.id]?.includes(optionIndex) ?? false
               const isCorrect = question.correct.includes(optionIndex)
@@ -179,6 +189,15 @@ function keyLabel(key: string, naming: Parameters<typeof formatPitchClass>[1]): 
   }
 }
 
+/** "Comece a 60 bpm e suba 5 a cada execução limpa, até 90 bpm." */
+function tempoPlan(p: PerformanceExercise['parameters']): string {
+  if (p.startBpm && p.targetBpm && p.startBpm < p.targetBpm) {
+    const step = p.bpmStep ? `, subindo ${p.bpmStep} a cada execução limpa` : ''
+    return `de ${p.startBpm} a ${p.targetBpm} bpm${step}`
+  }
+  return `${p.targetBpm ?? p.startBpm} bpm`
+}
+
 function PerformanceRunner({
   exercise,
   context,
@@ -228,7 +247,10 @@ function PerformanceRunner({
         if (!saved) void submit()
       }}
     >
-      {(parameters.keys.length > 0 || parameters.targetBpm || parameters.hands) && (
+      {(parameters.keys.length > 0 ||
+        parameters.targetBpm ||
+        parameters.startBpm ||
+        parameters.hands) && (
         <dl className={styles.params}>
           {parameters.keys.length > 0 && (
             <div>
@@ -236,10 +258,10 @@ function PerformanceRunner({
               <dd>{parameters.keys.map((k) => keyLabel(k, naming)).join(' · ')}</dd>
             </div>
           )}
-          {parameters.targetBpm && (
+          {(parameters.targetBpm || parameters.startBpm) && (
             <div>
               <dt>Andamento</dt>
-              <dd>{parameters.targetBpm} bpm</dd>
+              <dd>{tempoPlan(parameters)}</dd>
             </div>
           )}
           {parameters.hands && (
@@ -251,10 +273,17 @@ function PerformanceRunner({
         </dl>
       )}
 
-      {parameters.targetBpm && (
+      {parameters.backing && (
+        <BackingTrack
+          backing={parameters.backing}
+          initialBpm={parameters.startBpm ?? parameters.targetBpm ?? 70}
+        />
+      )}
+
+      {(parameters.targetBpm || parameters.startBpm) && (
         <details className={styles.metronome}>
-          <summary>Metrônomo ({parameters.targetBpm} bpm)</summary>
-          <MetronomeControl initialBpm={parameters.targetBpm} />
+          <summary>Metrônomo ({parameters.startBpm ?? parameters.targetBpm} bpm)</summary>
+          <MetronomeControl initialBpm={parameters.startBpm ?? parameters.targetBpm ?? 80} />
         </details>
       )}
 
@@ -340,7 +369,12 @@ export function ExerciseRunner({
       {embedded && (
         <div className={styles.embeddedHeader}>
           <span className={styles.kicker}>
-            {exercise.type === 'quiz' ? 'Exercício · quiz' : 'Exercício · no teclado'}
+            {STAGE_LABEL[exercise.stage]} ·{' '}
+            {exercise.type === 'quiz'
+              ? exercise.questions.some((q) => q.audio)
+                ? 'de ouvido'
+                : 'quiz'
+              : 'no teclado'}
           </span>
           <Link to={paths.exercise(exercise.id)} className="plain">
             <strong>{exercise.title}</strong>
@@ -352,6 +386,16 @@ export function ExerciseRunner({
         <QuizRunner key={exercise.id} exercise={exercise} context={fullContext} />
       ) : (
         <PerformanceRunner key={exercise.id} exercise={exercise} context={fullContext} />
+      )}
+      {exercise.challenges.length > 0 && (
+        <details className={styles.challenges}>
+          <summary>Desafios extras</summary>
+          <ul>
+            {exercise.challenges.map((challenge) => (
+              <li key={challenge}>{challenge}</li>
+            ))}
+          </ul>
+        </details>
       )}
       <CountsFor exercise={exercise} />
     </div>

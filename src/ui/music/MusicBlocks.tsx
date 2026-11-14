@@ -4,6 +4,11 @@ import { DEFAULT_SETTINGS, useSettings } from '@/data'
 import {
   chordQualityName,
   chordToDegree,
+  chordToneLabels,
+  intervalLabel,
+  labelNotes,
+  pitchClassOf,
+  transpose,
   formatChord,
   formatDegree,
   formatPitchClass,
@@ -23,7 +28,13 @@ import { Icon } from '../Icon.tsx'
 import { Keyboard } from './Keyboard.tsx'
 import { noteList } from './names.ts'
 import { chordScore, sequenceScore, stepStarts } from './score.ts'
-import { setSlowMotion, usePlayback, useSlowMotion } from './usePlayback.ts'
+import {
+  setShowIntervals,
+  setSlowMotion,
+  usePlayback,
+  useShowIntervals,
+  useSlowMotion,
+} from './usePlayback.ts'
 import styles from './Music.module.css'
 
 function useNaming() {
@@ -68,10 +79,30 @@ function SlowMotionToggle() {
   )
 }
 
+/** Alterna entre nomes das notas e graus (1, ♭3, 5…) nas teclas. */
+function IntervalsToggle() {
+  const show = useShowIntervals()
+  return (
+    <button
+      type="button"
+      className={styles.slow}
+      aria-pressed={show}
+      title="Mostra nas teclas o grau de cada nota em relação à fundamental"
+      onClick={() => setShowIntervals(!show)}
+    >
+      <span className={styles.toggleGlyph} aria-hidden="true">
+        ♭3
+      </span>
+      Intervalos
+    </button>
+  )
+}
+
 /** Controles de reprodução do cabeçalho de um exemplo. */
 function Controls({ onPlay, label }: { readonly onPlay: () => void; readonly label?: string }) {
   return (
     <span className={styles.controls}>
+      <IntervalsToggle />
       <SlowMotionToggle />
       <PlayButton onPlay={onPlay} {...(label ? { label } : {})} />
     </span>
@@ -93,8 +124,10 @@ export function ChordBlock({
   const naming = useNaming()
   const playback = usePlayback()
   const slow = useSlowMotion()
+  const showIntervals = useShowIntervals()
   const chord = parseChord(symbol)
   const notes = voiceChord(chord, { octave, inversion })
+  const labels = showIntervals ? labelNotes(notes, chordToneLabels(chord)) : undefined
   const degree = keyName ? formatDegree(chordToDegree(parseKey(keyName).tonic, chord)) : null
 
   return (
@@ -115,6 +148,7 @@ export function ChordBlock({
           pressed={playback.pressed}
           onPress={playback.press}
           onRelease={playback.release}
+          labels={labels}
         />
       </div>
       <p className={styles.notes}>{noteList(notes, naming)}</p>
@@ -160,6 +194,10 @@ function ChordSequence({
   }
 
   const current: readonly NoteName[] = voicings[selected] ?? []
+  const showIntervals = useShowIntervals()
+  const currentChord = items[selected]?.chord
+  const labels =
+    showIntervals && currentChord ? labelNotes(current, chordToneLabels(currentChord)) : undefined
 
   return (
     <figure className={styles.block}>
@@ -192,6 +230,7 @@ function ChordSequence({
           pressed={playback.pressed}
           onPress={playback.press}
           onRelease={playback.release}
+          labels={labels}
         />
       </div>
       <p className={styles.notes}>{noteList(current, naming)}</p>
@@ -256,6 +295,10 @@ export function ScaleBlock({
   const playback = usePlayback()
   const slow = useSlowMotion()
   const notes = voiceScale(root, type, { octave: 4, octaves })
+  const showIntervals = useShowIntervals()
+  const labels = showIntervals
+    ? new Map(notes.map((n) => [n, intervalLabel(root, pitchClassOf(n))] as const))
+    : undefined
   const title = `${formatPitchClass(root, naming)} · ${SCALE_TYPES[type].name.toLowerCase()}`
 
   return (
@@ -283,9 +326,74 @@ export function ScaleBlock({
           pressed={playback.pressed}
           onPress={playback.press}
           onRelease={playback.release}
+          labels={labels}
         />
       </div>
       <p className={styles.notes}>{noteList(notes.slice(0, -1), naming)}</p>
+    </figure>
+  )
+}
+
+/**
+ * ::arpeggio — as notas do acorde uma a uma, subindo `octaves` oitavas e descendo.
+ * Usado para arpejos de tríades e tétrades.
+ */
+export function ArpeggioBlock({
+  symbol,
+  octaves = 2,
+  inversion = 0,
+}: {
+  readonly symbol: string
+  readonly octaves?: number
+  readonly inversion?: number
+}) {
+  const naming = useNaming()
+  const playback = usePlayback()
+  const slow = useSlowMotion()
+  const showIntervals = useShowIntervals()
+  const chord = parseChord(symbol)
+  const base = voiceChord(chord, { octave: octaves >= 2 ? 3 : 4, inversion })
+  const up: NoteName[] = []
+  for (let o = 0; o < octaves; o++) up.push(...base.map((n) => transpose(n, `${o * 7 + 1}P`)))
+  const first = base[0]
+  if (first) up.push(transpose(first, `${octaves * 7 + 1}P`))
+  const down = [...up].reverse().slice(1)
+  const labels = showIntervals ? labelNotes(up, chordToneLabels(chord)) : undefined
+  const title = `Arpejo de ${formatChord(chord)}`
+
+  return (
+    <figure className={styles.block}>
+      <figcaption className={styles.header}>
+        <span className={styles.chordName}>{title}</span>
+        <span className={styles.caption}>
+          {chordQualityName(chord.quality)} · {octaves} {octaves === 1 ? 'oitava' : 'oitavas'}
+          {inversion > 0 && ` · a partir da ${inversion}ª inversão`}
+        </span>
+        <Controls
+          onPlay={() =>
+            playback.play(
+              sequenceScore(
+                notesToMidi([...up, ...down]).map((m) => [m]),
+                0.28,
+                slow,
+              ),
+            )
+          }
+          label="Tocar o arpejo"
+        />
+      </figcaption>
+      <div className={styles.keys}>
+        <Keyboard
+          notes={up}
+          naming={naming}
+          minOctaves={octaves + 1}
+          pressed={playback.pressed}
+          onPress={playback.press}
+          onRelease={playback.release}
+          labels={labels}
+        />
+      </div>
+      <p className={styles.notes}>{noteList(base, naming)}</p>
     </figure>
   )
 }

@@ -3,7 +3,13 @@ import type { Nodes, Parent, RootContent, TableCell, TableRow } from 'mdast'
 import type { ReactNode } from 'react'
 import type { MarkdownRoot } from '@/domain/catalog'
 import { isScaleType } from '@/domain/music'
-import { ChordBlock, ChordsBlock, ProgressionBlock, ScaleBlock } from '../music/MusicBlocks.tsx'
+import {
+  ArpeggioBlock,
+  ChordBlock,
+  ChordsBlock,
+  ProgressionBlock,
+  ScaleBlock,
+} from '../music/MusicBlocks.tsx'
 import styles from './Markdown.module.css'
 
 /** Como mostrar os blocos que incorporam outras entidades (::concept, ::exercise). */
@@ -177,6 +183,14 @@ function MusicOrEmbed({
         <ChordsBlock
           symbols={attr(attributes, 'symbols') ?? ''}
           {...(keyName ? { keyName } : {})}
+        />
+      )
+    case 'arpeggio':
+      return (
+        <ArpeggioBlock
+          symbol={attr(attributes, 'symbol') ?? ''}
+          octaves={intAttr(attributes, 'octaves') ?? 2}
+          inversion={intAttr(attributes, 'inversion') ?? 0}
         />
       )
     case 'progression':

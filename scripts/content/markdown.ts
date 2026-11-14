@@ -64,6 +64,7 @@ const intInRange = (name: string, value: string | undefined, min: number, max: n
  *   ::exercise{id="..."}                              (incorpora um exercício — só em aulas)
  *   ::chord{symbol="Cm7" inversion="1" key="G" octave="4"}
  *   ::chords{symbols="G G7 C Cm G" key="G"}
+ *   ::arpeggio{symbol="Cmaj7" octaves="2" inversion="0"}
  *   ::progression{key="G" degrees="I I7 IV iv I"}
  *   ::scale{root="D" type="harmonic-minor" octaves="2"}
  */
@@ -99,6 +100,17 @@ const DIRECTIVES: Readonly<Record<string, DirectiveSpec>> = {
       ...(a.key === undefined ? [] : attempt(() => parseKey(a.key ?? ''))),
       ...intInRange('inversion', a.inversion, 0, 6),
       ...intInRange('octave', a.octave, 1, 7),
+    ],
+  },
+  arpeggio: {
+    kind: 'leafDirective',
+    contexts: ALL,
+    required: ['symbol'],
+    optional: ['octaves', 'inversion'],
+    check: (a) => [
+      ...attempt(() => parseChord(a.symbol ?? '')),
+      ...intInRange('octaves', a.octaves, 1, 3),
+      ...intInRange('inversion', a.inversion, 0, 3),
     ],
   },
   chords: {

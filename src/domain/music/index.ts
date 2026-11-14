@@ -64,6 +64,13 @@ export {
   type ChordVoicingOptions,
 } from './voicing.ts'
 export {
+  INTERVAL_NAMES,
+  chordToneLabels,
+  degreeLabel,
+  intervalLabel,
+  labelNotes,
+} from './intervals.ts'
+export {
   DEFAULT_NOTE_NAMING,
   chordQualityName,
   formatChord,

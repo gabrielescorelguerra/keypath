@@ -2,7 +2,16 @@ import { fireEvent, render, screen, within } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { resetDatabase } from '@/test/db.ts'
 import { Keyboard } from './Keyboard.tsx'
-import { ChordBlock, ChordsBlock, ProgressionBlock, ScaleBlock } from './MusicBlocks.tsx'
+import { BackingTrack } from './BackingTrack.tsx'
+import { ListenButton } from './ListenButton.tsx'
+import {
+  ArpeggioBlock,
+  ChordBlock,
+  ChordsBlock,
+  ProgressionBlock,
+  ScaleBlock,
+} from './MusicBlocks.tsx'
+import { setShowIntervals } from './usePlayback.ts'
 
 beforeEach(resetDatabase)
 
@@ -105,5 +114,47 @@ describe('blocos musicais', () => {
     render(<ScaleBlock root="A" type="harmonic-minor" />)
     expect(await screen.findByText('Lá (A) · menor harmônica')).toBeInTheDocument()
     expect(screen.getByText(/Sol♯ \(G♯\)$/)).toBeInTheDocument()
+  })
+})
+
+describe('recursos interativos', () => {
+  afterEach(() => setShowIntervals(false))
+
+  it('::arpeggio mostra as notas do acorde em duas oitavas, mais a fundamental no topo', async () => {
+    const { container } = render(<ArpeggioBlock symbol="Cmaj7" octaves={2} />)
+    expect(await screen.findByText('Arpejo de C7M')).toBeInTheDocument()
+    expect(highlighted(container).sort((a, b) => a - b)).toEqual([
+      48, 52, 55, 59, 60, 64, 67, 71, 72,
+    ])
+  })
+
+  it('o botão Intervalos troca os nomes das notas pelos graus', async () => {
+    const user = userEvent.setup()
+    const { container } = render(<ChordBlock symbol="Cm7" />)
+    await screen.findByText('Dó (C) · Mi♭ (E♭) · Sol (G) · Si♭ (B♭)')
+    await user.click(screen.getByRole('button', { name: /Intervalos/ }))
+    const labels = [...container.querySelectorAll('svg text')].map((t) => t.textContent)
+    expect(labels).toEqual(expect.arrayContaining(['1', '♭3', '5', '♭7']))
+  })
+
+  it('questão de ouvido tem o botão Ouvir', async () => {
+    render(<ListenButton audio={{ notes: 'C4 E4', chord: null, play: 'melody' }} />)
+    expect(await screen.findByRole('button', { name: 'Ouvir' })).toBeInTheDocument()
+  })
+
+  it('playback mostra a progressão em graus e cifras', async () => {
+    render(
+      <BackingTrack
+        backing={{ key: 'G', degrees: 'I V VIm IV', beatsPerChord: 4 }}
+        initialBpm={72}
+      />,
+    )
+    const list = await screen.findByRole('list', { name: 'Progressão' })
+    expect(
+      within(list)
+        .getAllByRole('listitem')
+        .map((li) => li.textContent),
+    ).toEqual(['IG', 'VD', 'VImEm', 'IVC'])
+    expect(screen.getByRole('button', { name: 'Tocar playback' })).toBeInTheDocument()
   })
 })

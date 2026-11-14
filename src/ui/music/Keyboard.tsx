@@ -32,6 +32,7 @@ export function Keyboard({
   pressed,
   onPress,
   onRelease,
+  labels,
 }: {
   readonly notes: readonly NoteName[]
   readonly naming: NoteNaming
@@ -39,7 +40,10 @@ export function Keyboard({
   readonly pressed?: ReadonlySet<number>
   readonly onPress?: (midi: number) => void
   readonly onRelease?: (midi: number) => void
+  /** Rótulos no lugar dos nomes das notas (ex.: graus "1", "♭3"). */
+  readonly labels?: ReadonlyMap<NoteName, string> | undefined
 }) {
+  const textFor = (note: NoteName) => labels?.get(note) ?? keyLabel(note, naming)
   const playable = onPress !== undefined
   const keyProps = (midi: number) =>
     playable
@@ -109,7 +113,7 @@ export function Keyboard({
                 y={WHITE_HEIGHT - 10}
                 className={styles.keyLabelOnWhite}
               >
-                {keyLabel(note, naming)}
+                {textFor(note)}
               </text>
             )}
           </g>
@@ -141,7 +145,7 @@ export function Keyboard({
                   y={BLACK_HEIGHT + 12}
                   className={styles.keyLabelOnBlack}
                 >
-                  {keyLabel(note, naming)}
+                  {textFor(note)}
                 </text>
               )}
             </g>
