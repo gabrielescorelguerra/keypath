@@ -1,0 +1,39 @@
+id: teoria.simetricas.reconhecer
+title: Escalas simétricas — reconhecer
+type: quiz
+stage: recognition
+competencies: [teoria.simetricas]
+questions:
+  - id: tons-inteiros
+    kind: single-choice
+    prompt: Que escala é esta (só tons inteiros)?
+    audio: { notes: C4 D4 E4 F#4 G#4 A#4 C5, play: melody }
+    options: [Tons inteiros, Lídio, Diminuta]
+    correct: [0]
+    explanation: Sem semitons não há "centro" — o som é de sonho, suspenso.
+  - id: diminuta
+    kind: single-choice
+    prompt: E esta, alternando semitom e tom?
+    audio: { notes: C4 Db4 Eb4 E4 F#4 G4 A4 Bb4 C5, play: melody }
+    options: [Diminuta (semitom–tom), Cromática, Alterada]
+    correct: [0]
+  - id: quantas-tons-inteiros
+    kind: single-choice
+    prompt: Quantas escalas de tons inteiros diferentes existem?
+    options: [Duas, Seis, Doze]
+    correct: [0]
+  - id: quantas-diminutas
+    kind: single-choice
+    prompt: E quantas diminutas diferentes (de cada tipo)?
+    options: [Três, Quatro, Doze]
+    correct: [0]
+  - id: sobre-dominante
+    kind: single-choice
+    prompt: Qual diminuta funciona sobre um dominante 7(♭9)?
+    options: [A que começa com semitom (semitom–tom), A que começa com tom (tom–semitom)]
+    correct: [0]
+  - id: sobre-aumentado
+    kind: single-choice
+    prompt: E qual escala combina com o acorde aumentado ou 7(♯5)?
+    options: [Tons inteiros, Diminuta tom–semitom, Pentatônica menor]
+    correct: [0]

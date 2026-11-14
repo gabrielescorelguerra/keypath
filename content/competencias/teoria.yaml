@@ -75,3 +75,65 @@
       method: self-assessment
       exercise: teoria.pentatonica.cinco-tons
       distinctDays: 2
+
+- id: teoria.modos-aplicados
+  track: teoria
+  level: 3
+  title: Modos na prática
+  description: Reconhece progressões modais típicas (I–♭VII, Im–IV, I–II, Im–♭VI–♭VII, Im–♭II) e improvisa com o modo certo sobre vamps e progressões.
+  prerequisites: [teoria.modos]
+  styles: [rock-alternativo, worship, funk]
+  mastery:
+    - id: ouvido
+      method: quiz
+      exercise: teoria.modos-aplicados.reconhecer
+    - id: teclado
+      method: self-assessment
+      exercise: teoria.modos-aplicados.vamps
+      distinctDays: 2
+
+- id: teoria.menores-avancadas
+  track: teoria
+  level: 3
+  title: Menor harmônica e melódica na prática
+  description: Usa o frígio dominante sobre o V7 do tom menor, o m(7M) como tônica, o lídio dominante e a escala alterada, a partir das menores harmônica e melódica.
+  prerequisites: [teoria.escalas-menores, teoria.modos]
+  styles: [jazz, post-hardcore, classico]
+  mastery:
+    - id: teoria
+      method: quiz
+      exercise: teoria.menores-avancadas.reconhecer
+    - id: teclado
+      method: self-assessment
+      exercise: teoria.menores-avancadas.dois-cinco-menor
+
+- id: teoria.simetricas
+  track: teoria
+  level: 4
+  title: Escalas cromática e simétricas
+  description: Toca e reconhece as escalas de tons inteiros e diminutas, sabe por que existem poucas versões de cada uma e as usa sobre acordes aumentados, diminutos e dominantes alterados.
+  prerequisites: [teoria.modos, harmonia.tetrades]
+  styles: [jazz, post-hardcore]
+  mastery:
+    - id: teoria
+      method: quiz
+      exercise: teoria.simetricas.reconhecer
+    - id: teclado
+      method: self-assessment
+      exercise: teoria.simetricas.no-teclado
+
+- id: teoria.escolha-de-escalas
+  track: teoria
+  level: 4
+  title: Escolher escalas para improvisar
+  description: Escolhe a escala de cada acorde (acorde-escala), mira notas do acorde nos tempos fortes e conduz frases pelas terças e sétimas num II–V–I.
+  prerequisites: [teoria.modos, teoria.pentatonica-e-blues, harmonia.tetrades]
+  styles: [jazz, gospel, neo-soul]
+  mastery:
+    - id: teoria
+      method: quiz
+      exercise: teoria.escolha-de-escalas.reconhecer
+    - id: teclado
+      method: self-assessment
+      exercise: teoria.escolha-de-escalas.notas-guia
+      distinctDays: 2

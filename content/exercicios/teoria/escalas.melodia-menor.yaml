@@ -1,0 +1,20 @@
+id: teoria.escalas.melodia-menor
+title: Uma melodia que usa as três menores
+type: performance
+stage: creativity
+competencies: [teoria.escalas-menores]
+prompt: |
+  Componha uma melodia de 8 compassos em Lá menor sobre **Am – Dm – E7 – Am**:
+
+  - nos compassos de Am e Dm, use a menor **natural**;
+  - no E7, use a **harmônica** (o Sol♯ é a terça do E7);
+  - numa subida rápida até o Lá, use a **melódica** (Fá♯, Sol♯).
+parameters:
+  keys: [Am]
+checklist:
+  - id: tres
+    text: A melodia usa as três formas da escala menor, cada uma no lugar indicado.
+  - id: tocar
+    text: Toquei melodia e acordes juntos.
+challenges:
+  - Transponha a melodia para Mi menor.

@@ -1,0 +1,16 @@
+id: teoria.modos-aplicados.compor
+title: Uma progressão modal sua
+type: performance
+stage: creativity
+competencies: [teoria.modos-aplicados]
+prompt: |
+  Escolha um modo e escreva uma progressão de 4 a 8 compassos que o faça soar sem ambiguidade —
+  use a nota característica na harmonia (o ♭VII do mixolídio, o IV maior do dórico, o II do
+  lídio, o ♭II do frígio). Depois, componha uma melodia por cima.
+parameters:
+  keys: []
+checklist:
+  - id: modo
+    text: A progressão soa claramente no modo escolhido, sem parecer o maior ou o menor comum.
+  - id: melodia
+    text: A melodia usa a nota característica.

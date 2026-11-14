@@ -1,0 +1,35 @@
+id: teoria.menores-avancadas.reconhecer
+title: Sons da menor harmônica e da melódica
+type: quiz
+stage: recognition
+competencies: [teoria.menores-avancadas]
+questions:
+  - id: frigio-dominante
+    kind: single-choice
+    prompt: Esta escala começa no 5º grau de Lá menor harmônica. Como se chama?
+    audio: { notes: E4 F4 G#4 A4 B4 C5 D5 E5, play: melody }
+    options: [Frígio dominante, Frígio, Mixolídio]
+    correct: [0]
+    explanation: Tem a ♭2 do frígio, mas com terça maior (Sol♯) — a terça do E7. É o som do flamenco e de muito metal.
+  - id: onde-frigio-dominante
+    kind: single-choice
+    prompt: Sobre qual acorde o frígio dominante de Mi soa "certo" em Lá menor?
+    options: [E7 (o V7 do tom), Am, Dm]
+    correct: [0]
+  - id: m7m
+    kind: single-choice
+    prompt: Qual acorde sai do 1º grau da menor melódica?
+    audio: { chord: AmMaj7, play: arpeggio }
+    options: [m(7M), m7, m7(♭5)]
+    correct: [0]
+  - id: lidio-dominante
+    kind: single-choice
+    prompt: O lídio dominante (4º modo da melódica) combina com qual acorde?
+    options: [7(♯11), 7M, m7]
+    correct: [0]
+  - id: alterada
+    kind: single-choice
+    prompt: Para tocar a escala alterada de G7, qual menor melódica você usa?
+    options: [Lá♭ menor melódica (meio tom acima), Dó menor melódica, Sol menor melódica]
+    correct: [0]
+    explanation: O 7º modo da menor melódica de Lá♭ começa em Sol e contém ♭9, ♯9, 3, ♯11, ♭13 e ♭7.

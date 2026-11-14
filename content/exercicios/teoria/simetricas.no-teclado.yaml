@@ -1,0 +1,31 @@
+id: teoria.simetricas.no-teclado
+title: As simétricas no teclado
+type: performance
+stage: execution
+competencies: [teoria.simetricas]
+prompt: |
+  1. **Tons inteiros:** toque as duas escalas (a partir de Dó e de Dó♯), duas oitavas, mão
+     direita. Repare no desenho: três teclas pretas e três brancas, alternando grupos.
+  2. **Diminuta semitom–tom** a partir de Dó, Dó♯ e Ré — as três que existem.
+  3. Toque **C7(♭9)** com a esquerda e a diminuta semitom–tom de Dó com a direita.
+
+  ::scale{root="C" type="whole-tone" octaves="2"}
+
+  ::scale{root="C" type="diminished-hw" octaves="2"}
+
+  ::chord{symbol="C7b9"}
+parameters:
+  keys: []
+  startBpm: 60
+  targetBpm: 96
+  bpmStep: 6
+  hands: right
+checklist:
+  - id: duas
+    text: Toquei as duas escalas de tons inteiros.
+  - id: tres
+    text: Toquei as três diminutas semitom–tom.
+  - id: sobre-acorde
+    text: Toquei a diminuta sobre o C7(♭9) e ouvi as tensões.
+challenges:
+  - Toque o acorde diminuto (°7) e suba-o em terças menores — quatro posições, as mesmas quatro notas.

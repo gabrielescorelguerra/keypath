@@ -1,0 +1,33 @@
+id: teoria.escalas.ouvido
+title: Maior, menor natural, harmônica ou melódica?
+type: quiz
+stage: recognition
+competencies: [teoria.escalas-menores]
+prompt: Cada escala começa em Lá. Escute o 3º grau (maior ou menor) e depois o 6º e o 7º.
+questions:
+  - id: maior
+    kind: single-choice
+    prompt: Que escala é esta?
+    audio: { notes: A3 B3 C#4 D4 E4 F#4 G#4 A4, play: melody }
+    options: [Maior, Menor natural, Menor harmônica, Menor melódica]
+    correct: [0]
+  - id: natural
+    kind: single-choice
+    prompt: E esta?
+    audio: { notes: A3 B3 C4 D4 E4 F4 G4 A4, play: melody }
+    options: [Maior, Menor natural, Menor harmônica, Menor melódica]
+    correct: [1]
+  - id: harmonica
+    kind: single-choice
+    prompt: E esta?
+    audio: { notes: A3 B3 C4 D4 E4 F4 G#4 A4, play: melody }
+    options: [Maior, Menor natural, Menor harmônica, Menor melódica]
+    correct: [2]
+    explanation: O salto Fá → Sol♯ (segunda aumentada) é a marca da harmônica — o som "oriental", "espanhol".
+  - id: melodica
+    kind: single-choice
+    prompt: E esta?
+    audio: { notes: A3 B3 C4 D4 E4 F#4 G#4 A4, play: melody }
+    options: [Maior, Menor natural, Menor harmônica, Menor melódica]
+    correct: [3]
+    explanation: Começa menor (Dó natural) e termina igual à maior (Fá♯, Sol♯).

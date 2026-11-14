@@ -18,6 +18,13 @@ export type ScaleType =
   | 'minor-pentatonic'
   | 'blues'
   | 'major-blues'
+  | 'phrygian-dominant'
+  | 'lydian-dominant'
+  | 'altered'
+  | 'whole-tone'
+  | 'diminished-wh'
+  | 'diminished-hw'
+  | 'chromatic'
 
 interface ScaleDef {
   readonly tonalName: string
@@ -40,6 +47,13 @@ export const SCALE_TYPES: Readonly<Record<ScaleType, ScaleDef>> = {
   'minor-pentatonic': { tonalName: 'minor pentatonic', name: 'Pentatônica menor' },
   blues: { tonalName: 'minor blues', name: 'Blues (menor)' },
   'major-blues': { tonalName: 'major blues', name: 'Blues maior' },
+  'phrygian-dominant': { tonalName: 'phrygian dominant', name: 'Frígio dominante' },
+  'lydian-dominant': { tonalName: 'lydian dominant', name: 'Lídio dominante' },
+  altered: { tonalName: 'altered', name: 'Alterada (superlócria)' },
+  'whole-tone': { tonalName: 'whole tone', name: 'Tons inteiros' },
+  'diminished-wh': { tonalName: 'diminished', name: 'Diminuta (tom–semitom)' },
+  'diminished-hw': { tonalName: 'half-whole diminished', name: 'Diminuta (semitom–tom)' },
+  chromatic: { tonalName: 'chromatic', name: 'Cromática' },
 }
 
 export function isScaleType(value: string): value is ScaleType {

@@ -1,0 +1,36 @@
+id: teoria.modos-aplicados.vamps
+title: Improvisar sobre vamps modais com playback
+type: performance
+stage: application
+competencies: [teoria.modos-aplicados]
+prompt: |
+  O playback toca um vamp **mixolídio** em Ré (D – C – G – D). Improvise com Ré mixolídio:
+
+  ::scale{root="D" type="mixolydian"}
+
+  1. Voltas 1–2: frases curtas que **destacam o Dó natural** (♭7) sobre o acorde de Dó.
+  2. Voltas 3–4: pergunta e resposta, terminando em Ré ou Fá♯.
+  3. Depois, troque mentalmente para os outros vamps abaixo (sem playback) e repita a ideia com o
+     modo de cada um, usando a mão esquerda para os acordes:
+
+  ::chords{symbols="Em A Em A"}
+
+  ::chords{symbols="Am F G Am"}
+
+  ::chords{symbols="C D/C C D/C"}
+parameters:
+  keys: [D, E, A, C]
+  startBpm: 80
+  targetBpm: 100
+  bpmStep: 5
+  hands: both
+  backing: { key: D, degrees: I bVII IV I, beatsPerChord: 4 }
+checklist:
+  - id: mixolidio
+    text: Improvisei quatro voltas sobre o playback, destacando a ♭7.
+  - id: quatro-vamps
+    text: Toquei os quatro vamps com o modo certo de cada um.
+  - id: caracteristica
+    text: Em cada vamp, usei a nota característica em tempo forte pelo menos uma vez.
+challenges:
+  - Transponha o vamp eólio para Mi menor (Em – C – D – Em) — o som de muito rock alternativo.

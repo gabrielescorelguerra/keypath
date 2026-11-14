@@ -1,0 +1,29 @@
+id: teoria.menores-avancadas.dois-cinco-menor
+title: II–V–I menor com o frígio dominante
+type: performance
+stage: application
+competencies: [teoria.menores-avancadas]
+prompt: |
+  O playback toca o II–V–I menor de Lá: **Bm7(♭5) – E7 – Am7**. Na mão direita:
+
+  1. Sobre o **Bm7(♭5)**, Lá menor natural (é o mesmo que Si lócrio).
+  2. Sobre o **E7**, o frígio dominante — Lá menor **harmônica** — destacando o Sol♯ e o Fá.
+  3. Sobre o **Am**, de volta à natural, ou a melódica para soar mais "jazz".
+
+  ::scale{root="E" type="phrygian-dominant"}
+parameters:
+  keys: [A]
+  startBpm: 70
+  targetBpm: 96
+  bpmStep: 6
+  hands: right
+  backing: { key: A, degrees: IIm7(b5) V7 Im7 Im7, beatsPerChord: 4 }
+checklist:
+  - id: troca
+    text: Troquei de escala no E7 e voltei no Am, no tempo certo.
+  - id: sensivel
+    text: Resolvi o Sol♯ no Lá pelo menos duas vezes.
+  - id: voltas
+    text: Improvisei seis voltas sem parar.
+challenges:
+  - Sobre o E7, toque Fá menor melódica (= Mi alterada) e compare a tensão.

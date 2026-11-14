@@ -15,6 +15,4 @@ modules:
     summary: A fórmula tom–tom–semitom da escala maior e as três escalas menores (natural, harmônica e melódica).
     level: 1
     prerequisites: [fundamentos.intervalos]
-    upcoming:
-      - A escala maior em todos os tons
-      - Menor natural, harmônica e melódica
+    lessons: [teoria.escala-maior-e-escalas-menores]

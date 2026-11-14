@@ -1,0 +1,16 @@
+id: teoria.escolha-de-escalas.mapa
+title: Mapa de escalas de uma música
+type: performance
+stage: creativity
+competencies: [teoria.escolha-de-escalas]
+prompt: |
+  Escolha uma música do repertório e escreva, embaixo de cada acorde da cifra, a escala que você
+  usaria para improvisar sobre ele (e por quê). Depois, toque um solo de 16 compassos seguindo o
+  mapa — e outro só com a pentatônica do tom. Compare.
+parameters:
+  keys: []
+checklist:
+  - id: mapa
+    text: Escrevi o mapa de escalas da música.
+  - id: dois-solos
+    text: Toquei os dois solos e descrevi a diferença.

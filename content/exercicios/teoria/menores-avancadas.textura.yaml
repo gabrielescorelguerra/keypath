@@ -1,0 +1,16 @@
+id: teoria.menores-avancadas.textura
+title: Uma introdução com o frígio dominante
+type: performance
+stage: creativity
+competencies: [teoria.menores-avancadas]
+prompt: |
+  Crie uma introdução de 8 compassos sobre um pedal de **Mi** (mão esquerda em oitavas) usando o
+  frígio dominante de Mi na direita — um riff que alterne Mi e Fá e use o Sol♯. É o som de muita
+  introdução de metal e de trilha "épica". Termine no Am.
+parameters:
+  keys: [Am, Dm]
+checklist:
+  - id: riff
+    text: Criei um riff reconhecível com a ♭2 e a terça maior.
+  - id: resolucao
+    text: A introdução resolve no Im.

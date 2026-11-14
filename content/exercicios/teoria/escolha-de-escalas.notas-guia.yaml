@@ -1,0 +1,29 @@
+id: teoria.escolha-de-escalas.notas-guia
+title: Notas-guia e escalas no II–V–I
+type: performance
+stage: application
+competencies: [teoria.escolha-de-escalas]
+prompt: |
+  O playback toca **Dm7 – G7 – C7M – C7M**. Em três etapas:
+
+  1. **Só notas-guia (3ª e 7ª)**, uma por tempo forte: Fá/Dó no Dm7, Si/Fá no G7, Mi/Si no C7M —
+     escolhendo sempre a mais próxima da anterior.
+  2. **Escala de cada acorde:** Ré dórico, Sol mixolídio, Dó jônio (com ♯4 se quiser lídio) —
+     começando cada compasso numa nota-guia.
+  3. **Livre**, mas aterrissando em nota-guia no tempo 1 de cada compasso.
+parameters:
+  keys: [C, F, Bb]
+  startBpm: 70
+  targetBpm: 110
+  bpmStep: 5
+  hands: right
+  backing: { key: C, degrees: IIm7 V7 I7M I7M, beatsPerChord: 4 }
+checklist:
+  - id: guia
+    text: Toquei uma volta inteira só com notas-guia, conduzindo por grau conjunto.
+  - id: escalas
+    text: Troquei de escala a cada acorde no tempo certo.
+  - id: tempo-um
+    text: Na etapa livre, aterrissei em nota-guia no tempo 1 de cada compasso.
+challenges:
+  - Troque a escala do G7 pela alterada (Lá♭ menor melódica) e compare.

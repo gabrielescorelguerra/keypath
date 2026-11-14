@@ -1,0 +1,40 @@
+id: teoria.escolha-de-escalas.reconhecer
+title: Acorde → escala
+type: quiz
+stage: recognition
+competencies: [teoria.escolha-de-escalas]
+questions:
+  - id: m7-ii
+    kind: single-choice
+    prompt: Num II–V–I em Dó, qual escala é a escolha mais comum sobre o Dm7?
+    options: [Ré dórico, Ré eólio, Ré frígio]
+    correct: [0]
+  - id: maj7
+    kind: single-choice
+    prompt: Sobre um 7M, qual nota da escala jônia costuma ser evitada em tempo forte?
+    options: [A 4ª, A 9ª, A 6ª]
+    correct: [0]
+    explanation: A 4ª fica meio tom acima da terça. Trocar pelo ♯4 (lídio) resolve.
+  - id: v7-menor
+    kind: single-choice
+    prompt: Sobre um V7 que resolve num acorde menor, qual escala soa mais idiomática?
+    options: [Frígio dominante (ou alterada), Mixolídio, Lídio]
+    correct: [0]
+  - id: m7b5
+    kind: single-choice
+    prompt: E sobre um m7(♭5)?
+    options: [Lócrio, Dórico, Jônio]
+    correct: [0]
+  - id: tempos-fortes
+    kind: single-choice
+    prompt: Qual princípio deixa um improviso "dentro" da harmonia?
+    options:
+      - Notas do acorde (sobretudo 3ª e 7ª) nos tempos fortes
+      - Tocar a escala inteira em cada acorde
+      - Evitar notas do acorde
+    correct: [0]
+  - id: guia
+    kind: single-choice
+    prompt: No II–V–I Dm7 – G7 – C7M, qual linha de notas-guia desce por semitom?
+    options: [Dó (7ª do Dm) → Si (3ª do G7) → Si (7ª do C7M), Ré → Sol → Dó, Lá → Ré → Sol]
+    correct: [0]

@@ -1,0 +1,16 @@
+id: teoria.simetricas.padroes
+title: Padrões simétricos para frases de tensão
+type: performance
+stage: creativity
+competencies: [teoria.simetricas]
+prompt: |
+  Crie uma frase de 2 compassos que **suba em blocos simétricos** — por exemplo, a mesma figura
+  de 3 notas repetida a cada terça menor (diminuta) ou a cada tom inteiro — e resolva numa nota
+  do acorde de chegada. Use sobre um G7(♭9) resolvendo em C.
+parameters:
+  keys: [C]
+checklist:
+  - id: simetria
+    text: A frase repete o mesmo desenho por um intervalo fixo.
+  - id: resolucao
+    text: A frase resolve numa nota do acorde de chegada.

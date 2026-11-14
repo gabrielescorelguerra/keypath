@@ -1,0 +1,38 @@
+id: teoria.modos-aplicados.reconhecer
+title: Progressões modais — qual modo?
+type: quiz
+stage: recognition
+competencies: [teoria.modos-aplicados]
+questions:
+  - id: mixolidio
+    kind: single-choice
+    prompt: D – C – G – D (I – ♭VII – IV – I) sugere qual modo de Ré?
+    options: [Mixolídio, Dórico, Lídio]
+    correct: [0]
+  - id: dorico
+    kind: single-choice
+    prompt: Em – A (Im – IV maior) sugere qual modo de Mi?
+    options: [Dórico, Eólio, Frígio]
+    correct: [0]
+  - id: eolio
+    kind: single-choice
+    prompt: Am – F – G – Am (Im – ♭VI – ♭VII – Im) é o som típico de qual modo?
+    options: [Eólio, Dórico, Mixolídio]
+    correct: [0]
+  - id: lidio
+    kind: single-choice
+    prompt: C – D/C (I – II maior sobre pedal) sugere…
+    options: [Lídio, Jônio, Mixolídio]
+    correct: [0]
+  - id: frigio
+    kind: single-choice
+    prompt: Em – F (Im – ♭II) sugere…
+    options: [Frígio, Eólio, Lócrio]
+    correct: [0]
+  - id: mesma-escala
+    kind: single-choice
+    prompt: Numa música em Dó maior, ao passar pelo Dm7, o que muda na escala se você continuar no tom?
+    options:
+      - Nada — as notas são as de Dó maior; só o centro do acorde muda (o "Ré dórico" é a mesma escala)
+      - Tudo — é preciso tocar outra escala
+    correct: [0]

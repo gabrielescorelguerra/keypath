@@ -16,17 +16,14 @@ modules:
     summary: Usar cada modo sobre vamps e progressões — o que tocar, em que acorde, para conseguir que cor.
     level: 3
     prerequisites: [escalas-e-modos.modos-gregos]
-    upcoming:
-      - Vamps modais para improvisar
-      - Modos sobre progressões do campo maior
+    lessons: [teoria.modos-na-pratica]
 
   - id: menores-harmonica-e-melodica
     title: Menor harmônica e menor melódica
     summary: As escalas menores que criam a sensível, e os sons que nascem delas.
     level: 3
     prerequisites: [fundamentos.escalas-maior-e-menor]
-    upcoming:
-      - Menor harmônica e menor melódica na prática
+    lessons: [teoria.menor-harmonica-e-melodica-na-pratica]
 
   - id: pentatonica-e-blues
     title: Pentatônica e blues
@@ -40,8 +37,7 @@ modules:
     summary: Cromática, tons inteiros e diminuta — escalas que se repetem e geram tensão.
     level: 4
     prerequisites: [escalas-e-modos.modos-gregos]
-    upcoming:
-      - Tons inteiros e diminuta (tom–semitom / semitom–tom)
+    lessons: [teoria.escalas-simetricas]
 
   - id: escolher-escalas
     title: Escolher escalas para improvisar
@@ -51,5 +47,4 @@ modules:
       - escalas-e-modos.modos-na-pratica
       - escalas-e-modos.pentatonica-e-blues
       - harmonia-e-tecnica.tetrades
-    upcoming:
-      - Acorde-escala, notas-alvo e tensões
+    lessons: [teoria.escolher-escalas-para-improvisar]
