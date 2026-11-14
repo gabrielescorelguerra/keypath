@@ -9,8 +9,7 @@ modules:
     summary: Jônico, dórico, frígio, lídio, mixolídio, eólio e lócrio — a nota característica e a cor de cada um.
     level: 3
     prerequisites: [fundamentos.escalas-maior-e-menor]
-    upcoming:
-      - Os modos gregos pelo som
+    lessons: [teoria.os-modos-pelo-som]
 
   - id: modos-na-pratica
     title: Modos na prática

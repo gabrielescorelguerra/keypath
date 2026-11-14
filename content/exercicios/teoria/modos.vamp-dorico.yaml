@@ -1,0 +1,32 @@
+id: teoria.modos.vamp-dorico
+title: Improvisar em Ré dórico sobre um vamp
+type: performance
+stage: application
+competencies: [teoria.modos]
+prompt: |
+  Ligue o playback (**Dm7 – G7**, dois compassos cada) e improvise na mão direita usando
+  **só as teclas brancas de Ré a Ré** — isso é Ré dórico.
+
+  1. Primeiras voltas: só três notas — Ré, Fá e **Si**. O Si é a nota característica; repare
+     como ela soa "clara" sobre o Dm7 e se encaixa no G7.
+  2. Depois, use a escala inteira, terminando cada frase em Ré ou em Lá.
+  3. Por fim, deixe espaços: frase de dois compassos, dois compassos de silêncio.
+
+  ::scale{root="D" type="dorian"}
+parameters:
+  keys: [D]
+  startBpm: 70
+  targetBpm: 90
+  bpmStep: 5
+  hands: right
+  backing: { key: D, degrees: Im7 Im7 IV7 IV7, beatsPerChord: 4 }
+checklist:
+  - id: voltas
+    text: Improvisei por pelo menos quatro voltas sem parar o playback.
+  - id: caracteristica
+    text: Usei o Si (6ª maior) de propósito e percebi a diferença de cor.
+  - id: frases
+    text: Terminei as frases em notas do acorde (Ré, Fá, Lá) e deixei espaços entre elas.
+challenges:
+  - Troque o Si por Si♭ por uma volta inteira (vira eólio) e compare.
+  - Repita em Lá dórico (Am7 – D7), como em "Oye Como Va".

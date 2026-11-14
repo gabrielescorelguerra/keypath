@@ -1,0 +1,32 @@
+id: teoria.modos.compor
+title: Compor uma frase em cada cor
+type: performance
+stage: creativity
+competencies: [teoria.modos]
+prompt: |
+  Escolha **três** modos de cores diferentes — um claro (lídio ou mixolídio), um intermediário
+  (dórico) e um escuro (frígio) — e componha uma frase de quatro compassos em cada um, todos a
+  partir da **mesma tônica**.
+
+  Para a harmonia, use o vamp característico de cada modo, com a mão esquerda:
+
+  | Modo | Vamp em Mi |
+  | --- | --- |
+  | Lídio | E – F♯ (ou E – F♯/E) |
+  | Mixolídio | E – D |
+  | Dórico | Em7 – A7 |
+  | Frígio | Em – F |
+
+  Cada frase deve usar a nota característica pelo menos uma vez, num tempo forte.
+parameters:
+  keys: [E, A]
+checklist:
+  - id: tres-frases
+    text: Compus as três frases a partir da mesma tônica.
+  - id: caracteristica
+    text: A nota característica aparece em tempo forte em cada frase.
+  - id: descrever
+    text: 'Consigo descrever em uma palavra a cor de cada frase (por exemplo: épico, nostálgico, tenso).'
+challenges:
+  - Grave as três e peça a alguém para dizer qual soa mais "feliz" e qual mais "sombria" — bateu com a ordem claro → escuro?
+  - Use a frase frígia como introdução de uma música de rock pesado, com power chords Mi – Fá.

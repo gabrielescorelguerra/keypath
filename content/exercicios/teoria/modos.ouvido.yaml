@@ -1,0 +1,52 @@
+id: teoria.modos.ouvido
+title: Modos — reconhecer pela nota característica
+type: quiz
+stage: recognition
+competencies: [teoria.modos]
+prompt: |
+  Cada questão toca uma escala subindo, sempre a partir de Ré. Não tente identificar todas as
+  notas: escute **só a nota que diferencia** o modo do maior ou do menor natural.
+questions:
+  - id: dorico-ou-eolio
+    kind: single-choice
+    prompt: Escala menor — dórico ou eólio?
+    audio: { notes: D4 E4 F4 G4 A4 B4 C5 D5, play: melody }
+    options: [Dórico (6ª maior), Eólio (6ª menor)]
+    correct: [0]
+    explanation: O Si natural (6ª maior) deixa o menor mais "claro". No eólio seria Si♭.
+  - id: eolio-ou-frigio
+    kind: single-choice
+    prompt: E esta — eólio ou frígio?
+    audio: { notes: D4 Eb4 F4 G4 A4 Bb4 C5 D5, play: melody }
+    options: [Eólio, Frígio (2ª menor)]
+    correct: [1]
+    explanation: Logo na segunda nota, o Mi♭ (meio tom acima da tônica) — é o som "espanhol", sombrio, do frígio.
+  - id: jonio-ou-lidio
+    kind: single-choice
+    prompt: Escala maior — jônio ou lídio?
+    audio: { notes: D4 E4 F#4 G#4 A4 B4 C#5 D5, play: melody }
+    options: [Jônio, Lídio (4ª aumentada)]
+    correct: [1]
+    explanation: O Sol♯ (4ª aumentada) faz a escala "flutuar" — não há o meio tom que puxa para a subdominante.
+  - id: jonio-ou-mixolidio
+    kind: single-choice
+    prompt: E esta — jônio ou mixolídio?
+    audio: { notes: D4 E4 F#4 G4 A4 B4 C5 D5, play: melody }
+    options: [Jônio, Mixolídio (7ª menor)]
+    correct: [1]
+    explanation: O Dó natural (7ª menor) tira a sensível — o som fica "rock", "blues", menos conclusivo.
+  - id: claro-escuro
+    kind: single-choice
+    prompt: Qual ordem vai do modo mais claro para o mais escuro?
+    options:
+      - Lídio, jônio, mixolídio, dórico, eólio, frígio, lócrio
+      - Jônio, dórico, frígio, lídio, mixolídio, eólio, lócrio
+      - Lócrio, frígio, eólio, dórico, mixolídio, jônio, lídio
+    correct: [0]
+    explanation: A segunda é a ordem dos graus da escala maior; a terceira é a mesma lista, invertida.
+  - id: acorde-dorico
+    kind: single-choice
+    prompt: Qual vamp (dois acordes repetidos) faz soar o dórico em Ré?
+    options: [Dm7 – G7, Dm – B♭, D – C, D – E]
+    correct: [0]
+    explanation: O G7 tem o Si natural, a 6ª maior de Ré — a nota característica do dórico. D – C é mixolídio; D – E é lídio.
