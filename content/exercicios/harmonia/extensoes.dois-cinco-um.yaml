@@ -1,0 +1,35 @@
+id: harmonia.extensoes.dois-cinco-um
+title: II–V–I com extensões e condução de vozes
+type: performance
+stage: execution
+competencies: [harmonia.extensoes]
+prompt: |
+  O II–V–I com voicings de quatro notas na mão direita, **sem fundamental** (o baixo fica com a
+  esquerda). Em Dó:
+
+  | Acorde | Mão esquerda | Mão direita (de baixo para cima) |
+  | --- | --- | --- |
+  | Dm7(9) | Ré | Fá Lá Dó Mi |
+  | G7(13) | Sol | Fá Lá Si Mi |
+  | C7M(9) | Dó | Mi Sol Si Ré |
+
+  Repare: de Dm7(9) para G7(13) **só uma nota muda** (Dó → Si). É a condução de vozes que deixa o
+  som profissional.
+
+  ::chords{symbols="Dm9 G13 Cmaj9" key="C"}
+parameters:
+  keys: [C, F, Bb, Eb, G, D]
+  startBpm: 60
+  targetBpm: 96
+  bpmStep: 6
+  hands: both
+checklist:
+  - id: tons
+    text: Toquei o II–V–I nos seis tons, um acorde por compasso.
+  - id: uma-nota
+    text: Entre o II e o V movi apenas uma nota da mão direita.
+  - id: andamento
+    text: Cheguei a 96 bpm, dois tempos por acorde, sem parar.
+challenges:
+  - Comece o voicing de Dm7(9) pela 7ª (Dó Mi Fá Lá) e siga a condução até o C7M(9).
+  - Troque o G7(13) por G7(♭9) e ouça a resolução mais dramática.

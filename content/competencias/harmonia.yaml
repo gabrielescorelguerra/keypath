@@ -156,3 +156,19 @@
       method: self-assessment
       exercise: harmonia.bvi-bvii.cadencias
       distinctDays: 2
+
+- id: harmonia.extensoes
+  track: harmonia
+  level: 3
+  title: Extensões (9, 11 e 13)
+  description: Sabe quais extensões cabem em cada tipo de acorde e em cada grau do campo, e toca voicings com 9, 11 e 13 nas duas mãos, conduzindo as vozes.
+  prerequisites: [harmonia.campo-harmonico-maior-tetrades, acompanhamento.inversoes-e-conducao]
+  concepts: [tetrade]
+  mastery:
+    - id: teoria
+      method: quiz
+      exercise: harmonia.extensoes.reconhecer
+    - id: teclado
+      method: self-assessment
+      exercise: harmonia.extensoes.dois-cinco-um
+      distinctDays: 2

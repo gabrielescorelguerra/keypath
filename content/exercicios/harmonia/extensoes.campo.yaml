@@ -1,0 +1,36 @@
+id: harmonia.extensoes.campo
+title: O campo maior com extensões
+type: performance
+stage: execution
+competencies: [harmonia.extensoes]
+prompt: |
+  Toque o campo harmônico maior com a extensão que cabe em cada grau — mão esquerda na
+  fundamental, mão direita com **3ª, 7ª e a extensão** (sem fundamental, sem quinta):
+
+  | Grau | Em Dó | Mão direita |
+  | --- | --- | --- |
+  | I7M(9) | C7M(9) | Mi Si Ré |
+  | IIm7(9) | Dm7(9) | Fá Dó Mi |
+  | IIIm7(11) | Em7(11) | Sol Ré Lá |
+  | IV7M(♯11) | F7M(♯11) | Lá Mi Si |
+  | V7(13) | G7(13) | Si Fá Mi |
+  | VIm7(9) | Am7(9) | Dó Sol Si |
+  | VIIm7(♭5) | Bm7(♭5) | Ré Lá Mi (11ª) |
+
+  ::chords{symbols="Cmaj9 Dm9 Em11 Fmaj7#11 G13 Am9 Bm7b5" key="C"}
+parameters:
+  keys: [C, G, F, D, Bb]
+  startBpm: 56
+  targetBpm: 80
+  bpmStep: 4
+  hands: both
+checklist:
+  - id: tons
+    text: Toquei o campo com extensões subindo e descendo nos cinco tons.
+  - id: sem-pensar
+    text: Na terceira tonalidade já não precisei consultar a tabela.
+  - id: andamento
+    text: Troquei de acorde a cada dois tempos a 80 bpm.
+challenges:
+  - Toque o mesmo campo invertendo a mão direita (7ª embaixo, depois a extensão, depois a 3ª).
+  - Faça em Mi♭ e Lá♭.

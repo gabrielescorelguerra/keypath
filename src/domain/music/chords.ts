@@ -34,6 +34,11 @@ export type ChordQualityId =
   | '7b9'
   | '7#9'
   | '7#11'
+  | 'm11'
+  | 'maj7#11'
+  | 'maj13'
+  | '7b13'
+  | '9sus4'
   | '13'
 
 export interface ChordQuality {
@@ -138,6 +143,46 @@ const QUALITY_LIST: readonly ChordQuality[] = [
     '7(#11)',
     ['7(#11)'],
     'dominante com décima primeira aumentada',
+  ),
+  q(
+    'm11',
+    ['1P', '3m', '5P', '7m', '11P'],
+    'm11',
+    'm7(11)',
+    ['m7(11)', 'min11', '-11'],
+    'menor com sétima e décima primeira',
+  ),
+  q(
+    'maj7#11',
+    ['1P', '3M', '5P', '7M', '11A'],
+    'maj7#11',
+    '7M(#11)',
+    ['7M(#11)', 'maj7(#11)', 'lyd'],
+    'maior com sétima maior e décima primeira aumentada',
+  ),
+  q(
+    'maj13',
+    ['1P', '3M', '5P', '7M', '9M', '13M'],
+    'maj13',
+    '7M(13)',
+    ['7M(13)', 'maj7(13)', '7M(9)(13)'],
+    'maior com sétima maior, nona e décima terceira',
+  ),
+  q(
+    '7b13',
+    ['1P', '3M', '5P', '7m', '13m'],
+    '7b13',
+    '7(b13)',
+    ['7(b13)'],
+    'dominante com décima terceira menor',
+  ),
+  q(
+    '9sus4',
+    ['1P', '4P', '5P', '7m', '9M'],
+    '9sus4',
+    '7(4)(9)',
+    ['7(4)(9)', '7(9)(4)', '9sus', '7sus4(9)'],
+    'dominante suspenso com nona',
   ),
   q(
     '13',

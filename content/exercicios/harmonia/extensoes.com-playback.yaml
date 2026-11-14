@@ -1,0 +1,29 @@
+id: harmonia.extensoes.com-playback
+title: Colorir uma progressão com extensões
+type: performance
+stage: application
+competencies: [harmonia.extensoes]
+prompt: |
+  O playback toca **I – VIm – IIm – V** em Fá, em tríades. Acompanhe com a versão colorida:
+
+  ::chords{symbols="Fmaj9 Dm9 Gm9 C13" key="F"}
+
+  - Voltas 1–2: só tétrades (F7M, Dm7, Gm7, C7).
+  - Voltas 3–4: acrescente as extensões acima.
+  - Voltas 5–6: varie — troque o C7(13) por C7(4)(9) no primeiro tempo e resolva no C7(13) no terceiro.
+parameters:
+  keys: [F]
+  startBpm: 70
+  targetBpm: 90
+  bpmStep: 5
+  hands: both
+  backing: { key: F, degrees: I VIm IIm V, beatsPerChord: 4 }
+checklist:
+  - id: voltas
+    text: Fiz as três etapas sem parar o playback.
+  - id: escuta
+    text: Percebi a diferença de cor entre tétrades e acordes com extensões.
+  - id: sus
+    text: A troca C7(4)(9) → C7(13) aconteceu no tempo certo.
+challenges:
+  - Faça a mesma coisa em uma música do seu repertório, só no refrão.

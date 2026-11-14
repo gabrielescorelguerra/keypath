@@ -1,0 +1,57 @@
+id: harmonia.extensoes.reconhecer
+title: Extensões — reconhecer e escolher
+type: quiz
+stage: recognition
+competencies: [harmonia.extensoes]
+questions:
+  - id: ouvido-9
+    kind: single-choice
+    prompt: O acorde tem só a sétima ou também a nona?
+    audio: { chord: Cmaj9, play: arpeggio }
+    options: [C7M, C7M(9)]
+    correct: [1]
+    explanation: A última nota do arpejo (Ré) é a nona — repare como o acorde fica mais "aberto".
+  - id: ouvido-13
+    kind: single-choice
+    prompt: E este dominante?
+    audio: { chord: G13, play: arpeggio }
+    options: [G7, G7(9), G7(13)]
+    correct: [2]
+  - id: ouvido-m9
+    kind: single-choice
+    prompt: Menor com sétima ou menor com sétima e nona?
+    audio: { chord: Am9, play: together }
+    options: [Am7, Am7(9)]
+    correct: [1]
+  - id: nove-onze-treze
+    kind: single-choice
+    prompt: A 9ª, a 11ª e a 13ª são as mesmas notas que…
+    options: [a 2ª, a 4ª e a 6ª, uma oitava acima, a 3ª, a 5ª e a 7ª, a fundamental repetida]
+    correct: [0]
+  - id: evitar-11
+    kind: single-choice
+    prompt: Por que a 11ª justa costuma ser evitada no acorde 7M?
+    options:
+      - Ela fica a meio tom acima da terça maior e bate com ela
+      - Ela é igual à fundamental
+      - Ela transforma o acorde em menor
+    correct: [0]
+    explanation: Num C7M, o Fá (11ª) fica a um semitom do Mi (3ª). Por isso se usa a 11ª aumentada, Fá♯ — o 7M(♯11).
+  - id: campo-em
+    kind: single-choice
+    prompt: No campo de Dó maior, qual extensão combina com o Em7 (III grau)?
+    options: [11 (Lá), 9 (Fá), 13 (Dó)]
+    correct: [0]
+    explanation: Fá seria uma 9ª menor sobre o Mi — tensão forte demais para um acorde de repouso. A 11ª (Lá) soa bem.
+  - id: campo-f
+    kind: single-choice
+    prompt: E no F7M (IV grau), qual 11ª aparece naturalmente no campo de Dó?
+    options: [11ª aumentada (Si), 11ª justa (Si♭)]
+    correct: [0]
+    explanation: O Si do campo de Dó é a ♯11 de Fá — por isso o IV grau tem a cor do lídio.
+  - id: quinta
+    kind: single-choice
+    prompt: Num voicing com extensões, qual nota do acorde costuma ser omitida primeiro?
+    options: [A quinta, A terça, A sétima]
+    correct: [0]
+    explanation: Terça e sétima definem o tipo do acorde; a quinta quase não muda o som.

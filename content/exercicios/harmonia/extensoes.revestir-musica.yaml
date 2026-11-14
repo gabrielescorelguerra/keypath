@@ -1,0 +1,22 @@
+id: harmonia.extensoes.revestir-musica
+title: Revestir uma música com extensões
+type: performance
+stage: creativity
+competencies: [harmonia.extensoes]
+prompt: |
+  Escolha uma música do repertório cifrada só com tríades e escreva uma versão em que **cada
+  acorde ganhe a extensão que cabe no seu grau** (use a tabela do campo com extensões).
+
+  Depois, escolha **dois** lugares para uma tensão mais forte — um 7(♭9) ou um 7(♭13) antes de
+  um acorde menor, um 7M(♯11) num IV grau — e compare as duas versões.
+parameters:
+  keys: []
+checklist:
+  - id: cifra
+    text: Escrevi a nova cifra com as extensões.
+  - id: melodia
+    text: Conferi que nenhuma extensão bate meio tom com a melodia.
+  - id: tensoes
+    text: Usei pelo menos duas tensões fortes, nos lugares que escolhi.
+challenges:
+  - Grave as duas versões e escolha uma para usar no próximo culto ou ensaio.

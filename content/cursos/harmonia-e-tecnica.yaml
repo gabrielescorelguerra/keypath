@@ -55,9 +55,9 @@ modules:
     summary: As notas além da sétima, quais combinam com cada acorde e como montá-las nas duas mãos.
     level: 3
     prerequisites: [harmonia-e-tecnica.tetrades, harmonia-e-tecnica.inversoes-e-conducao]
+    lessons: [harmonia.extensoes-9-11-13]
     upcoming:
-      - Nonas, décimas primeiras e décimas terceiras
-      - Voicings com extensões nas duas mãos
+      - Dominantes alterados (♭9, ♯9, ♭13) e upper structures
 
   - id: sus-add-e-barra
     title: Acordes sus, add9 e com baixo invertido
