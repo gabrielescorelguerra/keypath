@@ -10,11 +10,11 @@ modules:
     level: 3
     style: gospel
     prerequisites: [harmonia-e-tecnica.emprestimo-modal]
-    lessons: [acompanhamento.gospel-contemporaneo]
-    upcoming:
-      - Levadas em 12/8 e em semicolcheias, passo a passo
-      - Frases, riffs e corridas (runs)
-      - Repertório comentado
+    lessons:
+      - acompanhamento.gospel-contemporaneo
+      - acompanhamento.gospel-levadas
+      - acompanhamento.gospel-runs
+      - acompanhamento.gospel-escuta-guiada
 
   - id: worship
     title: Worship / CCM
@@ -22,10 +22,10 @@ modules:
     level: 2
     style: worship
     prerequisites: [harmonia-e-tecnica.funcoes-e-progressoes]
-    lessons: [acompanhamento.worship-no-teclado]
-    upcoming:
-      - Levadas em 6/8 e ballads lentas
-      - Repertório comentado
+    lessons:
+      - acompanhamento.worship-no-teclado
+      - acompanhamento.worship-6-8-e-baladas
+      - acompanhamento.worship-escuta-guiada
 
   - id: jazz
     title: Jazz

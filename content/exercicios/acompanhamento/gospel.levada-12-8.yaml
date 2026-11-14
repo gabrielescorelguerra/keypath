@@ -1,0 +1,31 @@
+id: acompanhamento.gospel.levada-12-8
+title: Balada gospel em 12/8
+type: performance
+stage: execution
+competencies: [acompanhamento.gospel-contemporaneo]
+prompt: |
+  Em 12/8, cada um dos 4 tempos se divide em **três**: conte "**1**-2-3 **4**-5-6 **7**-8-9 **10**-11-12"
+  (ou "**um**-e-a **dois**-e-a…"). O metrônomo e o playback marcam os 4 tempos principais.
+
+  - **Mão esquerda:** fundamental em oitava no tempo 1 e no tempo 3 (contagens 1 e 7), com uma
+    nota de passagem na última tercina antes de cada troca.
+  - **Mão direita:** o acorde nas tercinas 2-3, 5-6, 8-9 e 11-12 — leve, sem acentuar —, e o acorde
+    inteiro de novo no 1 do compasso seguinte.
+
+  ::progression{key="Ab" degrees="I7M IIIm7 VI7 IIm7 V7sus4 V7"}
+parameters:
+  keys: [Ab, Eb, Db]
+  startBpm: 52
+  targetBpm: 66
+  bpmStep: 2
+  hands: both
+  backing: { key: Ab, degrees: I7M IIIm7 VI7 IIm7 V7sus4 V7, beatsPerChord: 4 }
+checklist:
+  - id: contagem
+    text: Contei as tercinas em voz alta por uma volta inteira enquanto tocava.
+  - id: leve
+    text: As tercinas da direita ficaram leves e regulares, abaixo da voz.
+  - id: passagem
+    text: A esquerda fez a nota de passagem antes de cada troca.
+challenges:
+  - Na última volta, faça um walk-up no baixo nas tercinas do tempo 4 até o I.

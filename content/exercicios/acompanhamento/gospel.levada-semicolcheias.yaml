@@ -1,0 +1,29 @@
+id: acompanhamento.gospel.levada-semicolcheias
+title: Louvor rápido em semicolcheias
+type: performance
+stage: application
+competencies: [acompanhamento.gospel-contemporaneo]
+prompt: |
+  O playback toca **I – IV – I – V** em Dó, rápido. Conte as semicolcheias: "**1** e a **2** e a…".
+
+  1. **Mão esquerda:** oitavas nos tempos (Dó, Dó, Dó, Dó), trocando com o acorde.
+  2. **Mão direita:** acordes curtos no "e" de cada tempo (o contratempo), deixando o tempo livre
+     para a esquerda — o "ping-pong" entre as mãos.
+  3. **Passagem:** no último tempo de cada compasso, um acorde cromático que leve ao próximo
+     (C → C♯°7 → Dm7 quando o próximo for o II; B♭7 → C quando voltar ao I).
+parameters:
+  keys: [C, Db, Eb]
+  startBpm: 96
+  targetBpm: 132
+  bpmStep: 6
+  hands: both
+  backing: { key: C, degrees: I IV I V, beatsPerChord: 4 }
+checklist:
+  - id: pingpong
+    text: As mãos se alternaram (esquerda no tempo, direita no contratempo) sem atropelar.
+  - id: andamento
+    text: Cheguei a 120 bpm ou mais mantendo o padrão por quatro voltas.
+  - id: passagem
+    text: Coloquei as passagens cromáticas no último tempo sem atrasar o compasso seguinte.
+challenges:
+  - Toque o mesmo padrão em Ré♭ e Mi♭ (tons comuns no gospel).

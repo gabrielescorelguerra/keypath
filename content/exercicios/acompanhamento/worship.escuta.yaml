@@ -1,0 +1,24 @@
+id: acompanhamento.worship.escuta
+title: Analisar uma música de worship do seu repertório
+type: performance
+stage: application
+competencies: [acompanhamento.worship]
+prompt: |
+  Escolha uma música de worship do seu repertório e preencha o roteiro (anote em
+  **Prática → Repertório**):
+
+  1. **Tom e compasso:** 4/4 ou 6/8? Qual o andamento aproximado?
+  2. **Progressões:** em graus, por seção. Alguma é rotação de I–V–VIm–IV?
+  3. **Cores:** onde aparecem sus, add9, baixo pedal ou inversões?
+  4. **Mapa de dinâmica:** o que o teclado faz em cada parte (pad, notas longas, colcheias)?
+  5. **Timbres:** piano, pad, ambos? Há uma frase de synth?
+  6. **Transição:** como ela começa e termina — e como você ligaria ao próximo louvor?
+parameters:
+  keys: []
+checklist:
+  - id: roteiro
+    text: Preenchi os seis itens do roteiro.
+  - id: mapa
+    text: Toquei a música seguindo o meu mapa de dinâmica.
+challenges:
+  - Faça o roteiro de três músicas de um mesmo culto e planeje as transições entre elas.

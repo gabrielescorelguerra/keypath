@@ -1,0 +1,31 @@
+id: acompanhamento.worship.balada-pedal
+title: Balada lenta e pedal sincopado
+type: performance
+stage: application
+competencies: [acompanhamento.worship]
+prompt: |
+  Numa balada lenta, o pedal de sustentação liga os acordes — mas, se não for trocado, mistura
+  tudo. A técnica é o **pedal sincopado**:
+
+  1. Toque o novo acorde.
+  2. **Logo depois** que ele soar, levante o pedal e pressione de novo.
+  3. O som anterior é cortado, o novo fica ligado, sem buraco entre os dois.
+
+  Toque a progressão com o playback, um acorde por compasso, voicings abertos (1·5·8 na esquerda,
+  tríade com add9 na direita), trocando o pedal a cada acorde.
+
+  ::chords{symbols="Gadd9 Em7 Cadd9 Dsus4 D" key="G"}
+parameters:
+  keys: [G, D, Bb]
+  startBpm: 60
+  targetBpm: 70
+  bpmStep: 5
+  hands: both
+  backing: { key: G, degrees: I VIm IV V, beatsPerChord: 4 }
+checklist:
+  - id: sem-buraco
+    text: As trocas de acorde ficaram ligadas, sem silêncio.
+  - id: sem-mistura
+    text: Nenhum acorde "sujou" o seguinte.
+challenges:
+  - "Grave e escute com fone: ainda há mistura? Ajuste o momento da troca."

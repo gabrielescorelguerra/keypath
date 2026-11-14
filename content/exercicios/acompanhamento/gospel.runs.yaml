@@ -1,0 +1,31 @@
+id: acompanhamento.gospel.runs
+title: Quatro runs de gospel em vários tons
+type: performance
+stage: execution
+competencies: [acompanhamento.gospel-contemporaneo]
+prompt: |
+  Quatro corridas para preencher espaços. Toque cada uma devagar, depois em tercinas ou
+  semicolcheias, terminando sempre numa nota do acorde.
+
+  1. **Subida pentatônica:** Dó Ré Mi Sol Lá Dó (e a próxima oitava), em grupos de 3 dedos (1 2 3).
+  2. **Descida com a blue note:** Dó Lá Sol Mi **Mi♭**–Mi Ré Dó — o Mi♭ desliza para o Mi.
+  3. **Em terças:** a subida 1 em terças paralelas na mão direita (Dó+Mi, Ré+Fá…).
+  4. **Aproximação cromática:** chegue à terça do acorde (Mi) vindo de meio tom abaixo (Ré♯–Mi)
+     ou acima (Fá–Mi).
+
+  ::scale{root="C" type="major-blues"}
+parameters:
+  keys: [C, F, Ab, Eb]
+  startBpm: 60
+  targetBpm: 100
+  bpmStep: 5
+  hands: right
+checklist:
+  - id: quatro
+    text: Toquei as quatro runs nos quatro tons.
+  - id: chegada
+    text: Todas terminaram numa nota do acorde, no tempo.
+  - id: velocidade
+    text: Cheguei a 100 bpm em semicolcheias nas runs 1 e 2.
+challenges:
+  - Toque a run 1 nas duas mãos em oitavas.

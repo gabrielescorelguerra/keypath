@@ -1,0 +1,27 @@
+id: acompanhamento.gospel.escuta
+title: Analisar uma música gospel do seu repertório
+type: performance
+stage: application
+competencies: [acompanhamento.gospel-contemporaneo]
+prompt: |
+  Escolha uma gravação de gospel contemporâneo que você toca (ou quer tocar) e analise com este
+  roteiro. Anote na música, na área **Prática → Repertório**.
+
+  1. **Tom:** cante a nota de "casa" e encontre-a no teclado.
+  2. **Forma:** marque introdução, estrofes, refrão, ponte, vamp e final.
+  3. **Baixo:** tire a linha de baixo do refrão — ela revela os acordes.
+  4. **Graus:** escreva os acordes do refrão em graus (I, IIm7, V7…).
+  5. **Vocabulário:** marque onde aparecem extensões, acordes de passagem, sus, walk-ups e
+     empréstimos (IVm, ♭VI, ♭VII).
+  6. **Levada:** 12/8, semicolcheias ou outra? Onde o teclado preenche com runs?
+parameters:
+  keys: []
+checklist:
+  - id: forma-graus
+    text: Escrevi a forma e os acordes do refrão em graus.
+  - id: vocabulario
+    text: Identifiquei pelo menos três recursos do vocabulário gospel na gravação.
+  - id: tocar
+    text: Toquei o refrão junto com a gravação.
+challenges:
+  - Repita o roteiro com uma segunda música e compare os recursos usados.

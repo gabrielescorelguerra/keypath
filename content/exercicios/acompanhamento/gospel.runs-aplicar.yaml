@@ -1,0 +1,23 @@
+id: acompanhamento.gospel.runs-aplicar
+title: Preencher os espaços com runs sobre o playback
+type: performance
+stage: application
+competencies: [acompanhamento.gospel-contemporaneo]
+prompt: |
+  O playback toca **I7M – VI7 – IIm7 – V7** em Mi♭. Acompanhe com acordes e, a cada **dois
+  compassos**, toque uma run curta (até um tempo e meio) que termine na nota do acorde seguinte.
+  Imagine que um cantor está cantando nos compassos sem run — eles são dele.
+parameters:
+  keys: [Eb]
+  startBpm: 66
+  targetBpm: 80
+  bpmStep: 4
+  hands: both
+  backing: { key: Eb, degrees: I7M VI7 IIm7 V7, beatsPerChord: 4 }
+checklist:
+  - id: espaco
+    text: As runs ficaram só nos espaços, a cada dois compassos.
+  - id: chegada
+    text: Cada run terminou numa nota do acorde seguinte, no tempo 1.
+challenges:
+  - Crie a sua run "assinatura" e use-a no final da progressão.

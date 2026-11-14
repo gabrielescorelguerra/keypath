@@ -1,0 +1,31 @@
+id: acompanhamento.gospel.escuta-quiz
+title: Método para tirar músicas de ouvido
+type: quiz
+stage: recognition
+competencies: [acompanhamento.gospel-contemporaneo]
+questions:
+  - id: primeiro
+    kind: single-choice
+    prompt: Qual é o primeiro passo para tirar a harmonia de uma música?
+    options: [Encontrar o tom (a nota de "casa"), Tirar o solo, Descobrir o timbre]
+    correct: [0]
+  - id: baixo
+    kind: single-choice
+    prompt: Por que tirar a linha de baixo antes dos acordes?
+    options:
+      [
+        O baixo quase sempre toca a fundamental e revela o grau de cada acorde,
+        Porque é mais alto,
+        Porque é mais fácil de cantar,
+      ]
+    correct: [0]
+  - id: testar
+    kind: single-choice
+    prompt: Depois de achar o tom, quais acordes testar primeiro?
+    options: [I, IV, V e VIm, Os acordes diminutos, Acordes de outro tom]
+    correct: [0]
+  - id: loop
+    kind: single-choice
+    prompt: O que fazer com um trecho difícil?
+    options: [Repetir em loop e, se possível, ouvir mais devagar, Pular, Tocar mais rápido]
+    correct: [0]

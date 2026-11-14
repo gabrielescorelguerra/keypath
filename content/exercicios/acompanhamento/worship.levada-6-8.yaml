@@ -1,0 +1,29 @@
+id: acompanhamento.worship.levada-6-8
+title: Worship em 6/8
+type: performance
+stage: execution
+competencies: [acompanhamento.worship]
+prompt: |
+  Em 6/8, conte seis colcheias por compasso com acento no **1** e no **4**: "**1** 2 3 **4** 5 6".
+  O playback e o metrônomo marcam as colcheias (o andamento indicado é de colcheias).
+
+  - **Mão esquerda:** fundamental no 1, quinta no 4 (ou 1·5·8 arpejado: 1–5–8–5–8–5).
+  - **Mão direita:** o acorde no 1 e no 4, segurando — ou arpejado nas seis colcheias nas estrofes.
+
+  ::progression{key="D" degrees="I IV I V"}
+parameters:
+  keys: [D, G, C]
+  startBpm: 108
+  targetBpm: 132
+  bpmStep: 6
+  hands: both
+  backing: { key: D, degrees: I IV I V, beatsPerChord: 6 }
+checklist:
+  - id: acento
+    text: O 1 e o 4 ficaram claramente acentuados.
+  - id: arpejo
+    text: Toquei a versão arpejada da esquerda por quatro voltas.
+  - id: troca
+    text: Alternei entre acordes segurados (refrão) e arpejados (estrofe).
+challenges:
+  - Faça uma progressão sua em 6/8 com sus4 → I no fim de cada frase.
