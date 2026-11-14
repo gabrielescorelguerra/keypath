@@ -96,7 +96,7 @@ Só entra link verificado: a página precisa existir e tratar do assunto. Prefir
 
 ## Estado atual
 
-- **Mapa curricular** com 5 cursos (Fundamentos, Harmonia e técnica, Escalas e modos, Estilos, Timbres e sound design) e 33 módulos. Os módulos sem aula mostram os tópicos em preparação.
+- **Mapa curricular** com 5 cursos (Fundamentos, Harmonia e técnica, Escalas e modos, Estilos, Timbres e sound design) e 34 módulos. Os módulos sem aula mostram os tópicos em preparação.
 - **12 aulas**, 20 competências, 16 conceitos e 50 exercícios. Além da fatia de Harmonia ([plano](../docs/plano-fatia-harmonia.md)), já há aulas completas, com etapas, exercícios nas quatro etapas e materiais externos, para Intervalos, Arpejos, Os sete modos, Fundamentos de síntese e Gospel contemporâneo.
 - As 7 aulas da fatia de Harmonia ainda não têm materiais externos nem etapas marcadas.
 - O conteúdo musical ainda precisa de **revisão do autor**.
