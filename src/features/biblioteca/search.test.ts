@@ -23,6 +23,12 @@ describe('busca de conceitos', () => {
     expect(search.search('campo xilofone')).toEqual([])
   })
 
+  it('título igual à busca vem antes de títulos mais longos', () => {
+    expect(search.search('campo harmonico menor')[0]).toBe('campo-harmonico-menor')
+    expect(search.search('emprestimo modal')[0]).toBe('emprestimo-modal')
+    expect(search.search('SDm')[0]).toBe('subdominante-menor')
+  })
+
   it('consulta vazia não devolve nada', () => {
     expect(search.search('  ')).toEqual([])
   })

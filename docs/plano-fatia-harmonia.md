@@ -1,6 +1,6 @@
 # KeyPath — Plano da fatia vertical de Harmonia
 
-> Versão 0.1 · 14/11/2026 · Status: **estrutura aprovada · conteúdo musical a revisar**
+> Versão 0.1 · 14/11/2026 · Status: **escrito (etapa 7) · aguardando revisão musical do autor**
 >
 > Objetivo: ir da revisão de campo harmônico até o empréstimo modal, com aplicações no gospel. Esta fatia serve para testar o modelo inteiro: Biblioteca, aulas, exercícios, critérios e progresso.
 
@@ -95,3 +95,13 @@ Em geral, cada competência tem **um quiz** (conhecimento) e **um exercício de 
 4. Escrever as **aulas**, que incorporam os itens anteriores.
 
 O build valida tudo a cada passo. Eu redijo e **você revisa o conteúdo musical** antes de cada etapa ser considerada concluída.
+
+## 6. Situação (etapa 7)
+
+Tudo acima foi escrito e passa na validação. Desvios em relação ao rascunho:
+
+- As competências de **Teoria** (intervalos, escala maior, escalas menores, modos) não têm aula própria. As escalas menores aparecem como revisão na aula 5, e as quatro podem ser declaradas ou demonstradas pelos exercícios.
+- `acompanhamento.emprestimo-gospel` tem dois critérios de autoavaliação: as progressões em três tons (2 dias) e a aplicação numa música do repertório.
+- O critério de empréstimo modal (conceito) usa a análise de três músicas do seu repertório.
+
+**Para revisar:** a precisão musical dos textos, a escolha das progressões gospel e se as metas dos exercícios (tons, bpm, dias) estão adequadas ao seu nível.

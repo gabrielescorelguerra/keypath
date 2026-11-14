@@ -1,0 +1,33 @@
+id: harmonia.analise.quiz
+title: Análise por graus e transposição — quiz
+type: quiz
+competencies: [harmonia.analise-por-graus]
+questions:
+  - id: re-maior
+    kind: single-choice
+    prompt: Em Ré maior, quais graus correspondem a D – Bm – G – A7?
+    options: [I – VIm – IV – V7, I – IIIm – IV – V7, I – VIm – V – IV7, I – IIm – IV – V7]
+    correct: [0]
+  - id: la-maior
+    kind: single-choice
+    prompt: A progressão I – V – VIm – IV em Lá maior é…
+    options: [A – E – F♯m – D, A – E – F♯ – D, A – D – F♯m – E, A – E – C♯m – D]
+    correct: [0]
+  - id: transpor
+    kind: single-choice
+    prompt: Uma música em Sol vai ser cantada em Mi. O acorde C (IV) vira…
+    options: [A, F, B, D]
+    correct: [0]
+    explanation: C é o IV de Sol; o IV de Mi é Lá (A).
+  - id: grau-fora
+    kind: single-choice
+    prompt: Em Dó maior, qual é o grau de A♭?
+    options: [♭VI, VI, ♯V, ♭VII]
+    correct: [0]
+    explanation: Lá é o VI de Dó; Lá♭ é o VI abaixado — ♭VI.
+  - id: qual-tom
+    kind: single-choice
+    prompt: Qual é o tom mais provável de E – A – B7 – E?
+    options: [Mi maior, Lá maior, Si maior, Dó♯ menor]
+    correct: [0]
+    explanation: B7 é o V7 de Mi e a progressão termina em E — I, IV, V7, I.

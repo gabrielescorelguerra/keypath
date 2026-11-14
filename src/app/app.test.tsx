@@ -110,10 +110,10 @@ describe('Biblioteca', () => {
     expect(
       await screen.findByRole('heading', { level: 1, name: 'Campo harmônico' }),
     ).toBeInTheDocument()
-    expect(screen.getByRole('table')).toBeInTheDocument()
-    expect(screen.getByRole('group', { name: 'Acordes' })).toBeInTheDocument()
+    expect(screen.getAllByRole('table').length).toBeGreaterThan(0)
+    expect(screen.getAllByRole('group', { name: 'Acordes' }).length).toBeGreaterThan(0)
     expect(
-      screen.getByRole('link', { name: /Competência: Campo harmônico maior/ }),
+      screen.getByRole('link', { name: 'Competência: Campo harmônico maior (tríades)' }),
     ).toBeInTheDocument()
   })
 

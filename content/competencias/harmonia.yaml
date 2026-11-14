@@ -29,3 +29,130 @@
       method: self-assessment
       exercise: harmonia.campo-maior.12-tons
       distinctDays: 2
+
+- id: harmonia.tetrades
+  track: harmonia
+  level: 2
+  title: Tétrades
+  description: Forma e toca os acordes de sétima — 7M, 7, m7, m7(♭5), °7 e m(7M) — sobre qualquer nota, sabendo a fórmula de cada um.
+  prerequisites: [harmonia.triades]
+  concepts: [tetrade, cifragem]
+  mastery:
+    - id: teoria
+      method: quiz
+      exercise: harmonia.tetrades.quiz
+    - id: teclado
+      method: self-assessment
+      exercise: harmonia.tetrades.todas-as-notas
+      distinctDays: 2
+
+- id: harmonia.campo-harmonico-maior-tetrades
+  track: harmonia
+  level: 2
+  title: Campo harmônico maior (tétrades)
+  description: Forma, toca e nomeia por grau as sete tétrades do campo harmônico maior — I7M, IIm7, IIIm7, IV7M, V7, VIm7, VIIm7(♭5) — em qualquer tonalidade.
+  prerequisites: [harmonia.campo-harmonico-maior-triades, harmonia.tetrades]
+  concepts: [campo-harmonico]
+  mastery:
+    - id: teoria
+      method: quiz
+      exercise: harmonia.campo-maior-tetrades.quiz
+    - id: teclado
+      method: self-assessment
+      exercise: harmonia.campo-maior-tetrades.12-tons
+      distinctDays: 2
+
+- id: harmonia.analise-por-graus
+  track: harmonia
+  level: 2
+  title: Análise por graus e transposição
+  description: Converte cifras em graus e graus em cifras em qualquer tom, e usa isso para transpor uma música de cabeça.
+  prerequisites: [harmonia.campo-harmonico-maior-triades]
+  concepts: [graus-e-analise, cifragem]
+  mastery:
+    - id: teoria
+      method: quiz
+      exercise: harmonia.analise.quiz
+    - id: teclado
+      method: self-assessment
+      exercise: harmonia.analise.transpor
+      distinctDays: 2
+
+- id: harmonia.funcoes-harmonicas
+  track: harmonia
+  level: 2
+  title: Funções harmônicas
+  description: Classifica os acordes do campo maior em tônica, subdominante e dominante, e troca acordes de mesma função para variar uma progressão.
+  prerequisites: [harmonia.analise-por-graus]
+  concepts: [funcoes-harmonicas]
+  mastery:
+    - id: teoria
+      method: quiz
+      exercise: harmonia.funcoes.quiz
+    - id: teclado
+      method: self-assessment
+      exercise: harmonia.funcoes.substituicoes
+      distinctDays: 2
+
+- id: harmonia.campo-harmonico-menor
+  track: harmonia
+  level: 3
+  title: Campo harmônico menor
+  description: Forma os campos menor natural e menor harmônico (com tétrades) e explica por que o V7 do menor vem da escala harmônica.
+  prerequisites: [teoria.escalas-menores, harmonia.campo-harmonico-maior-tetrades]
+  concepts: [campo-harmonico-menor, escalas-menores]
+  mastery:
+    - id: teoria
+      method: quiz
+      exercise: harmonia.campo-menor.quiz
+    - id: teclado
+      method: self-assessment
+      exercise: harmonia.campo-menor.12-tons
+      distinctDays: 2
+
+- id: harmonia.emprestimo-modal-conceito
+  track: harmonia
+  level: 3
+  title: Empréstimo modal — o conceito
+  description: Identifica o tom homônimo, sabe quais acordes podem ser emprestados dele e reconhece acordes emprestados numa música.
+  prerequisites: [harmonia.campo-harmonico-menor, harmonia.funcoes-harmonicas]
+  concepts: [tom-homonimo, emprestimo-modal]
+  mastery:
+    - id: teoria
+      method: quiz
+      exercise: harmonia.emprestimo.quiz
+    - id: escuta
+      method: self-assessment
+      exercise: harmonia.emprestimo.analise-de-musicas
+
+- id: harmonia.subdominante-menor
+  track: harmonia
+  level: 3
+  title: Subdominante menor
+  description: Usa IVm, IVm6, IIm7(♭5) e ♭VI7M como subdominante menor — em especial a cadência IV → IVm → I — em qualquer tom.
+  prerequisites: [harmonia.emprestimo-modal-conceito]
+  concepts: [subdominante-menor, emprestimo-modal]
+  mastery:
+    - id: teoria
+      method: quiz
+      exercise: harmonia.subdominante-menor.quiz
+    - id: teclado
+      method: self-assessment
+      exercise: harmonia.subdominante-menor.12-tons
+      distinctDays: 2
+
+- id: harmonia.bvi-bvii
+  track: harmonia
+  level: 3
+  title: ♭VI e ♭VII emprestados
+  description: Usa ♭VI e ♭VII7 emprestados do homônimo menor, incluindo a cadência ♭VI → ♭VII → I e o ♭VII7 resolvendo na tônica.
+  prerequisites: [harmonia.emprestimo-modal-conceito]
+  concepts: [emprestimo-modal]
+  mastery:
+    - id: teoria
+      method: quiz
+      exercise: harmonia.bvi-bvii.quiz
+    - id: teclado
+      method: self-assessment
+      exercise: harmonia.bvi-bvii.cadencias
+      distinctDays: 2

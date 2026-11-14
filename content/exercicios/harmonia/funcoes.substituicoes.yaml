@@ -1,0 +1,18 @@
+id: harmonia.funcoes.substituicoes
+title: Variações por substituição de função
+type: performance
+competencies: [harmonia.funcoes-harmonicas]
+prompt: |
+  Parta de I – IV – V7 – I e crie variações trocando acordes por outros **de mesma função**
+  (IIm no lugar do IV, VIm ou IIIm no lugar do I…). Toque cada variação e compare o som.
+
+  ::progression{key="G" degrees="I IV V7 I"}
+
+  ::progression{key="G" degrees="I IIm7 V7 VIm"}
+parameters:
+  keys: [C, G, D]
+checklist:
+  - id: tres-variacoes
+    text: Criei pelo menos três variações diferentes, em três tons.
+  - id: funcao
+    text: Para cada acorde trocado, disse em voz alta a função que ele cumpre.

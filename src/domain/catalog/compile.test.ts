@@ -145,6 +145,18 @@ describe('compileCatalog', () => {
     expect(aula?.prerequisites).toEqual(['teoria.intervalos'])
   })
 
+  it('ordena as aulas pela primeira competência trabalhada', () => {
+    const catalog = compileCatalog(
+      sources({
+        lessons: [
+          lesson('harmonia.a-depois', ['harmonia.campo']),
+          lesson('harmonia.b-antes', ['harmonia.triades']),
+        ],
+      }),
+    ).catalog
+    expect(catalog?.lessons.map((l) => l.id)).toEqual(['harmonia.b-antes', 'harmonia.a-depois'])
+  })
+
   it('aponta ids duplicados', () => {
     const s = sources()
     expect(

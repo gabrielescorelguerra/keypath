@@ -1,0 +1,16 @@
+id: harmonia.campo-maior-tetrades.12-tons
+title: Campo maior com tétrades nas 12 tonalidades
+type: performance
+competencies: [harmonia.campo-harmonico-maior-tetrades]
+prompt: |
+  Toque as sete tétrades do campo, subindo, dizendo o grau de cada uma. Em Sol maior:
+
+  ::progression{key="G" degrees="I7M IIm7 IIIm7 IV7M V7 VIm7 VIIm7(b5)"}
+parameters:
+  keys: [C, G, D, A, E, B, F#, Db, Ab, Eb, Bb, F]
+  targetBpm: 60
+checklist:
+  - id: tonalidades
+    text: Toquei o campo com tétrades nas 12 tonalidades sem parar mais de dois tempos para pensar.
+  - id: graus
+    text: Nomeei corretamente o grau e o tipo de cada acorde.

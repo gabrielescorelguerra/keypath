@@ -1,0 +1,18 @@
+id: teoria.modos.no-teclado
+title: Os sete modos a partir da mesma nota
+type: performance
+competencies: [teoria.modos]
+prompt: |
+  Escolha uma tônica e toque os sete modos **a partir dela** (jônio, dórico, frígio, lídio,
+  mixolídio, eólio e lócrio), dizendo a nota característica de cada um. Por exemplo, Ré dórico:
+
+  ::scale{root="D" type="dorian"}
+parameters:
+  keys: [C, D, G]
+  targetBpm: 60
+  hands: right
+checklist:
+  - id: sete-modos
+    text: Toquei os sete modos a partir da mesma tônica, nas três tonalidades.
+  - id: caracteristica
+    text: Identifiquei a nota característica de cada modo enquanto tocava.

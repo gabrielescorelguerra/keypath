@@ -1,0 +1,19 @@
+id: harmonia.bvi-bvii.cadencias
+title: Cadências com ♭VI e ♭VII
+type: performance
+competencies: [harmonia.bvi-bvii]
+prompt: |
+  Toque as duas cadências em cada tom: ♭VI → ♭VII → I (final grandioso) e
+  IVm → ♭VII7 → I (o ♭VII7 resolvendo direto na tônica). Em Sol:
+
+  ::progression{key="G" degrees="bVI bVII I"}
+
+  ::progression{key="G" degrees="IVm bVII7 I"}
+parameters:
+  keys: [C, G, D, A, E, Bb]
+  targetBpm: 70
+checklist:
+  - id: tonalidades
+    text: Toquei as duas cadências nos seis tons.
+  - id: conducao
+    text: Usei inversões próximas, sem saltar a mão entre os acordes.

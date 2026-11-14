@@ -1,0 +1,16 @@
+id: acompanhamento.emprestimo-gospel.no-repertorio
+title: Empréstimo modal numa música do seu repertório
+type: performance
+competencies: [acompanhamento.emprestimo-gospel]
+styles: [gospel]
+prompt: |
+  Escolha uma música que você toca na igreja e insira um empréstimo onde ele faz sentido:
+  um **IVm** no final de uma frase, ou um final **♭VI – ♭VII – I** no último refrão.
+  Toque acompanhando a voz (ou uma gravação).
+checklist:
+  - id: apliquei
+    text: Usei um empréstimo modal numa música do meu repertório.
+  - id: contexto
+    text: O empréstimo soou natural no contexto (final de frase, ministração, último refrão).
+  - id: andamento
+    text: Toquei acompanhando a voz ou a gravação sem perder o andamento.

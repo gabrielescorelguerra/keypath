@@ -1,0 +1,39 @@
+id: harmonia.emprestimo.quiz
+title: Empréstimo modal — quiz
+type: quiz
+competencies: [harmonia.emprestimo-modal-conceito]
+questions:
+  - id: homonimo-re
+    kind: single-choice
+    prompt: Qual é o tom homônimo de Ré maior?
+    options: [Ré menor, Si menor, Fá♯ menor, Lá menor]
+    correct: [0]
+  - id: emprestado-sol
+    kind: single-choice
+    prompt: Em Sol maior, qual destes acordes é um empréstimo do homônimo menor?
+    options: [Cm, Am, Em, D7]
+    correct: [0]
+    explanation: Am, Em e D7 são do campo de Sol maior. Cm é o IVm, vindo de Sol menor.
+  - id: lab7m
+    kind: single-choice
+    prompt: Em Dó maior, o acorde A♭7M é…
+    options:
+      - O ♭VI7M, emprestado de Dó menor
+      - O VI7M do campo maior
+      - Uma modulação para Lá♭ maior
+      - Um erro de cifra
+    correct: [0]
+  - id: comuns-do
+    kind: multiple-choice
+    prompt: Quais destes são empréstimos comuns em Dó maior?
+    options: [Fm, B♭7, A♭7M, Dm7, G7]
+    correct: [0, 1, 2]
+  - id: nao-modulacao
+    kind: single-choice
+    prompt: Como saber se é empréstimo e não modulação?
+    options:
+      - A tônica continua a mesma e a música volta logo ao campo maior
+      - O acorde é menor
+      - Ele aparece no refrão
+      - Ele tem sétima
+    correct: [0]

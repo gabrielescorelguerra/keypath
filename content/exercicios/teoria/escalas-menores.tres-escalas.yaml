@@ -1,0 +1,18 @@
+id: teoria.escalas-menores.tres-escalas
+title: As três escalas menores no teclado
+type: performance
+competencies: [teoria.escalas-menores]
+prompt: |
+  Em cada tonalidade, toque seguidas a menor **natural**, a **harmônica** e a **melódica**,
+  uma oitava subindo e descendo. Diga em voz alta quais notas mudam de uma para a outra.
+
+  ::scale{root="E" type="harmonic-minor"}
+parameters:
+  keys: [Am, Em, Bm, Dm, Gm, Cm]
+  targetBpm: 60
+  hands: right
+checklist:
+  - id: tres-formas
+    text: Toquei as três formas em cada uma das seis tonalidades, sem errar notas.
+  - id: o-que-muda
+    text: Disse corretamente quais notas mudam entre natural, harmônica e melódica.

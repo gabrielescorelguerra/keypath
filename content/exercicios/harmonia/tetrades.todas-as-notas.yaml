@@ -1,0 +1,16 @@
+id: harmonia.tetrades.todas-as-notas
+title: As tétrades principais sobre todas as notas
+type: performance
+competencies: [harmonia.tetrades]
+prompt: |
+  Sobre cada nota, toque em sequência 7M, 7, m7 e m7(♭5). Exemplo em Dó:
+
+  ::chords{symbols="Cmaj7 C7 Cm7 Cm7b5"}
+parameters:
+  keys: [C, G, D, A, E, B, F#, Db, Ab, Eb, Bb, F]
+  targetBpm: 60
+checklist:
+  - id: doze-notas
+    text: Fiz os quatro tipos sobre as 12 notas.
+  - id: fluencia
+    text: Troquei de acorde a cada tempo, a 60 bpm, sem parar.

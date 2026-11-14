@@ -1,0 +1,35 @@
+id: harmonia.funcoes.quiz
+title: Funções harmônicas — quiz
+type: quiz
+competencies: [harmonia.funcoes-harmonicas]
+questions:
+  - id: vi
+    kind: single-choice
+    prompt: Qual é a função do VIm no campo maior?
+    options: [Tônica, Subdominante, Dominante, Nenhuma]
+    correct: [0]
+  - id: substitui-iv
+    kind: single-choice
+    prompt: Qual acorde pode substituir o IV mantendo a mesma função?
+    options: [IIm, VIm, V7, IIIm]
+    correct: [0]
+  - id: engano
+    kind: single-choice
+    prompt: Na cadência de engano, o V7 resolve em…
+    options: [VIm, I, IV, IIm]
+    correct: [0]
+  - id: dominantes
+    kind: multiple-choice
+    prompt: Quais acordes têm função dominante no campo maior?
+    options: [V7, VIIm7(♭5), IV, IIIm]
+    correct: [0, 1]
+  - id: tritono
+    kind: single-choice
+    prompt: O que, dentro do V7, cria a tensão que pede resolução?
+    options:
+      - O trítono entre a 3ª e a 7ª do acorde
+      - A quinta justa
+      - A terça maior entre a fundamental e a 3ª
+      - A oitava
+    correct: [0]
+    explanation: Em G7, Si e Fá formam um trítono que resolve em Dó e Mi.

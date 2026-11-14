@@ -1,0 +1,20 @@
+id: acompanhamento.inversoes.campo-conduzido
+title: Progressões com condução de vozes
+type: performance
+competencies: [acompanhamento.inversoes-e-conducao]
+prompt: |
+  Com a mão esquerda no baixo (fundamental) e a direita escolhendo a inversão mais próxima,
+  toque I – IV – V – I e I – VIm – IV – V. Em Dó:
+
+  ::progression{key="C" degrees="I IV V I"}
+
+  ::progression{key="C" degrees="I VIm IV V"}
+parameters:
+  keys: [C, G, D, F, Bb, E]
+  targetBpm: 70
+  hands: both
+checklist:
+  - id: tonalidades
+    text: Toquei as duas progressões nos seis tons.
+  - id: menor-movimento
+    text: A mão direita manteve as notas comuns e quase não saltou.

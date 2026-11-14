@@ -1,0 +1,30 @@
+id: harmonia.campo-maior-tetrades.quiz
+title: Campo harmônico maior com tétrades — quiz
+type: quiz
+competencies: [harmonia.campo-harmonico-maior-tetrades]
+questions:
+  - id: ii-fa
+    kind: single-choice
+    prompt: Qual é o IIm7 de Fá maior?
+    options: [Gm7, G7, Gm7(♭5), Dm7]
+    correct: [0]
+  - id: dominante
+    kind: single-choice
+    prompt: Qual grau do campo maior forma um acorde dominante (7)?
+    options: [V, IV, I, II]
+    correct: [0]
+  - id: vii-re
+    kind: single-choice
+    prompt: Em Ré maior, qual é o VIIm7(♭5)?
+    options: [C♯m7(♭5), Cm7(♭5), Bm7(♭5), C♯°7]
+    correct: [0]
+  - id: setima-maior
+    kind: multiple-choice
+    prompt: Quais graus têm sétima maior (7M) no campo maior?
+    options: [I, IV, V, VIm]
+    correct: [0, 1]
+  - id: iv-mib
+    kind: single-choice
+    prompt: Em Mi♭ maior, qual é a tétrade do IV grau?
+    options: [A♭7M, A♭7, Am7, B♭7]
+    correct: [0]

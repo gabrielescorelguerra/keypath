@@ -1,0 +1,32 @@
+id: harmonia.subdominante-menor.quiz
+title: Subdominante menor — quiz
+type: quiz
+competencies: [harmonia.subdominante-menor]
+questions:
+  - id: ivm-sol
+    kind: single-choice
+    prompt: Em Sol maior, qual é o IVm?
+    options: [Cm, Dm, Am, Gm]
+    correct: [0]
+  - id: nota-que-desce
+    kind: single-choice
+    prompt: Na cadência IV → IVm → I em Dó (F → Fm → C), qual nota desce meio tom?
+    options: [Lá desce para Lá♭, Fá desce para Mi, Dó desce para Si, Mi desce para Mi♭]
+    correct: [0]
+    explanation: A terça do F (Lá) vira a terça menor do Fm (Lá♭) e depois resolve em Sol.
+  - id: sexta-do-ivm6
+    kind: single-choice
+    prompt: No Fm6 (em Dó), a sexta do acorde é Ré. Que nota ela é em relação à tônica Dó?
+    options: [A 9ª (2ª), A 6ª, A 7ª, A 4ª]
+    correct: [0]
+  - id: familia-re
+    kind: multiple-choice
+    prompt: Quais acordes têm função de subdominante menor em Ré maior?
+    options: [Gm, B♭7M, Em7(♭5), Em7, A7]
+    correct: [0, 1, 2]
+    explanation: Gm (IVm), B♭7M (♭VI7M) e Em7(♭5) (IIm7(♭5)) vêm de Ré menor. Em7 e A7 são do campo maior.
+  - id: nota-comum
+    kind: single-choice
+    prompt: Qual nota está presente em todos os acordes de subdominante menor?
+    options: [O ♭6 do tom, A tônica, A sensível, O ♭2 do tom]
+    correct: [0]

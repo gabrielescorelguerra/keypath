@@ -1,0 +1,16 @@
+id: harmonia.emprestimo.analise-de-musicas
+title: Encontrar empréstimos no seu repertório
+type: performance
+competencies: [harmonia.emprestimo-modal-conceito]
+prompt: |
+  Escolha **três músicas** do seu repertório que tenham algum acorde "de fora" do tom.
+  Escreva cada uma em graus, marque os acordes emprestados e diga de onde vêm.
+  Depois toque o trecho trocando o acorde emprestado pelo do campo maior (por exemplo, IVm → IV)
+  e compare.
+checklist:
+  - id: tres-musicas
+    text: Analisei três músicas em graus.
+  - id: identifiquei
+    text: Identifiquei os acordes emprestados e de qual tom eles vêm.
+  - id: comparei
+    text: Toquei cada trecho com e sem o empréstimo e percebi a diferença de cor.

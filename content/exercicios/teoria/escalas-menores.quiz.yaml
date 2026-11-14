@@ -1,0 +1,41 @@
+id: teoria.escalas-menores.quiz
+title: Escalas menores — quiz
+type: quiz
+competencies: [teoria.escalas-menores]
+questions:
+  - id: diferenca-harmonica
+    kind: single-choice
+    prompt: O que diferencia a menor harmônica da menor natural?
+    options: [A 7ª elevada (sensível), A 6ª elevada, A 3ª maior, A 2ª menor]
+    correct: [0]
+  - id: mi-harmonica
+    kind: single-choice
+    prompt: Quais são as notas de Mi menor harmônica?
+    options:
+      - Mi Fá♯ Sol Lá Si Dó Ré♯
+      - Mi Fá♯ Sol Lá Si Dó Ré
+      - Mi Fá♯ Sol Lá Si Dó♯ Ré♯
+      - Mi Fá Sol Lá Si Dó Ré♯
+    correct: [0]
+    explanation: Mi menor natural tem Fá♯ e Ré; a harmônica eleva a 7ª, Ré → Ré♯.
+  - id: relativa-fa
+    kind: single-choice
+    prompt: Qual é a relativa menor de Fá maior?
+    options: [Ré menor, Fá menor, Lá menor, Si♭ menor]
+    correct: [0]
+    explanation: A relativa menor começa no VI grau da escala maior e tem as mesmas notas.
+  - id: muda-do-menor
+    kind: multiple-choice
+    prompt: Em relação a Dó maior, quais notas mudam em Dó menor natural?
+    options: [Mi vira Mi♭, Lá vira Lá♭, Si vira Si♭, Ré vira Ré♭]
+    correct: [0, 1, 2]
+    explanation: A menor natural tem ♭3, ♭6 e ♭7 em relação à maior com a mesma tônica.
+  - id: por-que-harmonica
+    kind: single-choice
+    prompt: Por que existe a escala menor harmônica?
+    options:
+      - Para o V grau virar um acorde maior (V7), com uma sensível que resolve na tônica
+      - Para evitar o intervalo de um tom e meio
+      - Porque soa mais alegre que a natural
+      - Para ter as mesmas notas da relativa maior
+    correct: [0]

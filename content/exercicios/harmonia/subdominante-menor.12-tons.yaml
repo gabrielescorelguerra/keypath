@@ -1,0 +1,19 @@
+id: harmonia.subdominante-menor.12-tons
+title: IV → IVm → I nas 12 tonalidades
+type: performance
+competencies: [harmonia.subdominante-menor]
+prompt: |
+  Toque I – IV – IVm – I e depois I – IV – IVm6 – I em cada tom, com condução de vozes
+  (a terça do IV desce meio tom no IVm). Em Sol:
+
+  ::progression{key="G" degrees="I IV IVm I"}
+
+  ::progression{key="G" degrees="I IV IVm6 I"}
+parameters:
+  keys: [C, G, D, A, E, B, F#, Db, Ab, Eb, Bb, F]
+  targetBpm: 60
+checklist:
+  - id: tonalidades
+    text: Toquei as duas versões nas 12 tonalidades.
+  - id: semitom
+    text: Em todas, a terça do IV desceu meio tom no IVm sem eu mexer o resto da mão.

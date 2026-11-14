@@ -1,0 +1,16 @@
+id: harmonia.analise.transpor
+title: Transpor uma música pelos graus
+type: performance
+competencies: [harmonia.analise-por-graus]
+prompt: |
+  Escolha uma música do seu repertório. Escreva a harmonia **em graus** e toque-a em três tons
+  diferentes **sem olhar a cifra original**, só os graus. Exemplo:
+
+  ::progression{key="A" degrees="I V VIm IV"}
+parameters:
+  keys: [C, G, D, A, E, Bb]
+checklist:
+  - id: em-graus
+    text: Escrevi a harmonia da música inteira em graus.
+  - id: tres-tons
+    text: Toquei a música em três tons diferentes, lendo só os graus.

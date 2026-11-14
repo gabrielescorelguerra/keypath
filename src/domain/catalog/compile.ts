@@ -383,6 +383,11 @@ export function compileCatalog(sources: CatalogSources): CompileResult {
     }
   })
 
+  // Ordem pedagógica: pela primeira competência trabalhada (ordem do grafo), depois pelo id.
+  const firstOrder = (lesson: Lesson) =>
+    Math.min(...lesson.competencies.map((id) => competencyById.get(id)?.order ?? Infinity))
+  catalogLessons.sort((a, b) => firstOrder(a) - firstOrder(b) || a.id.localeCompare(b.id))
+
   const catalogConcepts: Concept[] = [...concepts.values()].map(({ value: concept }) => ({
     ...concept.frontmatter,
     body: concept.body,

@@ -1,0 +1,34 @@
+id: harmonia.campo-menor.quiz
+title: Campo harmônico menor — quiz
+type: quiz
+competencies: [harmonia.campo-harmonico-menor]
+questions:
+  - id: v-natural
+    kind: single-choice
+    prompt: No campo menor natural de Lá, qual é o acorde do V grau?
+    options: [Em7, E7, E7M, Em7(♭5)]
+    correct: [0]
+  - id: por-que-v7
+    kind: single-choice
+    prompt: Por que o V grau do tom menor costuma ser V7 (com terça maior)?
+    options:
+      - Vem da menor harmônica, que tem a sensível
+      - Vem da menor natural
+      - Porque a música passou para o tom maior
+      - Por causa do ♭VI
+    correct: [0]
+  - id: bvi-bvii-mi
+    kind: single-choice
+    prompt: Em Mi menor, quais são o ♭VI7M e o ♭VII7?
+    options: [C7M e D7, C7 e D7M, Cm7 e Dm7, B7M e C7]
+    correct: [0]
+  - id: ii-menor
+    kind: single-choice
+    prompt: Qual é o acorde do II grau do campo menor (tétrades)?
+    options: [IIm7(♭5), IIm7, II7, II°7]
+    correct: [0]
+  - id: v7-re
+    kind: single-choice
+    prompt: Em Ré menor harmônico, o V7 é…
+    options: [A7, Am7, A7M, G7]
+    correct: [0]

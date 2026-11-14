@@ -43,7 +43,26 @@ export function createConceptSearch(concepts: readonly Concept[]): ConceptSearch
       body: plainText(concept.body),
     })),
   )
+  const titles = new Map(
+    concepts.map((c) => [c.id, [c.title, ...c.aliases].map((t) => normalize(t))] as const),
+  )
+  // Título (ou sinônimo) igual à busca vem primeiro; depois, títulos que começam com ela.
+  const rank = (id: string, query: string) => {
+    const names = titles.get(id) ?? []
+    if (names.includes(query)) return 0
+    if (names.some((name) => name.startsWith(query))) return 1
+    return 2
+  }
+
   return {
-    search: (query) => (query.trim() ? index.search(query).map((result) => String(result.id)) : []),
+    search: (query) => {
+      const normalized = normalize(query.trim())
+      if (!normalized) return []
+      return index
+        .search(query)
+        .map((result, position) => ({ id: String(result.id), position }))
+        .sort((a, b) => rank(a.id, normalized) - rank(b.id, normalized) || a.position - b.position)
+        .map((result) => result.id)
+    },
   }
 }

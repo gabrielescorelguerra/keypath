@@ -1,0 +1,34 @@
+id: acompanhamento.inversoes.quiz
+title: Inversões e condução de vozes — quiz
+type: quiz
+competencies: [acompanhamento.inversoes-e-conducao]
+questions:
+  - id: primeira-sol
+    kind: single-choice
+    prompt: Qual é a 1ª inversão de Sol maior?
+    options: [Si Ré Sol, Ré Sol Si, Sol Si Ré, Si Sol Ré]
+    correct: [0]
+  - id: c-sobre-g
+    kind: single-choice
+    prompt: A cifra C/G indica…
+    options:
+      - Dó maior com Sol no baixo (2ª inversão)
+      - Dó com um Sol adicionado
+      - Dó e Sol tocados alternadamente
+      - Sol maior com Dó no baixo
+    correct: [0]
+  - id: c-para-f
+    kind: single-choice
+    prompt: Saindo de C (Dó Mi Sol), qual forma de F tem o menor movimento?
+    options: [Dó Fá Lá, Fá Lá Dó, Lá Dó Fá, Fá Dó Lá]
+    correct: [0]
+    explanation: Dó fica parado; Mi sobe para Fá e Sol sobe para Lá.
+  - id: regra
+    kind: single-choice
+    prompt: Qual é a regra principal da condução de vozes?
+    options:
+      - Manter as notas comuns e mover as outras pelo menor caminho
+      - Tocar sempre na posição fundamental
+      - Mover todas as vozes na mesma direção
+      - Dobrar sempre a terça
+    correct: [0]

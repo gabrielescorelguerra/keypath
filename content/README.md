@@ -51,4 +51,4 @@ Tipos de escala: `major`, `natural-minor`, `harmonic-minor`, `melodic-minor`, `i
 
 ## Estado atual
 
-O conteúdo desta pasta ainda é uma **amostra** usada para validar o formato. A fatia completa de Harmonia entra na etapa 7 ([plano](../docs/plano-fatia-harmonia.md)).
+A **fatia de Harmonia** está completa: 16 competências (Teoria, Harmonia e Acompanhamento), 16 conceitos, 7 aulas e 32 exercícios, do campo harmônico ao empréstimo modal, com exemplos gospel ([plano](../docs/plano-fatia-harmonia.md)). O conteúdo musical ainda precisa de **revisão do autor**.

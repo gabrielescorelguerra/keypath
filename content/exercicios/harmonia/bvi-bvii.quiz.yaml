@@ -1,0 +1,34 @@
+id: harmonia.bvi-bvii.quiz
+title: ♭VI e ♭VII — quiz
+type: quiz
+competencies: [harmonia.bvi-bvii]
+questions:
+  - id: sol
+    kind: single-choice
+    prompt: Em Sol maior, quais são o ♭VI e o ♭VII?
+    options: [E♭ e F, E e F♯, E♭ e F♯, D♭ e E♭]
+    correct: [0]
+  - id: bb7-c
+    kind: single-choice
+    prompt: Em Dó maior, um B♭7 resolvendo em C é…
+    options: [♭VII7 → I, V7 → I, IV7 → I, II7 → I]
+    correct: [0]
+  - id: cadencia-re
+    kind: single-choice
+    prompt: Na cadência ♭VI → ♭VII → I em Ré maior, os acordes são…
+    options: [B♭ – C – D, B – C♯ – D, B♭ – C♯ – D, A – B – D]
+    correct: [0]
+  - id: origem
+    kind: single-choice
+    prompt: De onde vem o ♭VII?
+    options:
+      - Do homônimo menor (e também do modo mixolídio)
+      - Da menor harmônica
+      - Da escala maior do tom
+      - Do modo lídio
+    correct: [0]
+  - id: bvi-la
+    kind: single-choice
+    prompt: Em Lá maior, o ♭VI7M é…
+    options: [F7M, F♯m7, E7M, F7]
+    correct: [0]

@@ -1,0 +1,31 @@
+id: teoria.modos.quiz
+title: Modos — quiz
+type: quiz
+competencies: [teoria.modos]
+questions:
+  - id: quinto-grau
+    kind: single-choice
+    prompt: Qual modo começa no V grau da escala maior?
+    options: [Mixolídio, Dórico, Lídio, Eólio]
+    correct: [0]
+  - id: dorico
+    kind: single-choice
+    prompt: Qual é a nota característica do dórico, comparado à menor natural?
+    options: [6ª maior, 2ª menor, 7ª maior, 4ª aumentada]
+    correct: [0]
+  - id: re-dorico
+    kind: single-choice
+    prompt: Ré dórico tem as mesmas notas de qual escala maior?
+    options: [Dó maior, Ré maior, Fá maior, Sol maior]
+    correct: [0]
+    explanation: O dórico começa no II grau — Ré é o II de Dó maior.
+  - id: lidio
+    kind: single-choice
+    prompt: Qual modo é maior e tem a 4ª aumentada?
+    options: [Lídio, Mixolídio, Jônio, Frígio]
+    correct: [0]
+  - id: tercas-menores
+    kind: multiple-choice
+    prompt: Quais modos têm terça menor?
+    options: [Dórico, Frígio, Eólio, Lócrio, Mixolídio]
+    correct: [0, 1, 2, 3]

@@ -1,0 +1,27 @@
+id: acompanhamento.emprestimo-gospel.progressoes
+title: Progressões gospel com empréstimo modal
+type: performance
+competencies: [acompanhamento.emprestimo-gospel]
+styles: [gospel]
+prompt: |
+  Toque as quatro progressões com baixo na mão esquerda e condução de vozes na direita.
+  Em Sol:
+
+  ::progression{key="G" degrees="I I7 IV IVm I"}
+
+  ::progression{key="G" degrees="I IV IVm6 I"}
+
+  ::progression{key="G" degrees="IV V bVI bVII I"}
+
+  ::progression{key="G" degrees="VIm7 IV IVm I"}
+parameters:
+  keys: [G, C, D, A, E, Bb]
+  targetBpm: 70
+  hands: both
+checklist:
+  - id: tres-tons
+    text: Toquei as quatro progressões em pelo menos três tons.
+  - id: conducao
+    text: Usei inversões próximas — a mão direita quase não saltou.
+  - id: baixo
+    text: A mão esquerda manteve o baixo firme, sem perder o andamento.

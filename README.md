@@ -6,7 +6,7 @@ Plataforma pessoal de aprendizado de teclado e piano. Reúne três áreas:
 - **Biblioteca:** consulta livre de conceitos musicais;
 - **Prática:** exercícios, sessões e repertório.
 
-> Status: em desenvolvimento (MVP). Etapas 1–6 concluídas: estrutura, motor de teoria musical, catálogo de conteúdo, regras de progresso, dados com backup e interface completa (aulas, exercícios, Biblioteca, som).
+> Status: em desenvolvimento (MVP). MVP concluído (etapas 1–7): app completo e fatia de Harmonia do campo harmônico ao empréstimo modal. Conteúdo aguardando revisão musical.
 
 ## Documentação
 

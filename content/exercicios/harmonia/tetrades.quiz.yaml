@@ -1,0 +1,38 @@
+id: harmonia.tetrades.quiz
+title: Tétrades — quiz
+type: quiz
+competencies: [harmonia.tetrades]
+questions:
+  - id: g7
+    kind: single-choice
+    prompt: Quais são as notas de G7?
+    options: [Sol Si Ré Fá, Sol Si Ré Fá♯, Sol Si♭ Ré Fá, Sol Si Ré♯ Fá]
+    correct: [0]
+  - id: re-fa-la-do
+    kind: single-choice
+    prompt: Qual cifra representa Ré, Fá, Lá e Dó?
+    options: [Dm7, D7M, D7, Dm(7M)]
+    correct: [0]
+  - id: meio-diminuto
+    kind: single-choice
+    prompt: O que diferencia Cm7(♭5) de C°7?
+    options:
+      - A sétima — menor no meio-diminuto, diminuta no diminuto
+      - A terça
+      - A quinta
+      - A fundamental
+    correct: [0]
+  - id: formula-7m
+    kind: single-choice
+    prompt: Qual é a fórmula do acorde 7M?
+    options:
+      - Tríade maior + sétima maior
+      - Tríade maior + sétima menor
+      - Tríade menor + sétima maior
+      - Tríade menor + sétima menor
+    correct: [0]
+  - id: bb7m
+    kind: single-choice
+    prompt: Quais são as notas de B♭7M?
+    options: [Si♭ Ré Fá Lá, Si♭ Ré Fá Lá♭, Si♭ Ré♭ Fá Lá, Si♭ Ré Fá♯ Lá]
+    correct: [0]

@@ -1,0 +1,34 @@
+- id: acompanhamento.inversoes-e-conducao
+  track: acompanhamento
+  level: 2
+  title: Inversões e condução de vozes
+  description: Toca tríades nas três posições e encadeia acordes mantendo notas comuns e movendo as outras pelo menor caminho.
+  prerequisites: [harmonia.triades]
+  concepts: [inversao, conducao-de-vozes]
+  mastery:
+    - id: teoria
+      method: quiz
+      exercise: acompanhamento.inversoes.quiz
+    - id: teclado
+      method: self-assessment
+      exercise: acompanhamento.inversoes.campo-conduzido
+      distinctDays: 2
+
+- id: acompanhamento.emprestimo-gospel
+  track: acompanhamento
+  level: 3
+  title: Empréstimo modal no acompanhamento gospel
+  description: Aplica IVm, ♭VI e ♭VII7 em progressões típicas do louvor, com boa condução de vozes, em pelo menos três tons.
+  core: false
+  styles: [gospel]
+  prerequisites:
+    [harmonia.subdominante-menor, harmonia.bvi-bvii, acompanhamento.inversoes-e-conducao]
+  concepts: [emprestimo-modal, subdominante-menor, conducao-de-vozes]
+  mastery:
+    - id: teclado
+      method: self-assessment
+      exercise: acompanhamento.emprestimo-gospel.progressoes
+      distinctDays: 2
+    - id: repertorio
+      method: self-assessment
+      exercise: acompanhamento.emprestimo-gospel.no-repertorio

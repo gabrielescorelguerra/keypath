@@ -1,0 +1,19 @@
+id: harmonia.campo-menor.12-tons
+title: Campo menor em várias tonalidades
+type: performance
+competencies: [harmonia.campo-harmonico-menor]
+prompt: |
+  Em cada tom menor, toque o campo menor natural com tétrades e depois a cadência
+  Im – IVm7 – V7 – Im (com o V7 da harmônica). Em Mi menor:
+
+  ::progression{key="Em" degrees="Im7 IIm7(b5) bIII7M IVm7 Vm7 bVI7M bVII7"}
+
+  ::progression{key="Em" degrees="Im7 IVm7 V7 Im7"}
+parameters:
+  keys: [Am, Em, Bm, F#m, Dm, Gm, Cm, Fm]
+  targetBpm: 60
+checklist:
+  - id: tonalidades
+    text: Toquei o campo e a cadência nas oito tonalidades menores.
+  - id: graus
+    text: Nomeei os graus (Im7, IIm7(♭5), ♭III7M…) enquanto tocava.

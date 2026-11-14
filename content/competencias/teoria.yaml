@@ -27,3 +27,35 @@
       method: self-assessment
       exercise: teoria.escala-maior.12-tons
       distinctDays: 2
+
+- id: teoria.escalas-menores
+  track: teoria
+  level: 2
+  title: Escalas menores
+  description: Constrói e toca as escalas menor natural, harmônica e melódica, sabendo o que muda entre elas e em relação à escala maior.
+  prerequisites: [teoria.escala-maior]
+  concepts: [escalas-menores]
+  mastery:
+    - id: teoria
+      method: quiz
+      exercise: teoria.escalas-menores.quiz
+    - id: teclado
+      method: self-assessment
+      exercise: teoria.escalas-menores.tres-escalas
+      distinctDays: 2
+
+- id: teoria.modos
+  track: teoria
+  level: 3
+  title: Modos da escala maior
+  description: Reconhece os sete modos da escala maior e a nota característica de cada um, e toca qualquer modo a partir de qualquer nota.
+  prerequisites: [teoria.escala-maior]
+  concepts: [modos-gregos]
+  mastery:
+    - id: teoria
+      method: quiz
+      exercise: teoria.modos.quiz
+    - id: teclado
+      method: self-assessment
+      exercise: teoria.modos.no-teclado
+      distinctDays: 2
