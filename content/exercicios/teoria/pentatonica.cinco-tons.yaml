@@ -22,6 +22,19 @@ parameters:
   targetBpm: 100
   bpmStep: 5
   hands: right
+minutes: 25
+routine:
+  - '**Aquecimento:** pentatônica de Dó maior, uma oitava, 60 bpm, dizendo os graus (1 2 3 5 6).'
+  - '**Dedilhado de pentatônica:** use **1 2 3 · 1 2** por oitava, passando o polegar depois do 3º dedo.
+    Em tons com pretas, o polegar fica nas brancas.'
+  - '**Para cada tom**, os quatro itens seguidos: maior, menor da relativa (3 semitons abaixo), blues menor,
+    grupos de três.'
+  - '**Grupos de três** primeiro em semínimas a 60 e só depois em colcheias.'
+  - '**Dois tons por dia**; no terceiro dia, os cinco seguidos.'
+mistakes:
+  - 'Achar a relativa contando para o lado errado: a menor relativa fica uma 3ª menor **abaixo** da tônica
+    maior.'
+  - Na escala blues, tocar a ♭5 como nota de chegada — ela é passagem entre a 4ª e a 5ª.
 checklist:
   - id: tons
     text: Toquei os quatro itens nos cinco tons.

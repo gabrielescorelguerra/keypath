@@ -8,6 +8,15 @@ prompt: |
   e uma linha de baixo que desce cromaticamente em pelo menos um ponto. Toque com timbre de Rhodes.
 parameters:
   keys: []
+minutes: 35
+routine:
+  - '**Escolha o tom** e quatro acordes (inclua um m9, um 7M(9) e um 7(4)(9)).'
+  - '**Voicings em quartas** ou clusters na direita para cada acorde.'
+  - '**Linha de baixo** com uma descida cromática em algum ponto.'
+  - '**Ritmo atrás do tempo**, semicolcheias suingadas, timbre de Rhodes.'
+  - '**Grave o loop** 4 vezes seguidas.'
+mistakes:
+  - 'Tocar exatamente no tempo: o neo-soul pede um leve atraso.'
 checklist:
   - id: loop
     text: O loop tem os três tipos de acorde e um cromatismo no baixo.

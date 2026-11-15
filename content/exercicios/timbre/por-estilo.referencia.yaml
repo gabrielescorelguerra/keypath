@@ -17,6 +17,15 @@ prompt: |
   Toque junto com a gravação e ajuste até ficar difícil distinguir.
 parameters:
   keys: []
+minutes: 40
+routine:
+  - '**Ouça o trecho da gravação** 5 vezes, só ouvindo, com fone.'
+  - '**Responda às seis perguntas** por escrito antes de mexer no teclado.'
+  - '**Escolha o preset mais próximo** e ajuste o envelope primeiro, depois o filtro.'
+  - '**Ajuste o movimento e o espaço.**'
+  - '**Toque junto com a gravação** e ajuste o que ainda soa diferente.'
+mistakes:
+  - Tentar acertar o reverb antes do envelope — o caráter do timbre vem do ataque e do release.
 checklist:
   - id: seis-passos
     text: Anotei as respostas dos seis passos.

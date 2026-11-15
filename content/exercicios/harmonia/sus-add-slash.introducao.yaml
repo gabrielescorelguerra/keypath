@@ -13,6 +13,15 @@ prompt: |
   Escreva a cifra e toque três vezes seguidas, sem parar.
 parameters:
   keys: []
+minutes: 35
+routine:
+  - '**Escolha a música** e o tom; anote os 2 ou 3 primeiros acordes da estrofe.'
+  - '**Desenhe a linha de baixo** (por exemplo I – I/VII – VIm – IV) antes de pensar nos acordes.'
+  - '**Coloque as cores:** um sus4 → maior em algum ponto e um add9 no I.'
+  - '**Escreva a cifra** dos 8 compassos.'
+  - '**Toque 3 vezes seguidas** sem parar e emende na estrofe.'
+mistakes:
+  - Fazer a introdução num andamento diferente da música — use o metrônomo no andamento da canção.
 checklist:
   - id: cifra
     text: Escrevi a cifra da introdução com os três recursos.

@@ -19,6 +19,16 @@ parameters:
   bpmStep: 6
   hands: right
   backing: { key: G, degrees: I V VIm IV, beatsPerChord: 4 }
+minutes: 20
+routine:
+  - '**Toque a pentatônica de Sol** duas vezes antes de ligar o playback.'
+  - '**Voltas 1–2:** frases de 2 a 4 notas, uma por compasso, sempre terminando em Sol, Si ou Ré.'
+  - '**Voltas 3–4:** pergunta (sobe) e resposta (desce).'
+  - '**Voltas 5–6:** acrescente o Si♭ indo para o Si, como um deslize.'
+  - '**Grave a última volta** e ouça: você deixou espaço?'
+mistakes:
+  - Tocar colcheias sem parar — frases curtas com silêncio soam mais musicais.
+  - 'Ficar na mesma região do teclado: use pelo menos duas oitavas.'
 checklist:
   - id: voltas
     text: Improvisei por seis voltas sem parar.

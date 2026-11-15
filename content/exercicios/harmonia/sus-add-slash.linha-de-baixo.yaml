@@ -27,6 +27,16 @@ parameters:
   bpmStep: 6
   hands: both
   backing: { key: C, degrees: I V/VII VIm VIm/V IV IV V V, beatsPerChord: 4 }
+minutes: 25
+routine:
+  - '**Linha 1 só com a esquerda:** Dó – Si – Lá – Sol – Fá, devagar.'
+  - '**Junte a direita:** C – G/B – Am – Am/G – F. A direita quase não se mexe.'
+  - '**Linha 2 (pedal):** Dó parado na esquerda; direita C – F – G – C. Ouça a tensão crescer no G/C.'
+  - '**Linha 3:** F7M – F/G – C. O F/G funciona como um G7sus4.'
+  - '**Com playback:** linha descendente por 4 voltas.'
+  - '**Transponha** para Sol e Ré.'
+mistakes:
+  - Tocar a fundamental do acorde na esquerda em vez da nota depois da barra.
 checklist:
   - id: tres-linhas
     text: Toquei as três linhas nos três tons.

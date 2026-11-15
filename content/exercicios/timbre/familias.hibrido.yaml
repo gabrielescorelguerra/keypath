@@ -9,6 +9,15 @@ prompt: |
   anote os valores e use numa introdução.
 parameters:
   keys: []
+minutes: 30
+routine:
+  - '**Escolha as duas famílias** e diga qual empresta o ataque e qual empresta a cauda.'
+  - '**Parta da família do ataque** (por exemplo, o pluck) e ajuste reverb e delay até ter a cauda da outra.'
+  - '**Toque uma frase curta** e ajuste até as duas partes soarem como um timbre só.'
+  - '**Dê um nome**, anote os valores e salve.'
+  - '**Use numa introdução** de música do repertório.'
+mistakes:
+  - Exagerar no reverb a ponto de perder o ataque que define o timbre.
 checklist:
   - id: hibrido
     text: Criei um timbre que mistura duas famílias de forma reconhecível.

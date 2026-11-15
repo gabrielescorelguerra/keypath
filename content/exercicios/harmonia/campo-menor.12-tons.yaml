@@ -12,6 +12,17 @@ prompt: |
 parameters:
   keys: [Am, Em, Bm, F#m, Dm, Gm, Cm, Fm]
   targetBpm: 60
+minutes: 25
+routine:
+  - '**Fórmula do menor natural com tétrades:** m7, m7(♭5), 7M, m7, m7, 7M, 7.'
+  - '**Em Mi menor:** Em7, F♯m7(♭5), G7M, Am7, Bm7, C7M, D7 — devagar, dizendo os graus.'
+  - '**Cadência com a harmônica:** Em7 – Am7 – B7 – Em7. Ouça a diferença entre Bm7 (natural) e B7 (harmônica,
+    com o Ré♯).'
+  - '**Dois tons por dia**, sempre tocando o campo e depois a cadência.'
+  - '**Fechamento:** escolha o tom menor de uma música do seu repertório e toque a cadência nele.'
+mistakes:
+  - 'Usar o Vm7 na cadência final: ele não resolve com força — use o V7.'
+  - Esquecer que o ♭III7M e o ♭VI7M são maiores com sétima maior.
 checklist:
   - id: tonalidades
     text: Toquei o campo e a cadência nas oito tonalidades menores.

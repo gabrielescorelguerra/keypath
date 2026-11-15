@@ -19,6 +19,15 @@ parameters:
   targetBpm: 84
   bpmStep: 4
   hands: both
+minutes: 15
+routine:
+  - '**Uma oitava, mãos separadas**, a partir do Dó central, conferindo os dedos.'
+  - '**Mãos juntas, uma oitava:** olhe o polegar das duas mãos — eles tocam juntos o Dó central.'
+  - '**Duas oitavas:** o polegar passa nas duas mãos ao mesmo tempo; pratique só essa passagem 5 vezes.'
+  - '**Volte ao centro** sem parar e repita 3 vezes.'
+  - '**Sol, Fá e Lá menor** em dias diferentes; suba 4 bpm por série limpa.'
+mistakes:
+  - Olhar só para uma das mãos — olhe para o centro, entre as duas.
 checklist:
   - id: tons
     text: Toquei em movimento contrário nos quatro tons, duas oitavas.

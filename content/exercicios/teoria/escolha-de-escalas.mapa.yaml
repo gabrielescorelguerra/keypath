@@ -9,6 +9,19 @@ prompt: |
   mapa — e outro só com a pentatônica do tom. Compare.
 parameters:
   keys: []
+minutes: 40
+routine:
+  - '**Escolha uma música simples** (4 a 6 acordes) que você já toca bem.'
+  - '**Ache o tom** e marque com lápis os acordes que estão fora do campo harmônico — são eles que pedem
+    uma escala diferente.'
+  - '**Escreva a escala de cada acorde:** acordes do campo usam o modo do grau (IIm → dórico, V7 → mixolídio…);
+    acordes fora do campo pedem a escala do acorde (V7 de outro tom → mixolídio ou harmônica daquele tom).'
+  - '**Solo 1 (mapa):** 16 compassos devagar, trocando de escala a cada acorde. Pode parar e recomeçar.'
+  - '**Solo 2 (pentatônica):** os mesmos 16 compassos só com a pentatônica do tom.'
+  - '**Compare** gravando os dois e anote em uma frase o que cada abordagem tem de melhor.'
+mistakes:
+  - Escolher uma música difícil demais — o objetivo é a escolha de escala, não a harmonia.
+  - 'Trocar de escala tarde: a troca acontece no tempo 1 do acorde novo, não no meio do compasso.'
 checklist:
   - id: mapa
     text: Escrevi o mapa de escalas da música.

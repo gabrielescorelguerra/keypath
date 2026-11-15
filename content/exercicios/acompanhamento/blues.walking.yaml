@@ -18,6 +18,17 @@ parameters:
   bpmStep: 8
   hands: both
   backing: { key: F, degrees: I7 IV7 I7 I7 IV7 IV7 I7 I7 V7 IV7 I7 V7, beatsPerChord: 4 }
+minutes: 30
+routine:
+  - '**Walking sozinho** sobre o Fá7: Fá Lá Dó Ré, uma nota por tempo, a 90 bpm.'
+  - '**Aproximações:** no último tempo antes de cada troca, toque meio tom abaixo ou acima da próxima fundamental
+    (Si → Si♭; Dó♯ → Dó).'
+  - '**Forma inteira** só com a esquerda, contando os compassos.'
+  - '**Direita:** riffs em terças e um tremolo; depois junte as mãos devagar.'
+  - '**Turnaround em tercinas** nos compassos 11–12.'
+  - '**Suba 8 bpm** por forma limpa.'
+mistakes:
+  - 'Walking pesado: toque cada nota com o mesmo peso, sem acentuar o tempo 1.'
 checklist:
   - id: walking
     text: O walking bass andou em semínimas, com aproximação cromática em cada troca.

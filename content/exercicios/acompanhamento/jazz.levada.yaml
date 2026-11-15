@@ -19,6 +19,17 @@ parameters:
   bpmStep: 10
   hands: left
   backing: { key: F, degrees: IIm7 V7 I7M VI7, beatsPerChord: 4 }
+minutes: 30
+routine:
+  - '**Shells** com o playback a 80 bpm, um por compasso.'
+  - '**Voicings sem fundamental** parados, devagar, conferindo as notas: Gm7(9) Si♭ Ré Fá Lá → C7(13) Si♭
+    Ré Mi Lá → F7M(9) Lá Dó Mi Sol.'
+  - '**Repare na condução:** do Gm7 para o C7 só o Fá desce para Mi.'
+  - '**Charleston:** acorde no 1 e no "e" do 2, colcheias suingadas.'
+  - '**Transponha** para Si♭ e Dó; suba 10 bpm por série limpa.'
+mistakes:
+  - 'Voicings graves demais (abaixo do Ré3): a esquerda fica embolada — mantenha os voicings entre Ré3 e
+    Sol4.'
 checklist:
   - id: shells
     text: Toquei duas voltas só com shells.

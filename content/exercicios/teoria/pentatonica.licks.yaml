@@ -14,6 +14,16 @@ prompt: |
   de estilo.
 parameters:
   keys: []
+minutes: 30
+routine:
+  - '**Improvise 3 minutos** em Lá menor pentatônico, gravando.'
+  - '**Ouça a gravação** e pegue os 4 melhores trechos curtos.'
+  - '**Ajuste cada frase** para caber em 1 ou 2 compassos e dê um nome.'
+  - '**Transponha** cada frase para Mi e Ré, devagar.'
+  - '**Anote as quatro** (nomes das notas ou cifra) em Prática → Repertório ou num caderno.'
+mistakes:
+  - Criar frases que só funcionam num tom porque dependem do desenho das teclas — pense em graus (1, ♭3,
+    4…).
 checklist:
   - id: quatro
     text: Criei as quatro frases e consigo tocá-las de memória.

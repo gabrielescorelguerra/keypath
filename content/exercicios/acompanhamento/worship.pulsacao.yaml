@@ -18,6 +18,15 @@ parameters:
   targetBpm: 80
   bpmStep: 4
   hands: both
+minutes: 20
+routine:
+  - '**Esquerda sozinha:** 1·5·8 em Sol, um por compasso.'
+  - '**Direita sozinha:** a condução G → D → Em → C em semínimas.'
+  - '**Colcheias** na direita, com o tempo 1 um pouco mais forte.'
+  - '**Cores:** troque I por I(9) e IV por IV(9).'
+  - '**Um tom novo por dia** (Ré, Lá, Mi, Dó); suba 4 bpm por série limpa.'
+mistakes:
+  - 'Pulsação mecânica e forte: o worship pede colcheias leves e regulares.'
 checklist:
   - id: tons
     text: Toquei a progressão nos cinco tons.

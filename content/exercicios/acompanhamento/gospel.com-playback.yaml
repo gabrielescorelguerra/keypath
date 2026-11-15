@@ -21,6 +21,15 @@ parameters:
   bpmStep: 6
   hands: both
   backing: { key: C, degrees: I7M VI7 IIm7 V7, beatsPerChord: 4 }
+minutes: 25
+routine:
+  - '**Monte os voicings** (3ª, 7ª e 9ª) de C7M, A7, Dm7 e G7 parados.'
+  - '**Voltas 1–2:** só acompanhamento, baixo em oitavas.'
+  - '**Voltas 3–4:** acorde de passagem no tempo 4 (E7 antes do A7, A♭7 antes do G7).'
+  - '**Voltas 5–6:** frase curta com a pentatônica, com Mi♭ → Mi de passagem.'
+  - '**Suba 6 bpm** por série limpa.'
+mistakes:
+  - 'Frases longas que cobrem a voz: no gospel, o teclado preenche os espaços.'
 checklist:
   - id: seis-voltas
     text: Fiz as três etapas sem parar o playback.

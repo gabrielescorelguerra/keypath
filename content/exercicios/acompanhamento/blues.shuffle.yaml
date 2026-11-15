@@ -20,6 +20,17 @@ parameters:
   targetBpm: 110
   bpmStep: 5
   hands: both
+minutes: 25
+routine:
+  - '**Esquerda sozinha** em Dó: Dó+Sol, Dó+Lá alternando, colcheias suingadas, 70 bpm.'
+  - '**Troca de acorde:** o mesmo desenho em Fá (Fá+Dó, Fá+Ré) e Sol (Sol+Ré, Sol+Mi).'
+  - '**Direita sozinha:** acorde curto no tempo 2 e no "e" do 4, batendo o pé nos tempos.'
+  - '**Mãos juntas** em um compasso só, repetido, até ficar natural.'
+  - '**Forma de 12 compassos** com quick change; suba 5 bpm por forma limpa.'
+  - '**Transponha** para Fá e Sol.'
+mistakes:
+  - 'Tocar colcheias retas: o shuffle é longa-curta.'
+  - Direita no tempo junto com a esquerda — ela fica no contratempo.
 checklist:
   - id: forma
     text: Toquei a forma inteira de memória, nos três tons.

@@ -20,6 +20,16 @@ parameters:
   bpmStep: 5
   hands: both
   backing: { key: E, degrees: Im7 Im7 IV7(9) IV7(9), beatsPerChord: 4 }
+minutes: 25
+routine:
+  - '**Conte as semicolcheias** em voz alta com o metrônomo a 84: "1 e a 2 e a 3 e a 4 e a".'
+  - '**Esquerda sozinha** com o playback: Mi em oitava no 1 e nota curta no "e" do 2.'
+  - '**Direita sozinha:** acordes curtos no "e" do 1, no "a" do 2 e no 4.'
+  - '**Mãos juntas** por 2 voltas, depois acrescente as notas fantasma.'
+  - '**Suba 5 bpm** por série limpa; transponha para Lá e Ré.'
+mistakes:
+  - 'Segurar os acordes: staccato é metade da levada.'
+  - Tocar todas as semicolcheias — o groove está no que você deixa de fora.
 checklist:
   - id: curtos
     text: Os acordes ficaram curtos e precisos, sem pedal.

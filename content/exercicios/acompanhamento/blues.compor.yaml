@@ -12,6 +12,17 @@ prompt: |
   - escreva uma introdução de 4 compassos e um final com turnaround.
 parameters:
   keys: []
+minutes: 40
+routine:
+  - '**Escolha o tom e o andamento** e toque a forma com shuffle uma vez.'
+  - '**Crie a frase A** (compassos 1–4) cantando por cima do I7.'
+  - '**Repita A** nos compassos 5–8, sobre o IV7 — ajuste uma nota se precisar.'
+  - '**Crie a resposta B** nos compassos 9–12 (V7 – IV7 – I7).'
+  - '**Introdução de 4 compassos** e **final com turnaround** (por exemplo, descendo cromático do I7 ao
+    V7).'
+  - '**Escreva tudo** e grave uma vez inteira.'
+mistakes:
+  - 'Fazer A e B parecidos demais: a resposta precisa soar como conclusão.'
 checklist:
   - id: forma
     text: O blues tem 12 compassos com a estrutura AAB.

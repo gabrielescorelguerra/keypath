@@ -22,6 +22,20 @@ parameters:
   targetBpm: 96
   bpmStep: 4
   hands: both
+minutes: 20
+routine:
+  - '**Mão direita sozinha**, Dó maior, em semínimas a 60. Prepare o polegar para passar enquanto o 3º dedo
+    toca.'
+  - '**Mão esquerda sozinha:** o cruzamento é do 4º (ou 3º) dedo por cima do polegar — mantenha o pulso
+    alto.'
+  - '**Maior → menor:** só a terça desce; repita o arpejo menor sem mudar o dedilhado.'
+  - '**Mãos juntas em oitavas** só quando cada mão sair limpa sozinha.'
+  - '**Colcheias e andamento:** suba 4 bpm por série limpa até 96.'
+  - '**Fechamento:** diminuta e aumentada na mão direita, um tom por vez.'
+mistakes:
+  - 'Pressa nas mãos juntas: os polegares passam em momentos diferentes e é aí que a coisa desalinha — vá
+    devagar.'
+  - 'Levantar o cotovelo na passagem: o movimento é dos dedos e do antebraço, não do ombro.'
 checklist:
   - id: tons
     text: Toquei maior e menor nos seis tons, subindo e descendo duas oitavas.

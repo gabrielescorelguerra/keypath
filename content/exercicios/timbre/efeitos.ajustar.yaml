@@ -15,6 +15,19 @@ prompt: |
   semínima.
 parameters:
   keys: []
+minutes: 25
+routine:
+  - '**Calcule antes de mexer:** a 70 bpm, semínima = 0,857 s; a 120 bpm, semínima = 0,5 s e colcheia pontuada
+    = 0,375 s.'
+  - '**Pad de oração:** reverb longo e mix alto; delay discreto. Toque 4 compassos e anote os valores.'
+  - '**Pluck rítmico:** delay de 0,375 s com ~35% de repetição; toque colcheias e ouça o eco se encaixar
+    no tempo.'
+  - '**Lead:** chorus leve, delay curto, reverb médio; toque uma frase e ajuste até ela ficar na frente
+    sem "lavar".'
+  - '**Compare** os três e salve as anotações em Prática → Repertório ou num caderno.'
+mistakes:
+  - Ajustar o delay de ouvido sem o metrônomo — o eco fora do tempo embola a música.
+  - 'Reverb alto em música rápida: o som vira uma massa.'
 checklist:
   - id: tres
     text: Ajustei os três timbres e anotei os valores.

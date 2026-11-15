@@ -16,6 +16,17 @@ parameters:
   keys: []
   startBpm: 60
   targetBpm: 80
+minutes: 30
+routine:
+  - '**Escolha a música e o andamento** (entre 60 e 80 bpm) e toque a progressão em blocos.'
+  - '**Defina o ritmo** batendo palmas: colcheias, ou semínima pontuada + colcheia.'
+  - '**Defina a ordem das notas:** por exemplo 1 – 5 – 9 – 3 (fundamental, quinta, nona, terça). Toque sobre
+    um acorde só até ficar automático.'
+  - '**Aplique na progressão inteira** mantendo o desenho e mudando só as notas.'
+  - '**Variação do refrão:** a mesma figura uma oitava acima, ou com mais notas.'
+  - '**Grave 30 s** e ouça cantando por cima.'
+mistakes:
+  - Padrão ocupado demais na região da voz (do Dó central para cima) — deixe o agudo mais livre na estrofe.
 checklist:
   - id: padrao
     text: Criei um padrão e consigo descrevê-lo (ritmo e ordem das notas).

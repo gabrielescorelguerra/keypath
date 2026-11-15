@@ -9,6 +9,19 @@ prompt: |
   lídio, o ♭II do frígio). Depois, componha uma melodia por cima.
 parameters:
   keys: []
+minutes: 35
+routine:
+  - '**Escolha o modo e a tônica** e anote a nota característica (ex.: mixolídio de Sol → Fá natural).'
+  - '**Monte dois acordes:** o I e o acorde que contém a nota característica (Sol mixolídio → G e F; Ré
+    dórico → Dm e G; Fá lídio → F e G; Mi frígio → Em e F).'
+  - '**Vamp de 2 acordes** por 2 minutos: escute se ainda soa modal ou se parece o maior/menor comum.'
+  - '**Expanda para 4 a 8 compassos** acrescentando no máximo mais um acorde do modo — e evite o V7 do tom
+    relativo, que puxa para o maior.'
+  - '**Componha a melodia** cantando por cima, colocando a nota característica em um tempo forte.'
+  - '**Toque tudo duas vezes** e grave.'
+mistakes:
+  - 'Acrescentar acordes demais: a progressão vira um tom comum e o modo some.'
+  - Terminar na tônica do relativo (Dó, no caso de Ré dórico) — o centro precisa ser a tônica do modo.
 checklist:
   - id: modo
     text: A progressão soa claramente no modo escolhido, sem parecer o maior ou o menor comum.

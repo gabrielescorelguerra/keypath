@@ -9,6 +9,15 @@ prompt: |
   Toque com a gravação original.
 parameters:
   keys: []
+minutes: 40
+routine:
+  - '**Ouça a música** e anote o que a guitarra faz em cada seção.'
+  - '**Escolha um papel** diferente para o teclado (pedal agudo, pad, riff ou piano motor).'
+  - '**Escreva a parte** de uma seção.'
+  - '**Toque com a gravação** e ajuste a região (fuja da região da guitarra).'
+  - '**Complete as outras seções.**'
+mistakes:
+  - Dobrar a guitarra nota por nota — o teclado some ou embola.
 checklist:
   - id: espaco
     text: A parte ocupa um espaço que a guitarra não ocupa.

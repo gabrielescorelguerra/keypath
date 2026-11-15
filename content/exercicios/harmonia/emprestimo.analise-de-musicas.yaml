@@ -7,6 +7,17 @@ prompt: |
   Escreva cada uma em graus, marque os acordes emprestados e diga de onde vêm.
   Depois toque o trecho trocando o acorde emprestado pelo do campo maior (por exemplo, IVm → IV)
   e compare.
+minutes: 40
+routine:
+  - '**Liste candidatas:** passe pelas cifras do repertório e marque acordes que não estão no campo maior
+    do tom (IVm, ♭VII, ♭VI, ♭III…).'
+  - '**Para cada música**, escreva a progressão em graus e circule o empréstimo.'
+  - '**Diga de onde vem:** quase sempre do tom menor homônimo (IVm, ♭VI, ♭VII, ♭III) — anote.'
+  - '**Toque o trecho original** duas vezes, depois troque o empréstimo pelo acorde do campo (IVm → IV,
+    ♭VII → V) e toque mais duas.'
+  - '**Anote em uma frase** o que o empréstimo acrescenta (melancolia, grandiosidade, surpresa).'
+mistakes:
+  - 'Confundir empréstimo com dominante secundário: um A7 em Dó maior é V7/II, não empréstimo.'
 checklist:
   - id: tres-musicas
     text: Analisei três músicas em graus.

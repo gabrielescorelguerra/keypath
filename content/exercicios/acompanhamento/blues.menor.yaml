@@ -22,6 +22,17 @@ parameters:
   bpmStep: 3
   hands: both
   backing: { key: C, degrees: Im7 Im7 Im7 Im7 IVm7 IVm7 Im7 Im7 bVI7 V7 Im7 V7, beatsPerChord: 4 }
+minutes: 30
+routine:
+  - '**Conte o 12/8 em voz alta** com o metrônomo a 48: "UM-e-a DOIS-e-a TRÊS-e-a QUATRO-e-a".'
+  - '**Só a esquerda:** fundamental e quinta no tempo 1, passagem nas tercinas do 4, forma inteira.'
+  - '**Só a direita:** 3ª e 7ª nas tercinas (Cm7: Mi♭ e Si♭; Fm7: Lá♭ e Mi♭; A♭7: Dó e Sol♭; G7: Si e Fá).'
+  - '**Mãos juntas** com o playback, duas formas.'
+  - '**Improviso:** uma forma com a blues menor, com grace notes e tremolos nas notas longas.'
+  - '**Transponha** para Lá e Mi menor.'
+mistakes:
+  - 'Esquecer a virada ♭VI7 → V7 (compassos 9 e 10): é a marca do blues menor.'
+  - Tercinas desiguais — conte em voz alta.
 checklist:
   - id: forma
     text: Toquei a forma do blues menor de memória, com o ♭VI7 → V7.

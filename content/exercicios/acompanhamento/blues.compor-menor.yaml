@@ -9,6 +9,15 @@ prompt: |
   instrumento que vai solar com você.
 parameters:
   keys: []
+minutes: 40
+routine:
+  - '**Escolha o tom** e toque a forma do blues menor (Im7, IVm7, ♭VI7, V7) duas vezes.'
+  - '**Introdução:** 4 compassos sobre o V7, com uma frase que termina na tônica.'
+  - '**Melodia ou riff** para os compassos 1–4, repetida nos 5–8 (sobre o IVm7) e respondida nos 9–12.'
+  - '**Final:** a blues menor descendo até a tônica, ralentando.'
+  - '**Grave em 12/8** a 48–56 bpm e ouça.'
+mistakes:
+  - 'Andamento rápido demais: slow blues vive do espaço entre as notas.'
 checklist:
   - id: forma
     text: Introdução sobre o V7, forma de 12 compassos e final.

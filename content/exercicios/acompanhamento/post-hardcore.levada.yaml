@@ -20,6 +20,15 @@ parameters:
   bpmStep: 5
   hands: both
   backing: { key: D, degrees: Im bVI bVII Im, beatsPerChord: 4 }
+minutes: 30
+routine:
+  - '**Prepare os três timbres** (pad escuro, cordas, pluck com delay).'
+  - '**Camada 1:** Ré–Lá na esquerda com o pad, 2 voltas.'
+  - '**Camada 2:** tríades de cordas na região média (Dm, B♭, C), 2 voltas.'
+  - '**Camada 3:** arpejo em colcheias no agudo com delay, 2 voltas.'
+  - '**Tudo junto** (ou alternando, se o teclado não tiver layer), crescendo até o fim.'
+mistakes:
+  - 'Deixar o pad mudar a cada acorde: ele segura Ré–Lá o tempo todo.'
 checklist:
   - id: camadas
     text: Toquei as três camadas, uma de cada vez, sobre o playback.

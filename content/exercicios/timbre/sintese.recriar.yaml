@@ -16,6 +16,16 @@ prompt: |
   Compare com os timbres prontos do laboratório: chegou perto?
 parameters:
   keys: []
+minutes: 30
+routine:
+  - '**Comece no Órgão** e toque um acorde de Dó maior como referência.'
+  - '**Pad:** mude a onda, depois o filtro, depois o envelope, depois o LFO — um bloco por vez, tocando
+    o acorde a cada mudança.'
+  - '**Volte ao Órgão** e faça o Pluck (o principal é sustentação zero).'
+  - '**Volte ao Órgão** e faça o Lead.'
+  - '**Compare** com os timbres prontos e anote a diferença de cada um.'
+mistakes:
+  - 'Esquecer o release no pad: sem release longo, o som corta seco quando você solta as teclas.'
 checklist:
   - id: tres
     text: Montei pad, pluck e lead começando do mesmo ponto.

@@ -221,8 +221,7 @@ export function LearnPage() {
             <span className={styles.bigOf}>de {overview.lessonsTotal} aulas</span>
           </p>
           <p className={styles.quiet}>
-            {overview.modulesCompleted} de {overview.modulesAvailable} módulos com aulas concluídos.
-            Os demais estão em preparação.
+            {overview.modulesCompleted} de {overview.modulesAvailable} módulos concluídos.
           </p>
         </section>
 
@@ -273,6 +272,11 @@ export function LearnPage() {
           </div>
           <div id="curso-atual" role="tabpanel" aria-labelledby={`tab-${selectedCourse.id}`}>
             <p className={styles.courseSummary}>{selectedCourse.summary}</p>
+            <p className={styles.howTo}>
+              <strong>Como funciona:</strong> cada curso tem <em>módulos</em>; cada módulo tem{' '}
+              <em>aulas</em> em ordem; cada aula é dividida em partes curtas e termina com{' '}
+              <em>prática</em> no teclado. Clique num módulo para ver as aulas dele.
+            </p>
             <CourseMap course={selectedCourse} map={map} />
           </div>
         </section>

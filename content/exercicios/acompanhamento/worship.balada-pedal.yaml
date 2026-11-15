@@ -22,6 +22,16 @@ parameters:
   bpmStep: 5
   hands: both
   backing: { key: G, degrees: I VIm IV V, beatsPerChord: 4 }
+minutes: 20
+routine:
+  - '**Sem acordes:** toque uma nota, pise o pedal logo depois, troque a nota e repita o movimento "tocar,
+    levantar, pisar".'
+  - '**Com a progressão:** voicings abertos, um acorde por compasso, trocando o pedal.'
+  - '**Ouça a troca:** não pode haver buraco nem mistura.'
+  - '**Com playback** a 60 bpm.'
+  - '**Transponha** para Ré e Si♭.'
+mistakes:
+  - Pisar o pedal junto com o acorde novo — o som anterior vaza.
 checklist:
   - id: sem-buraco
     text: As trocas de acorde ficaram ligadas, sem silêncio.

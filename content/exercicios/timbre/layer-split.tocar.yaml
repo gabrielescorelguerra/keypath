@@ -19,6 +19,16 @@ parameters:
   startBpm: 70
   targetBpm: 80
   hands: both
+minutes: 25
+routine:
+  - '**Split no laboratório:** esquerda só com a fundamental abaixo de Dó3, direita com acordes no pad,
+    4 voltas.'
+  - '**Layer:** pad + strings, ajuste o volume das camadas até ouvir as duas.'
+  - '**No seu teclado:** procure no manual "Split" e "Layer" (ou "Dual").'
+  - '**Monte e salve** os dois registros.'
+  - '**Toque a progressão** em Ré e Sol com cada um.'
+mistakes:
+  - 'Ponto de divisão alto demais: a mão direita invade o baixo.'
 checklist:
   - id: split
     text: Toquei a progressão com o split, sem invadir a região da outra mão.

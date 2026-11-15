@@ -16,6 +16,14 @@ prompt: |
   Toque o mesmo trecho com cada registro, com a Leslie lenta e depois rápida.
 parameters:
   keys: []
+minutes: 25
+routine:
+  - '**Zere todos os drawbars** e monte o primeiro registro, lendo da esquerda para a direita.'
+  - '**Toque um trecho** (por exemplo, I – IV – V – I) com a Leslie lenta e depois rápida.'
+  - '**Monte os outros dois registros** e repita o mesmo trecho.'
+  - '**Compare** e anote qual registro combina com cada música do repertório.'
+mistakes:
+  - 'Usar Leslie rápida o tempo todo: ela é um efeito de crescendo, não um padrão.'
 checklist:
   - id: tres
     text: Montei os três registros.

@@ -20,6 +20,16 @@ parameters:
   bpmStep: 5
   hands: right
   backing: { key: D, degrees: Im7 Im7 IV7 IV7, beatsPerChord: 4 }
+minutes: 20
+routine:
+  - '**Escute uma volta do playback** sem tocar, só batendo o pé.'
+  - '**Voltas 1–2 com três notas** (Ré, Fá, Si): ritmos simples, notas longas.'
+  - '**Voltas 3–4 com a escala inteira**, terminando cada frase em Ré ou Lá.'
+  - '**Voltas 5–6 com espaço:** dois compassos tocando, dois em silêncio.'
+  - '**Suba 5 bpm** e repita, até 90.'
+mistakes:
+  - 'Evitar o Si por soar "estranho": é exatamente o Si que torna o som dórico.'
+  - Terminar frases no Mi ou no Sol, que deixam a frase em suspenso.
 checklist:
   - id: voltas
     text: Improvisei por pelo menos quatro voltas sem parar o playback.

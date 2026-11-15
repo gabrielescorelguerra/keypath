@@ -9,6 +9,16 @@ prompt: |
   mesma função, cores (sus, add9, 7M) e um dominante secundário. Escreva em graus e toque em dois tons.
 parameters:
   keys: []
+minutes: 40
+routine:
+  - '**Escolha a base** (por exemplo I – V – VIm – IV) e toque 4 voltas para ouvi-la.'
+  - '**Recurso 1 — rotação:** comece no VIm (VIm – IV – I – V).'
+  - '**Recurso 2 — baixo:** troque um acorde por uma inversão para o baixo andar por grau conjunto.'
+  - '**Recurso 3 — cor ou dominante secundário:** acrescente um sus4 que resolve ou um V7/VI antes do VIm.'
+  - '**Organize em 8 compassos** e escreva em graus.'
+  - '**Toque em dois tons** e grave.'
+mistakes:
+  - 'Juntar recursos demais num mesmo compasso: um recurso por lugar já transforma a progressão.'
 checklist:
   - id: tres-recursos
     text: A progressão usa pelo menos três recursos da aula.

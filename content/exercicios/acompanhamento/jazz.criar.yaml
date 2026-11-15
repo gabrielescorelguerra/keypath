@@ -9,6 +9,15 @@ prompt: |
   turnaround I – VI7 – IIm7 – V7.
 parameters:
   keys: []
+minutes: 45
+routine:
+  - '**Escolha a melodia** e escreva a harmonia simples em graus.'
+  - '**Troque tríades por tétrades** com extensões, checando a melodia.'
+  - '**Insira II–V** antes dos acordes de chegada mais importantes.'
+  - '**Comping em Charleston** na esquerda, melodia na direita.'
+  - '**Final com turnaround** I – VI7 – IIm7 – V7 e grave.'
+mistakes:
+  - 'Esquecer o swing: colcheias longa-curta o tempo todo.'
 checklist:
   - id: harmonia
     text: Reharmonizei com II–V e extensões.

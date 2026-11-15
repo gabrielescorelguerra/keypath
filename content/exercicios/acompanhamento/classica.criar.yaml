@@ -9,6 +9,16 @@ prompt: |
   esquerda.
 parameters:
   keys: [C, G]
+minutes: 40
+routine:
+  - '**Escolha o tom** e escreva o plano harmônico: compassos 1–4 terminando no V; 5–8 terminando em V7
+    – I.'
+  - '**Toque o plano** com baixo de Alberti, sem melodia.'
+  - '**Melodia da pergunta** (1–4), terminando numa nota do V (Ré ou Si, em Dó).'
+  - '**Melodia da resposta** (5–8), parecida com a pergunta e terminando na tônica.'
+  - '**Toque tudo** e grave.'
+mistakes:
+  - 'Resposta muito diferente da pergunta: o estilo clássico gosta de simetria.'
 checklist:
   - id: forma
     text: A frase tem pergunta (termina no V) e resposta (termina no I).

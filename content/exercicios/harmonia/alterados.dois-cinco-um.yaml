@@ -19,6 +19,22 @@ parameters:
   bpmStep: 6
   hands: both
   backing: { key: C, degrees: IIm7 V7 I7M I7M, beatsPerChord: 4 }
+minutes: 30
+routine:
+  - '**Monte os voicings sem playback.** Esquerda: Ré no Dm7, Sol no G7, Dó no C7M. Direita: Fá-Lá-Dó-Mi
+    no Dm7; no G7, comece pelo trítono **Si–Fá** e acrescente a cor da vez.'
+  - '**Ensaie as quatro cores do G7 paradas:** G7(13) com Mi em cima; G7(♭9) com Lá♭ em cima; tríade de
+    Mi♭ (Mi♭ Sol Si♭) sobre Si–Fá; tríade de Mi (Mi Sol♯ Si) sobre Si–Fá. Toque cada uma 4 vezes resolvendo
+    no C7M.'
+  - '**Encontre a resolução da nota de cima:** Lá♭ → Sol, Mi♭ → Ré ou Mi, Si♭ → Si (ou Lá), Sol♯ → Lá ou
+    Sol. Cante a resolução antes de tocar.'
+  - '**Com playback:** uma cor por volta, na ordem 1 → 4, duas rodadas completas.'
+  - '**Transponha para Fá** (Gm7 – C7 – F7M): o trítono do C7 é Mi–Si♭; as tríades viram Lá♭ e Lá.'
+  - '**Suba 6 bpm** só quando as quatro cores saírem sem hesitar.'
+mistakes:
+  - 'Tocar a fundamental do G7 na mão direita junto da tríade: deixe o Sol para a esquerda, senão o voicing
+    embola.'
+  - 'Resolver a tensão saltando: a graça do dominante alterado é a nota de cima descer (ou subir) meio tom.'
 checklist:
   - id: quatro
     text: Toquei as quatro versões do G7 sem parar o playback.

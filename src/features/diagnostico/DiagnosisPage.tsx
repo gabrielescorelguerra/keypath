@@ -107,7 +107,7 @@ export function DiagnosisPage() {
       <p className={`muted small ${styles.note}`}>
         Declarar não apaga nada: você pode desmarcar a qualquer momento. Competências dominadas
         pelos exercícios não podem ser desmarcadas aqui. Veja os detalhes de cada uma na sua página
-        — por exemplo, a partir das <Link to={paths.home}>trilhas no início</Link>.
+        — por exemplo, a partir das <Link to={paths.home}>áreas no início</Link>.
       </p>
     </>
   )

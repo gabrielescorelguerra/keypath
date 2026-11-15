@@ -20,6 +20,16 @@ parameters:
   targetBpm: 100
   bpmStep: 5
   hands: right
+minutes: 25
+routine:
+  - '**Uma run por vez**, em Dó, em colcheias a 60 bpm, até tocar de memória.'
+  - '**Ritmo da run:** depois em tercinas, depois em semicolcheias.'
+  - '**Termine sempre numa nota do acorde** e segure-a por um tempo.'
+  - '**Transponha** cada run para Fá, Lá♭ e Mi♭ (uma tonalidade por dia).'
+  - '**Suba 5 bpm** por série limpa.'
+mistakes:
+  - Dedilhado diferente a cada vez — fixe um e repita sempre igual.
+  - 'Correr antes de estar limpo: run suja soa pior do que run lenta.'
 checklist:
   - id: quatro
     text: Toquei as quatro runs nos quatro tons.

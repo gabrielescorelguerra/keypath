@@ -20,6 +20,17 @@ parameters:
   targetBpm: 88
   bpmStep: 4
   hands: right
+minutes: 20
+routine:
+  - '**Em Ré:** Dsus2 (Ré Mi Lá) – D – Dsus4 (Ré Sol Lá) – D – Dadd9 (Ré Fá♯ Lá Mi). Só a nota do meio se
+    mexe.'
+  - '**Voicing aberto do add9:** Ré no baixo da direita, Lá e Mi, e o Fá♯ em cima — ouça como soa mais "moderno".'
+  - '**Resolução:** A7sus4 (Lá Ré Mi Sol) → A7 (Lá Dó♯ Mi Sol) → D. O Ré desce para Dó♯.'
+  - '**Um tom por vez**, seguindo a lista, 60 bpm, um acorde a cada 2 tempos.'
+  - '**Suba 4 bpm** por série limpa.'
+mistakes:
+  - Chamar de add9 um acorde com sétima (D7(9) é outra coisa).
+  - 'Esquecer de resolver o sus4: sem resolução ele soa como erro, não como cor.'
 checklist:
   - id: tons
     text: Toquei a sequência nos seis tons.

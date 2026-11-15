@@ -32,6 +32,17 @@ parameters:
   targetBpm: 84
   bpmStep: 6
   hands: both
+minutes: 30
+routine:
+  - '**Toque a original** I7M – VIm7 – IIm7 – V7 em Dó, 4 voltas.'
+  - '**Uma camada por vez**, 4 voltas cada, sempre voltando à original antes de passar para a próxima —
+    para ouvir o que mudou.'
+  - '**Nas camadas 3 e 4**, toque devagar o baixo sozinho primeiro: E♭ – D – D♭ – C (trítono) e C – C♯ –
+    D – D♯ – E (diminutos).'
+  - '**Anote** qual camada combina com qual estilo (gospel, jazz, MPB, louvor).'
+  - '**Transponha** para Fá e Sol.'
+mistakes:
+  - 'Tocar o C♯°7 como C♯m7(♭5): o diminuto tem a 7ª diminuta (Si♭).'
 checklist:
   - id: camadas
     text: Toquei as cinco camadas nos quatro tons.

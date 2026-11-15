@@ -8,6 +8,16 @@ prompt: |
   estrofe (padrão leve), pré-refrão (crescendo) e refrão (padrão cheio). Escreva o mapa e toque.
 parameters:
   keys: []
+minutes: 40
+routine:
+  - '**Escolha a música** e escreva o mapa das seções com os acordes.'
+  - '**Introdução:** um ostinato de 2 notas no topo sobre a progressão.'
+  - '**Estrofe:** padrão de balada (semibreves na esquerda, tríade em semínimas).'
+  - '**Pré-refrão:** crescendo — de semínimas para colcheias.'
+  - '**Refrão:** 1·5·8 em colcheias e acordes acentuando 2 e 4.'
+  - '**Toque a música inteira** e grave.'
+mistakes:
+  - Refrão sem diferença de energia em relação à estrofe.
 checklist:
   - id: mapa
     text: Escrevi o mapa com um padrão por seção.

@@ -33,6 +33,16 @@ parameters:
   targetBpm: 80
   bpmStep: 5
   hands: both
+minutes: 30
+routine:
+  - '**Toque a melodia** sozinha na direita até tocar de memória.'
+  - '**Toque com a harmonia original** (C – G – C – G).'
+  - '**Aplique uma sugestão por compasso**, testando sempre a nota da melodia contra o acorde novo.'
+  - '**Crie uma variação sua** para pelo menos um compasso.'
+  - '**Toque a versão final** 3 vezes seguidas, subindo 5 bpm se sair limpa.'
+mistakes:
+  - Usar um acorde que deixa a melodia meio tom acima de uma nota do acorde — a sugestão do D♭7 no compasso
+    4 é exatamente o caso a evitar.
 checklist:
   - id: tres-tecnicas
     text: Usei pelo menos três técnicas diferentes nos quatro compassos.

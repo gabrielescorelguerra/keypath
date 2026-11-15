@@ -60,6 +60,8 @@ function performance(id: string, competencies: string[]) {
       competencies,
       styles: [],
       challenges: [],
+      routine: [],
+      mistakes: [],
       parameters: { keys: [] },
       checklist: [{ id: 'ok', text: 'ok' }],
     },

@@ -12,6 +12,19 @@ prompt: |
 parameters:
   keys: [C, G, D, A, E, Bb]
   targetBpm: 70
+minutes: 20
+routine:
+  - '**Em Sol, monte os acordes:** ♭VI = Mi♭, ♭VII = Fá, IVm = Dó menor, ♭VII7 = F7. Repare que todos vêm
+    de Sol menor.'
+  - '**Cadência 1:** E♭ – F – G, com a nota de cima subindo (Sol – Lá – Si). Toque devagar e com peso, como
+    um final de música.'
+  - '**Cadência 2:** Cm – F7 – G. Conduza as vozes: o Mi♭ do Cm vai para o Mi♭ do F7 e depois desce para
+    o Ré do G.'
+  - '**Os outros tons:** em cada um, primeiro diga os acordes em voz alta e só depois toque.'
+  - '**Use num final real:** termine uma música do repertório com ♭VI – ♭VII – I.'
+mistakes:
+  - 'Tocar o ♭VII como menor (Fm em vez de F): ele é maior.'
+  - Saltar a mão direita inteira entre os acordes — busque as notas comuns e o caminho mais curto.
 checklist:
   - id: tonalidades
     text: Toquei as duas cadências nos seis tons.

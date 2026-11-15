@@ -287,6 +287,25 @@ function PerformanceRunner({
         </details>
       )}
 
+      {exercise.routine && (
+        <section className={styles.routine} aria-label="Como praticar">
+          <h3 className={styles.routineTitle}>
+            Como praticar
+            {exercise.minutes && (
+              <span className={styles.routineTime}>cerca de {exercise.minutes} min</span>
+            )}
+          </h3>
+          <Markdown root={exercise.routine} />
+        </section>
+      )}
+
+      {exercise.mistakes && (
+        <section className={styles.mistakes} aria-label="Erros comuns">
+          <h3 className={styles.routineTitle}>Cuidado com</h3>
+          <Markdown root={exercise.mistakes} />
+        </section>
+      )}
+
       <fieldset className={styles.question}>
         <legend className={styles.prompt}>Depois de tocar, marque o que você conseguiu:</legend>
         {exercise.checklist.map((item) => (

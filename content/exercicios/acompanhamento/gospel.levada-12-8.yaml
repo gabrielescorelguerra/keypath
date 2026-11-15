@@ -20,6 +20,15 @@ parameters:
   bpmStep: 2
   hands: both
   backing: { key: Ab, degrees: I7M IIIm7 VI7 IIm7 V7sus4 V7, beatsPerChord: 4 }
+minutes: 25
+routine:
+  - '**Conte o 12/8** em voz alta com o metrônomo a 52.'
+  - '**Esquerda sozinha:** oitavas no 1 e no 7, passagem na última tercina.'
+  - '**Direita sozinha:** acordes leves nas tercinas 2-3, 5-6, 8-9, 11-12.'
+  - '**Mãos juntas** com o playback, uma volta inteira.'
+  - '**Transponha** para Mi♭ e Ré♭; suba 2 bpm por série limpa.'
+mistakes:
+  - Acentuar as tercinas — o peso fica nos tempos principais.
 checklist:
   - id: contagem
     text: Contei as tercinas em voz alta por uma volta inteira enquanto tocava.

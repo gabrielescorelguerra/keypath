@@ -24,6 +24,16 @@ parameters:
   targetBpm: 80
   bpmStep: 4
   hands: both
+minutes: 25
+routine:
+  - '**Em Dó, mãos separadas:** direita com 3ª, 7ª e extensão (tabela), devagar, dizendo a cifra completa.'
+  - '**Junte a fundamental na esquerda**, uma oitava abaixo do Dó central.'
+  - '**Escute o caráter** de cada grau: o IV7M(♯11) soa "flutuante", o V7(13) soa "pedindo resolução".'
+  - '**Suba o campo inteiro** a 56 bpm, um acorde a cada 2 tempos.'
+  - '**Transponha** um tom por dia (Sol, Fá, Ré, Si♭), primeiro escrevendo as notas da mão direita.'
+mistakes:
+  - Tocar a 11ª num acorde maior (I ou V) — ela briga com a terça; use a ♯11 no IV.
+  - 'Colocar a fundamental também na direita: tira o espaço das extensões.'
 checklist:
   - id: tons
     text: Toquei o campo com extensões subindo e descendo nos cinco tons.

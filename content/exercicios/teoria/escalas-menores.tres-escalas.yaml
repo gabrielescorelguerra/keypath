@@ -11,6 +11,21 @@ parameters:
   keys: [Am, Em, Bm, Dm, Gm, Cm]
   targetBpm: 60
   hands: right
+minutes: 20
+routine:
+  - '**Comece por Lá menor**, que só muda teclas brancas: natural (todas brancas), harmônica (Sol♯), melódica
+    (Fá♯ e Sol♯).'
+  - '**Em cada tom novo**, primeiro encontre a relativa maior (3ª menor acima) — a menor natural tem as
+    mesmas notas que ela.'
+  - '**Toque as três formas seguidas**, sem parar entre elas, a 60 bpm, uma nota por tempo. Antes de cada
+    uma, diga em voz alta a nota que muda.'
+  - '**Escute a cadência:** depois de cada tom, toque i – V7 – i com a esquerda (ex.: Am – E7 – Am) e cante
+    a sensível subindo para a tônica.'
+  - '**Duas tonalidades por dia** é suficiente; no terceiro dia, faça as seis seguidas.'
+mistakes:
+  - Esquecer que a melódica clássica desce como natural — aqui, para treinar, toque igual subindo e descendo
+    (o uso do jazz e do pop) e depois a versão clássica.
+  - 'Na harmônica, "engolir" o salto de segunda aumentada (6º → 7º grau): toque-o em legato, sem pressa.'
 checklist:
   - id: tres-formas
     text: Toquei as três formas em cada uma das seis tonalidades, sem errar notas.

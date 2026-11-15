@@ -12,6 +12,14 @@ prompt: |
 parameters:
   keys: [C, G, D, A, E, B, F#, Db, Ab, Eb, Bb, F]
   targetBpm: 60
+minutes: 20
+routine:
+  - '**Em Sol:** G – C – Cm – G. A direita toca Sol–Dó–Mi no C e só o Mi desce para Mi♭ no Cm.'
+  - '**Versão IVm6:** Cm6 = Dó Mi♭ Sol Lá. O Lá do Cm6 cria um caminho bonito para o Si do G.'
+  - '**4 tons por dia**, sempre falando os nomes antes de tocar (em Ré: G – Gm).'
+  - '**Ouça o efeito:** o IVm é o momento "nostálgico" de muita balada e de muitos finais de louvor.'
+mistakes:
+  - 'Mover a mão inteira no IV → IVm: só a terça muda.'
 checklist:
   - id: tonalidades
     text: Toquei as duas versões nas 12 tonalidades.

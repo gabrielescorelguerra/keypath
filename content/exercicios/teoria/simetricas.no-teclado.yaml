@@ -20,6 +20,17 @@ parameters:
   targetBpm: 96
   bpmStep: 6
   hands: right
+minutes: 20
+routine:
+  - '**Tons inteiros a partir de Dó:** Dó Ré Mi Fá♯ Sol♯ Lá♯ — repare que são só 6 notas. A partir de Dó♯,
+    as outras 6.'
+  - '**Diminuta semitom–tom de Dó:** Dó Ré♭ Mi♭ Mi Fá♯ Sol Lá Si♭ — alterne semitom e tom. Diga "S, T, S,
+    T" enquanto toca.'
+  - '**Prove que só existem três:** a diminuta de Mi♭, Fá♯ e Lá tem as mesmas notas da de Dó.'
+  - '**Sobre o acorde:** C7(♭9) na esquerda, diminuta de Dó na direita, devagar, ouvindo cada tensão.'
+  - '**Suba o andamento** 6 bpm por série limpa.'
+mistakes:
+  - Confundir semitom–tom (usada em acorde dominante) com tom–semitom (usada em acorde diminuto).
 checklist:
   - id: duas
     text: Toquei as duas escalas de tons inteiros.

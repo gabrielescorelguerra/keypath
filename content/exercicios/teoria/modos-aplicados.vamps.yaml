@@ -25,6 +25,17 @@ parameters:
   bpmStep: 5
   hands: both
   backing: { key: D, degrees: I bVII IV I, beatsPerChord: 4 }
+minutes: 30
+routine:
+  - '**Antes do playback**, toque Ré mixolídio e diga em voz alta: "o Dó é natural".'
+  - '**Voltas 1–2:** só frases que começam ou terminam no Dó quando o acorde de Dó aparece.'
+  - '**Voltas 3–4:** pergunta (2 compassos) e resposta (2 compassos), terminando em Ré ou Fá♯.'
+  - '**Sem playback, um vamp por vez:** Mi dórico (Em – A, nota característica Dó♯), Lá eólio (Am – F –
+    G, Fá), Dó lídio (C – D/C, Fá♯). Mão esquerda nos acordes, direita improvisando por 2 minutos cada.'
+  - '**Feche** voltando ao playback em Ré, a 5 bpm a mais.'
+mistakes:
+  - Tocar a escala maior por hábito (Dó♯ em vez de Dó no mixolídio).
+  - 'Tocar sem parar: deixe pelo menos um tempo de silêncio entre as frases.'
 checklist:
   - id: mixolidio
     text: Improvisei quatro voltas sobre o playback, destacando a ♭7.

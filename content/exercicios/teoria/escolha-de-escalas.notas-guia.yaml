@@ -18,6 +18,19 @@ parameters:
   bpmStep: 5
   hands: right
   backing: { key: C, degrees: IIm7 V7 I7M I7M, beatsPerChord: 4 }
+minutes: 25
+routine:
+  - '**Toque só os acordes** com a esquerda (Dm7 – G7 – C7M) e cante a 3ª e a 7ª de cada um.'
+  - '**Etapa 1, sem playback:** notas-guia em semibreves (uma por compasso), escolhendo sempre a mais próxima:
+    Fá → Fá → Mi ou Dó → Si → Si.'
+  - '**Etapa 1 com playback**, no andamento inicial, duas voltas.'
+  - '**Etapa 2:** escala de cada acorde em colcheias, começando sempre na nota-guia. Diga o nome da escala
+    antes de começar a volta.'
+  - '**Etapa 3 livre:** quatro voltas; a única regra é aterrissar em nota-guia no tempo 1.'
+  - '**Só depois de cumprir as três etapas a 70 bpm**, suba o andamento e passe para Fá e Si♭.'
+mistakes:
+  - 'Pular de uma nota-guia para outra distante: a graça está no movimento de semitom (Dó → Si, Fá → Mi).'
+  - Tocar a escala inteira de baixo para cima a cada compasso — comece no meio, na nota-guia.
 checklist:
   - id: guia
     text: Toquei uma volta inteira só com notas-guia, conduzindo por grau conjunto.

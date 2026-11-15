@@ -9,6 +9,17 @@ prompt: |
 parameters:
   keys: [C, G, D, A, E, B, F#, Db, Ab, Eb, Bb, F]
   targetBpm: 60
+minutes: 25
+routine:
+  - '**Fórmula do campo:** 7M, m7, m7, 7M, 7, m7, m7(♭5). Diga em voz alta antes de começar.'
+  - '**Tétrades em posição fundamental** na direita, subindo o campo, uma por tempo a 60 bpm, dizendo o
+    grau.'
+  - '**Esquerda junto:** a fundamental de cada acorde no grave.'
+  - '**4 tons por dia**, seguindo o ciclo de quintas (Dó, Sol, Ré, Lá…).'
+  - '**Fechamento:** em cada tom do dia, toque só I7M – IIm7 – V7 – I7M sem olhar.'
+mistakes:
+  - Esquecer o ♭5 do VII grau (Bm7(♭5), não Bm7).
+  - 'Confundir V7 e V7M: o V é o único dominante do campo.'
 checklist:
   - id: tonalidades
     text: Toquei o campo com tétrades nas 12 tonalidades sem parar mais de dois tempos para pensar.

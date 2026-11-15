@@ -10,6 +10,15 @@ prompt: |
   o timbre precisar de largura.
 parameters:
   keys: []
+minutes: 40
+routine:
+  - '**Escolha três músicas** (uma rápida, uma média, uma de adoração) e anote o bpm de cada uma.'
+  - '**Calcule o delay** de cada uma (semínima = 60 ÷ bpm; colcheia pontuada = 0,75 disso).'
+  - '**Ajuste o reverb** pelo momento: curto na rápida, longo na de adoração.'
+  - '**Chorus** só onde o timbre precisa de largura (pads, Rhodes).'
+  - '**Salve cada ajuste** num registro do teclado e toque um trecho de cada.'
+mistakes:
+  - Usar o mesmo reverb para tudo — o momento da música pede espaço diferente.
 checklist:
   - id: tres
     text: Ajustei os efeitos das três músicas no meu instrumento.

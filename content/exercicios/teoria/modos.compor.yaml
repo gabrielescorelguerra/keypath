@@ -20,6 +20,18 @@ prompt: |
   Cada frase deve usar a nota característica pelo menos uma vez, num tempo forte.
 parameters:
   keys: [E, A]
+minutes: 35
+routine:
+  - '**Prepare os três vamps** em Mi com a esquerda, um minuto cada, só para ouvir a cor.'
+  - '**Para cada modo:** escreva a nota característica (lídio: Lá♯; mixolídio: Ré; dórico: Dó♯; frígio:
+    Fá).'
+  - '**Improvise 2 minutos** sobre o vamp e guarde a ideia que mais gostar.'
+  - '**Fixe a frase em 4 compassos** com a nota característica em tempo forte; toque-a três vezes até sair
+    igual.'
+  - '**Toque as três frases em sequência**, do claro para o escuro, e anote uma palavra para cada uma.'
+mistakes:
+  - Fazer frases em que a nota característica só aparece de passagem — ela precisa ser ouvida.
+  - 'Mudar de tônica entre os modos: a comparação só funciona a partir da mesma nota.'
 checklist:
   - id: tres-frases
     text: Compus as três frases a partir da mesma tônica.

@@ -11,6 +11,16 @@ prompt: |
   um acorde menor, um 7M(♯11) num IV grau — e compare as duas versões.
 parameters:
   keys: []
+minutes: 40
+routine:
+  - '**Escolha um trecho de 8 a 16 compassos** e escreva os graus.'
+  - '**Aplique a tabela do campo:** I → 7M(9), IIm → m7(9), IV → 7M(9) ou 7M(♯11), V → 7(13), VIm → m7(9).'
+  - '**Confira a melodia:** cante cada compasso; se a extensão brigar com a nota da melodia (meio tom),
+    troque-a.'
+  - '**Escolha dois pontos de tensão forte** (um 7(♭9) antes de um menor, um 7M(♯11) no IV).'
+  - '**Grave as duas versões** e ouça lado a lado.'
+mistakes:
+  - Colocar extensão em todo acorde, todo tempo — às vezes uma tríade limpa é a melhor cor.
 checklist:
   - id: cifra
     text: Escrevi a nova cifra com as extensões.

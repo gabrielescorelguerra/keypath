@@ -229,7 +229,18 @@ export async function loadContent(contentDir: string): Promise<LoadResult> {
       prompt = stripPositions(markdown.root)
       refs = markdown.refs
     }
-    exercises.push({ file, data, prompt, refs })
+    const listRoot = (field: string, items: readonly string[], ordered: boolean) => {
+      if (items.length === 0) return null
+      const source = items
+        .map((item, i) => `${ordered ? `${i + 1}.` : '-'} ${item.replace(/\s*\n\s*/g, ' ')}`)
+        .join('\n')
+      const markdown = parseMarkdown(source, 'exercise')
+      for (const p of markdown.problems) error(file, `${field}: ${p.message}`)
+      return stripPositions(markdown.root)
+    }
+    const routine = data.type === 'performance' ? listRoot('routine', data.routine, true) : null
+    const mistakes = data.type === 'performance' ? listRoot('mistakes', data.mistakes, false) : null
+    exercises.push({ file, data, prompt, refs, routine, mistakes })
   }
 
   // --- Cursos ----------------------------------------------------------------

@@ -13,6 +13,17 @@ parameters:
   keys: [C, G, D, F, Bb, E]
   targetBpm: 70
   hands: both
+minutes: 20
+routine:
+  - '**Em Dó:** C em posição fundamental, F em 2ª inversão (Dó Fá Lá), G em 1ª inversão (Si Ré Sol). Repare
+    nas notas comuns.'
+  - '**Progressão 1** com a esquerda na fundamental, 4 voltas.'
+  - '**Progressão 2:** C – Am (Dó Mi Lá) – F (Dó Fá Lá) – G (Si Ré Sol).'
+  - '**Os outros tons**, um por dia: comece pelo I em posição fundamental e procure sempre a inversão mais
+    próxima.'
+  - '**Desafio:** comece o I em 1ª inversão e conduza a partir dela.'
+mistakes:
+  - Pular para a posição fundamental de cada acorde por hábito.
 checklist:
   - id: tonalidades
     text: Toquei as duas progressões nos seis tons.

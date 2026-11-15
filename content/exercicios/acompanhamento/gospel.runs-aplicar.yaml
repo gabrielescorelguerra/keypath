@@ -14,6 +14,17 @@ parameters:
   bpmStep: 4
   hands: both
   backing: { key: Eb, degrees: I7M VI7 IIm7 V7, beatsPerChord: 4 }
+minutes: 25
+routine:
+  - '**Monte os acordes em Mi♭** (E♭7M, C7, Fm7, B♭7) e acompanhe 2 voltas sem runs.'
+  - '**Escolha 2 runs** da aula anterior e transponha para Mi♭ devagar, sem playback.'
+  - '**Com playback:** uma run a cada dois compassos, sempre no fim do segundo compasso, terminando na nota
+    do acorde seguinte.'
+  - '**Cante (ou fale) uma frase** nos compassos sem run — eles são do cantor.'
+  - '**Suba 4 bpm** por série limpa até 80.'
+mistakes:
+  - Run longa demais que atropela o tempo 1 do acorde seguinte.
+  - 'Run em todo compasso: o espaço do cantor é sagrado.'
 checklist:
   - id: espaco
     text: As runs ficaram só nos espaços, a cada dois compassos.

@@ -15,6 +15,16 @@ parameters:
   targetBpm: 80
   bpmStep: 5
   hands: both
+minutes: 20
+routine:
+  - '**Toque os quatro acordes em bloco** com o voicing da aula: o baixo e a segunda nota na esquerda, três
+    notas na direita.'
+  - '**Monte a figura** de um compasso: as 5 notas subindo, depois as 3 notas da direita repetidas.'
+  - '**Encadeie os compassos** devagar, sem parar entre eles.'
+  - '**Escute as vozes:** cada nota da direita deve mudar o mínimo de um compasso para o outro.'
+  - '**Suba 5 bpm** por série limpa; transponha para Sol.'
+mistakes:
+  - 'Pedal sujo: troque o pedal no começo de cada compasso, junto com o baixo.'
 checklist:
   - id: figura
     text: Mantive a mesma figura em todos os compassos.

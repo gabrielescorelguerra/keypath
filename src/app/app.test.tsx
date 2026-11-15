@@ -12,7 +12,7 @@ describe('Início', () => {
     expect(
       within(steps).getByRole('link', { name: 'Intervalos no teclado e de ouvido' }),
     ).toHaveAttribute('href', '/aulas/teoria.intervalos-no-teclado-e-de-ouvido')
-    const tracks = screen.getByRole('region', { name: 'Suas trilhas' })
+    const tracks = screen.getByRole('region', { name: 'Seu nível por área' })
     expect(within(tracks).getByText('Harmonia')).toBeInTheDocument()
     expect(screen.getByRole('link', { name: 'Fazer o diagnóstico' })).toBeInTheDocument()
   })
@@ -21,12 +21,17 @@ describe('Início', () => {
 describe('navegação', () => {
   it('menu lateral leva à trilha, e dela à competência', async () => {
     const { user } = renderRoute('/')
-    const trackNav = await screen.findByRole('navigation', { name: 'Trilhas' })
+    const trackNav = await screen.findByRole('navigation', { name: 'Seu nível por área' })
     await user.click(within(trackNav).getByRole('link', { name: /^Harmonia/ }))
 
     expect(await screen.findByRole('heading', { level: 1, name: 'Harmonia' })).toBeInTheDocument()
     expect(screen.getByRole('heading', { name: 'Nível 1 · Iniciante' })).toBeInTheDocument()
     expect(screen.getByText('Antes, recomendado: Intervalos')).toBeInTheDocument()
+
+    // A página de área explica que não é uma aula e aponta onde estudar.
+    expect(screen.getByText('Esta página não é uma aula.')).toBeInTheDocument()
+    const where = screen.getByRole('region', { name: 'Onde estudar' })
+    expect(within(where).getAllByRole('link').length).toBeGreaterThan(0)
 
     await user.click(screen.getByRole('link', { name: 'Tríades' }))
     expect(await screen.findByRole('heading', { level: 1, name: 'Tríades' })).toBeInTheDocument()
@@ -81,7 +86,7 @@ describe('Diagnóstico', () => {
     })
 
     await user.click(screen.getByRole('link', { name: 'Início' }))
-    const tracks = await screen.findByRole('region', { name: 'Suas trilhas' })
+    const tracks = await screen.findByRole('region', { name: 'Seu nível por área' })
     expect(await within(tracks).findByText('Nível 1 · Iniciante')).toBeInTheDocument()
   })
 })

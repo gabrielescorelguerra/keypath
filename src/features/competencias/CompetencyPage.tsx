@@ -60,7 +60,7 @@ export function CompetencyPage() {
               <LevelMeter level={competency.level} label="" size="sm" />
               Nível {competency.level} · {levelName(competency.level)}
             </span>
-            {!competency.core && <Badge>Não conta para o nível da trilha</Badge>}
+            {!competency.core && <Badge>Não conta para o nível da área</Badge>}
             {competency.styles.map((id) => (
               <Badge key={id} tone="accent">
                 {catalog.styleById.get(id)?.name ?? id}

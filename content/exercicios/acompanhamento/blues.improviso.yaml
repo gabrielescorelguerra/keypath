@@ -20,6 +20,15 @@ parameters:
   bpmStep: 5
   hands: right
   backing: { key: C, degrees: I7 IV7 I7 I7 IV7 IV7 I7 I7 V7 IV7 I7 V7, beatsPerChord: 4 }
+minutes: 25
+routine:
+  - '**Toque a escala blues de Dó** duas vezes antes do playback.'
+  - '**Riff:** invente uma frase de 2 compassos e repita sobre o I7, o IV7 e o I7 — uma forma inteira.'
+  - '**Blue notes:** uma forma inteira deslizando Mi♭ → Mi e Sol♭ → Sol.'
+  - '**Turnaround:** nos compassos 11–12, desça a escala até o Sol.'
+  - '**Forma livre** misturando os três recursos; suba 5 bpm por forma limpa.'
+mistakes:
+  - Mudar de riff a cada compasso — no blues, a repetição é o que cria a tensão sobre o IV7.
 checklist:
   - id: voltas
     text: Improvisei por três voltas da forma sem me perder.

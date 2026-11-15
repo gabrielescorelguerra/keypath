@@ -71,6 +71,9 @@ export interface ExerciseInput {
   readonly data: ExerciseSource
   readonly prompt: MarkdownRoot | null
   readonly refs: readonly MarkdownRef[]
+  /** Roteiro e erros comuns já convertidos em listas Markdown. */
+  readonly routine?: MarkdownRoot | null
+  readonly mistakes?: MarkdownRoot | null
 }
 
 export interface CourseInput {
@@ -502,6 +505,9 @@ export function compileCatalog(sources: CatalogSources): CompileResult {
         hands: data.parameters.hands ?? null,
         backing: data.parameters.backing ?? null,
       },
+      minutes: data.minutes ?? null,
+      routine: value.routine ?? null,
+      mistakes: value.mistakes ?? null,
       checklist: data.checklist,
     }
   })

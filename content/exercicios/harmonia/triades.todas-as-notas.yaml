@@ -10,6 +10,15 @@ prompt: |
 parameters:
   keys: [C, G, D, A, E, B, F#, Db, Ab, Eb, Bb, F]
   targetBpm: 60
+minutes: 15
+routine:
+  - '**Comece pelo maior** e mude uma nota: maior → menor (a terça desce), menor → diminuta (a quinta desce),
+    maior → aumentada (a quinta sobe).'
+  - '**Diga o nome das notas** de cada tríade antes de tocar.'
+  - '**4 notas por dia** pelo ciclo de quintas; no quarto dia, as 12.'
+  - '**Fechamento:** toque só as maiores e menores das 12 notas, sem parar, a 60 bpm.'
+mistakes:
+  - Tocar a diminuta como menor com a quinta subindo — na diminuta a quinta **desce**.
 checklist:
   - id: doze-notas
     text: Fiz os quatro tipos sobre as 12 notas.

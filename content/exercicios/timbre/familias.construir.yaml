@@ -18,6 +18,16 @@ prompt: |
   | Baixo | corte baixo, ressonância, queda curta |
 parameters:
   keys: []
+minutes: 30
+routine:
+  - '**Carregue cada timbre pronto** e mude um parâmetro por vez (ataque, release, corte, LFO), tocando
+    o mesmo acorde.'
+  - '**Anote** o parâmetro que mais muda a "família" do som.'
+  - '**Do Órgão ao Pad:** reconstrua o pad sem olhar o pronto; compare.'
+  - '**Repita para Pluck, Lead, Strings e Baixo.**'
+  - '**Teste final:** toque um timbre seu para alguém e pergunte qual família parece.'
+mistakes:
+  - Mexer em vários controles ao mesmo tempo — você perde a referência do que causou a mudança.
 checklist:
   - id: seis
     text: Reconstruí as seis famílias a partir do Órgão.

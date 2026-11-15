@@ -174,6 +174,12 @@ export interface QuizExercise extends ExerciseBase {
 export interface PerformanceExercise extends ExerciseBase {
   readonly type: 'performance'
   readonly parameters: PerformanceParameters
+  /** Tempo estimado de uma sessão, em minutos. */
+  readonly minutes: number | null
+  /** Roteiro passo a passo (lista numerada). */
+  readonly routine: MarkdownRoot | null
+  /** Erros comuns (lista). */
+  readonly mistakes: MarkdownRoot | null
   readonly checklist: readonly ChecklistItem[]
 }
 

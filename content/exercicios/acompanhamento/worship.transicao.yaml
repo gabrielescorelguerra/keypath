@@ -13,6 +13,15 @@ prompt: |
   3. Entre no novo tom pelo I, ainda só com o pad, até a banda começar.
 parameters:
   keys: []
+minutes: 35
+routine:
+  - '**Escolha as duas músicas** e anote os tons.'
+  - '**Ache o V do novo tom** (para Lá, é Mi) e toque o V7(4) → V.'
+  - '**Monte a sequência:** I do tom 1 → V7(4) do tom 2 → V → I do tom 2, com o pad.'
+  - '**Ensaie** o final da primeira música e o começo da segunda com a transição.'
+  - '**Grave** e ouça se a mudança de tom soa natural.'
+mistakes:
+  - Mudar de tom sem preparação — o V sus é a ponte.
 checklist:
   - id: ligacao
     text: A transição levou de um tom ao outro sem soar "quebrada".

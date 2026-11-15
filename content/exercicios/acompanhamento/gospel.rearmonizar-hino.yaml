@@ -16,6 +16,16 @@ prompt: |
   Escreva a cifra nova e grave a versão.
 parameters:
   keys: []
+minutes: 45
+routine:
+  - '**Escolha o hino** e escreva a melodia e a harmonia original em graus.'
+  - '**Troque as tríades** por tétrades com extensões.'
+  - '**Insira três passagens** nos finais de frase, conferindo cada uma contra a melodia.'
+  - '**Walk-up no baixo** antes do refrão (por exemplo, I – II – III – IV).'
+  - '**Resolução sus** no final (V7(4) → V7 → I).'
+  - '**Grave a versão** e compare com a original.'
+mistakes:
+  - Passagens que mudam a melodia de lugar — cante sempre.
 checklist:
   - id: cifra
     text: Escrevi a nova cifra com as passagens marcadas.

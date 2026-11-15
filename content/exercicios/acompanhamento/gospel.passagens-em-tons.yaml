@@ -24,6 +24,15 @@ parameters:
   targetBpm: 80
   bpmStep: 5
   hands: both
+minutes: 30
+routine:
+  - '**Em Dó, uma fórmula por vez**, 4 vezes cada.'
+  - '**3-6-2-5-1:** Em7 – A7 – Dm7 – G7 – C7M; conduza as vozes.'
+  - '**Diminuto de passagem:** F7M – F♯°7 – C/G; o baixo sobe Fá → Fá♯ → Sol.'
+  - '**2-5-1 com sus:** Dm9 – G7sus4 – G13 – Cmaj9.'
+  - '**Um tom novo por dia**, escrevendo os acordes antes de tocar.'
+mistakes:
+  - 'No diminuto de passagem, tocar o baixo do C/G em Dó: o Sol no baixo é o que completa a subida.'
 checklist:
   - id: tons
     text: Toquei as três fórmulas em pelo menos cinco tons.

@@ -11,6 +11,20 @@ parameters:
   keys: [C, D, G]
   targetBpm: 60
   hands: right
+minutes: 20
+routine:
+  - '**Ordem do claro para o escuro:** lídio, jônio, mixolídio, dórico, eólio, frígio, lócrio. Cada modo
+    muda **uma nota** em relação ao anterior.'
+  - '**Em Dó:** toque lídio (Fá♯), jônio, mixolídio (Si♭), dórico (+Mi♭), eólio (+Lá♭), frígio (+Ré♭), lócrio
+    (+Sol♭). Diga a nota que mudou antes de tocar.'
+  - '**Uma oitava, 60 bpm**, uma nota por tempo, mão direita.'
+  - '**Depois de cada modo**, toque a tônica no grave e a nota característica por cima, segurando por 4
+    tempos — é o som do modo.'
+  - '**Repita em Ré e Sol** em dias diferentes.'
+mistakes:
+  - Tocar o modo a partir do grau (Ré dórico = teclas brancas de Ré) sem pensar nele a partir da tônica
+    — aqui a tônica é fixa e as alterações mudam.
+  - 'Pular o lócrio por ser estranho: toque-o também, ele completa a escala de cores.'
 checklist:
   - id: sete-modos
     text: Toquei os sete modos a partir da mesma tônica, nas três tonalidades.

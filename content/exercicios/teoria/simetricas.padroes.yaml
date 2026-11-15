@@ -9,6 +9,15 @@ prompt: |
   do acorde de chegada. Use sobre um G7(♭9) resolvendo em C.
 parameters:
   keys: [C]
+minutes: 25
+routine:
+  - '**Toque G7(♭9) → C** com a esquerda até soar natural.'
+  - '**Escolha a célula:** 3 notas da diminuta de Sol semitom–tom (por exemplo Sol – Lá♭ – Si).'
+  - '**Repita a célula** a cada terça menor: a partir de Sol, Si♭, Ré♭ e Mi.'
+  - '**Encaixe em 2 compassos** sobre o G7(♭9) e escolha a nota de chegada no C (Mi ou Sol).'
+  - '**Toque a frase 5 vezes** e depois crie uma segunda versão usando tons inteiros.'
+mistakes:
+  - 'Não resolver: padrões simétricos só soam bem quando chegam a uma nota clara do acorde seguinte.'
 checklist:
   - id: simetria
     text: A frase repete o mesmo desenho por um intervalo fixo.

@@ -8,6 +8,16 @@ prompt: |
   músicas, com pelo menos um split e um layer, e ensaie as trocas entre músicas sem silêncio.
 parameters:
   keys: []
+minutes: 45
+routine:
+  - '**Escolha as quatro músicas** e anote para cada uma: split ou layer, timbres, ponto de divisão.'
+  - '**Programe os registros** na ordem do setlist.'
+  - '**Ensaie as transições:** os últimos 4 compassos de uma música e os primeiros 4 da próxima, trocando
+    o registro sem silêncio.'
+  - '**Toque o setlist inteiro** uma vez sem parar.'
+  - '**Anote os problemas** (volume de uma camada, ponto de divisão) e ajuste.'
+mistakes:
+  - Deixar o volume do layer desequilibrado — uma camada some quando a banda entra.
 checklist:
   - id: registros
     text: Os quatro registros estão salvos em ordem.

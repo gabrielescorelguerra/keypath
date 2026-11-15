@@ -9,6 +9,16 @@ prompt: |
   subdominante). Grave e escute com fone.
 parameters:
   keys: []
+minutes: 30
+routine:
+  - '**Escolha o tom e o timbre** (pad escuro com reverb longo).'
+  - '**Grave os 30 primeiros segundos** só com o drone (tônica e quinta).'
+  - '**Acrescente swells** na direita: notas longas que crescem do silêncio.'
+  - '**Coloque o motivo com delay** no agudo, repetindo a cada dois compassos.'
+  - '**Mudança de cor no meio:** troque o drone da tônica para a subdominante e volte.'
+  - '**Ouça com fone** do começo ao fim e ajuste o volume das camadas.'
+mistakes:
+  - 'Tocar demais: ambiência é sobre espaço; uma nota nova a cada 4 a 8 segundos basta.'
 checklist:
   - id: duracao
     text: A ambiência tem entre 2 e 3 minutos e se sustenta sem ficar repetitiva.

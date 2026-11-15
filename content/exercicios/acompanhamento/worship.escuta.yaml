@@ -15,6 +15,15 @@ prompt: |
   6. **Transição:** como ela começa e termina — e como você ligaria ao próximo louvor?
 parameters:
   keys: []
+minutes: 45
+routine:
+  - '**Ouça a música inteira** com o roteiro na mão.'
+  - '**Tom, compasso e andamento** (bata o pé e conte).'
+  - '**Progressões por seção** em graus.'
+  - '**Mapa de dinâmica e timbres** do teclado.'
+  - '**Toque o refrão** junto com a gravação, imitando a dinâmica.'
+mistakes:
+  - Anotar só os acordes e esquecer o que o teclado faz — a dinâmica é metade do estilo.
 checklist:
   - id: roteiro
     text: Preenchi os seis itens do roteiro.

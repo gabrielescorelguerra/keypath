@@ -18,6 +18,15 @@ prompt: |
   lugar certo.
 parameters:
   keys: []
+minutes: 40
+routine:
+  - '**Escreva o mapa da música** (intro, estrofe, refrão, ponte, final) com o tempo de cada seção.'
+  - '**Escolha um timbre por seção**, seguindo a tabela; anote o número do preset.'
+  - '**Programe os registros** na ordem da música.'
+  - '**Ensaie só as trocas:** os 2 compassos antes e os 2 depois de cada mudança, 3 vezes.'
+  - '**Toque a música inteira** sem parar.'
+mistakes:
+  - Trocar de timbre no meio de uma frase — troque nas respirações entre seções.
 checklist:
   - id: mapa
     text: Fiz o mapa de timbres da música.

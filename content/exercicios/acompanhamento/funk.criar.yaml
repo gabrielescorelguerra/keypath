@@ -9,6 +9,15 @@ prompt: |
   quatro compassos.
 parameters:
   keys: []
+minutes: 30
+routine:
+  - '**Vamp de E9** na esquerda (Mi curto no tempo 1) a 90 bpm.'
+  - '**Escolha as notas** do riff (uma ou duas, do acorde ou da pentatônica de Mi menor).'
+  - '**Ritmo:** fale as semicolcheias e marque onde o riff toca; deixe uma pausa num tempo forte.'
+  - '**Notas fantasma** entre as notas principais.'
+  - '**Variação do último tempo** a cada quatro compassos; grave 8 compassos.'
+mistakes:
+  - 'Notas longas: no funk, quase tudo é curto.'
 checklist:
   - id: riff
     text: O riff tem semicolcheias, notas fantasma e uma pausa em tempo forte.

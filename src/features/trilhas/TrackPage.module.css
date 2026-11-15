@@ -101,30 +101,94 @@
   padding-top: 2px;
 }
 
-.tableWrap {
-  overflow-x: auto;
+.explain {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  gap: var(--space-3) var(--space-4);
+  align-items: center;
+  padding: var(--space-4) var(--space-5);
+  margin-bottom: var(--space-6);
+  border: 1px solid var(--color-border);
+  border-left: 3px solid var(--color-accent);
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
 }
 
-.tableWrap tbody tr:last-child td {
-  border-bottom: 0;
+.explain .nextButton {
+  min-width: 0;
+  max-width: 100%;
+  justify-self: start;
+  padding-block: var(--space-2);
+  line-height: 1.3;
+  white-space: normal;
+  text-align: left;
 }
 
-.narrow {
-  width: 1%;
-  white-space: nowrap;
+.explain p {
+  margin: 0;
+  color: var(--color-text-2);
 }
 
-.lessonTitle {
-  font-weight: 600;
+.modules {
+  list-style: none;
+  margin: var(--space-4) 0 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+  gap: var(--space-3);
 }
 
-.lessonSummary {
-  display: block;
-  margin-top: 2px;
-  max-width: 40rem;
+.moduleCard {
+  display: grid;
+  gap: var(--space-1);
+  height: 100%;
+  padding: var(--space-4);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  transition: border-color var(--t-base) var(--ease);
+}
+
+.moduleCard:hover {
+  border-color: var(--color-accent);
+}
+
+.moduleCourse {
+  font-size: var(--text-xs);
+  color: var(--color-text-3);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.moduleTitle {
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  font-weight: 500;
+}
+
+.moduleFacts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  align-items: center;
+  margin-top: var(--space-1);
+  font-size: var(--text-sm);
+  color: var(--color-text-3);
+}
+
+.where {
+  font-size: var(--text-sm);
+  color: var(--color-text-2);
 }
 
 @media (max-width: 40rem) {
+  .explain {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .explain > svg {
+    display: none;
+  }
+
   .levelBox {
     justify-items: start;
     padding-left: 0;

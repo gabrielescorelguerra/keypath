@@ -9,6 +9,15 @@ prompt: |
   tempo antes da banda entrar).
 parameters:
   keys: []
+minutes: 40
+routine:
+  - '**Escolha a música e o tom** (frequentemente menor).'
+  - '**Pad escuro** com tônica e quinta, segurando.'
+  - '**Motivo de 3 a 5 notas** no piano ou pluck, repetido a cada dois compassos.'
+  - '**Cordas** a partir da metade.'
+  - '**Drop:** um tempo de silêncio antes da banda; grave a introdução inteira.'
+mistakes:
+  - 'Motivo complicado demais: ele precisa ser lembrado depois de ouvido uma vez.'
 checklist:
   - id: crescimento
     text: A introdução cresce em camadas.

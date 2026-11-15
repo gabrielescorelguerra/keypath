@@ -9,6 +9,15 @@ prompt: |
 parameters:
   keys: [C, G, D, A, E, B, F#, Db, Ab, Eb, Bb, F]
   targetBpm: 60
+minutes: 20
+routine:
+  - '**Comece pelo Cmaj7** e mude uma nota de cada vez: 7M → 7 (a sétima desce), 7 → m7 (a terça desce),
+    m7 → m7(♭5) (a quinta desce).'
+  - '**Diga a nota que muda** antes de tocar cada acorde.'
+  - '**4 notas por dia**, seguindo o ciclo de quintas.'
+  - '**Ouvido:** de olhos fechados, toque os quatro e tente dizer qual é qual.'
+mistakes:
+  - Mexer em mais de uma nota por vez — a sequência foi pensada para mudar só uma.
 checklist:
   - id: doze-notas
     text: Fiz os quatro tipos sobre as 12 notas.

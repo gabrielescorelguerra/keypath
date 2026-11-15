@@ -23,6 +23,19 @@ parameters:
   targetBpm: 88
   bpmStep: 4
   hands: right
+minutes: 25
+routine:
+  - '**Aquecimento (3 min):** arpejo de Cmaj7 em uma oitava, mão direita, bem devagar, olhando a passagem
+    do polegar.'
+  - '**Blocos antes do arpejo:** toque cada tétrade em bloco (as quatro notas juntas) e ouça a nota que
+    muda para a próxima.'
+  - '**Duas oitavas em semínimas** a 56 bpm: 7M → 7 → m7 → m7(♭5) → °7 sobre a mesma nota, sem parar entre
+    eles.'
+  - '**Colcheias** só quando a semínima estiver limpa; suba 4 bpm por série limpa.'
+  - '**Uma nota por dia** da lista (Dó, Fá, Sol, Ré, Si♭); revise a do dia anterior antes de começar a nova.'
+mistakes:
+  - Acentuar a nota depois da passagem do polegar — grave e ouça se há um "tranco".
+  - 'Torcer o pulso para alcançar a 7ª: deixe o braço acompanhar a mão lateralmente.'
 checklist:
   - id: cinco-tipos
     text: Toquei os cinco tipos em sequência nas cinco notas.

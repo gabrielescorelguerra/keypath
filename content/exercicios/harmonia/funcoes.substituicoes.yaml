@@ -11,6 +11,15 @@ prompt: |
   ::progression{key="G" degrees="I IIm7 V7 VIm"}
 parameters:
   keys: [C, G, D]
+minutes: 20
+routine:
+  - '**Toque a original** I – IV – V7 – I em Sol duas vezes.'
+  - '**Troque o IV pelo IIm7** (Am7): mesma função de subdominante. Toque e compare.'
+  - '**Troque o último I pelo VIm** (Em): cadência de engano. Compare.'
+  - '**Troque o primeiro I pelo IIIm** e depois pelo VIm: o começo fica menos "estável".'
+  - '**Monte 3 variações suas** e toque-as em Dó e Ré.'
+mistakes:
+  - Substituir o V7 por acorde de outra função — a dominante é o que dá direção à progressão.
 checklist:
   - id: tres-variacoes
     text: Criei pelo menos três variações diferentes, em três tons.

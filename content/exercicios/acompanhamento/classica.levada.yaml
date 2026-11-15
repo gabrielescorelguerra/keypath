@@ -20,6 +20,15 @@ parameters:
   targetBpm: 100
   bpmStep: 5
   hands: both
+minutes: 25
+routine:
+  - '**Alberti em Dó**, só a esquerda: Dó Sol Mi Sol, semicolcheias, leve, a 60 bpm.'
+  - '**Troque de acorde** (C – F – G7 – C) usando inversões próximas para a mão quase não sair do lugar.'
+  - '**Melodia em semínimas** na direita, mãos juntas.'
+  - '**Cadências em quatro vozes:** cada voz da direita anda o mínimo — toque devagar e ouça cada voz.'
+  - '**Transponha** para Sol e Fá; suba 5 bpm por série limpa.'
+mistakes:
+  - 'Alberti alto demais: ele é acompanhamento; a melodia precisa soar mais.'
 checklist:
   - id: alberti
     text: O baixo de Alberti ficou regular e mais suave que a melodia.

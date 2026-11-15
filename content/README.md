@@ -92,7 +92,7 @@ materials:
 
 Só entra link verificado: a página precisa existir e tratar do assunto. Prefira páginas específicas a páginas iniciais de canais e sites.
 
-**Exercícios** declaram a etapa (`stage`: `recognition`, `execution`, `application`, `creativity`) e podem ter `challenges` (desafios extras). Os de execução aceitam `startBpm`, `targetBpm` e `bpmStep` (andamento progressivo) e `backing` (playback em loop: `{ key: G, degrees: I VIm IV V, beatsPerChord: 4 }`). Questões de quiz podem tocar um som com `audio: { notes: C4 E4, play: melody }` ou `audio: { chord: Cm7, play: arpeggio }` (`together`, `arpeggio` ou `melody`).
+**Exercícios** declaram a etapa (`stage`: `recognition`, `execution`, `application`, `creativity`) e podem ter `challenges` (desafios extras). Os de execução aceitam `startBpm`, `targetBpm` e `bpmStep` (andamento progressivo) e `backing` (playback em loop: `{ key: G, degrees: I VIm IV V, beatsPerChord: 4 }`). Todo exercício de execução tem `routine` (o roteiro de uma sessão, passo a passo, em Markdown de linha), `mistakes` (erros comuns) e `minutes` (tempo estimado); o app mostra esses campos como "Como praticar" e "Cuidado com". Questões de quiz podem tocar um som com `audio: { notes: C4 E4, play: melody }` ou `audio: { chord: Cm7, play: arpeggio }` (`together`, `arpeggio` ou `melody`).
 
 ## Estado atual
 

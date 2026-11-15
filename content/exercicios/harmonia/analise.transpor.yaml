@@ -9,6 +9,20 @@ prompt: |
   ::progression{key="A" degrees="I V VIm IV"}
 parameters:
   keys: [C, G, D, A, E, Bb]
+minutes: 30
+routine:
+  - '**Escolha uma música curta** (estrofe e refrão) que você toca bem.'
+  - '**Escreva os graus** embaixo de cada acorde da cifra original. Confira: acordes maiores do campo são
+    I, IV e V; menores são IIm, IIIm e VIm.'
+  - '**Esconda a cifra original** e toque a música no tom de origem lendo só os graus.'
+  - '**Tom 2:** escolha um tom vizinho (uma quinta acima). Antes de tocar, monte o campo harmônico do tom
+    novo.'
+  - '**Tom 3:** escolha um tom com bemóis (Fá ou Si♭) e repita.'
+  - '**Fechamento:** cante a melodia enquanto toca, para confirmar que a música continua reconhecível.'
+mistakes:
+  - Transpor acorde por acorde ("G vira A, D vira E") em vez de pensar em graus — o objetivo é largar a
+    cifra.
+  - 'Esquecer o tipo do acorde: o VIm continua menor em qualquer tom.'
 checklist:
   - id: em-graus
     text: Escrevi a harmonia da música inteira em graus.

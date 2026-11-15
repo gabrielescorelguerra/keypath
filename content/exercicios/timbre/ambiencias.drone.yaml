@@ -19,6 +19,15 @@ parameters:
   targetBpm: 72
   hands: both
   backing: { key: D, degrees: I V VIm IV, beatsPerChord: 8 }
+minutes: 20
+routine:
+  - '**Ajuste o pad** antes: ataque lento, release longo, reverb alto.'
+  - '**Camada 1:** segure Ré e Lá na esquerda com o playback por 2 voltas.'
+  - '**Camada 2:** swells na direita com notas do acorde da vez (Fá♯, Lá, Si, Sol).'
+  - '**Camada 3:** um motivo de 2 a 3 notas no agudo, com delay, a cada dois compassos.'
+  - '**Repita em Mi e Sol**, ajustando o drone (tônica e quinta do tom).'
+mistakes:
+  - Soltar o drone ao trocar o acorde da direita — ele fica o tempo todo.
 checklist:
   - id: drone
     text: O drone ficou contínuo, sem cortes nas trocas de acorde.

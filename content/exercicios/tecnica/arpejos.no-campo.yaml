@@ -19,6 +19,17 @@ parameters:
   bpmStep: 4
   hands: both
   backing: { key: G, degrees: I7M VIm7 IIm7 V7, beatsPerChord: 4 }
+minutes: 25
+routine:
+  - '**Toque as tétrades em bloco** (G7M, Em7, Am7, D7) para conhecer as notas.'
+  - '**Arpejo de cada acorde parado**, 1-3-5-7-8-7-5-3, a 60 bpm.'
+  - '**Com playback**, ainda voltando à fundamental a cada acorde, 2 voltas.'
+  - '**Condução:** na troca, comece o novo arpejo pela nota mais próxima da última que você tocou (por exemplo,
+    do Fá♯ do G7M para o Sol do Em7).'
+  - '**Transponha** para Ré e Dó; suba 4 bpm por série limpa.'
+mistakes:
+  - Atrasar a troca de acorde porque o arpejo "não terminou" — o acorde novo manda, mesmo que o desenho
+    fique incompleto.
 checklist:
   - id: tempo
     text: Toquei junto com o playback por quatro voltas sem perder o primeiro tempo do compasso.

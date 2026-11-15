@@ -11,6 +11,18 @@ prompt: |
   - numa subida rápida até o Lá, use a **melódica** (Fá♯, Sol♯).
 parameters:
   keys: [Am]
+minutes: 25
+routine:
+  - '**Toque os acordes** Am – Dm – E7 – Am com a esquerda, dois compassos cada, até a sequência ficar automática.'
+  - '**Improvise 2 minutos** só com a natural sobre Am e Dm, e só com a harmônica sobre o E7. Ainda não
+    é composição: é escutar a troca do Sol para o Sol♯.'
+  - '**Escreva o esqueleto:** uma nota-alvo por compasso (por exemplo, Mi – Fá – Sol♯ – Lá) e depois preencha
+    com notas de passagem.'
+  - '**Coloque a subida melódica** (Mi – Fá♯ – Sol♯ – Lá) no último compasso antes do Am final.'
+  - '**Toque tudo** com os acordes, grave no celular e ouça: a troca de escala soa natural ou forçada?'
+mistakes:
+  - Usar o Sol♯ sobre o Dm, onde ele briga com o acorde.
+  - 'Compor tudo em notas do mesmo valor: varie com notas longas no fim das frases.'
 checklist:
   - id: tres
     text: A melodia usa as três formas da escala menor, cada uma no lugar indicado.

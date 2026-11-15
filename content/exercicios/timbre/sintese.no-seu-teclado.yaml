@@ -18,6 +18,15 @@ prompt: |
   de oração: mais escura (corte mais baixo) e com release mais longo. Salve como timbre do usuário.
 parameters:
   keys: []
+minutes: 35
+routine:
+  - '**Abra o manual** e procure os quatro blocos pelos nomes da tabela.'
+  - '**Escolha um pad** do teclado e encontre como editar o timbre (Edit, Voice Edit, Program Edit).'
+  - '**Feche o filtro** um pouco (som mais escuro) e aumente o release.'
+  - '**Toque acordes longos** e compare com o original.'
+  - '**Salve** como timbre do usuário com um nome que você vá reconhecer.'
+mistakes:
+  - Salvar por cima do timbre de fábrica — use uma posição de usuário.
 checklist:
   - id: localizar
     text: Encontrei no meu instrumento os controles de filtro e de envelope.

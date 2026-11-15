@@ -7,6 +7,15 @@ prompt: |
   Escolha uma música que você toca na igreja e insira um empréstimo onde ele faz sentido:
   um **IVm** no final de uma frase, ou um final **♭VI – ♭VII – I** no último refrão.
   Toque acompanhando a voz (ou uma gravação).
+minutes: 30
+routine:
+  - '**Escolha a música** e marque onde as frases terminam no I depois de um IV.'
+  - '**Teste o IVm** entre o IV e o I nesse ponto (IV – IVm – I), cantando a melodia.'
+  - '**Teste o final ♭VI – ♭VII – I** no último refrão.'
+  - '**Escolha um dos dois** — o que soar melhor com a letra.'
+  - '**Toque a música inteira** acompanhando a voz ou a gravação.'
+mistakes:
+  - 'Usar o IVm em todo final de frase: ele perde o efeito.'
 checklist:
   - id: apliquei
     text: Usei um empréstimo modal numa música do meu repertório.

@@ -20,6 +20,15 @@ parameters:
   bpmStep: 6
   hands: both
   backing: { key: C, degrees: I V VIm IV, beatsPerChord: 4 }
+minutes: 25
+routine:
+  - '**Balada** com o playback, 3 voltas.'
+  - '**Ostinato:** Mi–Sol no topo em colcheias; a esquerda troca o baixo.'
+  - '**Refrão:** 1·5·8 em colcheias e acentos nos tempos 2 e 4.'
+  - '**Encadeie os três padrões** como uma música: balada → ostinato → refrão.'
+  - '**Transponha** para Sol e Ré; suba 6 bpm por série limpa.'
+mistakes:
+  - Acentuar o tempo 1 no refrão em vez dos tempos 2 e 4.
 checklist:
   - id: tres
     text: Toquei os três padrões sem parar o playback.

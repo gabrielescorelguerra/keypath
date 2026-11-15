@@ -21,6 +21,16 @@ parameters:
   targetBpm: 90
   bpmStep: 5
   hands: both
+minutes: 30
+routine:
+  - '**Uma progressão por vez**, em Dó, até sair sem pensar.'
+  - '**Condução de vozes:** na direita, escolha inversões em que as notas comuns ficam paradas e as outras
+    andam o mínimo.'
+  - '**Os cinco tons, progressão 1:** Dó, Sol, Ré, Fá, Si♭. Depois progressão 2, e assim por diante.'
+  - '**Ciclo de quintas (progressão 4):** é a mais longa — divida em duas metades de 4 acordes.'
+  - '**Metrônomo a 60**, um acorde por compasso; suba 5 bpm por série limpa.'
+mistakes:
+  - 'Tocar todos os acordes em posição fundamental: a mão salta e o som fica "quadrado".'
 checklist:
   - id: cinco
     text: Toquei as cinco progressões nos cinco tons.

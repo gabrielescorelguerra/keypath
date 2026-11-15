@@ -7,6 +7,24 @@ parameters:
   keys: [C, G, D, A, E, B, F#, Db, Ab, Eb, Bb, F]
   targetBpm: 60
   hands: right
+minutes: 20
+routine:
+  - '**Aquecimento (2 min):** Dó maior, mãos separadas, bem devagar, dizendo o nome de cada nota.'
+  - '**Antes de tocar cada tom:** diga as notas em voz alta e conte as alterações (Sol tem 1♯, Ré tem 2♯…).
+    A cada quinta acima entra um sustenido novo, sempre no 7º grau.'
+  - '**Dedilhado:** nas escalas que começam em tecla branca (Dó a Si, menos Fá), use **1 2 3 · 1 2 3 4 5**,
+    com o polegar passando depois do 3º dedo. Fá usa **1 2 3 4 · 1 2 3 4**. Nas que começam em tecla preta,
+    o polegar entra sempre na primeira branca depois de um grupo de pretas.'
+  - '**Faça 4 tons por dia** em vez de 12 de uma vez: dia 1 Dó–Sol–Ré–Lá, dia 2 Mi–Si–Fá♯–Ré♭, dia 3 Lá♭–Mi♭–Si♭–Fá.
+    No quarto dia, tente os 12 seguidos.'
+  - '**Metrônomo a 60:** uma nota por clique, duas vezes cada tom. Errou uma nota? Pare, repita só aquele
+    trecho três vezes devagar e recomece o tom.'
+  - '**Fechamento (2 min):** toque o tom mais difícil do dia de olhos fechados.'
+mistakes:
+  - 'Passar o polegar com um salto do braço: o polegar já deve ir se deslocando por baixo da mão enquanto
+    os outros dedos tocam.'
+  - Acelerar na subida e frear na descida — o metrônomo denuncia.
+  - 'Decorar o desenho das teclas sem saber o nome das notas: sempre diga as notas antes.'
 checklist:
   - id: tonalidades
     text: Toquei nas 12 tonalidades sem errar notas.

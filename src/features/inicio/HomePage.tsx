@@ -28,6 +28,15 @@ interface StepInfo {
   readonly parts: { readonly done: readonly boolean[]; readonly current: number } | null
 }
 
+/** "Fundamentos › Intervalos · aula 1 de 3" — onde a aula fica no mapa de estudo. */
+function whereIs(lessonId: string): string {
+  const module = catalog.moduleByLesson.get(lessonId)
+  if (!module) return ''
+  const course = catalog.courseById.get(module.course)
+  const index = module.lessons.indexOf(lessonId) + 1
+  return `${course ? `${course.title} › ` : ''}${module.title} · aula ${index} de ${module.lessons.length}`
+}
+
 function describe(step: Recommendation, snapshot: ProgressSnapshot): StepInfo {
   switch (step.kind) {
     case 'continue-lesson': {
@@ -38,7 +47,7 @@ function describe(step: Recommendation, snapshot: ProgressSnapshot): StepInfo {
       return {
         kicker: 'Continuar aula',
         title: lesson?.title ?? step.lessonId,
-        detail: `${doneIds.size} de ${done.length} partes concluídas`,
+        detail: `${whereIs(step.lessonId)} — ${doneIds.size} de ${done.length} partes concluídas`,
         to: paths.lesson(step.lessonId),
         action: 'Continuar',
         parts: { done, current: done.indexOf(false) },
@@ -46,14 +55,10 @@ function describe(step: Recommendation, snapshot: ProgressSnapshot): StepInfo {
     }
     case 'start-lesson': {
       const lesson = catalog.lessonById.get(step.lessonId)
-      const worked = lesson?.competencies
-        .map((id) => catalog.competencyById.get(id)?.title)
-        .filter(Boolean)
-        .join(', ')
       return {
         kicker: 'Começar aula',
         title: lesson?.title ?? step.lessonId,
-        detail: `Trabalha: ${worked ?? ''}`,
+        detail: whereIs(step.lessonId) || (lesson?.summary ?? ''),
         to: paths.lesson(step.lessonId),
         action: 'Começar',
         parts: lesson ? { done: lesson.checkpoints.map(() => false), current: 0 } : null,
@@ -197,8 +202,12 @@ export function HomePage() {
 
         <section className={styles.tracks} aria-labelledby="trilhas">
           <h2 id="trilhas" className={styles.columnTitle}>
-            Suas trilhas
+            Seu nível por área
           </h2>
+          <p className={styles.columnHint}>
+            Não são aulas: é o quanto você já domina em cada área. As aulas ficam em{' '}
+            <Link to={paths.learn}>Aprender</Link>.
+          </p>
           <ul className={styles.trackList}>
             {tracks.map((track) => {
               const state = snapshot.tracks.get(track.id)

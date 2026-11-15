@@ -24,6 +24,20 @@ parameters:
   targetBpm: 80
   bpmStep: 5
   hands: both
+minutes: 25
+routine:
+  - '**Fixe o trítono do C7** na esquerda (Mi embaixo, Si♭ em cima) e deixe-o parado o exercício inteiro.'
+  - '**Uma tríade por vez**, na ordem da tabela, em posição fundamental. Diga em voz alta as tensões ("Ré:
+    nona, décima primeira aumentada, décima terceira").'
+  - '**Agora invertida:** a mesma tríade em 1ª e 2ª inversão, escolhendo a que fica mais perto da anterior.'
+  - '**Resolva em F7M:** cada estrutura vai para Fá-Lá-Dó-Mi (ou Lá-Dó-Mi-Sol na direita). Repita resolvendo
+    em Fm7 e anote quais combinam melhor com maior e quais com menor.'
+  - '**Transponha** para G7, F7 e B♭7: o trítono e as tríades mudam juntos (sobem um tom = tríades um tom
+    acima).'
+mistakes:
+  - 'Usar a tríade de Ré (♯11, 13) antes de um acorde menor: ela soa "maior" demais — as de Lá♭ e Mi♭ combinam
+    mais com menor.'
+  - 'Esquecer que o trítono troca de posição: em F7 ele é Lá–Mi♭, não Mi–Si♭.'
 checklist:
   - id: cinco
     text: Toquei as cinco upper structures nos quatro dominantes.

@@ -19,6 +19,18 @@ parameters:
   targetBpm: 140
   bpmStep: 6
   hands: left
+minutes: 25
+routine:
+  - '**Diga o padrão em graus** (1 3 5 6 · ♭7 6 5 3) e toque em Dó, em colcheias retas, a 80 bpm.'
+  - '**Dedilhado sugerido para a esquerda:** 5 3 2 1 na subida (Dó Mi Sol Lá); na descida, 2 1 2 3 (Si♭ Lá
+    Sol Mi), com o 2 cruzando por cima do polegar até o Si♭. Mantenha o mesmo em todos os acordes.'
+  - '**Swing:** fale "lon-ga cur-ta" enquanto toca; a primeira colcheia de cada par dura o dobro da segunda.'
+  - '**Padrão em Fá7 e Sol7** separados, 4 vezes cada.'
+  - '**Forma inteira de 12 compassos**, contando os compassos em voz alta nas primeiras vezes.'
+  - '**Suba 6 bpm** por forma limpa, até 140.'
+mistakes:
+  - 'Perder a forma: conte os compassos ("um, dois… doze") até a forma ficar no corpo.'
+  - Tensionar a mão em andamentos altos — relaxe o pulso entre as notas.
 checklist:
   - id: forma
     text: Toquei a forma de 12 compassos inteira com o padrão, nos três tons.

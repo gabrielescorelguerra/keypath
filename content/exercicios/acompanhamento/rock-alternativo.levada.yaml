@@ -19,6 +19,15 @@ parameters:
   bpmStep: 8
   hands: both
   backing: { key: E, degrees: Im bVI bIII bVII, beatsPerChord: 4 }
+minutes: 25
+routine:
+  - '**Piano motor:** colcheias repetidas, sem pedal, 2 voltas.'
+  - '**Power chords:** fundamental e quinta com oitava, 2 voltas.'
+  - '**Pedal no topo:** Si agudo em colcheias sobre os quatro acordes.'
+  - '**Encadeie os três** como seções de uma música.'
+  - '**Transponha** para Lá e Ré; suba 8 bpm por série limpa.'
+mistakes:
+  - 'Usar o pedal de sustentação no piano motor: o som perde a pegada.'
 checklist:
   - id: tres
     text: Toquei as três texturas sem parar.

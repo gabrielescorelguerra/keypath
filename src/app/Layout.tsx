@@ -47,8 +47,8 @@ function Sidebar() {
       </nav>
 
       {tracks.length > 0 && (
-        <nav aria-label="Trilhas" className={styles.tracks}>
-          <span className={styles.navTitle}>Trilhas</span>
+        <nav aria-label="Seu nível por área" className={styles.tracks}>
+          <span className={styles.navTitle}>Seu nível por área</span>
           {tracks.map((track) => {
             const state = progress?.snapshot.tracks.get(track.id)
             const next =

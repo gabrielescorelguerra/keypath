@@ -14,6 +14,17 @@ prompt: |
   pede naquele momento.
 parameters:
   keys: []
+minutes: 45
+routine:
+  - '**Escolha o trecho** e escreva a melodia (nomes das notas) e os graus originais.'
+  - '**Versão discreta:** troque no máximo um acorde a cada dois compassos; confira se a melodia continua
+    cabendo.'
+  - '**Versão ousada:** use II–V secundários, trítono e diminuto; sempre cheque a nota da melodia contra
+    o acorde novo.'
+  - '**Toque as duas cantando a melodia** (ou peça a alguém para cantar).'
+  - '**Anote** em que parte de um culto ou show cada versão funcionaria.'
+mistakes:
+  - Escolher acordes que fazem a melodia virar 9ª menor ou 4ª contra a terça maior — sempre teste cantando.
 checklist:
   - id: duas
     text: Escrevi e toquei as duas versões.

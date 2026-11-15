@@ -9,6 +9,20 @@ prompt: |
   introdução de metal e de trilha "épica". Termine no Am.
 parameters:
   keys: [Am, Dm]
+minutes: 30
+routine:
+  - '**Monte o pedal:** oitavas de Mi na esquerda, em colcheias, a 80 bpm. Mantenha firme e sem acentos
+    irregulares.'
+  - '**Explore o frígio dominante** (Mi Fá Sol♯ Lá Si Dó Ré) na direita por 3 minutos, só ouvindo o efeito
+    do Fá e do Sol♯.'
+  - '**Crie o riff:** 4 a 6 notas, com Mi – Fá no começo e o Sol♯ em tempo forte. Repita-o até ficar de
+    memória.'
+  - '**Organize os 8 compassos:** riff (2) – riff (2) – variação subindo (2) – suspensão no E7 (1) – Am
+    (1).'
+  - '**Toque com dinâmica:** comece piano e cresça até o Am; grave e ouça.'
+mistakes:
+  - 'Riff longo demais: um bom riff cabe em um compasso.'
+  - 'Esquecer de resolver: a introdução precisa chegar no Am com clareza.'
 checklist:
   - id: riff
     text: Criei um riff reconhecível com a ♭2 e a terça maior.

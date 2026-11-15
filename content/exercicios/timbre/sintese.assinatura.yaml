@@ -12,6 +12,15 @@ prompt: |
   - o que você mudaria ao vivo (o corte do filtro durante a música?).
 parameters:
   keys: []
+minutes: 35
+routine:
+  - '**Escolha a música e o momento** (intro, riff, frase) e escreva a sensação em uma palavra.'
+  - '**Escolha a família** que mais combina com essa sensação.'
+  - '**Ajuste o timbre** um bloco por vez (oscilador, filtro, envelope, LFO).'
+  - '**Toque o trecho** com o timbre e ajuste até soar como a palavra que você escreveu.'
+  - '**Escreva as três linhas** pedidas.'
+mistakes:
+  - 'Começar por efeitos: eles escondem um timbre fraco — ajuste os blocos básicos primeiro.'
 checklist:
   - id: timbre
     text: Criei o timbre e toquei com ele um trecho da música.

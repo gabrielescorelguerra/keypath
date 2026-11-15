@@ -16,6 +16,15 @@ prompt: |
   6. **Levada:** 12/8, semicolcheias ou outra? Onde o teclado preenche com runs?
 parameters:
   keys: []
+minutes: 45
+routine:
+  - '**Ouça a música inteira uma vez** sem tocar, anotando a forma.'
+  - '**Ache o tom** cantando a nota de casa.'
+  - '**Tire o baixo do refrão** — uma nota por acorde é suficiente.'
+  - '**Escreva os graus** e marque o vocabulário (extensões, passagens, empréstimos).'
+  - '**Toque o refrão** junto com a gravação.'
+mistakes:
+  - 'Tentar tirar todas as notas do voicing antes do baixo: o baixo vem primeiro.'
 checklist:
   - id: forma-graus
     text: Escrevi a forma e os acordes do refrão em graus.

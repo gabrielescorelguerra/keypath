@@ -18,6 +18,15 @@ parameters:
   bpmStep: 6
   hands: both
   backing: { key: C, degrees: I IV I V, beatsPerChord: 4 }
+minutes: 25
+routine:
+  - '**Ping-pong devagar:** esquerda nos tempos e direita nos contratempos, a 80 bpm, sem playback.'
+  - '**Com playback** no andamento inicial, só ping-pong, 4 voltas.'
+  - '**Passagens:** no último tempo, o acorde cromático da aula.'
+  - '**Suba 6 bpm** por série limpa até 132.'
+  - '**Transponha** para Ré♭ e Mi♭.'
+mistakes:
+  - 'Mão direita atrasada no contratempo: pratique devagar até cair exatamente no meio do tempo.'
 checklist:
   - id: pingpong
     text: As mãos se alternaram (esquerda no tempo, direita no contratempo) sem atropelar.

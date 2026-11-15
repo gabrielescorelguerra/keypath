@@ -6,6 +6,18 @@ prompt: |
   Escolha uma nota qualquer e toque, a partir dela, a segunda maior, a terça menor,
   a terça maior, a quarta justa, a quinta justa e a oitava. Repita a partir de cinco notas diferentes,
   incluindo teclas pretas.
+minutes: 12
+routine:
+  - '**Memorize a contagem em semitons:** 2ª M = 2, 3ª m = 3, 3ª M = 4, 4ª J = 5, 5ª J = 7, 8ª = 12.'
+  - '**A partir de Dó:** toque cada intervalo como notas separadas (melódico) e depois juntas (harmônico),
+    dizendo o nome em voz alta.'
+  - '**Troque a nota de partida:** Ré, Mi♭, Fá♯, Lá♭ e Si — inclua pelo menos duas pretas.'
+  - '**Agora sem contar:** use os atalhos visuais (a 5ª justa de uma branca é branca, exceto Si → Fá♯; a
+    4ª justa é branca, exceto Fá → Si♭).'
+  - '**Sorteio:** peça a alguém (ou use um app de sorteio) uma nota e um intervalo; acerte em até 3 segundos.'
+mistakes:
+  - Contar teclas brancas em vez de semitons — conte todas, pretas e brancas.
+  - 'Confundir 3ª maior e 4ª justa (4 e 5 semitons): ouça a diferença tocando as duas seguidas.'
 checklist:
   - id: cinco-notas
     text: Fiz a sequência a partir de cinco notas diferentes, incluindo teclas pretas.

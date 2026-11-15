@@ -22,6 +22,15 @@ parameters:
   targetBpm: 92
   bpmStep: 4
   hands: right
+minutes: 20
+routine:
+  - '**Em blocos:** C em posição fundamental, 1ª e 2ª inversão. Ouça a quarta dentro de cada inversão.'
+  - '**Uma oitava** de cada inversão em semínimas, mão direita, conferindo o dedilhado (1 2 4 nas inversões).'
+  - '**Duas oitavas**, subindo e descendo, a 60 bpm.'
+  - '**Encadeie:** fundamental → 1ª → 2ª sem parar.'
+  - '**Novo tom por dia** (Sol, Fá, Ré); suba 4 bpm por série limpa.'
+mistakes:
+  - Usar o 3º dedo na quarta e esticar a mão — o 4º dedo alcança mais naturalmente.
 checklist:
   - id: tres-posicoes
     text: Toquei as três posições nos quatro tons, subindo e descendo.

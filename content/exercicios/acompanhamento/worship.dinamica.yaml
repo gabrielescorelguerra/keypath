@@ -20,6 +20,14 @@ parameters:
   targetBpm: 72
   hands: both
   backing: { key: D, degrees: I V VIm IV, beatsPerChord: 4 }
+minutes: 20
+routine:
+  - '**Leia a tabela** e marque em que volta cada parte começa.'
+  - '**Toque as 9 voltas** sem parar, contando em voz alta.'
+  - '**Grave e ouça:** há diferença clara entre estrofe, refrão e ponte?'
+  - '**Repita** exagerando a diferença de dinâmica.'
+mistakes:
+  - 'Começar forte: a introdução e a estrofe precisam deixar espaço para crescer.'
 checklist:
   - id: partes
     text: Mudei de textura no começo de cada parte, sem parar.

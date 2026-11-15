@@ -18,6 +18,16 @@ parameters:
   bpmStep: 5
   hands: both
   backing: { key: F, degrees: I VIm IIm V, beatsPerChord: 4 }
+minutes: 25
+routine:
+  - '**Prepare as tétrades** (F7M, Dm7, Gm7, C7) e as versões com extensão (F7M(9), Dm7(9), Gm7(9), C7(13))
+    paradas.'
+  - '**Voltas 1–2:** só tétrades, mudando no tempo 1.'
+  - '**Voltas 3–4:** com extensões. Procure voicings em que só uma ou duas notas se mexem entre os acordes.'
+  - '**Voltas 5–6:** no C, toque C7(4)(9) nos tempos 1–2 e resolva em C7(13) nos tempos 3–4.'
+  - '**Suba 5 bpm** por série limpa até 90.'
+mistakes:
+  - Mudar de acorde atrasado porque o voicing está longe — prepare a próxima posição durante o tempo 4.
 checklist:
   - id: voltas
     text: Fiz as três etapas sem parar o playback.

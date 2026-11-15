@@ -23,6 +23,17 @@ parameters:
   targetBpm: 96
   bpmStep: 6
   hands: both
+minutes: 25
+routine:
+  - '**Em Dó, devagar:** toque os três voicings da tabela, segurando cada um por 4 tempos.'
+  - '**Ouça a condução:** Dm7(9) → G7(13) muda só uma nota (Dó → Si); G7(13) → C7M(9) muda as outras.'
+  - '**Loop de II–V–I** por 2 minutos a 60 bpm.'
+  - '**Transponha para Fá e Si♭:** escreva as quatro notas da direita antes de tocar.'
+  - '**Depois Mi♭, Sol e Ré** em outros dias.'
+  - '**Suba 6 bpm** a cada série limpa.'
+mistakes:
+  - 'Deixar a esquerda pesada: toque a fundamental curta e leve, as cores estão na direita.'
+  - Mover a mão inteira entre os acordes em vez de mexer só as notas que mudam.
 checklist:
   - id: tons
     text: Toquei o II–V–I nos seis tons, um acorde por compasso.

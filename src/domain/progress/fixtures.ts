@@ -156,6 +156,9 @@ export const catalogData: Catalog = {
         hands: null,
         backing: null,
       },
+      minutes: null,
+      routine: null,
+      mistakes: null,
       checklist: [
         { id: 'um', text: 'um' },
         { id: 'dois', text: 'dois' },

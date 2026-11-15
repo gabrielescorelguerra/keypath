@@ -14,6 +14,19 @@ prompt: |
   Ordem sugerida: 5ª justa → 3ª maior → 3ª menor → 4ª justa → 8ª → 2ª maior → 6ª maior → 7ª menor.
 parameters:
   keys: []
+minutes: 15
+routine:
+  - '**Aquecimento (2 min):** toque e cante Dó – Sol – Dó (5ª justa) e Dó – Mi – Dó (3ª maior) até cantar
+    afinado.'
+  - '**Associe cada intervalo a uma melodia** que você já conhece (o começo de uma música da igreja, por
+    exemplo) e anote.'
+  - '**Rodada principal:** toque a nota de partida, pense na melodia de referência, cante o intervalo e
+    só então confira no teclado. Cinco tentativas por intervalo.'
+  - '**Descendente:** repita a rodada cantando para baixo — costuma ser mais difícil; vá devagar.'
+  - '**Fechamento:** escolha 5 intervalos ao acaso (sorteie) e tente acertar os cinco seguidos.'
+mistakes:
+  - Tocar antes de cantar — o exercício só funciona se a voz vem primeiro.
+  - 'Cantar alto demais ou forçado: cante em volume de conversa, na região confortável da sua voz.'
 checklist:
   - id: cinco
     text: Acertei cinco intervalos seguidos cantando antes de tocar.

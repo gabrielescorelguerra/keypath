@@ -75,3 +75,13 @@ describe('Autoavaliação', () => {
     expect(attempts[1]?.result).toMatchObject({ type: 'self-assessment', bpm: 64 })
   })
 })
+
+describe('Execução', () => {
+  it('mostra o roteiro de prática, o tempo estimado e os erros comuns', async () => {
+    renderRoute('/exercicios/teoria.escala-maior.12-tons')
+    const routine = await screen.findByRole('region', { name: 'Como praticar' })
+    expect(within(routine).getByText('cerca de 20 min')).toBeInTheDocument()
+    expect(within(routine).getAllByRole('listitem').length).toBeGreaterThanOrEqual(4)
+    expect(screen.getByRole('region', { name: 'Erros comuns' })).toBeInTheDocument()
+  })
+})

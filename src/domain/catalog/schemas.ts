@@ -225,6 +225,12 @@ export const performanceExerciseSchema = z.strictObject({
         .optional(),
     })
     .default({ keys: [] }),
+  /** Tempo estimado de uma sessão do exercício, em minutos. */
+  minutes: z.number().int().min(1).max(120).optional(),
+  /** Roteiro: os passos de uma sessão, em ordem (Markdown em linha). */
+  routine: list(text),
+  /** Erros comuns e como evitá-los (Markdown em linha). */
+  mistakes: list(text),
   checklist: z.array(z.strictObject({ id: slug, text })).min(1),
 })
 

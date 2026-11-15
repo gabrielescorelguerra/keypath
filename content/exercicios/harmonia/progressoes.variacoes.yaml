@@ -19,6 +19,16 @@ parameters:
   bpmStep: 6
   hands: both
   backing: { key: G, degrees: I V VIm IV, beatsPerChord: 4 }
+minutes: 20
+routine:
+  - '**Duas voltas da original** com o playback para pegar o andamento.'
+  - '**Variação 1:** baixo descendente G – F♯ – E – C (o D/F♯ é a ponte).'
+  - '**Variação 2:** Am7 no lugar do C na segunda volta.'
+  - '**Variação 3:** Gadd9 – Dsus4 – Em7 – C7M; repare que o Dsus4 não resolve, e tudo bem.'
+  - '**Variação 4:** C nos tempos 1–3 e D7 no tempo 4.'
+  - '**Rodada final:** escolha a ordem que quiser e toque 8 voltas sem parar.'
+mistakes:
+  - Trocar de variação no meio da volta — mude sempre no começo.
 checklist:
   - id: quatro
     text: Toquei as quatro variações sem parar o playback.

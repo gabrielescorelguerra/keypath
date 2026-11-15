@@ -18,6 +18,18 @@ parameters:
   bpmStep: 6
   hands: right
   backing: { key: A, degrees: IIm7(b5) V7 Im7 Im7, beatsPerChord: 4 }
+minutes: 25
+routine:
+  - '**Toque os acordes** Bm7(♭5) – E7 – Am7 com a esquerda e encontre, em cada um, a nota que muda entre
+    a natural e a harmônica: o **Sol♯** no E7.'
+  - '**Sem playback, devagar:** uma volta tocando a natural nos compassos 1 e 3 e a harmônica no 2, em semínimas.'
+  - '**Com playback no andamento inicial:** duas voltas só com frases que terminam no Sol♯ no E7 e resolvem
+    no Lá no Am.'
+  - '**Agora livre:** seis voltas sem parar, misturando frases curtas e longas.'
+  - '**Suba 6 bpm** a cada série limpa até 96.'
+mistakes:
+  - Usar o Sol natural sobre o E7 — soa como se a dominante tivesse perdido a força.
+  - 'Deixar o Sol♯ pendurado: ele quer subir para o Lá.'
 checklist:
   - id: troca
     text: Troquei de escala no E7 e voltei no Am, no tempo certo.

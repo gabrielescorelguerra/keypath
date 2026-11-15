@@ -18,6 +18,14 @@ parameters:
   keys: [G, C, D, A, E, Bb]
   targetBpm: 70
   hands: both
+minutes: 25
+routine:
+  - '**Em Sol, uma progressão por vez**, 4 voltas cada, um acorde por compasso.'
+  - '**Ouça a condução:** no IV → IVm, só a terça desce (Mi → Mi♭); no I → I7, entra o Fá.'
+  - '**Progressão 3:** E♭ – F – G no final, com a nota de cima subindo.'
+  - '**Os outros tons**, um por dia, dizendo os acordes antes de tocar.'
+mistakes:
+  - Tocar o ♭VI e o ♭VII menores — são maiores.
 checklist:
   - id: tres-tons
     text: Toquei as quatro progressões em pelo menos três tons.

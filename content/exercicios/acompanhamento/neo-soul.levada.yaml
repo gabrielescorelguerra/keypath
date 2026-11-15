@@ -19,6 +19,15 @@ parameters:
   bpmStep: 6
   hands: both
   backing: { key: C, degrees: IV7M(9) IIIm7 IIm7(9) I7M(9), beatsPerChord: 4 }
+minutes: 25
+routine:
+  - '**Monte os voicings** (sem fundamental) de F7M(9), Em7, Dm7(9) e C7M(9) e segure cada um.'
+  - '**Com playback:** acorde no tempo 1, segurando, 2 voltas.'
+  - '**Semicolcheias suingadas** atrasando o ataque, 2 voltas.'
+  - '**Passagem:** D♭7M(9) no último tempo do Dm7(9).'
+  - '**Transponha** para Mi♭ e Fá; suba 6 bpm por série limpa.'
+mistakes:
+  - 'Atraso exagerado que vira atraso de verdade: o ataque fica atrás do tempo, mas o acorde troca no lugar.'
 checklist:
   - id: voicings
     text: Toquei os voicings de quatro notas conduzindo as vozes.
