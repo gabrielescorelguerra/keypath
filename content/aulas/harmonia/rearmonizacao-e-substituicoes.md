@@ -42,6 +42,20 @@ materials:
     kind: course
     purpose: practice
     note: Curso com dominantes secundários e diminutos auxiliares. Parte do conteúdo exige assinatura.
+  - title: Dominantes secundários (tutorial em PDF)
+    url: https://studiosol-a.akamaihd.net/gcs/cifraclub/contrib/tutoriais/-dominantes-secundarios_1207170197.pdf
+    source: Cifra Club (tutorial de colaborador)
+    kind: article
+    purpose: understand
+    language: pt
+    note: O V7 de cada grau, com exemplos em Dó e o II–V secundário.
+  - title: Acordes emprestados (Theory Pages, em PDF)
+    url: https://www.tobyrush.com/theorypages/pt-br/pdf/0304acodresalterados.pdf
+    source: Toby Rush — tradução de Aroldo Luviso Neto
+    kind: article
+    purpose: understand
+    language: pt
+    note: Página ilustrada sobre dominantes secundárias e acordes emprestados.
 songs:
   - title: Garota de Ipanema
     artist: Tom Jobim e Vinicius de Moraes

@@ -24,6 +24,20 @@ materials:
     kind: article
     purpose: understand
     note: Acordes menores estendidos e como aproximar as notas do voicing.
+  - title: 'Progressões de acordes do neo soul: guia para iniciantes'
+    url: https://emastered.com/pt/blog/neo-soul-chord-progressions
+    source: eMastered (em português)
+    kind: article
+    purpose: understand
+    language: pt
+    note: Acordes estendidos e progressões do estilo.
+  - title: 7 progressões de acordes de R&B
+    url: https://emastered.com/pt/blog/r-n-b-chord-progressions
+    source: eMastered (em português)
+    kind: article
+    purpose: practice
+    language: pt
+    note: Progressões para tocar no estilo.
 songs:
   - title: Untitled (How Does It Feel)
     artist: D'Angelo

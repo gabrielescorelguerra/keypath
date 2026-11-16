@@ -20,6 +20,20 @@ materials:
     kind: article
     purpose: practice
     note: Exercícios de análise por graus.
+  - title: Harmonia funcional 1 (apostila em PDF)
+    url: https://musicaeadoracao.com.br/recursos/arquivos/tecnicos/teoria/harmonia_funcional_1.pdf
+    source: Música & Adoração
+    kind: article
+    purpose: understand
+    language: pt
+    note: 'Apostila gratuita: campo harmônico e funções tônica, subdominante e dominante.'
+  - title: 'Progressões de acordes: o guia completo'
+    url: https://emastered.com/pt/blog/chord-progressions
+    source: eMastered (em português)
+    kind: article
+    purpose: understand
+    language: pt
+    note: Graus, campo harmônico e progressões básicas.
 songs:
   - title: Let It Be
     artist: The Beatles

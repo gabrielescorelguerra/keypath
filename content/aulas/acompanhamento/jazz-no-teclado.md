@@ -26,6 +26,13 @@ materials:
     kind: sheet
     purpose: practice
     note: Folha de voicings sem fundamental para praticar.
+  - title: 'Progressões de acordes de jazz: guia para principiantes'
+    url: https://emastered.com/pt/blog/jazz-chord-progressions
+    source: eMastered (em português)
+    kind: article
+    purpose: understand
+    language: pt
+    note: II–V–I, turnarounds e ciclos.
 songs:
   - title: So What
     artist: Miles Davis (piano de Bill Evans)

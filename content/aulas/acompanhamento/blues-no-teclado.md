@@ -32,6 +32,13 @@ materials:
     kind: article
     purpose: practice
     note: Roteiro gratuito para iniciantes no blues ao piano.
+  - title: 'Progressões de acordes de blues: o guia definitivo'
+    url: https://emastered.com/pt/blog/blues-chord-progressions
+    source: eMastered (em português)
+    kind: article
+    purpose: understand
+    language: pt
+    note: O blues de 12 compassos e suas variações.
 songs:
   - title: Sweet Home Chicago
     artist: Robert Johnson

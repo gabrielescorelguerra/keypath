@@ -38,6 +38,27 @@ materials:
     kind: docs
     purpose: practice
     note: Exemplo de como um manual de sintetizador descreve os envelopes — útil para achar os mesmos controles no seu.
+  - title: O que é um oscilador e o que ele faz?
+    url: https://emastered.com/pt/blog/what-does-an-oscillator-do
+    source: eMastered (em português)
+    kind: article
+    purpose: understand
+    language: pt
+    note: Formas de onda e seu som.
+  - title: 'Envelopes ADSR: como criar o som perfeito'
+    url: https://blog.landr.com/pt-br/envelopes-adsr/
+    source: LANDR Blog (em português)
+    kind: article
+    purpose: understand
+    language: pt
+    note: Infográfico do ADSR com exemplos.
+  - title: 'Síntese subtrativa: o que é e como funciona'
+    url: https://emastered.com/pt/blog/subtractive-synthesis
+    source: eMastered (em português)
+    kind: article
+    purpose: understand
+    language: pt
+    note: Oscilador, filtro e envelope.
 songs:
   - title: Jump
     artist: Van Halen

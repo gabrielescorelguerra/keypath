@@ -25,6 +25,27 @@ materials:
     source: Music Mann
     kind: article
     purpose: see
+  - title: 'Modos musicais: como enriquecer suas músicas com cor modal'
+    url: https://blog.landr.com/pt-br/modos-musicais/
+    source: LANDR Blog (em português)
+    kind: article
+    purpose: understand
+    language: pt
+    note: Como usar cada modo em composições.
+  - title: 'Modo eólio: guia completo'
+    url: https://emastered.com/pt/blog/aeolian-mode
+    source: eMastered (em português)
+    kind: article
+    purpose: understand
+    language: pt
+    note: A menor natural como modo.
+  - title: 'Modo lócrio: guia completo'
+    url: https://emastered.com/pt/blog/locrian-mode
+    source: eMastered (em português)
+    kind: article
+    purpose: understand
+    language: pt
+    note: O modo mais instável e por que é raro.
 songs:
   - title: Get Lucky
     artist: Daft Punk

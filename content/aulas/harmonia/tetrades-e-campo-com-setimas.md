@@ -19,6 +19,13 @@ materials:
     kind: interactive
     purpose: understand
     note: As sete tétrades do campo maior e do menor.
+  - title: 'Acordes de 7ª: quando e como usá-los'
+    url: https://emastered.com/pt/blog/when-to-use-7th-chords
+    source: eMastered (em português)
+    kind: article
+    purpose: understand
+    language: pt
+    note: Os tipos de sétima e seus usos.
 songs:
   - title: Fly Me to the Moon
     artist: Bart Howard (gravação de Frank Sinatra)

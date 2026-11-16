@@ -25,6 +25,27 @@ materials:
     kind: article
     purpose: practice
     note: Usar o ciclo para achar dominantes secundários e transpor.
+  - title: Reviravoltas (turnarounds) na música
+    url: https://emastered.com/pt/blog/turnarounds-in-music
+    source: eMastered (em português)
+    kind: article
+    purpose: understand
+    language: pt
+    note: Como os finais de seção levam de volta ao início.
+  - title: 10 progressões de acordes emotivos
+    url: https://blog.landr.com/pt-br/10-progressoes-de-acordes-emotivos/
+    source: LANDR Blog (em português)
+    kind: article
+    purpose: listen
+    language: pt
+    note: Progressões comuns com exemplos de músicas.
+  - title: 6 progressões de acordes mais fáceis para principiantes
+    url: https://emastered.com/pt/blog/easy-chord-progressions
+    source: eMastered (em português)
+    kind: article
+    purpose: practice
+    language: pt
+    note: Progressões para treinar em vários tons.
 songs:
   - title: Don't Stop Believin'
     artist: Journey

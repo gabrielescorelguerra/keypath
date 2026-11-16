@@ -26,6 +26,13 @@ materials:
     kind: article
     purpose: see
     note: Onde os pads funcionam e como criar os seus.
+  - title: 'Síntese subtrativa: o que é e como funciona'
+    url: https://emastered.com/pt/blog/subtractive-synthesis
+    source: eMastered (em português)
+    kind: article
+    purpose: understand
+    language: pt
+    note: Como cada família nasce dos mesmos blocos.
 songs:
   - title: Bitter Sweet Symphony
     artist: The Verve

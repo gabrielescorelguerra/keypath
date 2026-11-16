@@ -26,6 +26,13 @@ materials:
     kind: article
     purpose: practice
     note: Cortar o grave de coros e pads para não embolar a mixagem.
+  - title: 9 progressões de acordes cinematográficos
+    url: https://emastered.com/pt/blog/cinematic-chord-progressions
+    source: eMastered (em português)
+    kind: article
+    purpose: listen
+    language: pt
+    note: Progressões épicas com empréstimos do menor.
 songs:
   - title: Can You Feel My Heart
     artist: Bring Me The Horizon

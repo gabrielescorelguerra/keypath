@@ -30,6 +30,13 @@ materials:
     source: MusicRadar
     kind: article
     purpose: practice
+  - title: 'Progressões de acordes de jazz: guia para principiantes'
+    url: https://emastered.com/pt/blog/jazz-chord-progressions
+    source: eMastered (em português)
+    kind: article
+    purpose: understand
+    language: pt
+    note: II–V–I e outras progressões sobre as quais se improvisa.
 songs:
   - title: Autumn Leaves (Folhas Mortas)
     artist: Joseph Kosma

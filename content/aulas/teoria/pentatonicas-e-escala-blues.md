@@ -26,6 +26,13 @@ materials:
     kind: article
     purpose: practice
     note: Exercícios curtos de improvisação para começar.
+  - title: 'Escala de blues: o guia completo'
+    url: https://emastered.com/pt/blog/blues-scale
+    source: eMastered (em português)
+    kind: article
+    purpose: understand
+    language: pt
+    note: Pentatônica menor + ♭5, e a versão maior com ♭3.
 songs:
   - title: Amazing Grace (Graça Excelsa)
     artist: John Newton (melodia tradicional)

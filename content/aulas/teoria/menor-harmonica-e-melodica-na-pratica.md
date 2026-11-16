@@ -34,6 +34,13 @@ materials:
     source: Hear and Play
     kind: article
     purpose: practice
+  - title: 'Escalas menores: como fazer músicas tristes'
+    url: https://blog.landr.com/pt-br/minor-scales
+    source: LANDR Blog (em português)
+    kind: article
+    purpose: understand
+    language: pt
+    note: Por que a menor harmônica tem o V7.
 songs:
   - title: Hava Nagila
     artist: Tradicional

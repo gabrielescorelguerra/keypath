@@ -24,6 +24,13 @@ materials:
     source: Disc Makers Blog
     kind: article
     purpose: listen
+  - title: 9 progressões de acordes cinematográficos
+    url: https://emastered.com/pt/blog/cinematic-chord-progressions
+    source: eMastered (em português)
+    kind: article
+    purpose: listen
+    language: pt
+    note: Progressões com ♭VI, ♭VII e empréstimos que soam grandiosas.
 songs:
   - title: Super Mario Bros. (fim de fase)
     artist: Koji Kondo

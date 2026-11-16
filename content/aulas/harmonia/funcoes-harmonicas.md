@@ -20,6 +20,20 @@ materials:
     kind: article
     purpose: understand
     note: As funções no modelo de frase e nas cadências.
+  - title: Harmonia funcional 1 (apostila em PDF)
+    url: https://musicaeadoracao.com.br/recursos/arquivos/tecnicos/teoria/harmonia_funcional_1.pdf
+    source: Música & Adoração
+    kind: article
+    purpose: understand
+    language: pt
+    note: 'Apostila gratuita: campo harmônico e funções tônica, subdominante e dominante.'
+  - title: Harmonia funcional 2 (apostila em PDF)
+    url: https://musicaeadoracao.com.br/recursos/arquivos/tecnicos/teoria/harmonia_funcional_2.pdf
+    source: Música & Adoração
+    kind: article
+    purpose: understand
+    language: pt
+    note: 'Continuação: dominantes secundários, empréstimos e cadências.'
 songs:
   - title: La Bamba
     artist: Tradicional (gravação de Ritchie Valens)

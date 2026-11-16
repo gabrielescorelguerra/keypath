@@ -38,6 +38,20 @@ materials:
     kind: interactive
     purpose: practice
     note: Dicionário de acordes estendidos no teclado, em todos os tons — para conferir voicings.
+  - title: 'Acordes alargados (com extensões): guia completo'
+    url: https://emastered.com/pt/blog/extended-chords
+    source: eMastered (em português)
+    kind: article
+    purpose: understand
+    language: pt
+    note: Sétimas, nonas, décimas primeiras e terceiras.
+  - title: 'Acordes gospel: 7 acordes para música gospel'
+    url: https://emastered.com/pt/blog/gospel-chords
+    source: eMastered (em português)
+    kind: article
+    purpose: see
+    language: pt
+    note: Extensões e acordes típicos do gospel.
 songs:
   - title: Wave
     artist: Tom Jobim

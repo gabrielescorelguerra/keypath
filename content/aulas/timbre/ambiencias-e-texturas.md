@@ -24,6 +24,20 @@ materials:
     source: Lunacy Audio
     kind: article
     purpose: practice
+  - title: 'O que é reverb: um guia completo'
+    url: https://emastered.com/pt/blog/what-is-reverb
+    source: eMastered (em português)
+    kind: article
+    purpose: understand
+    language: pt
+    note: Tipos de reverb e seus parâmetros.
+  - title: O que é o pré-atraso (pre-delay) de reverberação
+    url: https://emastered.com/pt/blog/reverb-pre-delay
+    source: eMastered (em português)
+    kind: article
+    purpose: understand
+    language: pt
+    note: Separar o som direto da cauda do reverb.
 songs:
   - title: An Ending (Ascent)
     artist: Brian Eno

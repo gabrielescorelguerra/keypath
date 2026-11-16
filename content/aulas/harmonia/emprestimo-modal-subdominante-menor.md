@@ -24,6 +24,20 @@ materials:
     source: FaChords
     kind: article
     purpose: practice
+  - title: Acordes emprestados (Theory Pages, em PDF)
+    url: https://www.tobyrush.com/theorypages/pt-br/pdf/0304acodresalterados.pdf
+    source: Toby Rush — tradução de Aroldo Luviso Neto
+    kind: article
+    purpose: understand
+    language: pt
+    note: Página ilustrada sobre dominantes secundárias e acordes emprestados.
+  - title: Harmonia funcional 2 (apostila em PDF)
+    url: https://musicaeadoracao.com.br/recursos/arquivos/tecnicos/teoria/harmonia_funcional_2.pdf
+    source: Música & Adoração
+    kind: article
+    purpose: understand
+    language: pt
+    note: 'Continuação: dominantes secundários, empréstimos e cadências.'
 songs:
   - title: Creep
     artist: Radiohead

@@ -37,6 +37,27 @@ materials:
     kind: interactive
     purpose: practice
     note: Teste de percepção — maior ou menor.
+  - title: 'Escalas menores: como fazer músicas tristes'
+    url: https://blog.landr.com/pt-br/minor-scales
+    source: LANDR Blog (em português)
+    kind: article
+    purpose: understand
+    language: pt
+    note: As três escalas menores e o V7 do tom menor.
+  - title: 'Escala diatónica: o guia completo'
+    url: https://emastered.com/pt/blog/diatonic-scale
+    source: eMastered (em português)
+    kind: article
+    purpose: understand
+    language: pt
+    note: A escala maior e seus sete modos.
+  - title: 'Círculo de quintas: o guia completo'
+    url: https://emastered.com/pt/blog/circle-of-fifths
+    source: eMastered (em português)
+    kind: article
+    purpose: understand
+    language: pt
+    note: Armaduras, relativas e tons vizinhos.
 songs:
   - title: Joy to the World (Cantai que o Salvador chegou)
     artist: Lowell Mason, sobre melodia atribuída a Händel

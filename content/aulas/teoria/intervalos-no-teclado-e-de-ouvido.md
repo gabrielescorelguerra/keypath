@@ -55,6 +55,20 @@ materials:
     kind: interactive
     purpose: practice
     note: Treina intervalos sobre uma nota sustentada, que define a tonalidade.
+  - title: O que são intervalos na música?
+    url: https://emastered.com/pt/blog/intervals-in-music
+    source: eMastered (em português)
+    kind: article
+    purpose: understand
+    language: pt
+    note: Tom, semitom e qualidade dos intervalos.
+  - title: Calculadora de intervalo musical
+    url: https://www.omnicalculator.com/pt/outras/intervalo-musical
+    source: Omni Calculator
+    kind: interactive
+    purpose: practice
+    language: pt
+    note: Escolha duas notas e confira o nome do intervalo.
 songs:
   - title: Brilha, Brilha Estrelinha
     artist: Tradicional

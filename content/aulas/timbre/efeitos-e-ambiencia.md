@@ -26,6 +26,20 @@ materials:
     kind: article
     purpose: see
     note: Efeitos aplicados especificamente a teclados.
+  - title: Todos os efeitos de áudio explicados
+    url: https://emastered.com/pt/blog/audio-effects-explained
+    source: eMastered (em português)
+    kind: article
+    purpose: understand
+    language: pt
+    note: Efeitos de tempo, modulação e dinâmica.
+  - title: 'Delay vs. reverb: qual é a diferença?'
+    url: https://emastered.com/pt/blog/delay-vs-reverb
+    source: eMastered (em português)
+    kind: article
+    purpose: understand
+    language: pt
+    note: Quando usar cada um e como combinar.
 songs:
   - title: Where the Streets Have No Name
     artist: U2

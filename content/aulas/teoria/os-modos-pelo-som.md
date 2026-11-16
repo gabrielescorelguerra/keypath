@@ -62,6 +62,41 @@ materials:
     kind: sheet
     purpose: practice
     note: Peças curtas em dórico para tocar ao piano.
+  - title: 'Modos musicais: o guia definitivo'
+    url: https://emastered.com/pt/blog/music-modes
+    source: eMastered (em português)
+    kind: article
+    purpose: understand
+    language: pt
+    note: Os sete modos, com exemplos.
+  - title: 'Modo dórico: guia completo'
+    url: https://emastered.com/pt/blog/dorian-mode
+    source: eMastered (em português)
+    kind: article
+    purpose: understand
+    language: pt
+    note: A 6ª maior que distingue o dórico.
+  - title: 'Modo mixolídio: o guia completo'
+    url: https://emastered.com/pt/blog/mixolydian-mode
+    source: eMastered (em português)
+    kind: article
+    purpose: understand
+    language: pt
+    note: A 7ª menor e o trítono com a terça.
+  - title: 'Modo lídio: o guia completo'
+    url: https://emastered.com/pt/blog/lydian-mode
+    source: eMastered (em português)
+    kind: article
+    purpose: understand
+    language: pt
+    note: O único modo com quarta aumentada.
+  - title: 'Modo frígio: guia completo'
+    url: https://emastered.com/pt/blog/phrygian-mode
+    source: eMastered (em português)
+    kind: article
+    purpose: understand
+    language: pt
+    note: O ♭2 e o som do flamenco e do metal.
 songs:
   - title: Oye Como Va
     artist: Tito Puente (gravação de Santana)

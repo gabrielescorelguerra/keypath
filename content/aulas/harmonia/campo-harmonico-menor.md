@@ -19,6 +19,20 @@ materials:
     kind: interactive
     purpose: understand
     note: Inclui as tétrades do campo menor.
+  - title: 'Acordes menores: como construir e usar'
+    url: https://blog.landr.com/pt-br/acordes-menores-como-construir-e-usar-acordes-tristes/
+    source: LANDR Blog (em português)
+    kind: article
+    purpose: understand
+    language: pt
+    note: Tríades e tétrades menores e suas inversões.
+  - title: Harmonia tonal (apostila em PDF)
+    url: https://musicaeadoracao.com.br/recursos/arquivos/tecnicos/teoria/harmonia_tonal.pdf
+    source: Música & Adoração
+    kind: article
+    purpose: understand
+    language: pt
+    note: Texto de referência de harmonia tonal, com seções sobre funções e acordes secundários.
 songs:
   - title: Hotel California
     artist: Eagles

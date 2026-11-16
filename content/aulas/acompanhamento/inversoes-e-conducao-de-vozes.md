@@ -30,6 +30,13 @@ materials:
     source: Dummies
     kind: article
     purpose: practice
+  - title: 'Vozes dos acordes (voicings): o que são e como usá-los'
+    url: https://emastered.com/pt/blog/chord-voicings
+    source: eMastered (em português)
+    kind: article
+    purpose: understand
+    language: pt
+    note: Inversões e distribuição das notas.
 songs:
   - title: Piano Man
     artist: Billy Joel

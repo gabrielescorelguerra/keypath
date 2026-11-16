@@ -26,6 +26,13 @@ materials:
     kind: course
     purpose: practice
     note: O sus2 em progressões maiores e menores (assinatura).
+  - title: 'Progressões de acordes: o guia completo'
+    url: https://emastered.com/pt/blog/chord-progressions
+    source: eMastered (em português)
+    kind: article
+    purpose: understand
+    language: pt
+    note: As progressões mais usadas no pop.
 songs:
   - title: Viva la Vida
     artist: Coldplay

@@ -43,6 +43,20 @@ materials:
     source: Piano in a Flash
     kind: article
     purpose: practice
+  - title: 'Acordes de slash: tudo o que precisa de saber'
+    url: https://emastered.com/pt/blog/slash-chords
+    source: eMastered (em português)
+    kind: article
+    purpose: understand
+    language: pt
+    note: Acorde/baixo, inversões e pedais.
+  - title: 'Vozes dos acordes (voicings): o que são e como usá-los'
+    url: https://emastered.com/pt/blog/chord-voicings
+    source: eMastered (em português)
+    kind: article
+    purpose: understand
+    language: pt
+    note: Como distribuir as notas do acorde.
 songs:
   - title: Maiden Voyage
     artist: Herbie Hancock

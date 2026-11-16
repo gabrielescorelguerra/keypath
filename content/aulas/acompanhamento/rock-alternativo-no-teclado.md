@@ -25,6 +25,20 @@ materials:
     kind: article
     purpose: practice
     note: Como dividir espaço com a guitarra.
+  - title: 'Progressões de acordes indie: guia para principiantes'
+    url: https://emastered.com/pt/blog/indie-chord-progressions
+    source: eMastered (em português)
+    kind: article
+    purpose: understand
+    language: pt
+    note: Progressões do rock alternativo e indie.
+  - title: 'Power chords: guia completo'
+    url: https://emastered.com/pt/blog/power-chords
+    source: eMastered (em português)
+    kind: article
+    purpose: understand
+    language: pt
+    note: Fundamental e quinta, sem terça.
 songs:
   - title: Somewhere Only We Know
     artist: Keane

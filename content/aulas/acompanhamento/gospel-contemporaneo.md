@@ -48,6 +48,13 @@ materials:
     source: PianoGroove
     kind: video
     purpose: practice
+  - title: 'Acordes gospel: 7 acordes para música gospel'
+    url: https://emastered.com/pt/blog/gospel-chords
+    source: eMastered (em português)
+    kind: article
+    purpose: understand
+    language: pt
+    note: Os acordes e cores do gospel.
 songs:
   - title: Oh Happy Day
     artist: Edwin Hawkins Singers
