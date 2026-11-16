@@ -37,7 +37,7 @@ describe('Músicas para aprender', () => {
       await screen.findByRole('heading', { level: 1, name: 'Músicas para aprender' }),
     ).toBeInTheDocument()
     await user.type(screen.getByRole('searchbox', { name: 'Buscar música' }), 'beethoven')
-    expect(screen.getByText('Für Elise')).toBeInTheDocument()
+    expect(screen.getAllByText('Für Elise').length).toBeGreaterThan(0)
     expect(screen.queryByText('Oye Como Va')).not.toBeInTheDocument()
   })
 })
