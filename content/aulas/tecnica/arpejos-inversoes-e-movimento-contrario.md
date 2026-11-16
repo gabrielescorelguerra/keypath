@@ -25,6 +25,28 @@ materials:
     source: Robert Kelley
     kind: sheet
     purpose: practice
+songs:
+  - title: Prelúdio em Dó maior (Cravo Bem Temperado I, BWV 846)
+    artist: Johann Sebastian Bach
+    learn:
+      Cada compasso é um **acorde quebrado** com a mesma figura; os acordes mudam por **condução de
+      vozes**, quase sempre em inversões.
+    key: C
+    publicDomain: true
+  - title: Estudo Op. 10 nº 1
+    artist: Frédéric Chopin
+    learn:
+      Arpejos enormes de Dó maior na mão direita, com inversões e aberturas — para ouvir onde a técnica
+      de arpejo pode chegar.
+    key: C
+    publicDomain: true
+  - title: Für Elise
+    artist: Ludwig van Beethoven
+    learn:
+      A mão esquerda responde à melodia com arpejos curtos de **Lá menor** e **Mi maior** — arpejo
+      como acompanhamento.
+    key: Am
+    publicDomain: true
 ---
 
 Você já toca arpejos a partir da fundamental. Agora o arpejo começa em **qualquer nota do acorde**, e as duas mãos passam a trabalhar juntas.
@@ -34,6 +56,18 @@ Você já toca arpejos a partir da fundamental. Agora o arpejo começa em **qual
 - **Arpejo invertido:** a mesma sequência de notas, começando da terça (1ª inversão) ou da quinta (2ª). Aparece um intervalo de **quarta** dentro da oitava — por isso o dedilhado muda.
 - **Movimento contrário:** as mãos começam juntas e se afastam. Como uma mão é o espelho da outra, os dedilhados ficam quase iguais.
 - **Acorde quebrado:** em vez de subir duas oitavas, o acorde é tocado como figura repetida (como no Prelúdio em Dó de Bach).
+
+**Por que treinar inversões no arpejo**
+
+Num acompanhamento real, você raramente começa um arpejo pela fundamental: começa pela nota **mais próxima** de onde a mão está. Treinar as três posições deixa a mão pronta para entrar em qualquer ponto do acorde — é a condução de vozes aplicada à técnica.
+
+| Posição     | Começa na   | Em Dó     | Intervalo "estranho" |
+| ----------- | ----------- | --------- | -------------------- |
+| Fundamental | fundamental | Dó Mi Sol | — (só terças)        |
+| 1ª inversão | terça       | Mi Sol Dó | 4ª entre Sol e Dó    |
+| 2ª inversão | quinta      | Sol Dó Mi | 4ª entre Sol e Dó    |
+
+O Prelúdio em Dó de Bach é o melhor exemplo: os acordes mudam a cada compasso, mas a mão quase não se mexe, porque cada acorde está na inversão mais próxima do anterior.
 
 ::::
 

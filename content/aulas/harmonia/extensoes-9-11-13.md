@@ -38,6 +38,15 @@ materials:
     kind: interactive
     purpose: practice
     note: Dicionário de acordes estendidos no teclado, em todos os tons — para conferir voicings.
+songs:
+  - title: Wave
+    artist: Tom Jobim
+    learn:
+      Bossa nova cheia de **7M(9)**, **m7(9)** e dominantes com 13 — escute os acordes de piano da
+      gravação de Jobim.
+  - title: Corcovado
+    artist: Tom Jobim
+    learn: 'Começa num acorde de dominante com nona e passa por m6 e 7M: extensões como cor da melodia.'
 ---
 
 A tríade tem três notas; a tétrade, quatro. Continuando a empilhar terças acima da sétima, aparecem a **9ª**, a **11ª** e a **13ª** — as extensões. São as mesmas notas da 2ª, da 4ª e da 6ª, só que pensadas como cor de um acorde, e não como notas de passagem.
@@ -62,6 +71,22 @@ Nesta aula você aprende a regra que decide qual extensão cabe em cada acorde, 
 ::chords{symbols="Cmaj9 Dm9 Em11 Fmaj7#11 G13 Am9 Bm7b5" key="C"}
 
 Repare no **III grau** (Em7): a 9ª seria Fá, meio tom acima do Mi — por isso ele leva a 11ª. E no **IV** (F7M): o Si do campo é a ♯11, a cor do modo lídio.
+
+**Como ler as cifras com extensões**
+
+| Cifra           | Significado                         | Em Dó              |
+| --------------- | ----------------------------------- | ------------------ |
+| C9 ou C7(9)     | dominante com 9ª (tem a 7ª menor)   | Dó Mi Sol Si♭ Ré   |
+| Cadd9           | tríade + 9ª, **sem** sétima         | Dó Mi Sol Ré       |
+| C7M(9) ou Cmaj9 | sétima maior + 9ª                   | Dó Mi Sol Si Ré    |
+| C6/9 ou C6(9)   | tríade + 6ª + 9ª, sem sétima        | Dó Mi Sol Lá Ré    |
+| Cm7(11) ou Cm11 | menor com 7ª e 11ª                  | Dó Mi♭ Sol Si♭ Fá  |
+| C13 ou C7(13)   | dominante com 13ª (a 9ª é opcional) | Dó Mi Si♭ Lá (+Ré) |
+| C7M(♯11)        | sétima maior com ♯11                | Dó Mi Sol Si Fá♯   |
+
+Regra: o número **sozinho** (C9, C13) inclui a sétima menor; **add** quer dizer "sem sétima"; os parênteses dizem "acrescente esta nota ao acorde de antes".
+
+::chords{symbols="Cadd9 C6/9 C9 Cmaj9"}
 
 ::::
 

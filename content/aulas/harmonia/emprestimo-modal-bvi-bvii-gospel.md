@@ -24,6 +24,19 @@ materials:
     source: Disc Makers Blog
     kind: article
     purpose: listen
+songs:
+  - title: Super Mario Bros. (fim de fase)
+    artist: Koji Kondo
+    learn:
+      A fanfarra termina em **♭VI – ♭VII – I** — por isso essa cadência é apelidada de "cadência do
+      Mario".
+  - title: Lady Madonna
+    artist: The Beatles
+    learn: 'O riff de piano é **A – G – F – G – A**: I – ♭VII – ♭VI – ♭VII – I.'
+    key: A
+  - title: With a Little Help from My Friends (refrão)
+    artist: The Beatles
+    learn: '"I get by with a little help…": **♭VII – IV – I** — o ♭VII preparando a volta ao tom.'
 ---
 
 Se o IVm traz emoção, o **♭VI** e o **♭VII** trazem **grandeza**. São os acordes daquele final épico em que a banda inteira sobe junto: em Sol, **E♭ – F – G**. Nesta aula você aprende de onde eles vêm, as duas cadências principais e, no fim, junta tudo em progressões de louvor.
@@ -61,6 +74,12 @@ Achar que o ♭VII "está errado" porque não é do campo. Ele é emprestado e, 
 ::exercise{id="harmonia.bvi-bvii.quiz"}
 
 ::exercise{id="harmonia.bvi-bvii.cadencias"}
+
+**O ♭VII7 como \"dominante pela porta dos fundos\"**
+
+O V7 resolve no I porque sua terça e sua sétima (o trítono) caminham por semitom. O **♭VII7** faz algo parecido por outro caminho: em Dó, o B♭7 (Si♭ Ré Fá Lá♭) leva o **Lá♭ → Sol** e o **Ré → Dó** (ou Mi), chegando ao C com suavidade. No jazz isso é chamado de _backdoor_ — a resolução "pela porta dos fundos" —, e no gospel ela aparece muito como **IVm7 – ♭VII7 – I** (Fm7 – B♭7 – C).
+
+::chords{symbols="Fm7 Bb7 C" key="C"}
 
 ::::
 

@@ -61,6 +61,29 @@ materials:
     kind: sheet
     purpose: practice
     note: Tabela com o dedilhado padrão das duas mãos em todos os tons, incluindo os de teclas pretas.
+songs:
+  - title: Sonata ao Luar (1º movimento)
+    artist: Ludwig van Beethoven
+    learn:
+      A mão direita toca **tríades arpejadas em tercinas** do começo ao fim — o arpejo como textura.
+      Comece pelos 4 primeiros compassos.
+    key: C#m
+    publicDomain: true
+  - title: Comptine d'un autre été (L'après-midi)
+    artist: Yann Tiersen
+    learn:
+      A mão esquerda repete **arpejos de tríades** (Mi menor, Sol, Si menor, Ré) enquanto a direita
+      faz a melodia.
+  - title: River Flows in You
+    artist: Yiruma
+    learn:
+      Arpejos abertos na mão esquerda sustentando uma melodia simples — ótimo para treinar arpejo leve
+      e regular.
+  - title: Clocks
+    artist: Coldplay
+    learn:
+      O riff de piano é feito de **acordes quebrados** repetidos em ritmo constante — arpejo como motor
+      da música.
 ---
 
 Um **arpejo** é um acorde tocado uma nota de cada vez. Parece simples, mas ele treina três coisas ao mesmo tempo: a **forma** de cada acorde na mão, a **passagem do polegar** (que também é a base das escalas) e o **ouvido** — porque, nota por nota, você escuta exatamente o que faz cada acorde soar como soa.
@@ -100,6 +123,29 @@ Nas **tétrades** entra mais uma terça, a sétima:
 :::common-mistake{title="Pular a mão na passagem do polegar"}
 Se o polegar só se mexe quando chega a vez dele, a mão "pula" e a nota sai atrasada e acentuada. Comece a levar o polegar por baixo **assim que o 2 tocar**, devagar, até a passagem ficar inaudível.
 :::
+
+**Arpejo, acorde quebrado e baixo de Alberti**
+
+Os três tocam as notas do acorde uma de cada vez, mas com funções diferentes:
+
+| Nome             | Como é                                                        | Exemplo                            |
+| ---------------- | ------------------------------------------------------------- | ---------------------------------- |
+| Arpejo           | sobe ou desce pelas notas do acorde, atravessando oitavas     | escala de arpejo, _Sonata ao Luar_ |
+| Acorde quebrado  | as notas do acorde numa figura que se repete no lugar         | _Clocks_, Prelúdio em Dó de Bach   |
+| Baixo de Alberti | figura de 4 notas na mão esquerda: grave, aguda, média, aguda | sonatas de Mozart                  |
+
+**Como praticar para durar.** A coordenação nasce da repetição **lenta e correta**: tocar rápido com erros grava o erro. Uma regra simples é só subir o andamento depois de três execuções seguidas sem erro, e voltar 10 bpm atrás quando errar duas vezes.
+
+**Rotina semanal sugerida (15 minutos por dia):**
+
+| Dia | Foco                                                 |
+| --- | ---------------------------------------------------- |
+| Seg | tríades maiores e menores, 2 oitavas, mãos separadas |
+| Ter | as mesmas, mãos juntas                               |
+| Qua | tétrades 7M e 7                                      |
+| Qui | tétrades m7, m7(♭5) e °7                             |
+| Sex | arpejos do campo harmônico do tom da semana          |
+| Sáb | aplicação: acompanhamento arpejado de uma música     |
 
 ::::
 
@@ -152,6 +198,8 @@ Na **7M**, a sétima fica a um semitom da oitava: o arpejo soa aberto, "sonhador
 :::common-mistake{title="Arpejo que atropela a voz"}
 No acompanhamento, arpejo rápido e no registro da voz disputa espaço com o cantor. Arpeje na região média ou grave, e guarde as figuras rápidas para os espaços entre as frases.
 :::
+
+**Ouça antes de tocar:** a _Sonata ao Luar_ usa tríades arpejadas em tercinas; _Comptine d'un autre été_ e _River Flows in You_ usam arpejos na mão esquerda sob a melodia; _Clocks_ usa um acorde quebrado como riff. As gravações estão em Aprofundamento — escolha uma e tire os quatro primeiros compassos.
 
 ::::
 

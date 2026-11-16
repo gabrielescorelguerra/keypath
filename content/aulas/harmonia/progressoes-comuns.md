@@ -25,6 +25,35 @@ materials:
     kind: article
     purpose: practice
     note: Usar o ciclo para achar dominantes secundários e transpor.
+songs:
+  - title: Don't Stop Believin'
+    artist: Journey
+    learn: Abre com **I – V – VIm – IV** em Mi ao piano — o padrão mais famoso da aula.
+    key: E
+  - title: Zombie
+    artist: The Cranberries
+    learn:
+      'A rotação **VIm – IV – I – V** (Em – C – G – D): os mesmos quatro acordes, começando no menor,
+      soam tristes.'
+  - title: Every Breath You Take
+    artist: The Police
+    learn: '**I – VIm – IV – V** (doo-wop) com arpejos — a mesma ordem de *Stand by Me*.'
+  - title: Cânone em Ré
+    artist: Johann Pachelbel
+    learn:
+      A progressão **I – V – VIm – IIIm – IV – I – IV – V** repetida sobre o mesmo baixo, com variações
+      por cima.
+    key: D
+    publicDomain: true
+  - title: I Will Survive
+    artist: Gloria Gaynor
+    learn: 'Desce pelo **ciclo de quintas** em Lá menor: Am – Dm – G – C – F – Bm7(♭5) – E.'
+    key: Am
+  - title: Satin Doll
+    artist: Duke Ellington
+    learn:
+      'Começa com **II–V** em sequência (Dm7 – G7, Em7 – A7): o II–V–I como bloco de construção do
+      jazz.'
 ---
 
 Algumas sequências de acordes funcionam tão bem que viraram padrão. Conhecê-las pelos **graus** — e não pelas cifras de um tom — é o que permite reconhecê-las em qualquer música.
@@ -43,6 +72,19 @@ Algumas sequências de acordes funcionam tão bem que viraram padrão. Conhecê-
 O motor de quase todas é o mesmo: **tônica → afastamento → dominante → tônica**, e fundamentais que andam por **quintas** (o movimento mais forte da harmonia).
 
 ::concept{id="funcoes-harmonicas"}
+
+**Por que algumas progressões soam "certas": o movimento do baixo**
+
+O ouvido gosta de alguns movimentos de fundamental mais que de outros:
+
+| Movimento da fundamental            | Efeito                       | Exemplo em Dó       |
+| ----------------------------------- | ---------------------------- | ------------------- |
+| Quinta descendo (ou quarta subindo) | o mais forte: \"resolve\"    | G → C, Dm → G       |
+| Terça descendo                      | suave, troca só uma nota     | C → Am → F          |
+| Segunda subindo                     | energia, \"empurra\"         | F → G, G → Am       |
+| Segunda descendo                    | menos comum, mais \"pesado\" | C → B♭ (empréstimo) |
+
+O **ciclo de quintas** só usa o movimento mais forte; o **I – VIm – IV – V** usa terças descendo e depois uma segunda subindo; o **I – V – VIm – IV** combina quinta subindo, segunda subindo e terça descendo — um pouco de tudo, e por isso funciona em tantos estilos.
 
 ::::
 

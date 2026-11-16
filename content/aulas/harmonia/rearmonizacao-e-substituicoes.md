@@ -42,6 +42,25 @@ materials:
     kind: course
     purpose: practice
     note: Curso com dominantes secundários e diminutos auxiliares. Parte do conteúdo exige assinatura.
+songs:
+  - title: Garota de Ipanema
+    artist: Tom Jobim e Vinicius de Moraes
+    learn:
+      'No 6º compasso, **G♭7 → F7M**: a substituição de trítono (♭II7 no lugar do C7) resolvendo meio
+      tom abaixo.'
+    key: F
+  - title: Take the "A" Train
+    artist: Billy Strayhorn
+    learn: O **D7(♯11)** no 3º compasso é um dominante secundário (V7 do V) que dá a cor da música.
+    key: C
+  - title: All of Me
+    artist: Gerald Marks e Seymour Simons
+    learn: Uma cadeia de **dominantes secundários** (E7, A7, D7) — cada um puxa para o acorde seguinte.
+  - title: In the Bleak Midwinter
+    artist: Jacob Collier (sobre melodia de Gustav Holst)
+    learn:
+      'Uma reharmonização radical de um hino tradicional: a mesma melodia com harmonias muito diferentes
+      a cada estrofe.'
 ---
 
 Reharmonizar é **trocar os acordes de uma música sem trocar a melodia**. Não é colocar acordes difíceis em todo lugar, e sim escolher: aqui quero mais tensão, ali quero surpresa, naquele final quero um caminho cromático.
@@ -64,6 +83,22 @@ Esta aula organiza as técnicas da mais discreta à mais ousada. Todas seguem a 
 | Empréstimo modal        | traz um acorde do tom homônimo menor              | F7M → Fm6; Am7 → A♭7M       |
 
 ::concept{id="funcoes-harmonicas"}
+
+**Os dominantes secundários do campo**
+
+Todo acorde maior ou menor do campo pode ser precedido pelo seu próprio V7. Em Dó maior:
+
+| Alvo      | V7 secundário | Notas do V7   | Nota estranha ao tom |
+| --------- | ------------- | ------------- | -------------------- |
+| IIm (Dm)  | A7 (V7/II)    | Lá Dó♯ Mi Sol | Dó♯                  |
+| IIIm (Em) | B7 (V7/III)   | Si Ré♯ Fá♯ Lá | Ré♯, Fá♯             |
+| IV (F)    | C7 (V7/IV)    | Dó Mi Sol Si♭ | Si♭                  |
+| V (G)     | D7 (V7/V)     | Ré Fá♯ Lá Dó  | Fá♯                  |
+| VIm (Am)  | E7 (V7/VI)    | Mi Sol♯ Si Ré | Sol♯                 |
+
+A nota estranha é sempre a **terça do V7 secundário**, que vira a "sensível" do acorde alvo (o Dó♯ sobe para Ré, o Sol♯ sobe para Lá). Antes de usar um deles, confira se essa nota não briga com a melodia.
+
+::progression{key="C" degrees="I VI7 IIm7 V7 I"}
 
 ::::
 

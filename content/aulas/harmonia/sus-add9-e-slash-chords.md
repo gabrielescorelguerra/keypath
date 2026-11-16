@@ -43,6 +43,23 @@ materials:
     source: Piano in a Flash
     kind: article
     purpose: practice
+songs:
+  - title: Maiden Voyage
+    artist: Herbie Hancock
+    learn: 'A música inteira usa **acordes 7(4)(9)** (sus): sem terça, eles flutuam sem pedir resolução.'
+  - title: A Whiter Shade of Pale
+    artist: Procol Harum
+    learn: 'O órgão desce o baixo nota a nota com **slash chords**: C – C/B – Am – Am/G – F – F/E…'
+    key: C
+  - title: Ária (Suíte nº 3, BWV 1068)
+    artist: Johann Sebastian Bach
+    learn:
+      Um baixo que **desce por graus** em oitavas enquanto os acordes mudam por cima — a mesma ideia
+      dos slash chords do pop.
+    publicDomain: true
+  - title: Wonderwall
+    artist: Oasis
+    learn: Acordes com cores de **sus** e add9 (Em7 – G – Dsus4 – A7sus4) e notas que ficam presas no topo.
 ---
 
 Três recursos, uma ideia em comum — **mudar uma nota só** para mudar a cor:
@@ -67,6 +84,13 @@ O **sus** não é maior nem menor: sem terça, ele fica "em suspenso". O **add9*
 
 - Se o baixo é nota do acorde, é uma **inversão**: C/E, C/G.
 - Se não é, o baixo cria um **som novo**: F/G (soa como G7(4)(9)), B♭/C (soa como C7(4)(9)), D/C.
+
+**Mais duas cores: 6/9 e voicings em quartas**
+
+- **6/9** — tríade + 6ª + 9ª, sem sétima (C6/9 = Dó Mi Sol Lá Ré). Muito usado como acorde **final** no gospel e na bossa: soa resolvido e moderno ao mesmo tempo.
+- **Voicings em quartas** — empilhar quartas justas (Ré Sol Dó, Mi Lá Ré) em vez de terças. Sem terça clara, o acorde fica ambíguo como um sus. É o som de _Maiden Voyage_ e de muito pad de worship.
+
+::chords{symbols="C6/9 Dm11 Gsus4"}
 
 ::::
 

@@ -19,6 +19,22 @@ materials:
     kind: interactive
     purpose: understand
     note: Inclui as tétrades do campo menor.
+songs:
+  - title: Hotel California
+    artist: Eagles
+    learn:
+      'Em Si menor, o **F♯ maior** (V da menor harmônica) aparece logo no segundo acorde: Bm – F♯ –
+      A – E – G – D – Em – F♯.'
+    key: Bm
+  - title: Ain't No Sunshine
+    artist: Bill Withers
+    learn: 'Lá menor **natural**: Am – Em – G. O v é **menor** (Em) — compare com o F♯ de *Hotel California*.'
+    key: Am
+  - title: Summertime
+    artist: George Gershwin
+    learn:
+      Tom menor com o **V7** (sensível) antes de cada volta à tônica — a menor harmônica dentro da
+      canção.
 ---
 
 Para emprestar acordes do tom menor, primeiro é preciso conhecer o tom menor. Esta aula monta os campos menor natural e menor harmônico e compara com o campo maior da **mesma tônica**. Essa comparação é exatamente o mapa do empréstimo modal.
@@ -48,6 +64,23 @@ Tocar **Vm7** (menor) na hora de resolver para a tônica, quando a melodia pede 
 :::
 
 ::exercise{id="harmonia.campo-menor.quiz"}
+
+**Por que o tom menor mistura escalas**
+
+Na prática, quase ninguém toca só o campo menor natural. Os acordes mais usados num tom menor vêm de três escalas diferentes:
+
+| Acorde (em Lá menor)  | Vem da    | Por quê                                 |
+| --------------------- | --------- | --------------------------------------- |
+| Am, Dm, F, G, C       | natural   | a base do tom                           |
+| **E7** (V7)           | harmônica | o Sol♯ dá a sensível que puxa para o Lá |
+| G♯°7                  | harmônica | substitui o E7 (mesmo trítono Sol♯–Ré)  |
+| D (IV maior), Bm7(♭5) | melódica  | sobem com Fá♯ e Sol♯                    |
+
+Regra prática: **use a natural para tudo e troque só o V (e às vezes o VII) para a harmônica**. Ouça a diferença:
+
+::chords{symbols="Am Dm Em Am" key="Am"}
+
+::chords{symbols="Am Dm E7 Am" key="Am"}
 
 ::::
 

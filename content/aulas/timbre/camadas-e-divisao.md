@@ -37,6 +37,19 @@ materials:
 - **Região:** mantenha o **mesmo ponto de divisão** em todas as músicas (Dó3 é uma escolha comum), para a mão não precisar se readaptar.
 - **Efeitos:** baixo seco; pad e piano com reverb. No layer, evite somar dois reverbs grandes.
 
+**Por que algumas camadas embolam**
+
+Cada timbre ocupa uma faixa de frequências. Quando dois timbres ocupam a **mesma faixa**, eles se mascaram; quando ocupam faixas diferentes, se completam.
+
+| Faixa       | Frequências (aprox.) | Quem mora ali                           |
+| ----------- | -------------------- | --------------------------------------- |
+| Grave       | 40–250 Hz            | baixo, mão esquerda do piano, bumbo     |
+| Médio-grave | 250–500 Hz           | corpo do piano e dos pads (onde embola) |
+| Médio       | 500 Hz–2 kHz         | voz, guitarra, ataque do piano          |
+| Agudo       | 2–8 kHz              | brilho, strings agudas, pratos          |
+
+Dicas práticas: no layer piano + pad, **tire grave do pad** (filtro passa-alta ou região mais aguda); no split, deixe o baixo **seco e mono**; numa banda com guitarra, evite pads cheios entre Dó3 e Dó4 — é a região da guitarra.
+
 ::::
 
 ::::checkpoint{id="visualizacao" title="Split e layer no laboratório" stage="visualizacao"}

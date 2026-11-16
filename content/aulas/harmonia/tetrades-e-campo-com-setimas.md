@@ -19,6 +19,21 @@ materials:
     kind: interactive
     purpose: understand
     note: As sete tétrades do campo maior e do menor.
+songs:
+  - title: Fly Me to the Moon
+    artist: Bart Howard (gravação de Frank Sinatra)
+    learn:
+      'A primeira parte desce pelo ciclo de quintas com tétrades do campo: **Am7 – Dm7 – G7 – C7M –
+      F7M – Bm7(♭5) – E7 – Am**.'
+  - title: Garota de Ipanema
+    artist: Tom Jobim e Vinicius de Moraes
+    learn:
+      'Começa com **F7M – G7**: a sétima maior na tônica e um dominante "emprestado" (G7, o V7 do V)
+      — o som da bossa nova.'
+    key: F
+  - title: Just the Way You Are
+    artist: Billy Joel
+    learn: Piano elétrico com acordes de sétima maior na tônica e no IV — ouça como o 7M deixa o maior "macio".
 ---
 
 A tríade é o esqueleto; a **sétima** dá a cor. É ela que faz um acorde soar "mais bonito", mais aberto e mais moderno. No louvor contemporâneo, quase todo acorde tem uma sétima ou uma extensão. Nesta aula você monta as tétrades e o campo maior com sétimas.
@@ -36,6 +51,22 @@ Tocar **G7** quando a cifra pede **G7M**, ou o contrário. Leia com atenção: "
 :::
 
 ::exercise{id="harmonia.tetrades.quiz"}
+
+**As tétrades em intervalos**
+
+| Cifra  | Nome                   | Fórmula     | Em Dó                   | Onde aparece                     |
+| ------ | ---------------------- | ----------- | ----------------------- | -------------------------------- |
+| 7M     | maior com sétima maior | 1 3 5 7     | Dó Mi Sol Si            | I e IV do campo                  |
+| 7      | dominante              | 1 3 5 ♭7    | Dó Mi Sol Si♭           | V do campo                       |
+| m7     | menor com sétima       | 1 ♭3 5 ♭7   | Dó Mi♭ Sol Si♭          | II, III e VI                     |
+| m7(♭5) | meio-diminuto          | 1 ♭3 ♭5 ♭7  | Dó Mi♭ Sol♭ Si♭         | VII do campo; II do tom menor    |
+| °7     | diminuto               | 1 ♭3 ♭5 ♭♭7 | Dó Mi♭ Sol♭ Si♭♭ (= Lá) | VII da menor harmônica; passagem |
+| m(7M)  | menor com sétima maior | 1 ♭3 5 7    | Dó Mi♭ Sol Si           | I da menor harmônica/melódica    |
+| m6     | menor com sexta        | 1 ♭3 5 6    | Dó Mi♭ Sol Lá           | tônica menor (jazz, bossa)       |
+
+::chords{symbols="Cdim7 CmMaj7 Cm6"}
+
+**Meio-diminuto × diminuto:** a única diferença é a sétima. No m7(♭5), sétima menor (Si♭); no °7, sétima diminuta (Lá). O °7 é **simétrico** — empilha só terças menores —, por isso Cdim7, E♭dim7, F♯dim7 e Adim7 têm as mesmas quatro notas.
 
 ::::
 

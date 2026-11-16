@@ -20,6 +20,30 @@ materials:
     kind: article
     purpose: practice
     note: Exercícios de análise por graus.
+songs:
+  - title: Let It Be
+    artist: The Beatles
+    learn: Estrofe em **C – G – Am – F** (I – V – VIm – IV). Toque com tríades em Dó e diga os graus.
+    key: C
+  - title: No Woman, No Cry
+    artist: Bob Marley
+    learn:
+      A mesma progressão I – V – VIm – IV, num andamento lento de reggae — ótima para treinar trocas
+      sem pressa.
+    key: C
+  - title: With or Without You
+    artist: U2
+    learn: Quatro acordes do campo de Ré (**D – A – Bm – G**) repetidos a música inteira, só mudando a intensidade.
+    key: D
+  - title: Someone Like You
+    artist: Adele
+    learn:
+      I – V – VIm – IV em Lá maior ao piano, com o V às vezes com a terça no baixo (E/G♯) — antecipação
+      da aula de inversões.
+    key: A
+  - title: Stand by Me
+    artist: Ben E. King
+    learn: '**I – VIm – IV – V**: a ordem "doo-wop". Transponha para três tons pensando só nos graus.'
 ---
 
 Quase toda música que você toca na igreja usa os acordes de **um único campo harmônico**. Esta aula revisa as tríades, organiza esses acordes por **grau** e mostra como isso permite tocar qualquer música em qualquer tom. É a base de tudo o que vem depois, até chegar ao empréstimo modal.
@@ -60,6 +84,22 @@ Esquecer que o VII grau é **diminuto**. Na música popular ele aparece pouco co
 
 ::exercise{id="harmonia.campo-maior.quiz"}
 
+**Por que o campo tem essa ordem (maior, menor, menor, maior, maior, menor, diminuto)**
+
+Cada acorde do campo usa só notas da escala. Ao empilhar terças sobre cada grau de Dó maior, a distância até a terça e até a quinta muda conforme os semitons Mi–Fá e Si–Dó caem no meio:
+
+| Grau | Notas     | 3ª        | 5ª               | Tipo     |
+| ---- | --------- | --------- | ---------------- | -------- |
+| I    | Dó Mi Sol | maior (4) | justa (7)        | maior    |
+| II   | Ré Fá Lá  | menor (3) | justa            | menor    |
+| III  | Mi Sol Si | menor     | justa            | menor    |
+| IV   | Fá Lá Dó  | maior     | justa            | maior    |
+| V    | Sol Si Ré | maior     | justa            | maior    |
+| VI   | Lá Dó Mi  | menor     | justa            | menor    |
+| VII  | Si Ré Fá  | menor     | **diminuta (6)** | diminuto |
+
+**Os acordes primários.** I, IV e V juntos contêm **todas as sete notas da escala** (Dó Mi Sol + Fá Lá Dó + Sol Si Ré). Por isso dá para harmonizar quase qualquer melodia simples só com eles — e por isso tantos hinos e canções folclóricas usam apenas três acordes.
+
 ::::
 
 ::::checkpoint{id="graus" title="Pensar em graus e transpor" stage="aplicacao"}
@@ -75,6 +115,20 @@ Sempre que pegar uma cifra nova, escreva os graus em cima dos acordes. Em poucas
 :::
 
 ::exercise{id="harmonia.analise.quiz"}
+
+**Tabela de transposição rápida**
+
+| Grau | Dó  | Sol | Ré  | Lá  | Mi  | Fá  | Si♭ |
+| ---- | --- | --- | --- | --- | --- | --- | --- |
+| I    | C   | G   | D   | A   | E   | F   | B♭  |
+| IIm  | Dm  | Am  | Em  | Bm  | F♯m | Gm  | Cm  |
+| IIIm | Em  | Bm  | F♯m | C♯m | G♯m | Am  | Dm  |
+| IV   | F   | C   | G   | D   | A   | B♭  | E♭  |
+| V    | G   | D   | A   | E   | B   | C   | F   |
+| VIm  | Am  | Em  | Bm  | F♯m | C♯m | Dm  | Gm  |
+| VII° | B°  | F♯° | C♯° | G♯° | D♯° | E°  | A°  |
+
+Exemplo: _Let It Be_ em Dó é I – V – VIm – IV. Em Sol, a mesma música vira **G – D – Em – C**; em Ré, **D – A – Bm – G**.
 
 ::::
 

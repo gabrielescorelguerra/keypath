@@ -26,6 +26,20 @@ materials:
     kind: article
     purpose: see
     note: Onde os pads funcionam e como criar os seus.
+songs:
+  - title: Bitter Sweet Symphony
+    artist: The Verve
+    learn:
+      O riff de **cordas** (strings) com ataque médio e sustentação longa — o timbre que carrega a
+      música.
+  - title: Green Onions
+    artist: Booker T. & the M.G.'s
+    learn: '**Órgão** Hammond: envelope "liga-desliga", sem queda — exatamente a família órgão da aula.'
+  - title: Baba O'Riley
+    artist: The Who
+    learn:
+      O padrão repetitivo de **órgão com notas curtas** funciona como um pluck rítmico, sobre o qual
+      a banda entra.
 ---
 
 Todos os timbres de sintetizador saem dos mesmos blocos — oscilador, filtro, envelope, LFO e efeitos. O que muda de uma família para outra é **qual bloco manda**.
@@ -43,6 +57,17 @@ Todos os timbres de sintetizador saem dos mesmos blocos — oscilador, filtro, e
 | Keys    | harmonia rítmica      | amostras    | pianos acústicos e elétricos (Rhodes, Wurlitzer), clavinet  |
 
 As **keys** (pianos elétricos e clavinet) não saem de um sintetizador subtrativo simples — são amostras ou modelagem física. No laboratório trabalhamos as outras seis.
+
+**Quatro maneiras de fazer um timbre**
+
+| Síntese            | Como funciona                             | Exemplos                                         |
+| ------------------ | ----------------------------------------- | ------------------------------------------------ |
+| Subtrativa         | onda rica + filtro que remove harmônicos  | Minimoog, Prophet, a maioria dos pads e leads    |
+| Aditiva            | soma de senoides                          | órgão Hammond (cada drawbar é uma senoide)       |
+| FM                 | um oscilador modula a frequência de outro | Yamaha DX7: pianos elétricos e sinos dos anos 80 |
+| Sample / modelagem | gravação ou simulação do instrumento real | pianos, cordas e órgãos dos teclados de palco    |
+
+O laboratório desta plataforma é subtrativo — o mais fácil para entender as famílias, porque cada bloco tem um efeito audível.
 
 ::::
 

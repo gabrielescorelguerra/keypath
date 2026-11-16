@@ -30,6 +30,24 @@ materials:
     kind: docs
     purpose: understand
     note: Como os drawbars somam harmônicos, no manual de um órgão virtual.
+songs:
+  - title: Superstition
+    artist: Stevie Wonder
+    learn: O **clavinet** em semicolcheias, curto e percussivo — o timbre-símbolo do funk.
+  - title: What'd I Say
+    artist: Ray Charles
+    learn: 'O riff de **piano elétrico Wurlitzer**: ataque mais "sujo" e anasalado que o Rhodes.'
+  - title: Just the Way You Are
+    artist: Billy Joel
+    learn: '**Rhodes** suave com modulação — o piano elétrico das baladas.'
+  - title: Green Onions
+    artist: Booker T. & the M.G.'s
+    learn:
+      '**Hammond** com drawbars e percussão — ouça a diferença entre o órgão sustentado e as notas
+      curtas.'
+  - title: Light My Fire
+    artist: The Doors
+    learn: 'Órgão **Vox Continental** na introdução e no solo: mais fino e agudo que o Hammond.'
 ---
 
 ::::checkpoint{id="fundamentos" title="O timbre de cada estilo" stage="fundamentos"}
@@ -47,6 +65,16 @@ materials:
 **Órgão Hammond:** os **drawbars** somam harmônicos (síntese aditiva) — cada um é um tubo virtual. A caixa **Leslie** gira os alto-falantes: lenta (chorale) ou rápida (tremolo).
 
 **Método para copiar um timbre:** família → envelope → brilho → movimento → espaço → região.
+
+**Como cada instrumento produz o som** (e por isso soa como soa)
+
+| Instrumento | Mecanismo                                                         | Característica                       |
+| ----------- | ----------------------------------------------------------------- | ------------------------------------ |
+| Rhodes      | martelo bate em uma haste metálica (tine) captada por um captador | sino suave, \"bell\" no ataque forte |
+| Wurlitzer   | martelo bate em uma palheta metálica                              | mais anasalado e rosnado             |
+| Clavinet    | tangente pressiona uma corda, captada eletricamente               | curto, percussivo, funk              |
+| Hammond     | rodas tonais geram senoides somadas pelos drawbars                | sustentação infinita, sem queda      |
+| Leslie      | alto-falante giratório (lento/rápido)                             | o \"redemoinho\" do órgão            |
 
 ::::
 

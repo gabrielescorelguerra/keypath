@@ -26,6 +26,15 @@ materials:
     kind: article
     purpose: see
     note: Efeitos aplicados especificamente a teclados.
+songs:
+  - title: Where the Streets Have No Name
+    artist: U2
+    learn:
+      A introdução usa **delay de colcheia pontuada** sincronizado com o andamento — o padrão rítmico
+      nasce do eco.
+  - title: Shine On You Crazy Diamond
+    artist: Pink Floyd
+    learn: 'Teclados com **reverb longo** e notas sustentadas: o espaço como parte da música.'
 ---
 
 Os efeitos se dividem em três grupos:
@@ -45,6 +54,20 @@ Os efeitos se dividem em três grupos:
 | Drive            | satura, acrescenta harmônicos | ganho, tom                        | órgão no rock, synths agressivos |
 
 **Delay no tempo da música.** A semínima dura **60 ÷ bpm** segundos. A colcheia, metade; a colcheia pontuada, 0,75 da semínima — o delay mais usado no worship e no rock alternativo.
+
+**Tabela de delay por andamento** (em milissegundos)
+
+| bpm | Semínima | Colcheia | Colcheia pontuada |
+| --- | -------- | -------- | ----------------- |
+| 60  | 1000     | 500      | 750               |
+| 70  | 857      | 429      | 643               |
+| 80  | 750      | 375      | 563               |
+| 90  | 667      | 333      | 500               |
+| 100 | 600      | 300      | 450               |
+| 120 | 500      | 250      | 375               |
+| 140 | 429      | 214      | 321               |
+
+Fórmula: **semínima = 60 000 ÷ bpm** (ms). Colcheia = metade; colcheia pontuada = 3/4 da semínima. Muitos teclados fazem isso sozinhos com **tap tempo** ou sincronia com o metrônomo — procure no manual.
 
 ::::
 

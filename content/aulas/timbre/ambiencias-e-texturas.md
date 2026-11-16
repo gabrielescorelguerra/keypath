@@ -24,6 +24,18 @@ materials:
     source: Lunacy Audio
     kind: article
     purpose: practice
+songs:
+  - title: An Ending (Ascent)
+    artist: Brian Eno
+    learn: Acordes longos que surgem e somem devagar — **swells** e reverb como música em si.
+  - title: 1/1 (Music for Airports)
+    artist: Brian Eno
+    learn: 'Motivos curtos de piano repetidos com espaço entre eles: o **motivo com eco** que a aula propõe.'
+  - title: With or Without You
+    artist: U2
+    learn:
+      Uma guitarra com sustentação infinita cria a **textura** que fica por baixo da música toda —
+      a mesma função de um drone.
 ---
 
 ::::checkpoint{id="fundamentos" title="Os recursos da ambiência" stage="fundamentos"}
@@ -33,6 +45,17 @@ materials:
 - **Motivo com delay:** duas ou três notas agudas repetidas, com delay longo e reverb.
 - **Reverb enorme e shimmer:** caudas longas, às vezes com uma oitava acima ("shimmer").
 - **Movimento lento:** LFO no filtro, abrindo e fechando a cada poucos segundos.
+
+**Shimmer, freeze e swell: como cada um é feito**
+
+| Recurso        | Como se faz                                      | No teclado de palco                    |
+| -------------- | ------------------------------------------------ | -------------------------------------- |
+| Swell          | ataque lento do envelope ou pedal de volume      | Attack alto, ou pedal de expressão     |
+| Shimmer        | reverb com transposição de oitava acima na cauda | efeito \"Shimmer\" ou \"Pitch Reverb\" |
+| Drone          | notas presas (sostenuto) ou hold                 | pedal sostenuto ou função Hold         |
+| Motivo com eco | delay longo, 30–50% de repetição                 | delay sincronizado com o bpm           |
+
+Um bom drone usa **tônica e quinta** (sem terça) para servir a todos os acordes do tom; para mudar de tom numa transição, troque primeiro a quinta e só depois a tônica.
 
 ::::
 

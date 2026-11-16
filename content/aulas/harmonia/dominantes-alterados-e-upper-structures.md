@@ -34,6 +34,15 @@ materials:
     source: The Jazz Piano Site
     kind: article
     purpose: practice
+songs:
+  - title: Autumn Leaves (Folhas Mortas)
+    artist: Joseph Kosma
+    learn:
+      No II–V–I menor, o **V7(♭9)** (ou ♭13) aparece antes da tônica menor — o lugar mais natural para
+      as alterações.
+  - title: Misty
+    artist: Erroll Garner
+    learn: Balada cheia de II–V; nas gravações de piano, os dominantes ganham ♭9 e ♯9 antes de resolver.
 ---
 
 Um dominante tem quatro notas "obrigatórias" (1, 3, 5, ♭7) e várias tensões possíveis. As **alteradas** — ♭9, ♯9, ♯11 e ♭13 — aumentam a vontade de resolver.
@@ -48,6 +57,19 @@ Um dominante tem quatro notas "obrigatórias" (1, 3, 5, ♭7) e várias tensões
 | ♭13    | Mi♭         | melancólica                 | V7 → acorde menor                        |
 
 **Upper structures:** a mão esquerda toca só o **trítono** (3ª e 7ª), e a direita toca uma **tríade maior** cujas notas são tensões do acorde. Sobre o C7 há cinco que funcionam: Ré, Lá, Lá♭, Sol♭ e Mi♭.
+
+**De onde vêm as tensões alteradas**
+
+As quatro alterações (♭9, ♯9, ♯11 e ♭13) são exatamente as notas da **escala alterada** — o 7º modo da menor melódica — que não estão no mixolídio. Em Sol7: Sol, **Lá♭** (♭9), **Lá♯** (♯9), Si (3), **Dó♯** (♯11), **Mi♭** (♭13), Fá (7).
+
+| Tensão | Em G7     | Resolve em C para… | Quando usar                                 |
+| ------ | --------- | ------------------ | ------------------------------------------- |
+| ♭9     | Lá♭       | Sol                | antes de maior **ou** menor                 |
+| ♯9     | Lá♯ (Si♭) | Si ou Lá           | blues, funk, antes de menor                 |
+| ♯11    | Dó♯       | Ré ou Dó           | dominante que não resolve (lídio dominante) |
+| ♭13    | Mi♭       | Ré                 | antes de menor (é a ♭3 do Cm!)              |
+
+Repare na última linha: o ♭13 do G7 é exatamente a terça do **Cm**. Por isso G7(♭13) → Cm soa tão natural — a tensão já anuncia o acorde de chegada.
 
 ::::
 

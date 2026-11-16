@@ -20,6 +20,29 @@ materials:
     kind: article
     purpose: understand
     note: As funções no modelo de frase e nas cadências.
+songs:
+  - title: La Bamba
+    artist: Tradicional (gravação de Ritchie Valens)
+    learn:
+      '**I – IV – V** em loop: tônica, subdominante e dominante sem nada mais. Ouça a tensão do V pedindo
+      a volta.'
+    publicDomain: true
+  - title: Twist and Shout
+    artist: The Isley Brothers / The Beatles
+    learn:
+      'O mesmo I – IV – V em loop, com o V sustentado no crescendo antes do refrão: a dominante como
+      suspense.'
+  - title: Parabéns pra Você
+    artist: Mildred e Patty Hill
+    learn:
+      'Só **I, V7 e IV**: um exercício perfeito para sentir onde a dominante entra e onde a subdominante
+      "abre" a frase final.'
+    publicDomain: true
+  - title: Asa Branca
+    artist: Luiz Gonzaga
+    learn:
+      Melodia nordestina harmonizada com I, IV e V7 — toque o acompanhamento e diga a função de cada
+      acorde.
 ---
 
 Saber **quais** acordes estão no campo é o primeiro passo; entender **o que cada um faz** é o que permite criar. As funções harmônicas explicam a sensação de repouso, movimento e tensão, e mostram quais acordes podem ocupar o lugar de outros. Essa ideia vai ser essencial para entender o **empréstimo modal**, que é justamente trocar um acorde por outro de mesma função, com outra cor.
@@ -33,6 +56,19 @@ Ouça a diferença entre parar no V7 e resolver no I:
 ::progression{key="G" degrees="I IV V7"}
 
 ::progression{key="G" degrees="I IV V7 I"}
+
+**As cadências: como as frases terminam**
+
+| Cadência             | Acordes    | Efeito                     | Em Dó   |
+| -------------------- | ---------- | -------------------------- | ------- |
+| Autêntica (perfeita) | V(7) → I   | ponto final                | G7 → C  |
+| Plagal               | IV → I     | "amém", final suave        | F → C   |
+| Meia cadência        | … → V      | vírgula, pergunta          | Dm → G  |
+| De engano            | V(7) → VIm | surpresa, a frase continua | G7 → Am |
+
+::chords{symbols="G7 C F C Dm G G7 Am" key="C"}
+
+Em _Parabéns pra Você_, a primeira frase termina no V (meia cadência, "pergunta"); a segunda, no I (autêntica, "resposta"). Repare como quase toda canção alterna essas duas pontuações.
 
 ::::
 

@@ -38,6 +38,20 @@ materials:
     kind: docs
     purpose: practice
     note: Exemplo de como um manual de sintetizador descreve os envelopes — útil para achar os mesmos controles no seu.
+songs:
+  - title: Jump
+    artist: Van Halen
+    learn:
+      O riff é um **brass de sintetizador** (dente de serra, ataque rápido, filtro aberto) — o timbre
+      que define a música.
+  - title: Lucky Man (solo final)
+    artist: Emerson, Lake & Palmer
+    learn: 'Solo de **Minimoog** com portamento (glide) e filtro: o lead monofônico clássico.'
+  - title: Blinding Lights
+    artist: The Weeknd
+    learn:
+      'Lead de sintetizador oitentista com ataque curto e muito brilho: compare com o pad que sustenta
+      a harmonia.'
 ---
 
 Um sintetizador subtrativo funciona como uma pequena linha de montagem:
@@ -70,6 +84,19 @@ Nesta aula você vai ouvir cada bloco isoladamente no laboratório e montar trê
 - **Release:** quanto tempo o som leva para sumir depois que você solta a tecla.
 
 **LFO — o movimento.** Um oscilador lento demais para ser ouvido como nota (normalmente abaixo de 20 Hz). Ligado ao filtro, faz o som "respirar"; à afinação, faz vibrato; ao volume, faz tremolo.
+
+**As formas de onda e seus harmônicos**
+
+Todo som "musical" é uma soma de frequências: a **fundamental** (a nota) e os **harmônicos** (múltiplos dela). A forma de onda decide quais harmônicos existem — e o filtro decide quais deles chegam ao ouvido.
+
+| Onda           | Harmônicos         | Som                            | Uso típico                  |
+| -------------- | ------------------ | ------------------------------ | --------------------------- |
+| Senoide        | só a fundamental   | puro, \"flauta\"               | sub-bass, sinos suaves      |
+| Triângulo      | ímpares, fracos    | suave, oco                     | leads doces                 |
+| Quadrada       | só ímpares, fortes | oco, \"clarinete\", videogame  | leads, órgãos simples       |
+| Dente de serra | todos              | brilhante, \"metais e cordas\" | pads, brass, strings, leads |
+
+Por isso a dente de serra é o ponto de partida da maioria dos timbres: ela tem todos os harmônicos, e o filtro vai tirando o que sobra. É a síntese **subtrativa**.
 
 ::::
 
