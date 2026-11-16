@@ -63,10 +63,8 @@ export function TrackPage() {
     <>
       <PageHeader
         title={track.name}
-        crumbs={[
-          { label: 'Início', to: paths.home },
-          { label: 'Seu nível por área', to: paths.home },
-        ]}
+        eyebrow="Seu nível por área"
+        crumbs={[{ label: 'Início', to: paths.home }]}
         subtitle={track.description}
         aside={
           <div className={styles.levelBox}>
