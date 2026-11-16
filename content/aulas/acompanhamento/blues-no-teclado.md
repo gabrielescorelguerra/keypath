@@ -32,6 +32,22 @@ materials:
     kind: article
     purpose: practice
     note: Roteiro gratuito para iniciantes no blues ao piano.
+songs:
+  - title: Sweet Home Chicago
+    artist: Robert Johnson
+    learn: Blues de 12 compassos com shuffle — toque a forma inteira com a mão esquerda em 5ª e 6ª.
+  - title: Johnny B. Goode
+    artist: Chuck Berry (piano de Johnnie Johnson)
+    learn:
+      'A forma de 12 compassos acelerada no rock and roll: ouça o piano tocando acordes curtos nos
+      contratempos.'
+  - title: Kansas City
+    artist: Leiber & Stoller (gravação de Wilbert Harrison)
+    learn: Blues de 12 compassos clássico, com a letra na forma **AAB**.
+  - title: Green Onions
+    artist: Booker T. & the M.G.'s
+    learn: Um blues de 12 compassos tocado no órgão — o riff repetido sobre I7, IV7 e V7.
+    key: F
 ---
 
 O blues tem uma forma fixa — **12 compassos com três acordes** — e uma linguagem muito reconhecível: acordes dominantes em todos os graus, o suingue do shuffle e a blue note.
@@ -47,6 +63,19 @@ O blues tem uma forma fixa — **12 compassos com três acordes** — e uma ling
 - Variação comum: o **quick change**, com IV7 já no compasso 2.
 
 **O shuffle.** As colcheias são "suingadas": a primeira dura o dobro da segunda, como uma tercina com a nota do meio ligada. Conte "**um**-a-**dois**-a…".
+
+**Por que todos os acordes do blues são dominantes**
+
+No campo maior, só o V é dominante (7). No blues, **I7, IV7 e V7** são todos dominantes — o que, pela teoria tonal, não deveria "resolver" nunca. É justamente essa tensão permanente, somada à melodia com ♭3 e ♭7 (as blue notes), que dá o sabor do estilo. O blues nasceu de uma tradição melódica africana que não cabe inteira no sistema maior/menor europeu.
+
+**As variações da forma**
+
+| Versão         | O que muda            | Compassos 1–4    | 9–12                   |
+| -------------- | --------------------- | ---------------- | ---------------------- |
+| Básica         | —                     | I7 I7 I7 I7      | V7 IV7 I7 I7           |
+| Quick change   | IV7 no compasso 2     | I7 IV7 I7 I7     | V7 IV7 I7 V7           |
+| Com turnaround | V7 no compasso 12     | …                | V7 IV7 I7 V7           |
+| Jazz blues     | II–V no lugar do V–IV | I7 IV7 I7 Vm7 I7 | IIm7 V7 I7 VI7 IIm7 V7 |
 
 ::::
 

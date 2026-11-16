@@ -24,6 +24,18 @@ materials:
     kind: article
     purpose: understand
     note: Acordes menores estendidos e como aproximar as notas do voicing.
+songs:
+  - title: Untitled (How Does It Feel)
+    artist: D'Angelo
+    learn:
+      Acordes com extensões tocados **atrás do tempo**, num andamento lento — o groove "deitado" do
+      neo-soul.
+  - title: On & On
+    artist: Erykah Badu
+    learn: Poucos acordes, muito espaço e o Rhodes no centro do arranjo.
+  - title: Afro Blue
+    artist: Robert Glasper Experiment (com Erykah Badu)
+    learn: Um tema de jazz em 3 relido com acordes e voicings de neo-soul.
 ---
 
 O neo-soul vive de **acordes estendidos tocados de forma compacta**, de **movimento cromático** e de um **tempo relaxado**, sempre um pouco atrás da batida.
@@ -35,6 +47,12 @@ O neo-soul vive de **acordes estendidos tocados de forma compacta**, de **movime
 - **Movimento:** acordes de passagem meio tom acima ou abaixo do destino; baixo cromático.
 - **Tempo:** semicolcheias levemente suingadas, tocadas atrás do tempo.
 - **Timbre:** piano elétrico (Rhodes), com chorus ou tremolo.
+
+**Um truque de voicing: o sus é um acorde \"sobre\" o baixo**
+
+O dominante suspenso do neo-soul, **G9sus4** (Sol Dó Ré Fá Lá), tem as mesmas notas de um **F/G** (tríade de Fá com Sol no baixo) ou de um **Dm7/G**. Na prática: para tocar um 7(4)(9), toque a tríade **um tom abaixo** da fundamental na mão direita, com a fundamental no baixo.
+
+::chords{symbols="G9sus4 F/G Dm7/G" key="C"}
 
 ::::
 

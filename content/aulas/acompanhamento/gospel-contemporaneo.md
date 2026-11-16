@@ -48,6 +48,20 @@ materials:
     source: PianoGroove
     kind: video
     purpose: practice
+songs:
+  - title: Oh Happy Day
+    artist: Edwin Hawkins Singers
+    learn:
+      'O hino que levou o gospel às rádios em 1969: piano em levada, coro em pergunta e resposta e
+      muitas passagens.'
+  - title: Total Praise
+    artist: Richard Smallwood
+    learn:
+      Harmonia rica, com extensões e acordes de passagem a cada compasso — ouça como o piano conduz
+      as vozes do coro.
+  - title: Melodies from Heaven
+    artist: Kirk Franklin
+    learn: 'Gospel contemporâneo: tétrades com 9ª, dominantes secundários e o vamp final que cresce.'
 ---
 
 O gospel contemporâneo herdou a harmonia do **jazz** (tétrades, extensões, II–V–I), a cor do **blues** (sétimas, terça menor sobre maior) e a energia do canto de igreja. No teclado, isso vira um vocabulário bem definido: acordes sempre com cor, harmonia que **nunca fica parada** e um baixo que caminha.
@@ -73,6 +87,20 @@ Você já viu o empréstimo modal no gospel. Agora o foco é o resto do vocabul�
 **3. O baixo caminha.** O _walk-up_ leva o baixo por notas do acorde até o próximo grau: C – C/E – F.
 
 **4. A tensão é adiada.** O dominante aparece primeiro **suspenso** — G7(4) — e só depois resolve em G7 e no I.
+
+**Como os músicos de gospel falam de harmonia: números**
+
+Em ensaios de gospel e de worship é comum ouvir "faz um **3-6-2-5-1**" ou "vai pro **4** com o **4 menor**". São os **graus** ditos como números (o _Nashville Number System_), que funcionam em qualquer tom:
+
+| Falado               | Graus                       | Em Dó                   |
+| -------------------- | --------------------------- | ----------------------- |
+| "1-4-5"              | I – IV – V                  | C – F – G               |
+| "2-5-1"              | IIm7 – V7 – I               | Dm7 – G7 – C            |
+| "3-6-2-5-1"          | IIIm7 – VI7 – IIm7 – V7 – I | Em7 – A7 – Dm7 – G7 – C |
+| "4 – 4 menor – 1"    | IV – IVm – I                | F – Fm – C              |
+| "1 com o 3 no baixo" | I/III                       | C/E                     |
+
+Pensar em números é o que permite trocar de tom no meio da música sem reescrever a cifra.
 
 ::::
 

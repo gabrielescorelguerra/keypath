@@ -30,6 +30,25 @@ materials:
     source: Dummies
     kind: article
     purpose: practice
+songs:
+  - title: Piano Man
+    artist: Billy Joel
+    learn:
+      'A introdução desce o baixo com inversões: **C – G/B – F/A – C/G**. A mão direita quase não sai
+      do lugar.'
+    key: C
+  - title: Someone Like You
+    artist: Adele
+    learn:
+      Acompanhamento de piano em acordes quebrados, com o V em 1ª inversão (**E/G♯**) para o baixo
+      andar por grau.
+    key: A
+  - title: Let It Be
+    artist: The Beatles
+    learn:
+      'Toque a estrofe com a mão direita procurando a inversão mais próxima: **C – G/B – Am – F** soa
+      mais ligado que tudo em posição fundamental.'
+    key: C
 ---
 
 Duas pessoas tocando a mesma cifra podem soar completamente diferentes. A diferença quase sempre está na **condução de vozes**: em vez de "pular" de um acorde para outro na posição fundamental, o tecladista escolhe a inversão mais próxima e a mão quase não sai do lugar. É assim que o empréstimo modal vai soar suave: no IV → IVm, só **uma nota** se move.
@@ -61,6 +80,16 @@ Mover a mão esquerda junto com a direita. O baixo pode pular (ele faz a fundame
 :::
 
 ::exercise{id="acompanhamento.inversoes.quiz"}
+
+**As três regras da condução de vozes**
+
+1. **Nota comum fica parada.** Se dois acordes têm uma nota em comum, ela não se mexe (C → Am: Dó e Mi ficam).
+2. **As outras andam por grau conjunto** — semitom ou tom, o mais perto possível.
+3. **Evite saltos paralelos de todas as vozes** — mover a mão inteira como um bloco faz o acompanhamento soar "quadrado".
+
+**Como se escreve a inversão na cifra:** com barra. **C/E** = Dó maior com Mi no baixo (1ª inversão); **C/G** = com Sol no baixo (2ª inversão). Quando a cifra não tem barra, a inversão da mão direita é escolha sua — a barra só fala do **baixo**.
+
+::chords{symbols="C G/B Am F/A G" key="C"}
 
 ::::
 

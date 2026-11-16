@@ -38,6 +38,21 @@ materials:
     kind: video
     purpose: practice
     note: Uma progressão de fundo para momentos de oração — bom ponto de partida para o exercício de transição.
+songs:
+  - title: Oceans (Where Feet May Fail)
+    artist: Hillsong United
+    learn:
+      'Construção lenta de dinâmica: começa com pad e notas longas e só chega ao máximo no fim — o
+      mapa de dinâmica da aula.'
+  - title: Goodness of God
+    artist: Bethel Music
+    learn: 'Balada com I – IV – V e cores de add9: bom para treinar a pulsação em colcheias e o 1·5·8.'
+  - title: Way Maker
+    artist: Sinach
+    learn: Repetição de uma progressão curta crescendo em intensidade — treine as ondas de dinâmica.
+  - title: Graves into Gardens
+    artist: Elevation Worship
+    learn: 'Ponte que cresce até o refrão final: ouça como o teclado muda de pad para piano ritmado.'
 ---
 
 O som do worship contemporâneo é feito de **poucos acordes**, **muita textura** e **dinâmica**. A mesma progressão de quatro acordes pode passar a música inteira; o que muda é como a banda — e o teclado — preenche cada parte.
@@ -56,6 +71,10 @@ O som do worship contemporâneo é feito de **poucos acordes**, **muita textura*
 **Cor.** A complexidade vem de **sus e add9** e do **baixo** (inversões e pedal), não de tétrades densas. Os tons mais comuns são os bons para violão e guitarra: Sol, Ré, Lá, Mi, Dó — e Si♭ para vozes graves.
 
 **Espaço.** Numa banda com baixo, guitarras e pads, o teclado não precisa tocar tudo. A mão esquerda deixa o grave para o baixista; a direita evita a região da guitarra base.
+
+**O sistema de números na banda**
+
+Muitas bandas de louvor ensaiam com **números** no lugar das cifras (_Nashville Number System_): 1 – 5 – 6m – 4 é o I – V – VIm – IV. A vantagem é imediata: se o líder resolve subir o tom no dia do culto, ninguém precisa reescrever nada. Escreva as músicas do seu repertório em números ao lado da cifra — é o mesmo que pensar em graus.
 
 ::::
 

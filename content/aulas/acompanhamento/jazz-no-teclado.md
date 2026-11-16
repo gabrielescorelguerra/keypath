@@ -26,6 +26,18 @@ materials:
     kind: sheet
     purpose: practice
     note: Folha de voicings sem fundamental para praticar.
+songs:
+  - title: So What
+    artist: Miles Davis (piano de Bill Evans)
+    learn:
+      'As "respostas" do piano ao baixo usam o **voicing So What**: três quartas e uma terça (Mi Lá
+      Ré Sol Si sobre Dm).'
+  - title: All the Things You Are
+    artist: Jerome Kern
+    learn: Um standard feito de **II–V–I em vários tons** — o treino ideal para voicings sem fundamental.
+  - title: Waltz for Debby
+    artist: Bill Evans
+    learn: Para ouvir comping e voicings de Bill Evans, um dos pianistas que definiram os voicings sem fundamental.
 ---
 
 O jazz se apoia em três coisas: a **progressão II–V–I** (e suas variações), os **voicings** que conduzem as vozes com o mínimo de movimento e o **suingue**.
@@ -44,6 +56,16 @@ O jazz se apoia em três coisas: a **progressão II–V–I** (e suas variaçõe
 Num II–V–I, alterne A → B → A: a mão quase não sai do lugar.
 
 **Suingue:** colcheias longa-curta; acentos nos tempos 2 e 4.
+
+**Swing: as colcheias desiguais**
+
+No jazz, duas colcheias escritas iguais são tocadas **longa-curta**, aproximadamente como as duas pontas de uma tercina (a primeira dura 2/3 do tempo, a segunda 1/3). Em andamentos rápidos, a diferença diminui; em baladas, aumenta.
+
+**O voicing \"So What\"**
+
+Empilhe três quartas justas e uma terça maior: sobre Ré menor, **Mi – Lá – Ré – Sol – Si**. Ele soa moderno e serve para Dm7, Dm9, Dm11 — e, como não tem fundamental embaixo, funciona em qualquer região média do teclado.
+
+::chords{symbols="Dm11 Ebm11 Dm11" key="C"}
 
 ::::
 

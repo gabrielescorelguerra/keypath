@@ -26,6 +26,21 @@ materials:
     kind: course
     purpose: practice
     note: O sus2 em progressões maiores e menores (assinatura).
+songs:
+  - title: Viva la Vida
+    artist: Coldplay
+    learn:
+      Quatro acordes em loop (**IV – V – I – VIm**), com cordas marcando o ritmo — tente com o padrão
+      de ostinato.
+  - title: Your Song
+    artist: Elton John
+    learn: 'Balada de piano pop: baixo andando com inversões e mão direita em acordes quebrados.'
+  - title: Bennie and the Jets
+    artist: Elton John
+    learn: 'Piano **rítmico**: acordes curtos repetidos em staccato, o piano como bateria.'
+  - title: All of Me
+    artist: John Legend
+    learn: 'Balada só de voz e piano: estrofe leve e refrão mais cheio — a dinâmica por seção da aula.'
 ---
 
 O pop usa quase sempre os mesmos quatro acordes; o que faz cada música soar diferente é o **padrão de acompanhamento** e a **dinâmica**.
@@ -37,6 +52,17 @@ O pop usa quase sempre os mesmos quatro acordes; o que faz cada música soar dif
 - **Mão esquerda:** fundamental; 1·5·8; oitavas em colcheias.
 - **Mão direita:** tríades em semínimas, colcheias, arpejos e **ostinatos** (uma figura fixa no topo enquanto os acordes mudam).
 - **Dinâmica:** estrofe leve, refrão cheio.
+
+**O arranjo típico de uma música pop ao piano**
+
+| Seção      | Mão esquerda                        | Mão direita                             | Intensidade |
+| ---------- | ----------------------------------- | --------------------------------------- | ----------- |
+| Introdução | fundamental longa                   | ostinato ou riff                        | baixa       |
+| Estrofe    | fundamental ou 1·5                  | tríades em semínimas, região média      | baixa       |
+| Pré-refrão | colcheias na fundamental            | acordes em colcheias, subindo de região | crescendo   |
+| Refrão     | 1·5·8 ou oitavas em colcheias       | acordes cheios, acentos em 2 e 4        | alta        |
+| Ponte      | muda o padrão (pausas, síncopes)    | outra região ou outro padrão            | contraste   |
+| Final      | acorde longo ou retorno ao ostinato | —                                       | baixa       |
 
 ::::
 

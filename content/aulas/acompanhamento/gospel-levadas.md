@@ -29,6 +29,14 @@ materials:
     source: Piano With Jonny
     kind: article
     purpose: practice
+songs:
+  - title: His Eye Is on the Sparrow
+    artist: Civilla Martin e Charles Gabriel (hino de 1905)
+    learn: Hino muito cantado como **balada em 12/8** no gospel — ótimo para treinar a levada de três.
+    publicDomain: true
+  - title: Stomp
+    artist: Kirk Franklin
+    learn: 'Gospel rápido e sincopado: ouça o ping-pong entre baixo e acordes nas semicolcheias.'
 ---
 
 ::::checkpoint{id="fundamentos" title="Duas levadas, duas contagens" stage="fundamentos"}
@@ -39,6 +47,10 @@ materials:
 | Louvor em semicolcheias | 4 tempos × 4          | oitavas nos tempos                 | acordes curtos nos contratempos |
 
 Em 12/8, o andamento é medido nos 4 tempos principais (cada um com três tercinas). Nas semicolcheias, as mãos se alternam: a esquerda "cai" no tempo, a direita "responde" no contratempo.
+
+**12/8 ou 4/4 com tercinas?**
+
+Na prática, a balada gospel "em três" pode ser escrita em 12/8 ou em 4/4 com tercinas — o som é o mesmo. O que importa é sentir **quatro tempos, cada um dividido em três**. Teste: bata o pé nos tempos e fale "um-e-a, dois-e-a…". Se as palavras couberem naturalmente, a música está em 12/8.
 
 ::::
 

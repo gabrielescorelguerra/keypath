@@ -28,6 +28,13 @@ materials:
     source: Hear and Play
     kind: article
     purpose: see
+songs:
+  - title: Oh Happy Day
+    artist: Edwin Hawkins Singers
+    learn: 'Bom primeiro exercício de escuta: forma clara (estrofe, coro, vamp) e baixo fácil de tirar.'
+  - title: Total Praise
+    artist: Richard Smallwood
+    learn: 'Para o passo 5 do roteiro (vocabulário): procure as extensões e os acordes de passagem.'
 ---
 
 Em vez de uma lista de músicas comentadas por outra pessoa, esta aula dá um **método** para você analisar as músicas que já toca — e registrar a análise junto da música, no Repertório.

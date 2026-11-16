@@ -29,6 +29,12 @@ materials:
     source: PlayPiano.com
     kind: article
     purpose: practice
+songs:
+  - title: Amazing Grace (álbum ao vivo de 1972)
+    artist: Aretha Franklin
+    learn:
+      'Gravação histórica de gospel ao vivo: escute as frases de piano e órgão que preenchem cada respiração
+      da voz.'
 ---
 
 ::::checkpoint{id="fundamentos" title="Material das runs" stage="fundamentos"}
@@ -38,6 +44,17 @@ materials:
 - **Terças e sextas paralelas:** a mesma run em duas vozes, mais "cheia".
 - **Aproximação cromática:** chegar a uma nota do acorde vindo de meio tom.
 - **Regra de ouro:** a run termina **numa nota do acorde seguinte, no tempo**.
+
+**Uma run por função**
+
+| Onde                        | Run                                             | Exemplo em Dó        |
+| --------------------------- | ----------------------------------------------- | -------------------- |
+| Fim de frase, voltando ao I | pentatônica descendo até a tônica               | Lá Sol Mi Ré Dó      |
+| Antes do IV                 | pentatônica com blue note subindo até o Fá      | Dó Ré Mi♭ Mi Sol… Fá |
+| Na dominante                | arpejo do V7 descendo, terminando na terça do I | Fá Ré Si Sol → Mi    |
+| Antes do refrão             | subida em terças paralelas                      | Dó/Mi Ré/Fá Mi/Sol…  |
+
+Escolha **uma** de cada linha e treine-as até tocar sem pensar — é melhor ter quatro runs seguras do que vinte inseguras.
 
 ::::
 

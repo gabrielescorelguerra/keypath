@@ -30,6 +30,18 @@ materials:
     source: LessonRating
     kind: video
     purpose: see
+songs:
+  - title: Superstition
+    artist: Stevie Wonder
+    learn:
+      O riff de **clavinet** em semicolcheias sobre um acorde só — tire as duas primeiras batidas e
+      toque com metrônomo.
+  - title: Higher Ground
+    artist: Stevie Wonder
+    learn: 'Outro clavinet de Stevie: notas curtas, notas fantasma e um vamp de um acorde.'
+  - title: Chameleon
+    artist: Herbie Hancock
+    learn: 'Vamp de dois acordes (B♭m7 – E♭7): o **dórico** do funk, com synth bass e Rhodes.'
 ---
 
 No funk, a harmonia é simples — muitas vezes um acorde só — e tudo acontece no **ritmo**: semicolcheias, acentos deslocados e pausas.
@@ -41,6 +53,19 @@ No funk, a harmonia é simples — muitas vezes um acorde só — e tudo acontec
 - **Articulação:** acordes curtos, sem pedal; notas fantasma para manter o movimento.
 - **Papel:** o teclado conversa com a guitarra — se ela toca nos contratempos, você ocupa outros espaços.
 - **Timbres:** clavinet, Rhodes, órgão, e synth bass.
+
+**A grade de semicolcheias**
+
+Um compasso de funk tem **16 casas** — quatro por tempo: "**1** e & a". Escrever onde cada mão toca ajuda a ver o diálogo:
+
+| Tempo | 1           | e           | &           | a           |
+| ----- | ----------- | ----------- | ----------- | ----------- |
+| 1     | esquerda    | **direita** | —           | —           |
+| 2     | —           | —           | esquerda    | **direita** |
+| 3     | —           | —           | **direita** | —           |
+| 4     | **direita** | —           | —           | —           |
+
+Repare: a direita **evita o tempo 1**, onde a esquerda já está — o groove nasce dessa conversa. Monte padrões seus numa grade como esta antes de tocar.
 
 ::::
 

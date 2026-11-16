@@ -30,12 +30,35 @@ materials:
     kind: video
     purpose: see
     note: Compara o estilo em 4/4 com o 6/8 "medido", que deixa mais espaço para a letra.
+songs:
+  - title: We Are the Champions
+    artist: Queen
+    learn:
+      'Uma balada famosa em **6/8**: conte "UM dois três QUA-TRO cinco seis" e sinta as duas ondas
+      por compasso.'
+  - title: Nothing Else Matters
+    artist: Metallica
+    learn:
+      Outro exemplo de **6/8**, com arpejos nas seis colcheias — exatamente o padrão de estrofe da
+      aula.
+  - title: House of the Rising Sun
+    artist: Tradicional (gravação de The Animals)
+    learn: Acompanhamento arpejado em **6/8** do começo ao fim.
 ---
 
 ::::checkpoint{id="fundamentos" title="6/8 e balada" stage="fundamentos"}
 
 - **6/8:** seis colcheias, acento no **1** e no **4** — duas "ondas" por compasso. A esquerda marca 1 e 4; a direita segura o acorde ou arpeja as seis colcheias.
 - **Balada lenta (4/4, 60–72 bpm):** voicings abertos, um acorde por compasso, e o **pedal sincopado** — trocado logo depois de cada acorde novo.
+
+**6/8 × 3/4: mesmas seis colcheias, outra pulsação**
+
+| Compasso | Agrupamento     | Tempos sentidos      | Contagem                                |
+| -------- | --------------- | -------------------- | --------------------------------------- |
+| 6/8      | (1 2 3)(4 5 6)  | **2** tempos de três | **UM** dois três **QUA**-tro cinco seis |
+| 3/4      | (1 2)(3 4)(5 6) | **3** tempos de dois | **UM**-e **DOIS**-e **TRÊS**-e          |
+
+Na prática: se você balança o corpo **duas vezes** por compasso, é 6/8; se balança **três**, é 3/4 (valsa).
 
 ::::
 

@@ -13,6 +13,7 @@ export type ChordQualityId =
   | 'minor'
   | 'dim'
   | 'aug'
+  | '5'
   | 'sus2'
   | 'sus4'
   | '6'
@@ -60,6 +61,7 @@ const QUALITY_LIST: readonly ChordQuality[] = [
   q('minor', ['1P', '3m', '5P'], 'm', 'm', ['min', '-'], 'menor'),
   q('dim', ['1P', '3m', '5d'], 'dim', '°', ['°', 'o'], 'diminuto'),
   q('aug', ['1P', '3M', '5A'], 'aug', '+', ['+', '(#5)', '#5'], 'aumentado'),
+  q('5', ['1P', '5P'], '5', '5', ['(no3)'], 'power chord (fundamental e quinta)'),
   q('sus2', ['1P', '2M', '5P'], 'sus2', 'sus2', [], 'suspenso com segunda'),
   q('sus4', ['1P', '4P', '5P'], 'sus4', 'sus4', ['sus', '4', '(4)'], 'suspenso com quarta'),
   q('6', ['1P', '3M', '5P', '6M'], '6', '6', [], 'maior com sexta'),

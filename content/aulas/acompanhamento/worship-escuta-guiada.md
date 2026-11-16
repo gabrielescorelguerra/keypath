@@ -23,6 +23,15 @@ materials:
     source: Worship Artistry
     kind: song
     purpose: listen
+songs:
+  - title: Lugar Secreto
+    artist: Gabriela Rocha
+    learn:
+      'Para o roteiro: identifique a progressão, onde entram as cores (sus, add9) e como a dinâmica
+      cresce.'
+  - title: Ousado Amor
+    artist: Isaías Saad
+    learn: 'Versão em português de *Reckless Love*: compare a forma, os momentos de pad e a ponte que cresce.'
 ---
 
 ::::checkpoint{id="fundamentos" title="O roteiro" stage="fundamentos"}

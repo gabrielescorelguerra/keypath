@@ -25,6 +25,19 @@ materials:
     kind: article
     purpose: practice
     note: Como dividir espaço com a guitarra.
+songs:
+  - title: Somewhere Only We Know
+    artist: Keane
+    learn: '**Piano motor**: acordes repetidos em colcheias substituindo a guitarra base da banda.'
+  - title: Everything In Its Right Place
+    artist: Radiohead
+    learn: Piano elétrico e synth no centro do arranjo, com poucos acordes e muito espaço.
+  - title: Starlight
+    artist: Muse
+    learn: Piano em colcheias marcando o pulso, com power chords e synths por trás.
+  - title: Karma Police
+    artist: Radiohead
+    learn: 'Piano e guitarra dividindo o acompanhamento: o piano toca acordes, a guitarra fica no ritmo.'
 ---
 
 No rock alternativo, o teclado aparece de quatro jeitos: **piano motor** (acordes repetidos em colcheias), **pads** e texturas, **leads e riffs** de synth, e **órgão** com drive.
@@ -34,6 +47,12 @@ No rock alternativo, o teclado aparece de quatro jeitos: **piano motor** (acorde
 - **Harmonia:** progressões eólias (Im – ♭VI – ♭III – ♭VII) e mixolídias (I – ♭VII – IV), power chords, sus2, pedais.
 - **Espaço:** guitarras distorcidas ocupam o médio-grave; o teclado vai **acima** delas, ou em notas longas por baixo.
 - **Ritmo:** trave com a bateria — colcheias com o chimbal, acentos com a caixa.
+
+**Power chord no teclado**
+
+O power chord é **fundamental + quinta (+ oitava)**, sem terça: Mi – Si – Mi. Sem a terça, ele não é nem maior nem menor — por isso funciona sobre qualquer acorde e casa com guitarras distorcidas, que embolam quando tocam terças. No teclado, toque com as duas mãos em oitavas para o som "de parede".
+
+::chords{symbols="E5 C5 G5 D5"}
 
 ::::
 

@@ -26,6 +26,20 @@ materials:
     kind: article
     purpose: practice
     note: Cortar o grave de coros e pads para não embolar a mixagem.
+songs:
+  - title: Can You Feel My Heart
+    artist: Bring Me The Horizon
+    learn:
+      A introdução é feita por **synths e vozes processadas** antes das guitarras — o teclado como
+      camada estrutural.
+  - title: Throne
+    artist: Bring Me The Horizon
+    learn: 'Synths e efeitos eletrônicos misturados às guitarras pesadas: ouça onde o teclado fica no espectro.'
+  - title: Doomed
+    artist: Bring Me The Horizon
+    learn:
+      Começa com uma ambiência eletrônica e cresce até a banda inteira — modelo para a introdução atmosférica
+      do exercício.
 ---
 
 O teclado no metal moderno é **arranjo**: camadas sustentadas, orquestração e synths eletrônicos que dão tamanho às guitarras.
@@ -36,6 +50,10 @@ O teclado no metal moderno é **arranjo**: camadas sustentadas, orquestração e
 - **Camadas:** pad escuro (tônica e quinta), cordas na região média, coros, pluck ou arpejo de synth no agudo.
 - **Grave limpo:** corte os graves de pads e coros; o grave é das guitarras e do baixo.
 - **Afinação:** guitarras em afinações baixas (drop C, drop B…) — confira o tom real antes de tocar.
+
+**Por que o tom \"real\" importa com guitarras afinadas para baixo**
+
+Bandas de post-hardcore e metalcore costumam afinar as guitarras abaixo do padrão (_drop D_, _drop C_, _drop B_…). O guitarrista pode dizer "é em Ré" porque usa os mesmos desenhos de sempre, mas, se a guitarra está afinada um tom abaixo, o som real está **um tom abaixo**. Antes de ensaiar, toque uma nota no teclado junto com a corda mais grave da guitarra e confirme a tônica real. Os teclados de palco têm a função **Transpose** para quem prefere tocar nos desenhos originais.
 
 ::::
 
