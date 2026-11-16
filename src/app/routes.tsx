@@ -3,6 +3,7 @@ import { LearnPage } from '@/features/aprender/LearnPage'
 import { ModulePage } from '@/features/aprender/ModulePage'
 import { ConceptPage } from '@/features/biblioteca/ConceptPage'
 import { LibraryPage } from '@/features/biblioteca/LibraryPage'
+import { SongsPage } from '@/features/biblioteca/SongsPage'
 import { LessonPage } from '@/features/aulas/LessonPage'
 import { ExercisePage } from '@/features/exercicios/ExercisePage'
 import { PracticePage } from '@/features/pratica/PracticePage'
@@ -30,6 +31,7 @@ export const routes: RouteObject[] = [
       { path: 'aulas/:lessonId', element: <LessonPage /> },
       { path: 'exercicios/:exerciseId', element: <ExercisePage /> },
       { path: 'biblioteca', element: <LibraryPage /> },
+      { path: 'biblioteca/musicas', element: <SongsPage /> },
       { path: 'biblioteca/:conceptId', element: <ConceptPage /> },
       { path: 'pratica', element: <PracticePage /> },
       { path: 'pratica/sessoes/:sessionId', element: <SessionPage /> },

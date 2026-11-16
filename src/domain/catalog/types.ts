@@ -93,6 +93,15 @@ export interface Material {
 /** Etapa da aula a que uma parte pertence (a introdução, o aprofundamento e o próximo passo são gerados). */
 export type LessonStage = 'fundamentos' | 'visualizacao' | 'aplicacao' | 'pratica' | 'revisao'
 
+/** Música para aprender, sugerida pela aula. */
+export interface LessonSong {
+  readonly title: string
+  readonly artist: string
+  readonly learn: string
+  readonly key: string | null
+  readonly publicDomain: boolean
+}
+
 export interface Lesson {
   readonly id: string
   readonly title: string
@@ -103,6 +112,7 @@ export interface Lesson {
   readonly estimatedMinutes: number | null
   readonly why: string | null
   readonly materials: readonly Material[]
+  readonly songs: readonly LessonSong[]
   readonly intro: MarkdownRoot
   readonly checkpoints: readonly Checkpoint[]
   /** Derivado: maior nível entre as competências trabalhadas. */

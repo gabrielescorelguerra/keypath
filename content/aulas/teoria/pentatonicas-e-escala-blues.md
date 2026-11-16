@@ -26,6 +26,29 @@ materials:
     kind: article
     purpose: practice
     note: Exercícios curtos de improvisação para começar.
+songs:
+  - title: Amazing Grace (Graça Excelsa)
+    artist: John Newton (melodia tradicional)
+    learn:
+      A melodia inteira usa só as cinco notas da **pentatônica maior**. Toque-a só com Sol Lá Si Ré
+      Mi, em Sol.
+    key: G
+    publicDomain: true
+  - title: Auld Lang Syne (Valsa da Despedida)
+    artist: Tradicional escocesa
+    learn: Outra melodia **pentatônica maior** — reparar como ela nunca usa o 4º nem o 7º grau.
+    publicDomain: true
+  - title: Smoke on the Water
+    artist: Deep Purple
+    learn: O riff usa notas da **escala blues de Sol menor**, incluindo a **♭5** (Ré♭) de passagem.
+  - title: Sunshine of Your Love
+    artist: Cream
+    learn: Riff construído sobre a **escala blues de Ré** — toque-o na mão esquerda e repare na blue note.
+  - title: Stairway to Heaven (solo)
+    artist: Led Zeppelin
+    learn:
+      'O solo de guitarra é construído quase todo na **pentatônica menor de Lá**: ouça como as frases
+      terminam em Lá e Mi.'
 ---
 
 A **pentatônica** tem cinco notas. Ela tira da escala maior justamente as duas notas que ficam a meio tom de outras — o 4º e o 7º graus. Sem esses choques, quase toda combinação de notas soa bem sobre os acordes do tom.
@@ -41,6 +64,19 @@ A **pentatônica** tem cinco notas. Ela tira da escala maior justamente as duas 
 
 - A pentatônica maior e a menor **relativa** têm as mesmas notas (Dó maior = Lá menor).
 - A **blue note** é uma nota "entre" duas: ♭5 na blues menor, ♭3 na blues maior. Ela quase sempre é tocada **de passagem**, deslizando para a nota vizinha.
+
+**Por que a pentatônica "quase não erra"**
+
+A escala maior tem dois semitons (Mi–Fá e Si–Dó, em Dó). Justamente essas notas — o 4º e o 7º graus — são as que mais brigam com os acordes: o Fá contra o Mi do C, o Si contra o Dó do F. A pentatônica maior **tira as duas** e fica só com tons e terças menores. Sem semitons, nenhuma nota fica "meio tom acima" de uma nota do acorde, e por isso quase toda nota soa bem sobre quase todo acorde do tom.
+
+| Escala            | Fórmula em graus | Em Dó / Lá          |
+| ----------------- | ---------------- | ------------------- |
+| Pentatônica maior | 1 2 3 5 6        | Dó Ré Mi Sol Lá     |
+| Pentatônica menor | 1 ♭3 4 5 ♭7      | Lá Dó Ré Mi Sol     |
+| Blues menor       | 1 ♭3 4 ♭5 5 ♭7   | Lá Dó Ré Mi♭ Mi Sol |
+| Blues maior       | 1 2 ♭3 3 5 6     | Dó Ré Mi♭ Mi Sol Lá |
+
+A **blues menor** é a pentatônica menor + a ♭5. A **blues maior** é a pentatônica maior + a ♭3. Nos dois casos, a nota acrescentada é de **passagem**: ela desliza para a nota vizinha, não fica parada.
 
 ::::
 
@@ -76,6 +112,14 @@ E o atalho mais famoso do teclado — as cinco teclas pretas são a pentatônica
 :::common-mistake{title="Ficar subindo e descendo a escala"}
 Escala não é frase. Pense em frases curtas, com começo, meio e fim, e **termine em notas do acorde**. Silêncio também faz parte da frase.
 :::
+
+**Três frases para começar** (em Dó maior pentatônica / Lá menor):
+
+1. **Subida com resposta:** Dó Ré Mi Sol — Lá Sol Mi (termine em Mi segurando).
+2. **A blue note:** Sol Lá **Dó Ré♯** Mi — o Ré♯ (= Mi♭) desliza para o Mi.
+3. **Nota repetida com ritmo:** Sol Sol Lá Sol Mi, em síncope.
+
+Ouça como músicas inteiras vivem disso: _Amazing Grace_ e _Auld Lang Syne_ (pentatônica maior), _Smoke on the Water_ e _Sunshine of Your Love_ (escala blues). As gravações estão em Aprofundamento.
 
 ::::
 

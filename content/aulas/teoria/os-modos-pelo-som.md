@@ -62,6 +62,32 @@ materials:
     kind: sheet
     purpose: practice
     note: Peças curtas em dórico para tocar ao piano.
+songs:
+  - title: Oye Como Va
+    artist: Tito Puente (gravação de Santana)
+    learn: 'O vamp **Am7 – D7** é o dórico de Lá em estado puro: o Fá♯ do D7 é a 6ª maior.'
+  - title: So What
+    artist: Miles Davis
+    learn: Tema e improviso inteiros sobre **Ré dórico** (depois Mi♭ dórico) — o marco do jazz modal.
+  - title: Scarborough Fair
+    artist: Tradicional (gravação de Simon & Garfunkel)
+    learn: 'Melodia **dórica**: menor, mas com a 6ª maior na frase do meio.'
+    publicDomain: true
+  - title: Sweet Child O' Mine (estrofe)
+    artist: Guns N' Roses
+    learn: '**D – C – G – D**: o ♭VII (Dó) dá o sabor **mixolídio** de Ré.'
+  - title: Norwegian Wood
+    artist: The Beatles
+    learn: A melodia é **mixolídia** — maior com a 7ª menor (Ré natural, em Mi).
+  - title: Tema de Os Simpsons
+    artist: Danny Elfman
+    learn: 'O exemplo mais famoso do **lídio**: o ♯4 aparece logo no começo da melodia.'
+  - title: Dreams
+    artist: Fleetwood Mac
+    learn: 'Alterna dois acordes maiores a um tom de distância (**F – G**): o I e o II maior do **lídio**.'
+  - title: Wherever I May Roam
+    artist: Metallica
+    learn: 'Riff no **frígio** de Mi: o Fá (♭2) colado na tônica.'
 ---
 
 Os sete modos usam **as mesmas sete notas** da escala maior, cada um começando de um grau diferente. Por isso é fácil decorá-los — e por isso decorar não basta: tocados sobre a mesma tônica, eles soam completamente diferentes.
@@ -89,6 +115,25 @@ A tabela já está em ordem: **do mais claro ao mais escuro**. Cada linha baixa 
 :::common-mistake{title="Pensar o modo como \"a escala de Dó começando em Ré\""}
 É verdade que Ré dórico tem as notas de Dó maior. Mas, enquanto o centro tonal continuar sendo Dó, você está tocando Dó maior. O modo só aparece quando **Ré vira a tônica** — o baixo, o acorde e o repouso das frases estão em Ré.
 :::
+
+**Modos relativos × modos paralelos**
+
+Há dois jeitos de pensar os modos, e os dois são úteis:
+
+- **Relativos** — todos com as **mesmas notas**, começando em lugares diferentes: Dó jônio, Ré dórico, Mi frígio… (só teclas brancas). Bom para **achar** as notas.
+- **Paralelos** — todos a partir da **mesma tônica**, com notas diferentes: Ré jônio, Ré dórico, Ré frígio… Bom para **ouvir** a cor, porque só muda a nota característica.
+
+Como saber as notas de Ré dórico rápido? Ré é o **2º grau** de Dó maior → Ré dórico tem as notas de Dó maior. Sol mixolídio? Sol é o 5º de Dó → notas de Dó. Fá lídio? 4º de Dó → notas de Dó.
+
+| Modo      | É o grau… da escala maior | Exemplo com as notas de Dó |
+| --------- | ------------------------- | -------------------------- |
+| Jônio     | 1º                        | Dó jônio                   |
+| Dórico    | 2º                        | Ré dórico                  |
+| Frígio    | 3º                        | Mi frígio                  |
+| Lídio     | 4º                        | Fá lídio                   |
+| Mixolídio | 5º                        | Sol mixolídio              |
+| Eólio     | 6º                        | Lá eólio                   |
+| Lócrio    | 7º                        | Si lócrio                  |
 
 ::::
 
@@ -143,6 +188,21 @@ Um modo só se estabelece com a harmonia certa. O jeito mais simples é um **vam
 :::note{title="Onde ouvir"}
 Dórico: "So What" (Miles Davis), "Oye Como Va" (Santana), "Scarborough Fair" (tradicional). Para os outros modos, use as listas do Aprofundamento e confira de ouvido — o teste é sempre achar a tônica e procurar a nota característica.
 :::
+
+**Os modos em músicas que você pode ouvir hoje**
+
+| Modo      | Música                                            | O que ouvir             |
+| --------- | ------------------------------------------------- | ----------------------- |
+| Lídio     | Tema de Os Simpsons, _Dreams_ (Fleetwood Mac)     | o ♯4 / o II maior       |
+| Mixolídio | _Sweet Child O' Mine_ (estrofe), _Norwegian Wood_ | o ♭VII / a 7ª menor     |
+| Dórico    | _Oye Como Va_, _So What_, _Scarborough Fair_      | o IV maior / a 6ª maior |
+| Frígio    | _Wherever I May Roam_                             | o ♭2                    |
+
+Toque o vamp do _Oye Como Va_ e depois troque o D7 por Dm7 — o dórico vira eólio e a luz some:
+
+::chords{symbols="Am7 D7 Am7 D7"}
+
+::chords{symbols="Am7 Dm7 Am7 Dm7"}
 
 ::::
 

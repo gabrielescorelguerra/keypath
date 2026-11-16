@@ -100,6 +100,18 @@ export const materialSchema = z.strictObject({
   note: text.optional(),
 })
 
+/** Música para aprender: uma gravação real em que o conteúdo da aula aparece. */
+export const lessonSongSchema = z.strictObject({
+  title: text,
+  artist: text,
+  /** O que observar ou tocar nela, em relação à aula. */
+  learn: text,
+  /** Tom em que a música costuma ser tocada (notação canônica: "G", "Em"). */
+  key: text.optional(),
+  /** Obra em domínio público: a partitura pode ser buscada no IMSLP. */
+  publicDomain: z.boolean().default(false),
+})
+
 export const lessonFrontmatterSchema = z.strictObject({
   id: dottedId,
   title: text,
@@ -111,6 +123,8 @@ export const lessonFrontmatterSchema = z.strictObject({
   /** Por que isto importa — mostrado na introdução. */
   why: text.optional(),
   materials: list(materialSchema),
+  /** Músicas para aprender o conteúdo da aula. */
+  songs: list(lessonSongSchema),
 })
 
 const moduleSchema = z.strictObject({

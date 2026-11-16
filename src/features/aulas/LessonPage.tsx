@@ -15,6 +15,7 @@ import { ExerciseRunner } from '../exercicios/ExerciseRunner.tsx'
 import { NotFoundPage } from '../NotFoundPage.tsx'
 import styles from './Lesson.module.css'
 import { Materials, NextStep } from './LessonExtras.tsx'
+import { LessonSongs } from './LessonSongs.tsx'
 import { INTRO_STEP, MATERIALS_STEP, STAGE_LABEL } from './stages.ts'
 
 function embedsFor(lesson: Lesson, checkpointId: string): EmbedRenderers {
@@ -66,7 +67,7 @@ export function LessonPage() {
   const done = new Set(state?.completedCheckpoints ?? [])
   const firstPending = lesson.checkpoints.find((c) => !done.has(c.id))
   const requested = params.get('parte')
-  const hasMaterials = lesson.materials.length > 0
+  const hasMaterials = lesson.materials.length > 0 || lesson.songs.length > 0
   // Etapa atual: a pedida; senão a introdução (aula nova) ou a primeira parte pendente.
   const step =
     requested === INTRO_STEP || (requested === null && done.size === 0)
@@ -345,8 +346,10 @@ export function LessonPage() {
                 <span className={styles.partName}>Aprofundamento</span>
               </h2>
               <p className={styles.why}>
-                Materiais externos selecionados para este assunto. Abrem em outra aba.
+                Músicas para aprender e materiais externos selecionados para este assunto. Os links
+                abrem em outra aba.
               </p>
+              <LessonSongs lesson={lesson} />
               <Materials lesson={lesson} />
             </article>
           )}

@@ -25,6 +25,7 @@ const lesson = (id: string, competencies: string[]): Lesson => ({
   estimatedMinutes: null,
   why: null,
   materials: [],
+  songs: [],
   intro: { type: 'root', children: [] },
   checkpoints: [],
   level: 1,

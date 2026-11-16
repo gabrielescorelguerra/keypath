@@ -90,3 +90,52 @@
   color: var(--color-text-2);
   line-height: 1.5;
 }
+
+/* Músicas para aprender */
+.songsLink {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  gap: var(--space-4);
+  align-items: center;
+  margin-bottom: var(--space-6);
+  padding: var(--space-4) var(--space-5);
+  border: 1px solid var(--color-border);
+  border-left: 3px solid var(--color-accent);
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+}
+
+.songsLink:hover {
+  border-color: var(--color-accent);
+}
+
+.songsLink > span {
+  display: grid;
+  gap: 2px;
+}
+
+.songsLinkHint {
+  font-size: var(--text-sm);
+  color: var(--color-text-3);
+}
+
+.songGroups {
+  display: grid;
+  gap: var(--space-7);
+}
+
+.songLesson {
+  margin-top: var(--space-5);
+}
+
+.songLessonTitle {
+  margin: 0 0 var(--space-1);
+  font-size: var(--text-md);
+  font-weight: 600;
+}
+
+.songList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}

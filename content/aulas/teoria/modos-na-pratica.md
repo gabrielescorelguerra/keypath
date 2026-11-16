@@ -25,6 +25,24 @@ materials:
     source: Music Mann
     kind: article
     purpose: see
+songs:
+  - title: Get Lucky
+    artist: Daft Punk
+    learn: 'Quatro acordes em loop (**Bm – D – F♯m – E**). O E maior traz o Sol♯: Si **dórico**.'
+  - title: All Along the Watchtower
+    artist: Bob Dylan (gravação de Jimi Hendrix)
+    learn: 'Vamp **eólio**: Im – ♭VII – ♭VI – ♭VII, sem nunca ir ao V maior.'
+  - title: Livin' on a Prayer (estrofe)
+    artist: Bon Jovi
+    learn: 'A estrofe gira em **Im – ♭VI – ♭VII** (Em – C – D): o som épico do eólio, sem o V maior.'
+  - title: Hey Jude (coda)
+    artist: The Beatles
+    learn: 'O final repete **I – ♭VII – IV – I**: o ♭VII mixolídio dando força ao coro.'
+  - title: Mad World
+    artist: Tears for Fears
+    learn:
+      Tom menor com o **IV maior** (dórico) no meio da progressão — compare com a versão de Gary Jules,
+      ao piano.
 ---
 
 Um modo aparece quando a **harmonia** sustenta a nota característica. Na prática, isso acontece em poucas progressões, que reaparecem em todo lugar.
@@ -40,6 +58,22 @@ Um modo aparece quando a **harmonia** sustenta a nota característica. Na práti
 | Frígio    | Im – ♭II             | Em – F          | metal, metalcore, flamenco           |
 
 **A mesma escala, outro centro.** Dentro de um tom, as escalas de cada acorde são as notas do tom — o "Ré dórico" do Dm7 em Dó maior é a própria escala de Dó. Os modos só pedem notas **novas** quando a progressão sai do campo (o ♭VII, o IV maior no menor, o II maior).
+
+**Por que um modo "escorrega" para o maior ou o menor**
+
+A música tonal tem um ímã muito forte: o **V7 → I**. Se a progressão modal tiver um acorde dominante que resolve, o ouvido para de ouvir o modo e passa a ouvir o tom maior ou menor comum. Por isso as progressões modais:
+
+1. **repetem poucos acordes** (vamps de 2 a 4 acordes);
+2. **colocam a nota característica num acorde** (o ♭VII no mixolídio, o IV maior no dórico);
+3. **evitam o trítono resolvendo** — em Ré dórico, por exemplo, evite o A7 (que puxaria para Ré menor) e o G7 → C (que puxaria para Dó maior).
+
+| Modo      | Acorde característico | Progressões típicas     |
+| --------- | --------------------- | ----------------------- |
+| Mixolídio | ♭VII                  | I – ♭VII – IV – I       |
+| Dórico    | IV maior (ou IV7)     | Im – IV, Im – ♭III – IV |
+| Eólio     | ♭VI e ♭VII            | Im – ♭VI – ♭VII – Im    |
+| Lídio     | II maior              | I – II – I              |
+| Frígio    | ♭II                   | Im – ♭II – Im           |
 
 ::::
 
@@ -68,6 +102,10 @@ Um modo aparece quando a **harmonia** sustenta a nota característica. Na práti
 :::common-mistake{title="Trocar de escala a cada acorde do vamp"}
 Num vamp D – C, você não precisa de "Ré maior" e depois "Dó maior". A escala é uma só — Ré mixolídio — e os dois acordes saem dela.
 :::
+
+**Escute antes de improvisar**
+
+Antes do playback, ouça uma das músicas de Aprofundamento e responda: qual é a tônica (a nota de "casa")? Qual acorde traz a nota característica? Em _Get Lucky_, por exemplo, a tônica é Si e o acorde de **E maior** traz o Sol♯ — sem ele, seria Si eólio.
 
 ::::
 

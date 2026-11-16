@@ -29,6 +29,21 @@ materials:
     kind: article
     purpose: practice
     note: Simétricas no rock (para guitarra; as ideias de frase valem para o teclado).
+songs:
+  - title: Voiles (Prelúdios, Livro I)
+    artist: Claude Debussy
+    learn: Quase toda a peça usa a **escala de tons inteiros** — o som de sonho, sem tônica clara.
+    publicDomain: true
+  - title: O Voo do Besouro
+    artist: Nikolai Rimsky-Korsakov
+    learn: Corridas **cromáticas** o tempo todo — a cromática como movimento, não como harmonia.
+    publicDomain: true
+  - title: Petrushka
+    artist: Igor Stravinsky
+    learn:
+      'O famoso "acorde de Petrushka" (Dó maior + Fá♯ maior juntos) sai da **escala diminuta**: duas
+      tríades a um trítono, dentro da mesma escala.'
+    publicDomain: true
 ---
 
 Uma escala **simétrica** repete o mesmo padrão de intervalos: a cromática (só semitons), a de tons inteiros (só tons) e as diminutas (semitom e tom alternados).
@@ -43,6 +58,21 @@ Uma escala **simétrica** repete o mesmo padrão de intervalos: a cromática (s�
 | Diminuta semitom–tom | S T S T…    | 8     | 3                  | 7(♭9), 7(13)(♭9)             |
 
 Como o padrão se repete, a escala de tons inteiros de Dó é a mesma de Ré, Mi, Fá♯…; a diminuta de Dó é a mesma de Mi♭, Fá♯ e Lá.
+
+**Por que existem só 2 tons inteiros e 3 diminutas**
+
+Uma escala simétrica se repete a cada **intervalo fixo**. A de tons inteiros se repete a cada tom: começando em Ré, você encontra as mesmas notas de Dó (Ré Mi Fá♯ Sol♯ Lá♯ Dó). Então só existem **duas** — a que contém Dó e a que contém Dó♯.
+
+A diminuta se repete a cada **terça menor** (3 semitons): começando em Mi♭, Fá♯ ou Lá, você encontra as mesmas notas da de Dó. Como 12 ÷ 4 = 3, existem **três** diminutas — a de Dó, a de Dó♯ e a de Ré.
+
+| Escala                     | Repete a cada | Quantas existem | Notas |
+| -------------------------- | ------------- | --------------- | ----- |
+| Cromática                  | semitom       | 1               | 12    |
+| Tons inteiros              | tom           | 2               | 6     |
+| Diminuta                   | 3ª menor      | 3               | 8     |
+| Aumentada (3ª m + semitom) | 3ª maior      | 4               | 6     |
+
+Consequência prática: **o mesmo padrão funciona em quatro dominantes**. A diminuta semitom–tom de Sol serve para G7(♭9), B♭7(♭9), D♭7(♭9) e E7(♭9) — o padrão que você aprender em um vale para os quatro.
 
 ::::
 
@@ -66,6 +96,12 @@ Como o padrão se repete, a escala de tons inteiros de Dó é a mesma de Ré, Mi
 - **Diminuta semitom–tom:** sobre o dominante com ♭9, antes de resolver. Frases simétricas sobem a cada terça menor.
 - **Diminuta tom–semitom:** sobre acordes diminutos de passagem.
 - **Cromática:** notas de aproximação — chegar a uma nota do acorde vindo de meio tom abaixo ou acima.
+
+**Onde ouvir**
+
+- **Tons inteiros:** _Voiles_, de Debussy, e os efeitos de "sonho" de trilhas e desenhos animados.
+- **Cromática:** _O Voo do Besouro_.
+- **Diminuta:** o acorde de _Petrushka_, e no jazz as frases sobre o 7(♭9) antes de resolver.
 
 ::::
 

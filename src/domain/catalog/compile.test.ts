@@ -81,6 +81,7 @@ function lesson(id: string, competencies: string[], checkpoints = ['a'], refs: M
       competencies,
       styles: [],
       materials: [],
+      songs: [],
     },
     intro: EMPTY,
     checkpoints: checkpoints.map((c) => ({ id: c, title: c, stage: null, body: EMPTY })),

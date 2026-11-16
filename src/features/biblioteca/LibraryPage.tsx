@@ -53,6 +53,17 @@ export function LibraryPage() {
         aside={<span className="xsmall faint num">{catalog.concepts.length} verbetes</span>}
       />
 
+      <Link to={paths.songs} className={`plain ${styles.songsLink}`}>
+        <Icon name="book" size={20} />
+        <span>
+          <strong>Músicas para aprender</strong>
+          <span className={styles.songsLinkHint}>
+            As gravações sugeridas nas aulas — o que ouvir em cada uma e como tocar.
+          </span>
+        </span>
+        <Icon name="arrow" size={16} />
+      </Link>
+
       <search className={styles.search}>
         <Icon name="search" size={20} className={styles.searchIcon} />
         <label htmlFor="busca" className="visually-hidden">

@@ -37,6 +37,37 @@ materials:
     kind: interactive
     purpose: practice
     note: Teste de percepção — maior ou menor.
+songs:
+  - title: Joy to the World (Cantai que o Salvador chegou)
+    artist: Lowell Mason, sobre melodia atribuída a Händel
+    learn:
+      A primeira frase é a **escala maior descendo inteira**, da tônica até a tônica. Toque junto em
+      Ré maior.
+    key: D
+    publicDomain: true
+  - title: Dó-Ré-Mi (A Noviça Rebelde)
+    artist: Rodgers & Hammerstein
+    learn: A canção ensina os graus da escala maior um a um — e termina subindo a escala inteira.
+  - title: Für Elise
+    artist: Ludwig van Beethoven
+    learn:
+      'Lá menor com o **Sol♯** da menor harmônica: o Ré♯–Mi do começo e o acorde de **E** (V maior)
+      que volta para Am.'
+    key: Am
+    publicDomain: true
+  - title: Sonata ao Luar (1º movimento)
+    artist: Ludwig van Beethoven
+    learn:
+      'Dó♯ menor com o **Si♯** (sensível): ouça os arpejos e o V com terça maior antes de cada volta
+      à tônica.'
+    key: C#m
+    publicDomain: true
+  - title: House of the Rising Sun
+    artist: Tradicional (versão de The Animals)
+    learn:
+      Em Lá menor, o acorde de **E maior** no fim de cada volta vem da menor harmônica (Sol♯). Compare
+      com um Em no lugar e ouça a diferença.
+    key: Am
 ---
 
 A escala maior é a régua da teoria: graus, acordes e modos são medidos a partir dela. As escalas menores são três variações de uma mesma ideia, cada uma resolvendo um "problema" da anterior.
@@ -54,6 +85,37 @@ A escala maior é a régua da teoria: graus, acordes e modos são medidos a part
 **Menor melódica:** a harmônica com o **6º grau também elevado**, para evitar o salto de segunda aumentada (Fá → Sol♯) nas melodias. Na música clássica ela sobe melódica e desce natural; no jazz e no pop, é usada igual nas duas direções.
 
 ::concept{id="escalas-menores"}
+
+**Os nomes dos graus**
+
+Cada grau da escala tem um nome que diz sua função:
+
+| Grau | Nome           | Em Dó maior | Papel                                      |
+| ---- | -------------- | ----------- | ------------------------------------------ |
+| 1    | tônica         | Dó          | repouso, "casa"                            |
+| 2    | supertônica    | Ré          | passagem                                   |
+| 3    | mediante       | Mi          | define maior/menor                         |
+| 4    | subdominante   | Fá          | afastamento                                |
+| 5    | dominante      | Sol         | tensão, puxa para o 1                      |
+| 6    | superdominante | Lá          | tônica da relativa menor                   |
+| 7    | sensível       | Si          | meio tom abaixo da tônica, "sobe" para ela |
+
+A menor harmônica existe justamente para **recuperar a sensível**: na menor natural, o 7º grau fica um tom abaixo da tônica (Sol → Lá) e perde o puxão.
+
+**Armadura de clave e ciclo de quintas**
+
+Cada escala maior tem um número fixo de sustenidos ou bemóis — a **armadura**. Subindo de quinta em quinta, entra um sustenido por vez, sempre na ordem **Fá, Dó, Sol, Ré, Lá, Mi, Si**; descendo de quinta em quinta (ou subindo de quarta), entra um bemol, na ordem inversa **Si, Mi, Lá, Ré, Sol, Dó, Fá**.
+
+| Sustenidos | Tom maior | Relativa menor | Bemóis | Tom maior | Relativa menor |
+| ---------- | --------- | -------------- | ------ | --------- | -------------- |
+| 0          | Dó        | Lá m           | 1      | Fá        | Ré m           |
+| 1          | Sol       | Mi m           | 2      | Si♭       | Sol m          |
+| 2          | Ré        | Si m           | 3      | Mi♭       | Dó m           |
+| 3          | Lá        | Fá♯ m          | 4      | Lá♭       | Fá m           |
+| 4          | Mi        | Dó♯ m          | 5      | Ré♭       | Si♭ m          |
+| 5          | Si        | Sol♯ m         | 6      | Sol♭      | Mi♭ m          |
+
+Atalhos: o **último sustenido** é a sensível do tom (um sustenido = Fá♯ → Sol maior). O **penúltimo bemol** é o nome do tom (Si♭, Mi♭ → Mi♭ maior).
 
 ::::
 
@@ -81,6 +143,18 @@ Ligue **Intervalos** — os graus mostram exatamente o que muda:
 - **Menor melódica:** subidas melódicas, jazz e acordes como m6 e m(7M).
 
 Ouça a harmônica em ação — o E7 só existe por causa do Sol♯:
+
+::chords{symbols="Am Dm E7 Am"}
+
+**Ouvindo as quatro escalas em músicas reais**
+
+- **Maior descendo inteira:** a primeira frase de _Joy to the World_ — Ré Dó♯ Si Lá Sol Fá♯ Mi Ré.
+- **Menor com a sensível:** em _Für Elise_, a melodia alterna Mi e **Ré♯** antes de voltar ao Lá; a harmonia passa por **E** maior antes do Am.
+- **O V maior no tom menor:** em _House of the Rising Sun_, a volta termina em **E**, não em Em.
+
+Toque as duas versões e compare — primeiro com o V menor (natural), depois com o V maior (harmônica):
+
+::chords{symbols="Am Dm Em Am"}
 
 ::chords{symbols="Am Dm E7 Am"}
 

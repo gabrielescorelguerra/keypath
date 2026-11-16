@@ -9,6 +9,7 @@ export const paths = {
     `/aulas/${id}${checkpoint ? `?parte=${checkpoint}` : ''}`,
   exercise: (id: string) => `/exercicios/${id}`,
   library: '/biblioteca',
+  songs: '/biblioteca/musicas',
   concept: (id: string) => `/biblioteca/${id}`,
   diagnosis: '/diagnostico',
   settings: '/configuracoes',

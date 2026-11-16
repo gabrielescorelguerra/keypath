@@ -58,6 +58,7 @@ function lesson(
     estimatedMinutes: null,
     why: null,
     materials: [],
+    songs: [],
     intro: EMPTY,
     checkpoints: checkpoints.map((c) => ({ id: c, title: c, stage: null, body: EMPTY })),
     level: 1,

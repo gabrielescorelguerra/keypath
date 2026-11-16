@@ -34,6 +34,34 @@ materials:
     source: Hear and Play
     kind: article
     purpose: practice
+songs:
+  - title: Hava Nagila
+    artist: Tradicional
+    learn:
+      A melodia usa o **frígio dominante** (♭2 e 3ª maior juntos) — o som "oriental" que nasce da menor
+      harmônica.
+    publicDomain: true
+  - title: Hit the Road Jack
+    artist: Percy Mayfield (gravação de Ray Charles)
+    learn:
+      'O baixo desce Lá–Sol–Fá–**Mi**, e o último acorde é **maior** (E): a cadência andaluza, com
+      o V da menor harmônica.'
+  - title: Manhã de Carnaval
+    artist: Luiz Bonfá
+    learn:
+      Cheia de **II–V–I menores** — m7(♭5) → 7(♭9) → m. Sobre o dominante, a menor harmônica (ou a
+      alterada) é a escolha natural.
+  - title: Autumn Leaves (Folhas Mortas)
+    artist: Joseph Kosma
+    learn:
+      'Alterna um II–V–I maior e um **II–V–I menor** no mesmo tom: ótimo para comparar o mixolídio
+      com o frígio dominante sobre o V7.'
+  - title: Blue Bossa
+    artist: Kenny Dorham
+    learn:
+      Tema em Dó menor com **Dm7(♭5) – G7 – Cm** — pratique a menor harmônica de Dó sobre o G7 e a
+      melódica sobre o Cm.
+    key: Cm
 ---
 
 As menores harmônica e melódica geram sons que a escala maior não tem. Os quatro mais usados:
@@ -48,6 +76,28 @@ As menores harmônica e melódica geram sons que a escala maior não tem. Os qua
 | Alterada         | 7º grau da menor melódica  | 1 ♭9 ♯9 3 ♯11 ♭13 ♭7 | V7alt                    | dominante com tensão máxima antes de resolver |
 
 **Atalhos:** frígio dominante de Mi = Lá menor harmônica; alterada de Sol = Lá♭ menor melódica (meio tom acima do dominante); lídio dominante de Ré = Lá menor melódica (uma quinta acima).
+
+**Os modos da menor harmônica**
+
+Assim como a escala maior tem sete modos, a menor harmônica também tem — mas só dois são usados com frequência. Em Lá menor harmônica (Lá Si Dó Ré Mi Fá Sol♯):
+
+| A partir de | Nome                        | Uso                                      |
+| ----------- | --------------------------- | ---------------------------------------- |
+| Lá (1º)     | menor harmônica             | tônica menor com sensível; acorde Am(7M) |
+| Si (2º)     | lócrio ♮6                   | sobre o m7(♭5) do II–V menor             |
+| Mi (5º)     | **frígio dominante**        | sobre o V7 do tom menor (E7, E7(♭9))     |
+| Sol♯ (7º)   | diminuto (super lócrio ♭♭7) | sobre o °7 da sensível                   |
+
+**E os da menor melódica** (Lá Si Dó Ré Mi Fá♯ Sol♯), os mais usados no jazz:
+
+| A partir de | Nome                | Acorde      |
+| ----------- | ------------------- | ----------- |
+| Lá (1º)     | menor melódica      | Am6, Am(7M) |
+| Dó (3º)     | lídio aumentado     | C7M(♯5)     |
+| Ré (4º)     | **lídio dominante** | D7(♯11)     |
+| Sol♯ (7º)   | **alterada**        | G♯7(alt)    |
+
+A regra prática: se o acorde dominante **resolve num menor**, pense em menor harmônica; se ele **não resolve** (um IV7 de blues, um ♭VII7), lídio dominante; se você quer **todas as tensões** antes de resolver, alterada.
 
 ::::
 
@@ -74,6 +124,16 @@ O II–V–I menor, onde o frígio dominante mora:
 - **Metal e post-hardcore:** riffs sobre pedal no V do tom menor com o frígio dominante; o choque ♭2–3 é o som "épico".
 - **Clássico:** a menor harmônica é a base das cadências em tom menor — o V7 com sensível.
 - **Jazz:** m(7M) e m6 como tônica menor; lídio dominante em dominantes que não resolvem; alterada no V7 antes do I.
+
+**Ouvir para reconhecer**
+
+- **Frígio dominante na melodia:** _Hava Nagila_ — o salto de ♭2 para 3ª maior é inconfundível.
+- **O V maior no tom menor:** _Hit the Road Jack_, com o baixo descendo até o Mi e o acorde de E maior.
+- **II–V–I menor:** _Manhã de Carnaval_, _Autumn Leaves_ e _Blue Bossa_.
+
+Toque a cadência andaluza (a do _Hit the Road Jack_) e ouça o Sol♯ aparecer só no último acorde:
+
+::chords{symbols="Am G F E"}
 
 ::::
 

@@ -167,6 +167,14 @@ export async function loadContent(contentDir: string): Promise<LoadResult> {
     if (frontmatter.track !== folder) {
       error(file, `a aula está na pasta "${folder}" mas declara track "${frontmatter.track}"`)
     }
+    for (const song of frontmatter.songs) {
+      if (song.key === undefined) continue
+      try {
+        parseKey(song.key)
+      } catch {
+        error(file, `songs: tonalidade inválida "${song.key}" em "${song.title}"`)
+      }
+    }
     const markdown = parseMarkdown(parts.body, 'lesson', parts.bodyLineOffset)
     const split = splitLesson(markdown.root, parts.bodyLineOffset)
     for (const p of [...markdown.problems, ...split.problems]) error(file, p.message, p.line)

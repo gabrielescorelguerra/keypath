@@ -444,6 +444,7 @@ export function compileCatalog(sources: CatalogSources): CompileResult {
       estimatedMinutes: fm.estimatedMinutes ?? null,
       why: fm.why ?? null,
       materials: fm.materials.map((m) => ({ ...m, note: m.note ?? null })),
+      songs: fm.songs.map((song) => ({ ...song, key: song.key ?? null })),
       intro: lesson.intro,
       checkpoints: lesson.checkpoints.map(({ id, title, stage, body }) => ({
         id,
